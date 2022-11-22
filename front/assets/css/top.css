@@ -4,7 +4,7 @@ header {
     /* テスト用(要素が入るイメージ) */
     width: 100%;
     height: 600px;
-    background-color: #FFFCE3;
+    background-color: rgb(255, 252, 227);
 }
 
 main {
@@ -21,12 +21,12 @@ section {
     /* テスト用(要素が入るイメージ) */
     width: 100%;
     height: 400px;
-    background-color: #ccc;
+    background-color: rgb(204, 204, 204);
 }
 
 footer {
     /* テスト用(要素が入るイメージ) */
     width: 100%;
     height: 600px;
-    background-color: #FFFCE3;
+    background-color: rgb(255, 252, 227);
 }
