@@ -30,3 +30,142 @@ footer {
     height: 600px;
     background-color: rgb(255, 252, 227);
 }
+
+/* 2022/11/23追加 */
+/* ###############メディアクエリ############### */
+/* ########################################### */
+
+/* スマホ */
+/* 770pxまで */
+@media screen and (max-width: 770px) {
+    .top_margin_size_70or30 {
+        margin-top: 30px;
+    }
+
+    .top_margin_size_100or50 {
+        margin-top: 50px;
+    }
+
+    /* マージン下 */
+    .top_marginbottom_100or50 {
+        margin-bottom: 50px;
+    }
+
+    /* 表示 */
+    .top_parksearch_title {
+        display: none;
+    }
+
+    /* 検索エリアのスタイル */
+    .top_parksearch_style {
+        width: 100%;
+        height: 600px;
+        background-color: #FFFFFF;
+    }
+
+    /* 公園ピックアップのスタイル */
+    .top_parkpickup_style {
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+    }
+
+    /* このサイトについてのスタイル */
+    .top_about_style {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* タブレット */
+/* 771pxから1199pxまで */
+@media screen and (min-width: 771px) and (max-width:1199px) {
+
+    .top_margin_size_70or30 {
+        margin-top: 30px;
+
+    }
+
+    .top_margin_size_100or50 {
+        margin-top: 50px;
+    }
+
+    /* マージン下 */
+    .top_marginbottom_100or50 {
+        margin-bottom: 50px;
+    }
+
+    /* 表示 */
+    .top_parksearch_title {
+        display: none;
+    }
+
+    /* 検索エリアのスタイル */
+    .top_parksearch_style {
+        width: 100%;
+        height: 600px;
+        background-color: #FFFFFF;
+    }
+
+    /* 公園ピックアップのスタイル */
+    .top_parkpickup_style {
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+    }
+
+    /* このサイトについてのスタイル */
+    .top_about_style {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+/* PC */
+/* 1200pxから */
+@media screen and (min-width: 1200px) {
+
+    .top_margin_size_70or30 {
+        margin-top: 70px;
+
+    }
+
+    .top_margin_size_100or50 {
+        margin-top: 100px;
+    }
+
+    /* マージン下 */
+    .top_marginbottom_100or50 {
+        margin-bottom: 100px;
+    }
+
+    /* 表示 */
+    .top_parksearch_title {
+        display: inline;
+    }
+
+    /* 検索エリアのスタイル */
+    .top_parksearch_style {
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+    }
+
+    /* 公園ピックアップのスタイル */
+    .top_parkpickup_style {
+        width: 100%;
+        height: auto;
+        background-color: #FFFFFF;
+    }
+
+    /* このサイトについてのスタイル */
+    .top_about_style {
+        width: 100%;
+        height: auto;
+    }
+
+}

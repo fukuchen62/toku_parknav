@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+footer {
+    background-color: #FFFCE3;
+}
+
+
+/* #####################トップに戻るボタン##################### */
+.totopbnt_stl {
+    border-radius: 50%;
+    content: url(../img/totop150x150.png);
+}
+
+/* ボタンの位置 */
+.totopbnt_screenposition {
+    width: 95%;
+    /* height: 700px; */
+}
+
+/* ####################javascriptで使うクラス################### */
+/* モニタの右端から10％ モニタの真上から80%の位置に配置 */
+.JS_totopbtn_posi {
+    right: 10%;
+    top: 80%;
+}
+
+.JS_totopbtn_none {
+    display: none;
+    transition: transform 1s;
+}
+
+
+/* キーフレーム設定のためのクラス */
+.to_topanime_property {
+    animation-timing-function: ease-in-out;
+
+    /* infiniteを指定すると無限回繰り返す */
+    /* 1を指定してアニメを再生するのを1回だけにしている */
+    animation-iteration-count: 1;
+
+    /* アニメの向きを設定 */
+    /* 今回は反復させないのでnomarで設定 */
+    animation-direction: normal;
+    animation-duration: 1.5s;
+
+}
+
+/* 要素にキーフレームで設定したアニメをさせるためのクラス */
+.totopbtn_anime {
+    animation-name: to_topanime;
+}
+
+/* アニメーション設定 */
+/* Z軸で回転しながら移動するアニメ */
+@keyframes to_topanime {
+    0% {
+        transform: rotateZ(1270deg);
+        right: -200px;
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+        right: 10%;
+    }
+
+}
+
+
+/* ############メディアクエリ######### */
+/* スマホ */
+@media screen and (max-width: 770px) {
+    .footer_style {
+        width: 100%;
+        height: auto;
+        /* background-color: #FFFCE3; */
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+        /* padding-bottom: 42px; */
+
+    }
+
+    /* フッター項目の中に適用するフレックス */
+    .footer_col {
+        display: flex;
+        flex-flow: column;
+        margin-top: 15px;
+    }
+
+    /* スマホ時にフレックスを折り返す */
+    .footer_flex {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* フッター項目のフォントサイズ */
+    .footer_fontsize_a {
+        font-size: 16px;
+
+    }
+
+    /* コピーライトのスタイル */
+    .footer_copyright {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    small {
+        font-size: 14px;
+    }
+
+}
+
+/* タブレット */
+@media screen and (min-width: 771px) and (max-width:1199px) {
+    .footer_style {
+        width: 100%;
+        height: auto;
+        /* background-color: #FFFCE3; */
+        padding-top: 80px;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 42px;
+    }
+
+    /* フッター項目の中に適用するフレックス */
+    .footer_col {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .footer_flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* フッター項目のフォントサイズ */
+    .footer_fontsize_a {
+        font-size: 20px;
+    }
+
+    /* コピーライトのスタイル */
+    .footer_copyright {
+        margin-top: 180px;
+        text-align: center;
+        padding-bottom: 80px;
+    }
+
+    small {
+        font-size: 24px;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1200px) {
+    .footer_style {
+        width: 100%;
+        height: auto;
+        /* background-color: #FFFCE3; */
+        padding-top: 80px;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-bottom: 42px;
+    }
+
+    /* フッター項目の中に適用するフレックス */
+    .footer_col {
+        display: flex;
+        flex-flow: column;
+
+    }
+
+    .footer_flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* フッター項目のフォントサイズ */
+    .footer_fontsize_a {
+        font-size: 20px;
+
+    }
+
+    /* コピーライトのスタイル */
+
+    .footer_copyright {
+        margin-top: 180px;
+        text-align: center;
+        padding-bottom: 80px;
+
+    }
+
+    small {
+        font-size: 24px;
+    }
+
+}
