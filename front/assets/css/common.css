@@ -10,6 +10,9 @@ body {
     line-height: 1.7;
     /* スマホ横画面対策 */
     -webkit-text-size-adjust: 100%;
+    /* 要素を中央配置にする */
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* コンテンツ幅を950pxまでに設定 */
