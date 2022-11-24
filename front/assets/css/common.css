@@ -1,6 +1,388 @@
 @charset "UTF-8";
 
-body {
+/* 検証用 */
+/* 実際の環境では使わないでください */
+/* トップに戻るボタンの位置を調整 */
+
+/* .com_testbtn {
+    width: 95%;
+    height: 700px;
+}
+
+
+/* テスト用のクラス  */
+.testwarp {
+    width: 1200px;
+    margin: auto;
+    height: 7420px;
+    border: 1px solid black;
+}
+
+/* .com_testwarp_2 {
+    width: 375px;
+    margin: auto;
+    height: 5313px;
+    border: 1px solid black;
+} */
+
+/* テスト用 */
+/* .test {
+    width: 100%;
+    height: 2000px;
+} */
+
+/* ####################ページ全体適用###################### */
+/* ページ全体にZenMaruゴシックを適用 */
+* {
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* aタグに適用する共通の処理 */
+a {
+    cursor: pointer;
+}
+
+/* メディアクエリ */
+/* スマホ */
+/* 770pxまで */
+@media screen and (max-width: 770px) {
+
+    /* 画面のサイズ */
+    /* 可視化したいのでborderを設定 */
+    /* .com_warp {
+        width: 375px;
+        margin: auto;
+        height: 5313px;
+        border: 1px solid black;
+    } */
+
+    /* フォント */
+
+    h2 {
+        font-size: 20px;
+
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .insta_h2 {
+        font-size: 36px;
+    }
+
+    /* マージン */
+    /* 画像のマージン */
+    .com_imgmrg_right {
+        margin-right: 0px;
+    }
+
+
+
+    /* 画像 */
+    /* 読み込むメディアに応じて画像を切り替える処理 */
+    .com_img_about {
+        /* 四角い画像を丸形にする */
+        border-radius: 50%;
+        content: url(../../img/200x200.png);
+    }
+
+    /* 矢印ボタンの画像 */
+    .morebtn_img {
+        content: url(../../img/120x80.png);
+    }
+
+    /* 実flex子 */
+    /* 左昇順左右いっぱい配置 */
+    .com_flex_flexflow {
+
+        flex-direction: column;
+    }
+
+    /* 実flex孫 */
+    /* 昇順縦並び上下いっぱいに配置 */
+    .com_flex_flexflow_alignitems {
+        /* 縦並びにしている箇所 */
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+/* PC */
+/* 1200pxから */
+@media screen and (min-width: 1200px) {
+
+    /* 画面のサイズ */
+    /* 可視化したいのでborderを設定 */
+    /* .com_warp {
+        width: 1200px;
+        margin: auto;
+        height: 7420px;
+        border: 1px solid black;
+    } */
+
+    /* フォント */
+    h2 {
+        font-size: 36px;
+
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .insta_h2 {
+        font-size: 48px;
+    }
+
+    /* マージン */
+    /* 画像のマージン */
+    .com_imgmrg_right {
+        margin-right: 70px;
+    }
+
+    /* 画像 */
+    /* 読み込むメディアに応じて画像を切り替える処理 */
+    .com_img_about {
+        content: url(../../img/410x410.png);
+        /* 四角い画像を丸形にする */
+        border-radius: 50%;
+    }
+
+    /* 矢印ボタンの画像 */
+    .morebtn_img {
+        content: url(../../img/220x135.png);
+    }
+
+    /* 実flex子 */
+    /* 左昇順左右いっぱい配置 */
+    .com_flex_flexflow {
+        flex-direction: row;
+    }
+
+    /* 実flex孫 */
+    /* 昇順縦並び上下いっぱいに配置 */
+    .com_flex_flexflow_alignitems {
+
+        /* 縦並びにしている箇所 */
+        flex-flow: column;
+        align-items: end;
+    }
+}
+
+/* タブレット */
+/* 771pxから1199pxまで */
+@media screen and (min-width: 771px) and (max-width:1199px) {
+
+    /* 画面のサイズ */
+    /* 可視化したいのでborderを設定 */
+    /* .com_warp {
+        width: 1200px;
+        margin: auto;
+        height: 7420px;
+        border: 1px solid black;
+    } */
+
+    /* フォント */
+
+    h2 {
+        font-size: 20px;
+
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .insta_h2 {
+        font-size: 36px;
+    }
+
+    /* マージン */
+    /* 画像のマージン */
+    .com_imgmrg_right {
+        margin-right: 70px;
+    }
+
+
+    /* 画像 */
+    /* 読み込むメディアに応じて画像を切り替える処理 */
+    .com_img_about {
+        /* 四角い画像を丸形にする */
+        border-radius: 50%;
+        content: url(../../img/410x410.png);
+    }
+
+    /* 矢印ボタンの画像 */
+    .morebtn_img {
+        content: url(../../img/220x135.png);
+    }
+
+    /* flex子 */
+    /* 左昇順左右いっぱい配置 */
+    .com_flex_flexflow {
+        flex-direction: row;
+    }
+
+    /* 実flex孫 */
+    /* 昇順縦並び上下いっぱいに配置 */
+    .com_flex_flexflow_alignitems {
+        /* 縦並びにしている箇所 */
+        flex-flow: column;
+        align-items: end;
+    }
+
+}
+
+/* ###########各要素のスタイル########## */
+
+/* ##########テキストのスタイル############## */
+.com_txt_center {
+    text-align: center;
+}
+
+.com_txt_right {
+    text-align: right;
+}
+
+.com_txt_center {
+    text-align: center;
+}
+
+/* ############フォント########### */
+
+/* webフォント */
+
+
+
+
+/* ###############サイズ関係############# */
+/* 縦横100%にする */
+.com_wh_100 {
+    width: 100%;
+    height: 100%;
+}
+
+/* position */
+.com_rela {
+    position: relative;
+}
+
+.com_abs {
+    position: absolute;
+}
+
+.com_fxd {
+    position: fixed;
+}
+
+/* 画像関係 */
+
+
+/* 矢印のボタン のスタイル*/
+.com_morebtn {
+    transition: 0.2s;
+}
+
+.com_morebtn:hover {
+    transition: 0.2s;
+    transform: translate(30px, 0);
+}
+
+/*  戻るボタン のスタイル */
+.com_backbtn {
+    transition: 0.2s;
+}
+
+.com_backbtn:hover {
+    transition: 0.2s;
+    transform: translate(-30px, 0);
+}
+
+/* ################実flex############## */
+/* 実flex親 */
+/* 昇順縦並び中央揃え */
+.com_flex_minori {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+/* 実flex子 共通の部分*/
+/* メディアクエリに記載 */
+.com_flex_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 実flex孫 */
+/* メディアクエリの中に記載 */
+.com_flex_inner_grandchild {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #############共通のスタイル################## */
+/* 共通パディング */
+.com_pdg_mnr {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 125px;
+    padding-right: 125px;
+}
+
+.com_pdg_top {
+    padding-top: 50px;
+}
+
+/* 共通マージン */
+.com_mrg_bttm {
+    margin-bottom: 70px;
+}
+
+.com_mrg_bttm100 {
+    margin-bottom: 100px;
+}
+
+.com_mrg_bttm100 {
+    margin-bottom: 200px;
+}
+
+
+.com_mrg_top30 {
+    margin-top: 30px;
+}
+
+.com_mrg_top50 {
+    margin-top: 50px;
+}
+
+
+.com_mrg_left {
+    margin-left: 70px;
+}
+
+/* margin autoを使って要素を画面中央に寄せる */
+.com_mrg_aut {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #################display################ */
+.com_dis_block {
+    display: block;
+}
+
+.com_dis_none {
+    display: none;
+}
+
+.com_flex {
+    display: flex;
+
+
     font-family: 'Noto Serif JP', serif;
     font-family: 'Zen Maru Gothic', sans-serif;
     color: #3E3A39;
@@ -65,6 +447,8 @@ h4 {
     h4 {
         font-size: 24px;
     }
+
+
 }
 
 /* 矢印ボタン next→右向き prev→左向き*/
