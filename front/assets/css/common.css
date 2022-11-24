@@ -388,6 +388,18 @@ a {
     color: #3E3A39;
     /* 本文部分のフォントサイズ */
     font-size: 16px;
+    /* 行間の指定 */
+    line-height: 1.7;
+    /* スマホ横画面対策 */
+    -webkit-text-size-adjust: 100%;
+    /* 要素を中央配置にする */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* コンテンツ幅を950pxまでに設定 */
+main {
+    max-width: 950px;
 }
 
 /* パンくずのフォントサイズ(SP・TB・PC共通) */
@@ -431,3 +443,34 @@ h4 {
 
 
 }
+
+/* 矢印ボタン next→右向き prev→左向き*/
+
+.next_btn, .prev_btn {
+    position: relative;
+    width: 220px;
+    margin: 50px auto;
+}
+
+.next_btn:hover {
+    transition: 0.2s;
+    transform: translate(30px, 0);
+}
+
+.prev_btn:hover {
+    transition: 0.2s;
+    transform: translate(-30px, 0);
+}
+
+.next_btn p, .prev_btn p {
+    position: absolute;
+    color: #3E3A39;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* PC矢印ボタン ここまで*/
