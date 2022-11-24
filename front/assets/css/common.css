@@ -15,7 +15,6 @@ body {
 }
 
 /* セクションによって、背景色をクリーム色にする */
-/*  */
 .bgcolor_cream {
     margin: 0 calc(50% - 50vw);
     padding: 50px calc(50vw - 50% + 8px);
@@ -97,3 +96,76 @@ h4 {
 }
 
 /* PC矢印ボタン ここまで*/
+
+
+
+/* カード型記事 *********************************************** */
+
+/* card_flexの指定 */
+.card_flex {
+    display: flex;
+    justify-content: space-around;
+    /* 縮小幅にあわせて自動でカラム落ち */
+    flex-flow: row wrap;
+}
+
+/* カード1つ分の大枠 */
+.card_wrap {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 300px;
+    height: 430px;
+    border: 1px solid #3e3a39;
+    /* カードの角丸指定 */
+    border-radius: 30px;
+    /* カラム落ちしたときの下余白 */
+    margin-bottom: 50px;
+}
+
+/* 画像の指定 */
+.card_img {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #3e3a39;
+    /* 画像の角丸指定 */
+    border-radius: 30px;
+}
+
+/* 文章の指定（枠組み） */
+.card_container {
+    width: 100%;
+    height: 230px;
+    /* テキストを常に中央配置するための枠を指定 */
+    position: relative;
+}
+
+/* 文章の指定（中身） */
+.card_inner {
+    width: 250px;
+    text-align: center;
+    /* テキストを中央配置する中身の部分 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* サブタイトル */
+.card_subttl {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* タイトル */
+.card_ttl {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline 1px solid;
+    margin-bottom: 15px;
+}
+
+/* 記事本文の指定 */
+.card_txt p {
+    font-size: 16px;
+    font-weight: bold;
+}
