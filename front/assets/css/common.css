@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* 検証用 */
 /* 実際の環境では使わないでください */
 /* トップに戻るボタンの位置を調整 */
@@ -380,4 +381,53 @@ a {
 
 .com_flex {
     display: flex;
+
+
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #3E3A39;
+    /* 本文部分のフォントサイズ */
+    font-size: 16px;
+}
+
+/* パンくずのフォントサイズ(SP・TB・PC共通) */
+.pkz {
+    font-size: 14px;
+}
+
+/* SP見出しフォントサイズ */
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+/* PC・TBのフォントサイズ */
+
+@media screen and (min-width: 771px) {
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+
 }
