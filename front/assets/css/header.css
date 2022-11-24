@@ -7,7 +7,7 @@
 } */
 
 /* グローバルナビのスタイル */
-.gnav_style {
+.head_gnav_style {
 
     width: auto;
     height: 100px;
@@ -20,13 +20,13 @@
 }
 
 
-.gnav_logo {
+.head_gnav_logo {
     content: url(../../img/logodam.png);
 }
 
 /* ###########ハンバーガーメニューのスタイル############ */
 /* 三本線 */
-.gnav_hbgmenu_style {
+.head_gnav_hbgmenu_style {
     font-size: 44px;
     font-weight: bold;
     line-height: 20px;
@@ -37,12 +37,12 @@
 }
 
 /* jsで操作するクラス */
-.JS_gnav_display_none {
+.JS_head_gnav_display_none {
     display: none;
 }
 
 /* ハンバーガーメニュー */
-.gnav_hbgmenu {
+.head_gnav_hbgmenu {
     width: 100%;
     /* 2022/11/21 高さの値は仮 */
     height: auto;
@@ -59,57 +59,57 @@
 }
 
 /* メニュー内のロゴのスタイル */
-.gnav_hbgmenu_img_size {
+.head_gnav_hbgmenu_img_size {
     width: 100%;
     height: 160px;
 
 }
 
 /* ハンバーガー用フレックス */
-.gnav_hbgmenu_flex {
+.head_gnav_hbgmenu_flex {
     display: flex;
     flex-flow: column;
 }
 
 /* ハンバーガーメニュー用フォントサイズ */
-.gnav_hbgmenu_fontsize {
+.head_gnav_hbgmenu_fontsize {
     font-size: 16px;
 }
 
 /* 閉じるボタンのスタイル */
-.gnav_hbgclosebtn_style {
+.head_gnav_hbgclosebtn_style {
     font-size: 40px;
     cursor: pointer;
     box-sizing: border-box;
 }
 
 /* 閉じるボタンCLOSEの文字 */
-.gnav_hbgclose_text {
+.head_gnav_hbgclose_text {
     font-size: 12px;
 }
 
 /* 閉じるボタンを配置するためのフレックス */
-.gnav_hbgclosebtn_flex {
+.head_gnav_hbgclosebtn_flex {
     display: flex;
     justify-content: right;
 }
 
 /* 閉じるボタンのボックス */
-.gnav_hbgclosebtnbox {
+.head_gnav_hbgclosebtnbox {
     width: 32px;
     height: 48px;
     margin-right: 20px;
 }
 
 /* メニュー内の区切り*/
-.gnav_hbgmenu_separator {
+.head_gnav_hbgmenu_separator {
     /* border-bottom-width: 1px; */
     margin-top: 30px;
     text-align: center;
 }
 
 /* メニュー内のボタン */
-.gnav_hbgmenu_colbtn {
+.head_gnav_hbgmenu_colbtn {
     border: solid;
     border-radius: 45px;
     width: 80%;
@@ -122,7 +122,7 @@
 }
 
 /*  ハンバーガーメニュー用の検索ボックス */
-.gnav_hmbmenu_search {
+.head_gnav_hmbmenu_search {
     display: block;
     /* border: 1px solid black; */
     width: 80%;
@@ -134,7 +134,7 @@
 }
 
 /*  ハンバーガーメニュー用の検索送信ボタン */
-.gnav_hmbmenu_submit {
+.head_gnav_hmbmenu_submit {
     position: absolute;
     right: 12%;
     bottom: 15px;
@@ -144,13 +144,13 @@
 
 
 /* 表示非表示に使用するクラス */
-.JSgnav_hbgmenu_menudisplay_none {
+.JS_head_gnav_hbgmenu_menudisplay_none {
     /* 初期位置は-3000pxに配置*/
     transition: all 1s;
     left: -5000px;
 }
 
-.JSgnav_hbgmenu_menudisplay_block {
+.JS_head_gnav_hbgmenu_menudisplay_block {
     /*展開すると0pxに移動*/
     transition: all 1s;
     left: 0;
@@ -159,7 +159,7 @@
 
 
 /* ################ナビ用フレックス############## */
-.gnav_flex {
+.head_gnav_flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,13 +169,13 @@
 
 /* ###############検索フォームのスタイル################## */
 /* --検索フォームの親要素-- */
-.form_rel {
+.head_form_rel {
     position: relative;
 }
 
 
 /* --検索ボタン-- */
-.gnav_submit {
+.head_gnav_submit {
     position: absolute;
     right: 10px;
     bottom: 15px;
@@ -185,7 +185,7 @@
 }
 
 /* 検索ボックス */
-.gnav_srchbox {
+.head_gnav_srchbox {
     display: block;
     border: 1px solid black;
     background-color: #FFFFFF;
@@ -194,13 +194,13 @@
 }
 
 /* グローバルナビ用のマージン */
-.gnav_pad {
+.head_gnav_pad {
     padding-left: 20px;
     padding-right: 29px;
 }
 
 /* 見出し（メニュー）のスタイル */
-.gnav_menulist_top_style {
+.head_gnav_menulist_top_style {
     margin-top: 120px;
     font-size: 24px;
     text-align: center;
@@ -210,16 +210,16 @@
 /* スマホ */
 @media screen and (max-width: 770px) {
 
-    .gnav_menu_font {
+    .head_gnav_menu_font {
         font-size: 20px;
     }
 
     /* グローバルメニューの項目の表示非表示 */
-    .gnav_menu_display {
+    .head_gnav_menu_display {
         display: none;
     }
 
-    .gnav_item {
+    .head_gnav_item {
         width: auto;
         height: 100px;
         margin: 0;
@@ -228,7 +228,7 @@
     }
 
     /* ハンバーガーの表示非表示 */
-    .gnav_hbgmenu_display {
+    .head_gnav_hbgmenu_display {
         display: block;
     }
 
@@ -238,16 +238,16 @@
 /* タブレット */
 @media screen and (min-width: 771px) and (max-width:1199px) {
 
-    .gnav_menu_font {
+    .head_gnav_menu_font {
         font-size: 20px;
     }
 
     /* グローバルメニューの項目の表示非表示 */
-    .gnav_menu_display {
+    .head_gnav_menu_display {
         display: none;
     }
 
-    .gnav_item {
+    .head_gnav_item {
 
         width: auto;
         height: 100px;
@@ -258,7 +258,7 @@
 
     /* ハンバーガーの表示非表示 */
     /* ハンバーガーの表示非表示 */
-    .gnav_hbgmenu_display {
+    .head_gnav_hbgmenu_display {
         display: block;
     }
 
@@ -267,16 +267,16 @@
 /* PC */
 @media screen and (min-width: 1200px) {
 
-    .gnav_menu_font {
+    .head_gnav_menu_font {
         font-size: 20px;
     }
 
     /* グローバルメニューの項目の表示非表示 */
-    .gnav_menu_display {
+    .head_gnav_menu_display {
         display: block;
     }
 
-    .gnav_item {
+    .head_gnav_item {
 
         /* width: auto; */
         height: 100px;
@@ -287,7 +287,7 @@
 
     /* ハンバーガーの表示非表示 */
 
-    .gnav_hbgmenu_display {
+    .head_gnav_hbgmenu_display {
         display: none;
     }
 }

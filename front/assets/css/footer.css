@@ -6,32 +6,32 @@ footer {
 
 
 /* #####################トップに戻るボタン##################### */
-.totopbnt_stl {
+.foot_totopbnt_stl {
     border-radius: 50%;
     content: url(../img/totop150x150.png);
 }
 
 /* ボタンの位置 */
-.totopbnt_screenposition {
+.foot_totopbnt_screenposition {
     width: 95%;
     /* height: 700px; */
 }
 
 /* ####################javascriptで使うクラス################### */
 /* モニタの右端から10％ モニタの真上から80%の位置に配置 */
-.JS_totopbtn_posi {
+.JS_foot_totopbtn_posi {
     right: 10%;
     top: 80%;
 }
 
-.JS_totopbtn_none {
+.JS_foot_totopbtn_none {
     display: none;
     transition: transform 1s;
 }
 
 
 /* キーフレーム設定のためのクラス */
-.to_topanime_property {
+.foot_to_topanime_property {
     animation-timing-function: ease-in-out;
 
     /* infiniteを指定すると無限回繰り返す */
@@ -46,7 +46,7 @@ footer {
 }
 
 /* 要素にキーフレームで設定したアニメをさせるためのクラス */
-.totopbtn_anime {
+.foot_totopbtn_anime {
     animation-name: to_topanime;
 }
 
@@ -69,7 +69,7 @@ footer {
 /* ############メディアクエリ######### */
 /* スマホ */
 @media screen and (max-width: 770px) {
-    .footer_style {
+    .foot_footer_style {
         width: 100%;
         height: auto;
         /* background-color: #FFFCE3; */
@@ -81,14 +81,14 @@ footer {
     }
 
     /* フッター項目の中に適用するフレックス */
-    .footer_col {
+    .foot_col {
         display: flex;
         flex-flow: column;
         margin-top: 15px;
     }
 
     /* スマホ時にフレックスを折り返す */
-    .footer_flex {
+    .foot_flex {
         display: flex;
         justify-content: center;
         flex-flow: column;
@@ -97,19 +97,19 @@ footer {
     }
 
     /* フッター項目のフォントサイズ */
-    .footer_fontsize_a {
+    .foot_fontsize_a {
         font-size: 16px;
 
     }
 
     /* コピーライトのスタイル */
-    .footer_copyright {
+    .foot_copyright {
         margin-top: 30px;
         padding-bottom: 30px;
         text-align: center;
     }
 
-    small {
+    .foot_small {
         font-size: 14px;
     }
 
@@ -117,7 +117,7 @@ footer {
 
 /* タブレット */
 @media screen and (min-width: 771px) and (max-width:1199px) {
-    .footer_style {
+    .foot_footer_style {
         width: 100%;
         height: auto;
         /* background-color: #FFFCE3; */
@@ -128,36 +128,36 @@ footer {
     }
 
     /* フッター項目の中に適用するフレックス */
-    .footer_col {
+    .foot_col {
         display: flex;
         flex-flow: column;
     }
 
-    .footer_flex {
+    .foot_flex {
         display: flex;
         justify-content: space-between;
     }
 
     /* フッター項目のフォントサイズ */
-    .footer_fontsize_a {
+    .foot_fontsize_a {
         font-size: 20px;
     }
 
     /* コピーライトのスタイル */
-    .footer_copyright {
+    .foot_copyright {
         margin-top: 180px;
         text-align: center;
         padding-bottom: 80px;
     }
 
-    small {
+    .foot_small {
         font-size: 24px;
     }
 }
 
 /* PC */
 @media screen and (min-width: 1200px) {
-    .footer_style {
+    .foot_footer_style {
         width: 100%;
         height: auto;
         /* background-color: #FFFCE3; */
@@ -168,33 +168,33 @@ footer {
     }
 
     /* フッター項目の中に適用するフレックス */
-    .footer_col {
+    .foot_col {
         display: flex;
         flex-flow: column;
 
     }
 
-    .footer_flex {
+    .foot_flex {
         display: flex;
         justify-content: space-between;
     }
 
     /* フッター項目のフォントサイズ */
-    .footer_fontsize_a {
+    .foot_fontsize_a {
         font-size: 20px;
 
     }
 
     /* コピーライトのスタイル */
 
-    .footer_copyright {
+    .foot_copyright {
         margin-top: 180px;
         text-align: center;
         padding-bottom: 80px;
 
     }
 
-    small {
+    .foot_small {
         font-size: 24px;
     }
 

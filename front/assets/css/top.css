@@ -31,6 +31,20 @@ footer {
     background-color: rgb(255, 252, 227);
 }
 
+/* フレックスのスタイル */
+.top_flex_style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+.top_flex_size {
+    max-width: 477px;
+
+}
+
 /* 2022/11/23追加 */
 /* ###############メディアクエリ############### */
 /* ########################################### */

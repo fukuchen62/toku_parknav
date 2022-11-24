@@ -16,16 +16,16 @@ let classList = hbgMenu.classList;
 
 // クリックしたとき
 hbgMenubtn.addEventListener('click', () => {
-        hbgMenu.classList.add('JSgnav_hbgmenu_menudisplay_block');
-        hbgMenu.classList.remove('JSgnav_hbgmenu_menudisplay_none');
+        hbgMenu.classList.add('JS_head_gnav_hbgmenu_menudisplay_block');
+        hbgMenu.classList.remove('JS_head_gnav_hbgmenu_menudisplay_none');
 		// 動作OK
         console.log('ハンバーガーメニューのボタンをクリックした。');
 	});
 
 hbgMenubtnclose.addEventListener('click', () => {
 
-        hbgMenu.classList.add('JSgnav_hbgmenu_menudisplay_none');
-        hbgMenu.classList.remove('JSgnav_hbgmenu_menudisplay_block');
+        hbgMenu.classList.add('JS_head_gnav_hbgmenu_menudisplay_none');
+        hbgMenu.classList.remove('JS_head_gnav_hbgmenu_menudisplay_block');
 		// 動作OK
     console.log('ハンバーガーメニューの閉じるボタンをクリックした。');
 });
@@ -55,11 +55,11 @@ window.addEventListener('scroll', () => {
     const y = window.scrollY;
 
     if (y < 400) {
-        totop.classList.add('JS_totopbtn_none');
-        totop.classList.remove('JS_totopbtn_posi');
+        totop.classList.add('JS_foot_totopbtn_none');
+        totop.classList.remove('JS_foot_totopbtn_posi');
     }else if(y >= 400)  {
-        totop.classList.add('JS_totopbtn_posi');
-        totop.classList.remove('JS_totopbtn_none');
+        totop.classList.add('JS_foot_totopbtn_posi');
+        totop.classList.remove('JS_foot_totopbtn_none');
     }
 
     console.log(y);
