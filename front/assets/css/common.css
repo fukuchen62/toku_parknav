@@ -158,7 +158,6 @@ h4 {
     font-size: 20px;
     line-height: 20px;
     font-weight: normal;
-    font-weight: bold;
     margin-bottom: 8px;
 }
 
@@ -174,5 +173,4 @@ h4 {
 /* 記事本文の指定 */
 .card_txt p {
     font-size: 16px;
-    font-weight: bold;
 }
