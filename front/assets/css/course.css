@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
+body {
+    min-width: 300px;
+    height: 100%;
+}
+
+/* 見出し下余白 */
+h2, h3 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+/* カード部分はhのmarginを設定しない */
+.card_ttl {
+    margin-top: 0;
+}
+
+
+/* パンくず */
+.pkz {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* セクションの上下に余白をとる */
+section {
+    /* padding-bottom: 50px; */
+    padding-top: 50px;
+}
+
+/* ＝＝＝カテゴリバー＝＝＝ */
+
+/* サイドバーの幅を設定する */
+.sidebar_box {
+    width: 250px;
+    margin: 0 auto 50px;
+}
+
+/* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
+.category_ttl {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    background: rgba(255, 235, 57, 0.5);
+    border-radius: 20px;
+}
+
+li {
+    line-height: 3;
+}
+
+li a:hover {
+    color: darkgrey;
+}
+
+/* 「目的別」の文字スタイルを変更 */
+.category_subttl {
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+
+    /* カードとサイドバーにflexをかける  */
+    .flex_box {
+        display: flex;
+    }
+
+    .sidebar {
+        position: sticky;
+        /* Gナビの下で固定させる */
+        top: 80px;
+        right: 0;
+    }
+}
+
+/* ＝＝＝ページネーション＝＝＝ */
+
+/* SP幅で１カラムになったとき、下にmarginを50pxとる */
+.pagination {
+    margin: 0 auto 50px;
+}
+
+/* 番号部分を横並びにする */
+.nav_links {
+    display: flex;
+}
+
+/* 番号部分の成形 */
+.pagination .page_numbers {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px 30px;
+    color: #333;
+    border-radius: 50%;
+    border: #333 2px solid;
+    background: #FFF;
+}
+
+/* 現在のページを表す */
+.pagination .current {
+    padding: 20px 30px;
+    border: #333 2px solid;
+    background: rgba(57, 189, 255, 0.5);
+    color: #333;
+}
+
+/* 「前へ」「次へ」の部分 */
+.pagination .prev,
+.pagination .next {
+    background: transparent;
+    box-shadow: none;
+    color: #333;
+}
+
+/* ボタンの間の「…」 */
+.pagination .dots {
+    background: transparent;
+}
+
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .pagination {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* ナビのダミーブロック */
+.gnav_dummy {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: darkgray;
+}
+
+/* メインビジュアルのダミーブロック */
+.mainVisual_dummy {
+    width: 100%;
+    height: 120px;
+    background-color: cadetblue;
+    margin-top: 80px;
+}
+
+/* フッターのダミーブロック */
+.footer_dummy {
+    width: 100%;
+    height: 450px;
+    background-color: darkgray;
+}
