@@ -63,22 +63,28 @@
 
         <div class="header_links">
             <nav class="gnav">
-                <ul class="">
-                    <li><a href="<?php echo home_url('/'); ?>">HOME</a></li>
-                    <li><a href="<?php echo home_url('/about/'); ?>">わたしたちについて</a></li>
-                    <li><a href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
-                    <li><a href="<?php echo home_url('/category/news'); ?>">最新情報</a></li>
-                    <li><a href="<?php echo home_url('/menu/'); ?>">メニュー紹介</a></li>
-                    <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
+                <!-- <ul class="">
+                    <li><a href="<?php //echo home_url('/'); 
+                                    ?>">HOME</a></li>
+                    <li><a href="<?php //echo home_url('/about/'); 
+                                    ?>">わたしたちについて</a></li>
+                    <li><a href="<?php //echo home_url('/access/'); 
+                                    ?>">アクセス</a></li>
+                    <li><a href="<?php //echo home_url('/category/news'); 
+                                    ?>">最新情報</a></li>
+                    <li><a href="<?php //echo home_url('/menu/'); 
+                                    ?>">メニュー紹介</a></li>
+                    <li><a href="<?php //echo home_url('/contact/'); 
+                                    ?>">お問い合わせ</a></li>
 
-                </ul>
+                </ul> -->
                 <?php
-                // $args = array(
-                //     'menu' => 'global-navigation',
-                //     'menu_class' => '',
-                //     'container' => false,
-                // );
-                // wp_nav_menu($args);
+                $args = array(
+                    'menu' => 'global-navigation',
+                    'menu_class' => '',
+                    'container' => false,
+                );
+                wp_nav_menu($args);
                 ?>
             </nav>
 
