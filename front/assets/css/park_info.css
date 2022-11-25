@@ -188,3 +188,7 @@ td {
 .non_bottom_padding {
     padding-bottom: 0;
 }
+
+.prev_btn a p {
+    font-size: 16px;
+}
