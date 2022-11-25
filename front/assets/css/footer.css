@@ -2,8 +2,15 @@
 
 footer {
     background-color: #FFFCE3;
+    max-width: 950px;
+    margin: auto;
+
 }
 
+.foot_size {
+    max-width: 950px;
+    font-size: 14px;
+}
 
 /* #####################トップに戻るボタン##################### */
 .foot_totopbnt_stl {
@@ -15,7 +22,7 @@ footer {
 /* ボタンの位置 */
 .foot_totopbnt_screenposition {
     width: 95%;
-    /* height: 700px; */
+    margin: 0, auto;
 }
 
 /* ####################javascriptで使うクラス################### */
@@ -137,6 +144,7 @@ footer {
     .foot_flex {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     /* フッター項目のフォントサイズ */
@@ -147,7 +155,7 @@ footer {
     /* コピーライトのスタイル */
     .foot_copyright {
         margin-top: 180px;
-        text-align: center;
+        text-align: flex-start;
         padding-bottom: 80px;
     }
 
@@ -178,6 +186,7 @@ footer {
     .foot_flex {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
     }
 
     /* フッター項目のフォントサイズ */

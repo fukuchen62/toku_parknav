@@ -19,65 +19,70 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/top.css">
 
-    <title>とくしまGo!Go!パークなび</title>
+    <!-- font-awesome cdn -->
+    <!-- <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <title>【テスト用】とくしまGo!Go!パークなび</title>
 </head>
-
-
 <body>
     <!-- ヘッダー -->
     <header>
-        <!-- グローバルナビゲーション -->
-        <div class="gnav">
-            <!--グローバルナビ-->
-            <section class="head_gnav_style com_fxd">
-                <!-- ナビ本体 -->
-                <!-- ハンバーガーナビ用にposition:relativeを設定 -->
-                <div class="  head_gnav_item head_gnav_pad com_mrg_aut head_gnav_flex head_gnav_menu_font f_zenmar">
-                    <!-- ロゴ -->
-                    <div>
-                        <img class="head_gnav_logo" alt="とくしまGo!Go!パークなび">
-                    </div>
-                    <!-- メニュー -->
-                    <!--2022/11/21 レイアウトが崩れるので要素ごとに表示非表示用のクラスを適用した -->
-                    <div class="head_gnav_menu_display">
-                        <a>公園検索</a>
-                    </div>
-                    <div class="head_gnav_menu_display">|</div>
-                    <div class="head_gnav_menu_display">
-                        <a>モデルコース</a>
-                    </div>
-                    <div class="head_gnav_menu_display">|</div>
-                    <div class="head_gnav_menu_display">
-                        <a>運動療育について</a>
-                    </div>
-                    <div class="head_gnav_menu_display">|</div>
-                    <div class="head_gnav_menu_display">
-                        <a>ゲーム</a>
-                    </div>
-                    <div class="head_gnav_menu_display">|</div>
-                    <div class="head_gnav_menu_display">
-                        <a>お気に入りリスト</a>
-                    </div>
-                    <!-- 検索ボックス -->
-                    <!-- 送信ボタンをボックスの横に設置するためにnav_flex_childを設定してflexにしている -->
-                    <div class="com_flex head_gnav_menu_display">
-                        <form class="head_form_rel" action="">
-                            <input class=" head_gnav_srchbox" size="24" type="search" name="search" placeholder="キーワードを入力">
-                            <input class="head_gnav_submit" type="submit" value="🔍" />
-                        </form>
-                    </div>
+        <div class="header_size">
+            <!-- グローバルナビゲーション -->
+            <div class="gnav">
+
+                <!--グローバルナビ-->
+                <section class="head_gnav_style com_fxd">
+                    <!-- ナビ本体 -->
+                    <!-- ハンバーガーナビ用にposition:relativeを設定 -->
+                    <div class="head_gnav_item head_gnav_pad com_mrg_aut head_gnav_flex head_gnav_menu_font f_zenmar">
+                        <!-- ロゴ -->
+                        <div>
+                            <img class="head_logo_size" src="./assets/img/header_logo.png" alt="">
+
+                        </div>
+                        <!-- メニュー -->
+                        <!--2022/11/21 レイアウトが崩れるので要素ごとに表示非表示用のクラスを適用した -->
+                        <div class="head_gnav_menu_display">
+                            <a>公園検索</a>
+                        </div>
+                        <div class="head_gnav_menu_display">|</div>
+                        <div class="head_gnav_menu_display">
+                            <a>モデルコース</a>
+                        </div>
+                        <div class="head_gnav_menu_display">|</div>
+                        <div class="head_gnav_menu_display">
+                            <a>運動療育について</a>
+                        </div>
+                        <div class="head_gnav_menu_display">|</div>
+                        <div class="head_gnav_menu_display">
+                            <a>ゲーム</a>
+                        </div>
+                        <div class="head_gnav_menu_display">|</div>
+                        <div class="head_gnav_menu_display">
+                            <a>お気に入りリスト</a>
+                        </div>
+                        <!-- 検索ボックス -->
+                        <!-- 送信ボタンをボックスの横に設置するためにnav_flex_childを設定してflexにしている -->
+                        <div class="com_flex head_gnav_menu_display">
+                            <form class="head_form_rel" action="">
+                                <input class=" head_gnav_srchbox" size="24" type="search" name="search" placeholder="キーワードを入力">
+                                <input class="head_gnav_submit fas" type="submit" value="&#xf002;">
+                            </form>
+                        </div>
 
 
-                    <!-- ↑メニューここまで↑ -->
-                    <!-- ハンバーガーメニュー -->
-                    <div id="JShbg_menu_btn" class=" head_gnav_hbgmenu_style head_gnav_hbgmenu_display">
-                        <!-- メニューのボタン 三本線-->
-                        <div>―</div>
-                        <div>―</div>
-                        <div>―</div>
+                        <!-- ↑メニューここまで↑ -->
+                        <!-- ハンバーガーメニュー -->
+                        <div id="JShbg_menu_btn" class=" head_gnav_hbgmenu_style head_gnav_hbgmenu_display">
+                            <!-- メニューのボタン 三本線-->
+                            <div>―</div>
+                            <div>―</div>
+                            <div>―</div>
+                        </div>
                     </div>
-                </div>
-
+            </div>
             </section>
             <!-- ハンバーガーメニュー -->
             <div>
@@ -86,7 +91,7 @@
                     <div class="">
                         <div class="">
                             <!--ロゴ -->
-                            <div class=" com_txt_center head_gnav_hbgmenu_img_size">
+                            <div class="  head_gnav_hbgmenu_img_size">
                                 <img src="./img/159x72.png" alt="ページロゴ">
                             </div>
                         </div>
@@ -119,68 +124,80 @@
                                 <div class=" ">
                                     <form class="head_form_rel" action="">
                                         <input class=" head_gnav_hmbmenu_search" size="24" type="search" name="search" placeholder="キーワードを入力">
-                                        <input class="head_gnav_hmbmenu_submit" type="submit" value="🔍" />
+                                        <input class="head_gnav_hmbmenu_submit fas" type="submit" value="&#xf002;" />
                                     </form>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                 </div>
-                <!-- キービジュアル -->
-                <div class="main-visual"></div>
+            </div>
+
+            <!-- キービジュアル -->
+            <div class="main-visual">
+                <div class="head_keyvisual_style"></div>
+            </div>
+        </div>
     </header>
 
 
     <main>
         <!-- 公園の検索機能 -->
-        <section class="search">
-            <div class="com_txt_center">
-                <h2>
+        <div class="top_contentsbacl_width">
+            <section class="search ">
+                <div class="">
+                    <h2>
                 <span class="top_parksearch_title">今週末、どこ行く？<br></span> <span>公園検索</span>
                 </h2>
-            </div>
-            <!-- 徳島のマップ表示・検索 -->
-            <div class="search-park">
-                <div class="top_parksearch_style top_margin_size_70or30">
-                    <p>※ここにマップが入ります</p>
                 </div>
-            </div>
-            <!-- カード型記事 -->
-            <div class="search-card">
-                <div class="com_txt_center">
-                    <h2><span>pickup！パーク</span></h2>
+                <!-- 徳島のマップ表示・検索 -->
+                <div class="search-park">
+                    <div class="top_parksearch_style top_margin_size_70or30">
+                        <p>※ここにマップが入ります</p>
+                    </div>
                 </div>
-                <!-- 公園ピックアップ  -->
-                <div class="top_parkpickup_style top_margin_size_70or30 ">
-                    <p>※ピックアップ機能</p>
+                <!-- カード型記事 -->
+                <div class="search-card">
+                    <div class="">
+                        <h2><span>pickup！パーク</span></h2>
+                    </div>
+                    <!-- 公園ピックアップ  -->
+                    <div class="top_parkpickup_style top_margin_size_70or30 top_marginbottom_100or50">
+                        <p>※ピックアップ機能</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- このサイトについて -->
-        <section class="outline">
-            <div class=" top_about_style ">
-                <h2>このサイトについて</h2>
-                <!-- about部分 flex指定-->
-                <div class="top_margin_size_70or30  top_flex_style">
-                    <div><img src="../front/assets/img/about.png" alt="このサイトについて"></div>
-                    <div>
-                        <div class="top_margin_size_50or30">
-                            <p>サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。の熱い説明文がはいります。サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。</p>
+        <div class="top_contentsbacl_width_cream">
+            <section class="outline">
+                <div class=" top_style ">
+                    <h2>このサイトについて</h2>
+                    <!-- about部分 flex指定-->
+                    <div class="top_margin_size_70or30  top_flex_style">
+                        <div><img src="../front/assets/img/about.png" alt="このサイトについて"></div>
+                        <div>
+                            <div class="top_margin_size_50or30">
+                                <p>サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。の熱い説明文がはいります。サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。</p>
+                            </div>
+                            <div class="next_btn top_next_btn_display">
+                                <img src="./assets/img/next_btn_white.png ">
+                                <p>続きを見る</p>
+                            </div>
                         </div>
-                        <div class="next_btn top_next_btn_display">※矢印ボタン</div>
-                    </div>
-                    <!-- レスポンシブ時に表示するボタン -->
-                    <div class="next_btn top_next_btn_display_responsive">
-                        ※レスポンシブ時矢印ボタン
+                        <!-- レスポンシブ時に表示するボタン -->
+                        <div class="next_btn top_next_btn_display_responsive">
+                            <img src="./assets/img/next_btn_white.png ">
+                            <p>続きを見る</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
 
 
 
-        </section>
+
 
 
         <!-- モデルコース -->
@@ -191,15 +208,19 @@
             <div class="top_flex_style">
                 <div class="top_margin_size_50or30">
                     <p>サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。の熱い説明文がはいります。サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。</p>
+                    <div class="next_btn top_next_btn_display">
+                        <img src="./assets/img/next_btn_white.png ">
+                        <p>一覧へ</p>
+                    </div>
                 </div>
                 <div>
                     <img src="../front/assets/img/about.png" alt="モデルコース">
                 </div>
-                <div class="next_btn top_next_btn_display">※矢印ボタン</div>
             </div>
             <!-- レスポンシブ時に表示するボタン -->
-            <div class="next_btn top_next_btn_display_responsive ">
-                ※レスポンシブ時矢印ボタン
+            <div class="next_btn top_next_btn_display_responsive">
+                <img src="./assets/img/next_btn_white.png ">
+                <p>一覧へ</p>
             </div>
             <!-- ピックアップ -->
             <div>
@@ -214,7 +235,7 @@
 
         <!-- 運動療育と遊具 -->
         <section class="nursing">
-            <div class=" top_about_style ">
+            <div class=" top_style ">
                 <h2>理学療法士の先生と考える<br>
                 運動療育と遊具</h2>
                 <!-- about部分 flex指定-->
@@ -224,11 +245,15 @@
                         <div class="top_margin_size_50or30">
                             <p>サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。の熱い説明文がはいります。サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。</p>
                         </div>
-                        <div class="next_btn top_next_btn_display">※矢印ボタン</div>
+                        <div class="next_btn top_next_btn_display">
+                            <img src="./assets/img/next_btn_white.png ">
+                            <p>続きを見る</p>
+                        </div>
                     </div>
                     <!-- レスポンシブ時に表示するボタン -->
                     <div class="next_btn top_next_btn_display_responsive">
-                        ※レスポンシブ時矢印ボタン
+                        <img src="./assets/img/next_btn_white.png ">
+                        <p>続きを見る</p>
                     </div>
                 </div>
             </div>
@@ -243,7 +268,10 @@
             <div class="top_flex_style">
                 <div class="top_margin_size_50or30">
                     <p>サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。の熱い説明文がはいります。サイトについての熱い説明文がはいります。サイトについての熱い説明文がはいります。</p>
-                    <div class="next_btn top_next_btn_display">※矢印ボタン</div>
+                    <div class="next_btn top_next_btn_display">
+                        <img src="./assets/img/next_btn_white.png ">
+                        <p>あそぶ</p>
+                    </div>
                 </div>
                 <div>
                     <img src="../front/assets/img/about.png" alt="ポポ二郎と虫キャッチ！">
@@ -251,12 +279,12 @@
 
             </div>
             <!-- レスポンシブ時に表示するボタン -->
-            <div class="next_btn top_next_btn_display_responsive ">
-                ※レスポンシブ時矢印ボタン
+            <div class="next_btn top_next_btn_display_responsive">
+                <img src="./assets/img/next_btn_white.png ">
+                <p>あそぶ</p>
             </div>
             <!-- ピックアップ -->
         </section>
-
 
 
         <!-- ニュース -->
@@ -274,10 +302,19 @@
             <div class="next_btn top_next_btn_display_responsive ">
                 ※レスポンシブ時矢印ボタン
             </div>
-        </section>]
+        </section>
+
 
         <!-- Instagram -->
-        <section class="sns"></section>
+        <section class="sns">
+            <h2>Instagram</h2>
+            <!-- Instagram用の要素 -->
+            <ul class="your-class">
+                <li><a href="#"><img src="" alt="インスタグラム1"></a></li>
+                <li><a href="#"><img src="" alt="インスタグラム2"></a></li>
+                <li><a href="#"><img src="" alt="インスタグラム3"></a></li>
+            </ul>
+        </section>
 
         <!-- リンク集 -->
         <section class="banner"></section>
@@ -288,9 +325,9 @@
     <footer>
         <!-- ローカルナビゲーション -->
         <div class="lnav">
-            <div class="foot_footer_style ">
+            <div class="foot_footer_style">
                 <!-- 項目 -->
-                <div class="foot_flex foot_fontsize_a">
+                <div class="foot_flex foot_fontsize_a foot_size">
                     <ul class="foot_col ">
                         <li>
                             <a>公園検索</a>

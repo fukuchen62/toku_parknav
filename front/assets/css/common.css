@@ -69,6 +69,7 @@ h4 {
 
 /* 矢印ボタン next→右向き prev→左向き*/
 .next_btn, .prev_btn {
+    /* 文字に対してrelativeを設定 */
     position: relative;
     width: 220px;
     margin: 50px auto;
@@ -111,8 +112,7 @@ h4 {
 
 /* カード1つ分の大枠 */
 .card_wrap {
-    background-color: #fff;
-    /* font-family: 'Zen Maru Gothic', sans-serif; */
+    font-family: 'Zen Maru Gothic', sans-serif;
     width: 300px;
     height: 430px;
     border: 1px solid #3e3a39;
@@ -126,6 +126,7 @@ h4 {
 .card_img {
     width: 100%;
     height: 200px;
+    border: 1px solid #3e3a39;
     /* 画像の角丸指定 */
     border-radius: 30px;
 }
@@ -134,8 +135,6 @@ h4 {
 .card_container {
     width: 100%;
     height: 230px;
-    /* 画像の角丸指定 */
-    border-radius: 30px;
     /* テキストを常に中央配置するための枠を指定 */
     position: relative;
 }
@@ -154,15 +153,13 @@ h4 {
 /* サブタイトル */
 .card_subttl {
     font-size: 20px;
-    line-height: 20px;
-    font-weight: normal;
+    font-weight: bold;
     margin-bottom: 8px;
 }
 
 /* タイトル */
 .card_ttl {
     font-size: 24px;
-    line-height: 24px;
     font-weight: bold;
     text-decoration: underline 1px solid;
     margin-bottom: 15px;
@@ -171,4 +168,5 @@ h4 {
 /* 記事本文の指定 */
 .card_txt p {
     font-size: 16px;
+    font-weight: bold;
 }
