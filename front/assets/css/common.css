@@ -112,6 +112,7 @@ h4 {
 
 /* カード1つ分の大枠 */
 .card_wrap {
+    background-color: #fff;
     font-family: 'Zen Maru Gothic', sans-serif;
     width: 300px;
     height: 430px;
@@ -135,6 +136,8 @@ h4 {
 .card_container {
     width: 100%;
     height: 230px;
+    /* 画像の角丸指定 */
+    border-radius: 30px;
     /* テキストを常に中央配置するための枠を指定 */
     position: relative;
 }
@@ -153,6 +156,8 @@ h4 {
 /* サブタイトル */
 .card_subttl {
     font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
     font-weight: bold;
     margin-bottom: 8px;
 }
@@ -160,6 +165,7 @@ h4 {
 /* タイトル */
 .card_ttl {
     font-size: 24px;
+    line-height: 24px;
     font-weight: bold;
     text-decoration: underline 1px solid;
     margin-bottom: 15px;
