@@ -55,13 +55,13 @@
                         // 大サイズ画像URL
                         //$pic_url = $pic['sizes']['midium'];
                         ?>
-                        <img src="<?php //echo $pic_url; 
-                                    ?>" alt="<?php //echo $pic['filename']; 
-                                                                    ?>">
+                        <img src="<?php //echo $pic_url;
+                                    ?>" alt="<?php //echo $pic['filename'];
+                                                ?>">
                     </li>
                     <li>
                         //<b>価格</b>
-                        <span><?php //the_field('course_discription1'); 
+                        <span><?php //the_field('course_discription1');
                                 ?></span>
                     </li>
                     <li>
@@ -72,11 +72,11 @@
                             // 大サイズ画像URL
                             //$pic_url = $pic['sizes']['medium'];
                             ?>
-                            <img src="<?php //echo $pic_url; 
-                                        ?>" alt="<?php //echo $pic['filename']; 
-                                                                        ?>">
+                            <img src="<?php //echo $pic_url;
+                                        ?>" alt="<?php //echo $pic['filename'];
+                                                    ?>">
                         </div>
-                        <span><?php //the_field('course_time1'); 
+                        <span><?php //the_field('course_time1');
                                 ?></span>
                     </li>
                 </ul>
