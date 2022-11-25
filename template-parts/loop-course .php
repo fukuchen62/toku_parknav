@@ -26,11 +26,11 @@
         // );
         // $args['tax_query'] = $taxquerysp;
 
-        $purpose_id = (int)get_query_var('purpose');
-        $the_purpose =  get_categories($purpose_id);
-        $purpose_name = $the_purpose->name;
+        // $purpose_id = (int)get_query_var('purpose');
+        // $the_purpose =  get_categories($purpose_id);
+        // $purpose_name = $the_purpose->name;
 
-        echo $purpose_name;
+        //echo $purpose_name;
         ?>
 
         <!-- 投稿日時 -->

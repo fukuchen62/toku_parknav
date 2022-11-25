@@ -18,7 +18,8 @@
 
         <!-- 3周年特別イベント -->
         <p class="sec_btn">
-            <a href="<?php echo home_url('/special/') ?>" class="btn btn-default">3周年特別イベント<i class="fas fa-angle-right"></i></a>
+            <a href="<?php //echo home_url('/special/') 
+                        ?>" class="btn btn-default">3周年特別イベント<i class="fas fa-angle-right"></i></a>
         </p>
 
         <header class="sec_header">
@@ -45,8 +46,8 @@
 
         <p class="sec_btn">
             <?php
-            $news = get_term_by('slug', 'news', 'category');
-            $newslink = get_term_link($news, 'category');
+            // $news = get_term_by('slug', 'news', 'category');
+            // $newslink = get_term_link($news, 'category');
             ?>
             <a href="<?php echo $newslink; ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
 
