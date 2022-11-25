@@ -62,13 +62,6 @@ li a:hover {
     color: darkgrey;
 }
 
-/* 「目的別」の文字スタイルを変更 */
-.category_subttl {
-    display: block;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
 /* TB幅 */
 @media screen and (min-width: 771px) {
 
