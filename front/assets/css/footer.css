@@ -9,6 +9,7 @@ footer {
 .foot_totopbnt_stl {
     border-radius: 50%;
     content: url(../img/totop150x150.png);
+    position: fixed;
 }
 
 /* ボタンの位置 */
