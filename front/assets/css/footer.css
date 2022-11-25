@@ -21,13 +21,17 @@ footer {
 
 /* ボタンの位置 */
 .foot_totopbnt_screenposition {
+    max-width: 1200px;
     width: 95%;
+    height: auto;
     margin: 0, auto;
+    position: relative;
 }
 
 /* ####################javascriptで使うクラス################### */
 /* モニタの右端から10％ モニタの真上から80%の位置に配置 */
 .JS_foot_totopbtn_posi {
+
     right: 10%;
     top: 80%;
 }
@@ -58,6 +62,8 @@ footer {
     animation-name: to_topanime;
 }
 
+
+
 /* アニメーション設定 */
 /* Z軸で回転しながら移動するアニメ */
 @keyframes to_topanime {
@@ -79,14 +85,28 @@ footer {
 @media screen and (max-width: 770px) {
     .foot_footer_style {
         width: 100%;
-        height: auto;
+        /* height: auto; */
+        max-height: 540px;
         /* background-color: #FFFCE3; */
-        padding-top: 50px;
+        /* padding-top: 50px; */
         padding-left: 50px;
         padding-right: 50px;
+        margin: 0 auto;
         /* padding-bottom: 42px; */
-
     }
+
+    /* フッターの範囲を伸ばすして要素を950に配置する処理 */
+    .footer_contentsbacl_width_cream {
+        padding-top: 30px;
+        /* border: 1px solid black; */
+        background-color: #FFFCE3;
+
+        /* このクラスを設定した要素を画面いっぱいに引き延ばす */
+        width: 100vw;
+        /* margin-leftで中央位置に配置されるように調整 */
+        margin-left: calc(-50vw + 50%);
+    }
+
 
     /* フッター項目の中に適用するフレックス */
     .foot_col {
@@ -112,7 +132,7 @@ footer {
 
     /* コピーライトのスタイル */
     .foot_copyright {
-        margin-top: 30px;
+        /* margin-top: 30px; */
         padding-bottom: 30px;
         text-align: center;
     }
@@ -127,13 +147,29 @@ footer {
 @media screen and (min-width: 771px) and (max-width:1199px) {
     .foot_footer_style {
         width: 100%;
-        height: auto;
+        /* height: auto; */
+        max-height: 450px;
         /* background-color: #FFFCE3; */
         padding-top: 80px;
         padding-left: 110px;
         padding-right: 110px;
-        padding-bottom: 42px;
+        /* 要素を中央に */
+        margin: 0 auto;
+        /* padding-bottom: 42px; */
     }
+
+    /* フッターの範囲を伸ばすして要素を950に配置する処理 */
+    .footer_contentsbacl_width_cream {
+        padding-top: 30px;
+        /* border: 1px solid black; */
+        background-color: #FFFCE3;
+
+        /* このクラスを設定した要素を画面いっぱいに引き延ばす */
+        width: 100vw;
+        /* margin-leftで中央位置に配置されるように調整 */
+        margin-left: calc(-50vw + 50%);
+    }
+
 
     /* フッター項目の中に適用するフレックス */
     .foot_col {
@@ -154,9 +190,9 @@ footer {
 
     /* コピーライトのスタイル */
     .foot_copyright {
-        margin-top: 180px;
-        text-align: flex-start;
-        padding-bottom: 80px;
+        /* margin-top: 180px; */
+        text-align: center;
+        padding-bottom: 30px;
     }
 
     .foot_small {
@@ -167,19 +203,36 @@ footer {
 /* PC */
 @media screen and (min-width: 1200px) {
     .foot_footer_style {
-        width: 100%;
-        height: auto;
+        max-width: 950px;
+        /* height: auto; */
+        max-height: 450px;
         /* background-color: #FFFCE3; */
-        padding-top: 80px;
+        /* padding-top: 80px; */
         padding-left: 110px;
         padding-right: 110px;
-        padding-bottom: 42px;
+        /* 要素を中央に */
+        margin: 0 auto;
+        /* padding-bottom: 42px; */
     }
+
+    /* フッターの範囲を伸ばすして要素を950に配置する処理 */
+    .footer_contentsbacl_width_cream {
+        padding-top: 80px;
+        /* border: 1px solid black; */
+        background-color: #FFFCE3;
+
+        /* このクラスを設定した要素を画面いっぱいに引き延ばす */
+        width: 100vw;
+        /* margin-leftで中央位置に配置されるように調整 */
+        margin-left: calc(-50vw + 50%);
+    }
+
 
     /* フッター項目の中に適用するフレックス */
     .foot_col {
         display: flex;
         flex-flow: column;
+        gap: 0px 200px;
 
     }
 
@@ -187,6 +240,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        max-width: 950px;
     }
 
     /* フッター項目のフォントサイズ */
@@ -198,7 +252,7 @@ footer {
     /* コピーライトのスタイル */
 
     .foot_copyright {
-        margin-top: 180px;
+        /* margin-top: 180px; */
         text-align: center;
         padding-bottom: 80px;
 
