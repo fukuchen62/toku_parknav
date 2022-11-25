@@ -1,57 +1,22 @@
-<!-- <article class="news"> -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('course test'); ?>>
-
-    <!-- アイキャッチ画像 -->
-    <div class="news_pic">
-        <a href="<?php the_permalink(); ?>">
+<section class="menu">
+    <a href="<?php the_permalink(); ?>">
+        <figure class="menu_pic">
             <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail() ?>
+            <?php the_post_thumbnail('medium') ?>
             <?php else : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
             <?php endif; ?>
-        </a>
-    </div>
-
-    <div class="news_meta">
-        <!-- カテゴリー -->
-        <?php
-        //the_category();
-        // $taxquerysp = array(
-        //     'relation' => 'AND',
-        // );
-        // $taxquerysp[] = array(
-        //     'taxonomy' => 'purpose',
-        //     'terms' => $purposes->slug,
-        //     'field' => 'slug',
-        // );
-        // $args['tax_query'] = $taxquerysp;
-
-        // $purpose_id = (int)get_query_var('purpose');
-        // $the_purpose =  get_categories($purpose_id);
-        // $purpose_name = $the_purpose->name;
-
-        //echo $purpose_name;
-        ?>
-
-        <!-- 投稿日時 -->
-        <!-- <time class="news_time" datetime="<?php //the_time('Y-m-d');
-                                                ?>">
-            <?php //the_time('Y年m月d日');
-            ?>
-        </time> -->
-
-    </div>
-
-    <!-- 記事のタイトル -->
-    <h2 class="news_title">
-        <a href="<?php the_permalink(); ?>">
-            <?php the_title(); ?>
-        </a>
-    </h2>
-    <!-- 記事の概要 -->
-    <div class="news_desc">
-        <p><?php the_excerpt(); ?></p>
-        <p><a href="<?php //the_permalink();
-                    ?>">[続きを読む]</a></p>
-    </div>
-</article>
+        </figure>
+        <h3 class="menu_title"><?php
+                                $pic = get_field('course_image1');
+                                // 大サイズ画像URL
+                                $pic_url = $pic['sizes']['midium'];
+                                ?>
+            <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>">
+        </h3>
+        <p class="menu_price"><?php the_field('course_time1') ?></p>
+        <div class="menu_desc">
+            <?php the_field('course_discription1'); ?>
+        </div>
+    </a>
+</section>
