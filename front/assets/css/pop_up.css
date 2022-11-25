@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* ポップアップ****************************************** */
+/* flexの指定 */
+.category ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.c_1 ul li {
+    width: 170px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+/* 項目4つずつで表示 */
+/* .category ul { */
+/* display: flex; */
+/* flex-direction: row; */
+/* justify-content: space-between; */
+/* align-items: center; */
+/* margin-bottom: 15px; */
+/* } */
+
+.c_2 ul li,
+.c_3 ul li {
+    width: 170px;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.category ul li span {
+    font-size: small;
+}
+
+.search_wrap {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-align: center;
+    width: 1000px;
+    border: 1px solid #3E3A39;
+    margin: auto;
+    padding: 80px 100px;
+}
+
+.search_container {
+    /* width: 800px; */
+}
+
+.search_ttl {
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.category {
+    margin-bottom: 50px;
+}
+
+/* チェックボックスを文字のラインと揃える */
+.category input {
+    vertical-align: baseline;
+}
+
+.category_ttl {
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    /* 文字を上下中央に配置 */
+    line-height: 40px;
+}
+
+.c_ttl_1 {
+    background-color: rgba(255, 57, 123, 0.5);
+}
+
+.c_ttl_2 {
+    background-color: rgba(57, 189, 255, 0.5);
+}
+
+.c_ttl_3 {
+    background-color: rgba(255, 235, 57, 0.5);
+}
+
+
+
+/* 1案：真ん中100px余白 */
+.search_btn {
+    background-color: #fffce3;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 160px;
+    height: 80px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search_btn_reset {
+    /* font-family: 'Zen Maru Gothic', sans-serif;
+    width: 160px;
+    height: 80px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold; */
+    /* 余白 */
+    margin-right: 100px;
+}
+
+/* .search_btn input:first-of-type {
+    margin-right: 100px;
+} */
+
+.search_btn_search {}
+
+/* 2案：自動余白 */
+/* .search_btn {
+    display: flex;
+    justify-content: space-around;
+} */

@@ -16,11 +16,15 @@ main {
 }
 
 section {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     /* テスト用(要素が入るイメージ) */
     width: 100%;
+    /* 可視化用のスタイル */
     height: 400px;
+
+    /* height: auto; */
+    /* sectionのカラー */
     background-color: rgb(204, 204, 204);
 }
 
@@ -31,14 +35,7 @@ footer {
     background-color: rgb(255, 252, 227);
 }
 
-/* フレックスのスタイル */
-.top_flex_style {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 125px;
-    margin-right: 125px;
-}
+
 
 .top_flex_size {
     max-width: 477px;
@@ -56,8 +53,10 @@ footer {
         margin-top: 30px;
     }
 
-    .top_margin_size_100or50 {
-        margin-top: 50px;
+
+
+    .top_margin_size_50or30 {
+        margin-top: 30px;
     }
 
     /* マージン下 */
@@ -73,7 +72,7 @@ footer {
     /* 検索エリアのスタイル */
     .top_parksearch_style {
         width: 100%;
-        height: 600px;
+        height: 100%;
         background-color: #FFFFFF;
     }
 
@@ -88,6 +87,26 @@ footer {
     .top_about_style {
         width: 100%;
         height: auto;
+    }
+
+    /* フレックスのスタイル */
+    .top_flex_style {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-left: 125px;
+        margin-right: 125px;
+        flex-flow: column;
+    }
+
+    /* ネクストボタンの表示切替 */
+    .top_next_btn_display {
+        display: none;
+    }
+
+    /* レスポンシブ時ネクストボタンの表示切替 */
+    .top_next_btn_display_responsive {
+        display: block;
     }
 }
 
@@ -101,8 +120,10 @@ footer {
 
     }
 
-    .top_margin_size_100or50 {
-        margin-top: 50px;
+
+
+    .top_margin_size_50or30 {
+        margin-top: 30px;
     }
 
     /* マージン下 */
@@ -118,7 +139,7 @@ footer {
     /* 検索エリアのスタイル */
     .top_parksearch_style {
         width: 100%;
-        height: 600px;
+        height: 100%;
         background-color: #FFFFFF;
     }
 
@@ -133,6 +154,26 @@ footer {
     .top_about_style {
         width: 100%;
         height: auto;
+    }
+
+    /* フレックスのスタイル */
+    .top_flex_style {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-left: 125px;
+        margin-right: 125px;
+        flex-flow: column;
+    }
+
+    /* ネクストボタンの表示切替 */
+    .top_next_btn_display {
+        display: none;
+    }
+
+    /* レスポンシブ時ネクストボタンの表示切替 */
+    .top_next_btn_display_responsive {
+        display: block;
     }
 }
 
@@ -148,8 +189,10 @@ footer {
 
     }
 
-    .top_margin_size_100or50 {
-        margin-top: 100px;
+
+
+    .top_margin_size_50or30 {
+        margin-top: 50px;
     }
 
     /* マージン下 */
@@ -165,7 +208,7 @@ footer {
     /* 検索エリアのスタイル */
     .top_parksearch_style {
         width: 100%;
-        height: auto;
+        height: 100%;
         background-color: #FFFFFF;
     }
 
@@ -182,4 +225,25 @@ footer {
         height: auto;
     }
 
+    /* フレックスのスタイル */
+    .top_flex_style {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-left: 125px;
+        margin-right: 125px;
+        /* flex-flow: column; */
+    }
+
+    /* ネクストボタンの表示切替 */
+    .top_next_btn_display {
+        display: block;
+    }
+
+    /* レスポンシブ時ネクストボタンの表示切替 */
+    .top_next_btn_display_responsive {
+        display: none;
+    }
 }
+
+/* メモ　親の高さが400pxのためそれより大きくなって子がはみ出ている */
