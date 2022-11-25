@@ -27,6 +27,8 @@ h4 {
 
 /* パンくず */
 .pkz {
+    display: inline-block;
+    width: 100%;
     text-align: left;
     margin-left: 20px;
 }
@@ -126,7 +128,7 @@ li a:hover {
 /* TB幅 */
 @media screen and (min-width: 771px) {
     .pagination {
-        margin: 0 auto;
+        margin: 0 auto 50px;
     }
 }
 
@@ -147,7 +149,7 @@ li a:hover {
     width: 100%;
     height: 120px;
     background-color: cadetblue;
-    margin-top: 80px;
+    /* margin-top: 80px; */
 }
 
 /* フッターのダミーブロック */
