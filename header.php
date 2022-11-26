@@ -49,7 +49,7 @@
     <header class="header">
         <div class="header_inner">
             <div class="header_logo">
-                <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo@2x.png" alt="BISTRO CALME"></a></h1>
+                <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo@2x.png" alt="とくしま GO!GO! パークなび"></a></h1>
             </div>
 
             <div class="header_desc">
@@ -64,17 +64,17 @@
         <div class="header_links">
             <nav class="gnav">
                 <!-- <ul class="">
-                    <li><a href="<?php //echo home_url('/'); 
+                    <li><a href="<?php //echo home_url('/');
                                     ?>">HOME</a></li>
-                    <li><a href="<?php //echo home_url('/about/'); 
+                    <li><a href="<?php //echo home_url('/about/');
                                     ?>">わたしたちについて</a></li>
-                    <li><a href="<?php //echo home_url('/access/'); 
+                    <li><a href="<?php //echo home_url('/access/');
                                     ?>">アクセス</a></li>
-                    <li><a href="<?php //echo home_url('/category/news'); 
+                    <li><a href="<?php //echo home_url('/category/news');
                                     ?>">最新情報</a></li>
-                    <li><a href="<?php //echo home_url('/menu/'); 
+                    <li><a href="<?php //echo home_url('/menu/');
                                     ?>">メニュー紹介</a></li>
-                    <li><a href="<?php //echo home_url('/contact/'); 
+                    <li><a href="<?php //echo home_url('/contact/');
                                     ?>">お問い合わせ</a></li>
 
                 </ul> -->

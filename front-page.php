@@ -29,7 +29,7 @@
 
             <div class="col-md-4">
                 <!-- テンプレートパーツを読み込む -->
-                <?php //get_template_part('template-parts/loop', 'news') ?>
+                <?php get_template_part('template-parts/loop', 'post') ?>
             </div>
 
             <?php endwhile; ?>
@@ -42,9 +42,9 @@
             // $news = get_term_by('slug', 'news', 'category');
             // $newslink = get_term_link($news, 'category');
             ?>
-            <a href="<?php //echo $newslink; ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
+            <!-- <a href="<?php //echo $newslink; ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a> -->
 
-            <a href="<?php //echo home_url('/category/news/') ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
+            <!-- <a href="<?php //echo home_url('/post') ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a> -->
         </p>
     </div>
 </section>

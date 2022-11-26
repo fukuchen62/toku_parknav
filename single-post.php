@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">最新情報<span>NEWS</span></h2>
+<!-- <h2 class="pageTitle">最新情報<span>NEWS</span></h2> -->
 
 <!-- パンくずリストを読み込む -->
 <?php get_template_part('template-parts/breadcrumb'); ?>
@@ -36,23 +36,6 @@
                             <!-- 記事の詳細内容 -->
                             <?php the_content(); ?>
                         </div>
-
-                        <!-- コメントフォーム -->
-                        <?php comments_template(); ?>
-                    </div>
-
-                    <div class="postLinks">
-                        <!-- <div class="postLink postLink-prev"><a href="#"><i class="fas fa-chevron-left"></i>前の記事のタイトル</a></div> -->
-
-                        <div class="postLink postLink-prev">
-                            <?php previous_post_link('<i class="fas fa-chevron-left"></i>%link') ?>
-                        </div>
-
-                        <!-- <div class="postLink postLink-next"><a href="#">次の記事のタイトル<i class="fas fa-chevron-right"></i></a></div> -->
-
-                        <div class="postLink postLink-next">
-                            <?php next_post_link('%link<i class="fas fa-chevron-right"></i>') ?>
-                        </div>
                     </div>
                 </article>
 
@@ -64,14 +47,8 @@
 
             <!-- サイドバー -->
             <div class="col-12 col-md-3">
-                <!-- 直近の記事サイドバー -->
-                <?php get_sidebar('latests') ?>
-
                 <!-- カテゴリサイドバー -->
-                <?php get_sidebar('categories') ?>
-
-                <!-- アーカイブサイトバー -->
-                <?php get_sidebar('archives') ?>
+                <?php get_sidebar('category') ?>
             </div>
         </div>
     </div>
