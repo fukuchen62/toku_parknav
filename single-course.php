@@ -35,25 +35,25 @@
         </div>
 
         <div class="info">
+            <?php //get_template_part('template-parts/loop','spend') ?>
+
+
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
                         <span>
                             <?php
-                            $img1 = get_field('course_image1');
-                            if(!empty($img1)):
+                            $img = get_field('course_image1');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo $img1['sizes']['medium']; ?>" alt="<?php echo $img1['alt']; ?>">
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
                             <?php endif; ?>
                         </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription1');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time1');?>
                         </span>
@@ -64,22 +64,19 @@
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
                         <span>
-                        <?php
-                            $img2 = get_field('course_image2');
-                            if(!empty($img2)):
+                            <?php
+                            $img = get_field('course_image2');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo the_field('course_image2')['sizes']['medium']; ?>" alt="<?php //echo $img2['alt']; ?>">
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
                             <?php endif; ?>
                         </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription2');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time2');?>
                         </span>
@@ -90,20 +87,19 @@
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
-                        <?php
-                            $img3 = get_field('course_image3');
-                            if(!empty($img3)):
+                        <span>
+                            <?php
+                            $img = get_field('course_image3');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo $img3['sizes']['medium']; ?>" alt="<?php echo $img3['alt']; ?>">
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
                             <?php endif; ?>
+                        </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription3');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time3');?>
                         </span>
@@ -114,20 +110,19 @@
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
-                        <span><?php
-                            $img4 = get_field('course_image3');
-                            if(!empty($img4)):
+                        <span>
+                            <?php
+                            $img = get_field('course_image4');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo $img4['sizes']['medium']; ?>" alt="<?php echo $img4['alt']; ?>">
-                            <?php endif; ?></span>
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
+                            <?php endif; ?>
+                        </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription4');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time4');?>
                         </span>
@@ -138,20 +133,19 @@
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
-                        <span><?php
-                            $img5 = get_field('course_image5');
-                            if(!empty($img5)):
+                        <span>
+                            <?php
+                            $img = get_field('course_image5');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo $img5['sizes']['medium']; ?>" alt="<?php echo $img5['alt']; ?>">
-                            <?php endif; ?></span>
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
+                            <?php endif; ?>
+                        </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription5');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time5');?>
                         </span>
@@ -162,20 +156,19 @@
             <div class="container">
                 <ul class="info_list">
                     <li>
-                        <!-- <b>価格</b> -->
-                        <span><?php
-                            $img6 = get_field('course_image6');
-                            if(!empty($img6)):
+                        <span>
+                            <?php
+                            $img = get_field('course_image6');
+                            if(!empty($img)):
                             ?>
-                            <img src="<?php echo $img6['sizes']['medium']; ?>" alt="<?php echo $img6['alt']; ?>">
-                            <?php endif; ?></span>
+                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
+                            <?php endif; ?>
+                        </span>
                     </li>
                     <li>
-                        <!-- <b>カロリー</b> -->
                         <span><?php the_field('course_discription6');?></span>
                     </li>
                     <li>
-                        <!-- <b>アレルギー</b> -->
                         <span>
                             <?php the_field('course_time6');?>
                         </span>
