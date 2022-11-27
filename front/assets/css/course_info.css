@@ -126,6 +126,48 @@ td {
     padding: 10px;
 }
 
+/* アイコンにホバーすると説明が出る */
+/* いいね！ボタン（ハート） */
+.iineicon_tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.iineicon_tooltip a {
+    margin: 0;
+    padding: 0;
+}
+
+.iineicon_description {
+    display: none;
+    position: absolute;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 1.3em;
+    color: #fff;
+    border-radius: 5px;
+    background: #3E3A39;
+    width: 70px;
+}
+
+.iineicon_description:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 15px solid transparent;
+    border-top: 15px solid #3E3A39;
+    margin-left: -15px;
+}
+
+.iineicon_tooltip:hover .iineicon_description {
+    display: inline-block;
+    top: -50px;
+    left: -20px;
+}
+
 
 /* TB幅 */
 @media screen and (min-width: 771px) {
