@@ -176,6 +176,28 @@
                 </ul>
             </div>
         </div>
+
+        <!-- <div>
+            <?php
+            $args = array(
+                'post_type' => 'course',
+                'orderby' => 'rand',
+                'posts_per_page' => 3,
+                'post__not_in' => array($post->ID)
+            );
+            $post_query = new WP_Query($args);
+            if($post_query->have_posts()):
+                while($post_query->have_posts()):
+                    $post_query->the_posts();?>
+            <div>
+            <?php get_template_part('template-parts/loop','course') ?>
+            </div>
+            <?php
+                endwhile;
+            endif;
+            wp_reset_postdata();
+            ?>
+        </div> -->
     </section>
 </main>
 
