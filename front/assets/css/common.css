@@ -22,6 +22,11 @@ body {
     background-color: #FFFCE3;
 }
 
+/* リンクのhover時にカーソルをポインターにする */
+a:hover {
+    cursor: pointer;
+}
+
 /* コンテンツ幅を950pxまでに設定 */
 main {
     max-width: 950px;
