@@ -12,6 +12,7 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
     text-align: center;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* 「公園条件検索」の設定 */
@@ -72,7 +73,8 @@ body {
     width: 150px;
     /* 文字の左詰め */
     text-align: left;
-    margin-left: 12px;
+    /* カラム落ちのときにチェックボックスがはみ出さない */
+    margin-left: 15px;
     /* リスト間の高さ */
     line-height: 2em;
 }
@@ -163,7 +165,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 50px;
 }
 
 /* ボタンデザイン */
