@@ -3,15 +3,12 @@
 /* 全体のリストスタイル削除 */
 body {
     list-style: none;
-    /* width: 100%; */
 }
 
 /* 「公園検索条件」エリア全体 */
 .search_wrap {
     background-color: rgba(255, 252, 227, 0.5);
     border-radius: 20px;
-    /* border: 1px solid #3E3A39; */
-    /* border-top: 1px solid #3E3A39; */
     font-family: 'Zen Maru Gothic', sans-serif;
     text-align: center;
     margin-top: 50px;
@@ -19,15 +16,12 @@ body {
 
 /* 「公園条件検索」の設定 */
 .search_ttl {
-    /* margin-bottom: 50px; */
-    /* margin: 20px 0; */
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 /* 各項目の大きさ */
 .item {
-    /* width: 300px; */
     width: 100%;
     height: 100%;
     margin: 0 auto 15px;
@@ -43,7 +37,6 @@ body {
     width: 80%;
     height: 40px;
     border-radius: 30px;
-    /* margin-bottom: 30px; */
     margin: 0 auto 15px;
     font-weight: bold;
     /* 文字を上下中央に配置 */
@@ -69,7 +62,6 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    /* justify-content: space-between; */
     width: 100%;
     text-align: center;
 }
@@ -82,8 +74,7 @@ body {
     /* 文字の左詰め */
     text-align: left;
     margin-left: 12px;
-    /* リスト間の高さを文字の高さに揃える */
-    /* line-height: normal; */
+    /* リスト間の高さ */
     line-height: 2em;
 }
 
@@ -103,7 +94,6 @@ body {
 
 /* 一部文字を小さく表示 */
 .item ul li span {
-    /* font-size: small; */
     font-size: 14px;
 }
 
@@ -114,8 +104,6 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    /* align-items: center; */
-    /* margin-bottom: 15px; */
     padding: 0 10px;
 }
 
@@ -145,7 +133,6 @@ body {
 
         height: 40px;
         border-radius: 10px;
-        /* margin-bottom: 30px; */
         margin: 0 auto 15px;
         /* 文字を上下中央に配置 */
         line-height: 40px;
@@ -189,7 +176,7 @@ body {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border: 1px solid #3E3A39;
+    border: 2px solid #3E3A39;
     cursor: pointer;
 }
 
