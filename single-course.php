@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<h2 class="pageTitle">モデルコース一覧</h2>
 
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
@@ -36,7 +36,7 @@
 
         <div class="info">
 
-            <?php for ($i = 1; $i <= 8; $i++) : ?>
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
             <?php
                         //写真パス
                         $pic = get_field('course_image' . $i);
