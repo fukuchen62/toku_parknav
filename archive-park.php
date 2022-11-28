@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">地域<span>area</span></h2>
+<h2 class="pageTitle">公園検索<span>park</span></h2>
 
 <!-- パンくずリストを読み込む -->
 <?php get_template_part('template-parts/breadcrumb'); ?>
@@ -57,11 +57,11 @@ $ares = get_terms($args);
                 <?php
                         // 投稿タイプ
                         $args = array(
-                            'post_type' => 'area',
+                            'post_type' => 'park',
                             'posts_per_page' => -1,
                         );
 
-                        // 料理の種類で絞り込む
+                        // 地域の種類で絞り込む
                         $taxquerysp = array(
                             'relation' => 'AND',
                         );
@@ -86,7 +86,7 @@ $ares = get_terms($args);
 
                 <!-- 繰り返しメニューのカード型 -->
                 <div class="col-md-3">
-                    <?php get_template_part('template-parts/loop', 'area') ?>
+                    <?php get_template_part('template-parts/loop', 'park') ?>
                 </div>
                 <?php endwhile; ?>
                 <?php endif; ?>
