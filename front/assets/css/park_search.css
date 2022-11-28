@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+/* 全体のリストスタイル削除 */
+body {
+    list-style: none;
+}
+
+/* 「公園検索条件」エリア全体 */
+.search_wrap {
+    background-color: rgba(255, 252, 227, 0.5);
+    border-radius: 20px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* 「公園条件検索」の設定 */
+.search_ttl {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 各項目の大きさ */
+.item {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto 15px;
+}
+
+/* チェックボックスを文字のラインと揃える */
+.item input {
+    vertical-align: baseline;
+}
+
+/* 項目のタイトル */
+.item_ttl {
+    width: 80%;
+    height: 40px;
+    border-radius: 30px;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    /* 文字を上下中央に配置 */
+    line-height: 40px;
+}
+
+/* 項目タイトルの各背景色 */
+.i_ttl_1 {
+    background-color: rgba(255, 57, 123, 0.5);
+}
+
+.i_ttl_2 {
+    background-color: rgba(57, 189, 255, 0.5);
+}
+
+.i_ttl_3 {
+    background-color: rgba(255, 235, 57, 0.5);
+}
+
+/* flexの指定 */
+.item ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
+/* 項目詳細の要素の調整 */
+.item ul li {
+    /* 要素幅の微調整 */
+    width: 150px;
+    /* 文字の左詰め */
+    text-align: left;
+    margin-left: 12px;
+    /* リスト間の高さ */
+    line-height: 2em;
+}
+
+/* チェックボックスの大きさ・色 */
+.item input[type="checkbox"] {
+    transform: scale(1.6);
+    accent-color: #3e3a39;
+    cursor: pointer;
+}
+
+/* 文字をクリックしても選択可能にする
+・チェックボックスとの間余白・ */
+.item ul li label {
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+/* 一部文字を小さく表示 */
+.item ul li span {
+    font-size: 14px;
+}
+
+/* 項目「地域」のflex */
+.item_area ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 10px;
+}
+
+/* 「地域別」の項目詳細の大きさ */
+.item_area ul li {
+    width: auto;
+}
+
+/* メディアクエリ ******************************/
+/* 幅771pxからはここを読み込む */
+@media screen and (min-width: 771px) {
+
+    /* 「公園検索条件」エリア全体 */
+    .search_wrap {
+        border: 1px solid #3E3A39;
+    }
+
+    /* 項目範囲の幅を広げる */
+    .item {
+        width: 800px;
+    }
+
+    /* 3項目のタイトルの角丸 */
+    .item_ttl {
+        width: 90%;
+        border-radius: 10px;
+
+        height: 40px;
+        border-radius: 10px;
+        margin: 0 auto 15px;
+        /* 文字を上下中央に配置 */
+        line-height: 40px;
+    }
+
+    /* flexの指定 */
+    .item ul {
+        padding: 0 30px;
+        margin: 0 auto;
+    }
+
+    /* 項目リストの要素の大きさの調整 */
+    .item ul li {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    /*  */
+    .item_tool ul {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+
+/* クリア・検索ボタンの設定********************* */
+/* ボタン位置調整・下余白 */
+.search_btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+/* ボタンデザイン */
+.search_btn {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 160px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #3E3A39;
+    cursor: pointer;
+}
+
+/* リセットボタンの設定 */
+.search_btn_reset {
+    background-color: #fff;
+}
+
+/* 検索ボタンの設定 */
+.search_btn_search {
+    color: #fff;
+    background-color: #3E3A39;
+}
+
+@media screen and (min-width: 771px) {
+    .search_btn {
+        height: 80px;
+    }
+}
