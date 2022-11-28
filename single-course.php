@@ -36,13 +36,15 @@
 
         <div class="info">
 
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
+            <?php for ($i = 1; $i <= 8; $i++) : ?>
             <?php
                         //写真パス
-                        $pic = get_field('course_image' . $i);
-                        // print_r($pic);
-
-                        $pic_url = $pic['sizes']['large'];
+                        $pic = "";
+                        if (get_field('course_image' . $i) != null) {
+                            $pic = get_field('course_image' . $i);
+                            // print_r($pic);
+                            $pic_url = $pic['sizes']['large'];
+                        }
 
                         // ディスクリプション
                         $course_discription = get_field('course_discription' . $i);
