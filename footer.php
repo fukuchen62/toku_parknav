@@ -12,16 +12,16 @@
                     <li><a href="#">お問い合わせ</a></li>
                 </ul> -->
                 <?php
-                // $args = array(
-                //     'menu' => 'footer-menu',
-                //     'menu_class' => '',
-                //     'container' => false,
-                // );
-                // wp_nav_menu($args);
+                $args = array(
+                    'menu' => 'footer-menu',
+                    'menu_class' => '',
+                    'container' => false,
+                );
+                wp_nav_menu($args);
                 ?>
             </nav>
             <div class="footer_copyright">
-                <small>&copy; BISTRO CALME All rights reserved.</small>
+                <small>&copy; とくしまGo!Go!パークなび All rights reserved.</small>
             </div>
         </div>
     </div>
