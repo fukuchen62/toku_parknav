@@ -69,7 +69,6 @@ body {
 /* 項目詳細の要素の調整 */
 .item ul li {
     /* 要素幅の微調整 */
-    width: 175px;
     width: 150px;
     /* 文字の左詰め */
     text-align: left;
@@ -180,15 +179,15 @@ body {
     cursor: pointer;
 }
 
-/* クリアボタンの設定 */
+/* リセットボタンの設定 */
 .search_btn_reset {
-    color: #fff;
-    background-color: #3E3A39;
+    background-color: #fff;
 }
 
 /* 検索ボタンの設定 */
 .search_btn_search {
-    background-color: #fff;
+    color: #fff;
+    background-color: #3E3A39;
 }
 
 @media screen and (min-width: 771px) {
