@@ -35,15 +35,12 @@
         </div>
 
         <div class="info">
-            <?php //get_template_part('template-parts/loop','spend')
-                    ?>
 
-
-            <?php for ($i = 1; $i <= 8; $i++) : ?>
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
             <?php
                         //写真パス
-                        $pic = get_field('course_image1');
-                        print_r($pic);
+                        $pic = get_field('course_image' . $i);
+                        // print_r($pic);
 
                         $pic_url = $pic['sizes']['large'];
 
@@ -53,8 +50,7 @@
                         $course_time = get_field('course_time' . $i);
                         ?>
 
-            <?php if (!empty($img)) :
-                        ?>
+            <?php if (!empty($pic)) : ?>
             <div class="container">
                 <ul class="info_list">
                     <li>
@@ -74,7 +70,8 @@
             </div>
             <?php endif; ?>
 
-            <?php endfor; ?>
+            <?php endfor;
+                    ?>
 
     </section>
 </main>
