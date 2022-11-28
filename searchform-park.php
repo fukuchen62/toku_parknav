@@ -26,7 +26,7 @@
     <?php endif; ?>
 
     <h3>遊具</h3>
-    <?php $terms = get_terms('target'); ?>
+    <?php $terms = get_field('playground_slug'); ?>
     <?php if ($terms) : ?>
     <ul class="terms">
         <?php foreach ($terms as $term) : ?>
@@ -38,6 +38,6 @@
     </ul>
     <?php endif; ?>
 
-    <input type="submit" value="検索">
     <input type="clear" value="クリア">
+    <input type="submit" value="検索">
 </form>
