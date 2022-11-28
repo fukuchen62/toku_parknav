@@ -36,7 +36,7 @@
 
         <div class="info">
 
-            <?php for ($i = 1; $i <= 3; $i++) : ?>
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
             <?php
                         //写真パス
                         $pic = get_field('course_image' . $i);
