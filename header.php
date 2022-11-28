@@ -63,18 +63,18 @@
 
         <div class="header_links">
             <nav class="gnav">
-                <!-- <ul class="">
-                    <li><a href="<?php //echo home_url('/');
-                                    ?>">HOME</a></li>
-                    <li><a href="<?php //echo home_url('/about/');
+                <!-- <ul class=""> -->
+                <!-- <li><a href="<?php //echo home_url('/'); -->
+                ?>">HOME</a></li>
+                <li><a href="<?php //echo home_url('/about/');
                                     ?>">わたしたちについて</a></li>
-                    <li><a href="<?php //echo home_url('/access/');
+                <li><a href="<?php //echo home_url('/access/');
                                     ?>">アクセス</a></li>
-                    <li><a href="<?php //echo home_url('/category/news');
+                <li><a href="<?php //echo home_url('/category/news');
                                     ?>">最新情報</a></li>
-                    <li><a href="<?php //echo home_url('/menu/');
+                <li><a href="<?php //echo home_url('/menu/');
                                     ?>">メニュー紹介</a></li>
-                    <li><a href="<?php //echo home_url('/contact/');
+                <li><a href="<?php //echo home_url('/contact/');
                                     ?>">お問い合わせ</a></li>
 
                 </ul> -->

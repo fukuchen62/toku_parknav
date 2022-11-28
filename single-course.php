@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<h2 class="pageTitle">モデルコース一覧</h2>
 
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
@@ -27,7 +27,7 @@
 
                     <div class="col-12 col-md-6">
                         <div class="article_pic">
-                            <?php the_post_thumbnail('large')?>
+                            <?php the_post_thumbnail('large') ?>
                         </div>
                     </div>
                 </div>
@@ -35,147 +35,44 @@
         </div>
 
         <div class="info">
-            <?php //get_template_part('template-parts/loop','spend') ?>
 
+            <?php for ($i = 1; $i <= 4; $i++) : ?>
+            <?php
+                        //写真パス
+                        $pic = get_field('course_image' . $i);
+                        // print_r($pic);
 
+                        $pic_url = $pic['sizes']['large'];
+
+                        // ディスクリプション
+                        $course_discription = get_field('course_discription' . $i);
+                        // コース時間
+                        $course_time = get_field('course_time' . $i);
+                        ?>
+
+            <?php if (!empty($pic)) : ?>
             <div class="container">
                 <ul class="info_list">
                     <li>
                         <span>
-                            <?php
-                            $img = get_field('course_image1');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
+                            <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
                         </span>
                     </li>
                     <li>
-                        <span><?php the_field('course_discription1');?></span>
+                        <span><?php echo $course_discription; ?></span>
                     </li>
                     <li>
                         <span>
-                            <?php the_field('course_time1');?>
+                            <?php echo $course_time; ?>
                         </span>
                     </li>
                 </ul>
             </div>
+            <?php endif; ?>
 
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <span>
-                            <?php
-                            $img = get_field('course_image2');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
-                        </span>
-                    </li>
-                    <li>
-                        <span><?php the_field('course_discription2');?></span>
-                    </li>
-                    <li>
-                        <span>
-                            <?php the_field('course_time2');?>
-                        </span>
-                    </li>
-                </ul>
-            </div>
+            <?php endfor;
+                    ?>
 
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <span>
-                            <?php
-                            $img = get_field('course_image3');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
-                        </span>
-                    </li>
-                    <li>
-                        <span><?php the_field('course_discription3');?></span>
-                    </li>
-                    <li>
-                        <span>
-                            <?php the_field('course_time3');?>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <span>
-                            <?php
-                            $img = get_field('course_image4');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
-                        </span>
-                    </li>
-                    <li>
-                        <span><?php the_field('course_discription4');?></span>
-                    </li>
-                    <li>
-                        <span>
-                            <?php the_field('course_time4');?>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <span>
-                            <?php
-                            $img = get_field('course_image5');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
-                        </span>
-                    </li>
-                    <li>
-                        <span><?php the_field('course_discription5');?></span>
-                    </li>
-                    <li>
-                        <span>
-                            <?php the_field('course_time5');?>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <span>
-                            <?php
-                            $img = get_field('course_image6');
-                            if(!empty($img)):
-                            ?>
-                            <img src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
-                            <?php endif; ?>
-                        </span>
-                    </li>
-                    <li>
-                        <span><?php the_field('course_discription6');?></span>
-                    </li>
-                    <li>
-                        <span>
-                            <?php the_field('course_time6');?>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </section>
 </main>
 
