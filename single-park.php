@@ -76,7 +76,7 @@
                 <?php
                 $pic = get_field('playground_image2');
                 // 大サイズ画像URL
-                //$pic_ur2 = $pic['sizes']['large'];
+                $pic_ur2 = $pic['sizes']['large'];
                 ?>
                 <img src="<?php echo $pic_ur2; ?>" alt="<?php echo $pic['filename']; ?>">
             </div>
@@ -99,7 +99,7 @@
                 <?php
                 $pic = get_field('playground_image3');
                 // 大サイズ画像URL
-                //$pic_ur3 = $pic['sizes']['large'];
+                $pic_ur3 = $pic['sizes']['large'];
                 ?>
                 <img src="<?php echo $pic_ur3; ?>" alt="<?php echo $pic['filename']; ?>">
             </div>
