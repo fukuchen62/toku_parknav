@@ -25,7 +25,8 @@
                         <!-- 公園タイトル、概要テキスト、写真を読み込む -->
                         <h2 class="article_title"><?php the_title(); ?></h2>
                         <div class="content">
-                            <?php the_content(); ?>
+                            <?php the_content();
+                            ?>
                         </div>
                     </div>
                     <?php the_field('discription'); ?>
@@ -75,9 +76,9 @@
                 <?php
                 $pic = get_field('playground_image2');
                 // 大サイズ画像URL
-                //$pic_url = $pic['sizes']['large'];
+                //$pic_ur2 = $pic['sizes']['large'];
                 ?>
-                <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>">
+                <img src="<?php echo $pic_ur2; ?>" alt="<?php echo $pic['filename']; ?>">
             </div>
         </div>
 
@@ -98,9 +99,9 @@
                 <?php
                 $pic = get_field('playground_image3');
                 // 大サイズ画像URL
-                //$pic_url = $pic['sizes']['large'];
+                //$pic_ur3 = $pic['sizes']['large'];
                 ?>
-                <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>">
+                <img src="<?php echo $pic_ur3; ?>" alt="<?php echo $pic['filename']; ?>">
             </div>
         </div>
 
@@ -202,7 +203,15 @@
     <!-- ループの終了 -->
     <?php endif; ?>
 
+
+    <!-- インスタの表示 -->
+
+
+
+
 </main>
+
+
 
 <?php //フッターテンプレートファイルを読み込む
 ?>
