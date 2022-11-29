@@ -42,12 +42,7 @@
                         $pic = "";
                         if (get_field('course_image' . $i)) {
                             $pic = get_field('course_image' . $i);
-<<<<<<< Updated upstream
-                            //print_r($pic);
-                            $pic_url = $pic['sizes']['large'];
-=======
                             $pic_url = esc_url($pic['url']);
->>>>>>> Stashed changes
                         }
 
                         // ディスクリプション
