@@ -7,6 +7,31 @@
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
 
+<!-- サイドバーの設計 -->
+<?php
+// タクソノミーpurposeの要素を取得する
+$args = array(
+    'taxonomy' => 'purpose',
+);
+$purposes = get_terms($args);
+?>
+<!-- タクソノミーのメニューボタンを作成 -->
+<?php if (!empty($purposes)) :
+?>
+<div class="pageNav">
+    <ul>
+        <!-- kindに属する種類を一つずつリンクボタンを作成 -->
+        <?php foreach ($purposes as $key => $purpose) : ?>
+        <li>
+            <a href="<?php echo get_term_link($purpose); ?>">
+                <?php echo $purpose->name; ?>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>
+
 <!-- ループの開始 -->
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : ?>

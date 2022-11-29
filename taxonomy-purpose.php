@@ -65,18 +65,16 @@ $purposes = get_terms($args);
 
                 $query = new WP_Query($args);
 
-                ?>
-
-                <?php if ($query->have_posts()) : ?>
-                <?php while ($query->have_posts()) : ?>
-                <?php $query->the_post(); ?>
+                if ($query->have_posts()) :
+                    while ($query->have_posts()) :
+                        $query->the_post(); ?>
 
                 <div class="col-md-3">
                     <?php get_template_part('template-parts/loop', 'course') ?>
                 </div>
 
-                <?php endwhile; ?>
-                <?php endif; ?>
+                <?php endwhile;
+                endif; ?>
 
             </div>
         </div>
