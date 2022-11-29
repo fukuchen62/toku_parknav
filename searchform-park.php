@@ -5,7 +5,7 @@ form method="get" action="<?php echo home_url('/'); ?>">
 <ul class="terms">
     <?php foreach ($terms as $term) : ?>
     <li>
-        <input type="radio" name="area" value="<?php echo esc_attr($term->slug); ?>">
+        <input type="radio" name="area[]" value="<?php echo esc_attr($term->slug); ?>">
         <?php echo esc_html($term->name); ?>
     </li>
     <?php endforeach; ?>
@@ -18,7 +18,7 @@ form method="get" action="<?php echo home_url('/'); ?>">
 <ul class="terms">
     <?php foreach ($terms as $term) : ?>
     <li>
-        <input type="radio" name="purpose" value="<?php echo esc_attr($term->slug); ?>">
+        <input type="radio" name="purpose[]" value="<?php echo esc_attr($term->slug); ?>">
         <?php echo esc_html($term->name); ?>
     </li>
     <?php endforeach; ?>
@@ -31,7 +31,7 @@ form method="get" action="<?php echo home_url('/'); ?>">
 <ul class="terms">
     <?php foreach ($terms as $term) : ?>
     <li>
-        <input type="checkbox" name="playground" value="<?php echo esc_attr($term->slug); ?>">
+        <input type="checkbox" name="playground[]" value="<?php echo esc_attr($term->slug); ?>">
         <?php echo esc_html($term->name); ?>
     </li>
     <?php endforeach; ?>
@@ -39,5 +39,6 @@ form method="get" action="<?php echo home_url('/'); ?>">
 <?php endif; ?>
 
 <input type="clear" value="クリア">
+<input type="hidden" name="s" value="<?php the_search_query(); ?>">
 <input type="submit" value="検索">
 </form>
