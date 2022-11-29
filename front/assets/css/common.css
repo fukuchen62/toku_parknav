@@ -120,7 +120,9 @@ h4 {
     background-color: #fff;
     width: 300px;
     height: 430px;
-    border: 1px solid #3e3a39;
+    /* 枠線表示(写真との間に隙間ができない) */
+    outline: 2px solid #3e3a39;
+    outline-offset: -2px;
     /* カードの角丸指定 */
     border-radius: 30px;
     /* カラム落ちしたときの下余白 */
