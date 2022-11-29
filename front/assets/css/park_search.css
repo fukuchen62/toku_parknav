@@ -303,13 +303,14 @@ body {
 
 /* リセットボタンの設定 */
 .search_btn_reset {
-    background-color: #fff;
+    color: #fff;
+    background-color: #3E3A39;
+
 }
 
 /* 検索ボタンの設定 */
 .search_btn_search {
-    color: #fff;
-    background-color: #3E3A39;
+    background-color: #fff;
 }
 
 @media screen and (min-width: 771px) {
