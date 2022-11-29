@@ -1,331 +1,313 @@
 @charset "UTF-8";
-/* テスト用 */
-/* 実際の画像サイズを考慮して設定してください */
 
-/* .test_w100 {
-    width: 100%;
-} */
-
-header {
-    /* max-width: 950px; */
-    /* テスト用(要素が入るイメージ) */
-    width: 100%;
-    /* height: 600px; */
-    /* margin: auto; */
-    background-color: rgb(255, 252, 227);
-}
-
-
-.header_size {
-    max-width: 950px;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    margin-bottom: 100px;
-    background-color: rgb(255, 252, 227);
-}
-
-/* グローバルナビのスタイル */
-
-.head_gnav_style {
-    /* グローバルナビの大きさ950pxに設定 */
-    max-width: 1200px;
-    /* width: 100%; */
+.head_bg {
+    width: 100vw;
     height: 80px;
-    border: 1px solid black;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    margin: auto;
+    background-color: #fff;
     position: fixed;
-    left: 0;
-    right: 0;
     z-index: 90;
 }
 
-.head_hbg_fixd {
-    position: fixed;
-}
-
-.head_logo_size {
-    width: 200px;
-}
-
-/* ###########キービジュアル######### */
-
-.head_keyvisual_style {
-    width: auto;
-    margin: auto;
-}
-
-/* ###########ハンバーガーメニューのスタイル############ */
-/* 三本線 */
-.head_gnav_hbgmenu_style {
-    font-size: 44px;
-    font-weight: bold;
-    line-height: 20px;
+.head_menu {
+    height: 80px;
+    left: 0;
     right: 0;
-    /* padding */
-    padding-right: 20px;
-    cursor: pointer;
+    z-index: 90;
+    font-weight: bold;
 }
 
-/* jsで操作するクラス */
-.JS_head_gnav_display_none {
+.head_menu_item {
     display: none;
 }
 
-/* ハンバーガーメニュー */
-.head_gnav_hbgmenu {
-
-    width: 100%;
-    /* 2022/11/21 高さの値は仮 */
-    height: auto;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    /* バックのカラー */
-    background-color: #FFFCE3;
-    /* グラデーション */
-    /* background: rgb(57, 189, 255);
-    background: linear-gradient(180deg, rgba(57, 189, 255, 0.49933476808692223) 0%, rgba(255, 235, 57, 0.5021358885351015) 35%, rgba(255, 57, 123, 0.5049370089832808) 100%); */
-    /* ハンバーガーメニューを一番上に設定 */
-    z-index: 100;
+.head_logo {
+    width: 130px;
+    margin-left: 20px;
 }
 
-/* メニュー内のロゴのスタイル */
-.head_gnav_hbgmenu_img_size {
-    width: 100%;
-    height: 160px;
+/* PC幅 */
+@media screen and (min-width: 1200px) {
+    .head_content {
+        max-width: 1200px;
+        z-index: 100;
+        /* 要素を中央配置にする */
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
 
+    .head_menu_item {
+        display: block;
+        letter-spacing: 0.12em;
+    }
+
+    .head_logo {
+        margin-left: 0;
+    }
 }
 
-/* ハンバーガー用フレックス */
-.head_gnav_hbgmenu_flex {
-    display: flex;
-    flex-flow: column;
-}
-
-/* ハンバーガーメニュー用フォントサイズ */
-.head_gnav_hbgmenu_fontsize {
-    font-size: 16px;
-}
-
-/* 閉じるボタンのスタイル */
-.head_gnav_hbgclosebtn_style {
-    font-size: 40px;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-/* 閉じるボタンCLOSEの文字 */
-.head_gnav_hbgclose_text {
-    font-size: 12px;
-}
-
-/* 閉じるボタンを配置するためのフレックス */
-.head_gnav_hbgclosebtn_flex {
-    display: flex;
-    justify-content: right;
-}
-
-/* 閉じるボタンのボックス */
-.head_gnav_hbgclosebtnbox {
-    width: 32px;
-    height: 48px;
-    margin-right: 20px;
-}
-
-/* メニュー内の区切り*/
-.head_gnav_hbgmenu_separator {
-    /* border-bottom-width: 1px; */
-    margin-top: 30px;
-    text-align: center;
-}
-
-/* メニュー内のボタン */
-.head_gnav_hbgmenu_colbtn {
-    border: solid;
-    border-radius: 45px;
-    width: 80%;
-    height: 50px;
-    /* ボタンを要素内の中央に配置 */
-    margin-left: auto;
-    margin-right: auto;
-    /* line-heightで文字を中央に配置するようにしている。 */
-    line-height: 50px;
-}
-
-/*  ハンバーガーメニュー用の検索ボックス */
-.head_gnav_hmbmenu_search {
-    display: block;
-    /* border: 1px solid black; */
-    width: 80%;
-    height: 60px;
-    /* ボタンを要素内の中央に配置 */
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #FFFFFF;
-}
-
-/*  ハンバーガーメニュー用の検索送信ボタン */
-.head_gnav_hmbmenu_submit {
-    position: absolute;
-    right: 12%;
-    bottom: 10px;
-    padding: 0;
-    cursor: pointer;
-}
-
-
-/* 表示非表示に使用するクラス */
-.JS_head_gnav_hbgmenu_menudisplay_none {
-    /* 初期位置は-3000pxに配置*/
-    transition: all 1s;
-    left: -5000px;
-}
-
-.JS_head_gnav_hbgmenu_menudisplay_block {
-    /*展開すると0pxに移動*/
-    transition: all 1s;
-    left: 0;
-}
-
-
-
-/* ################ナビ用フレックス############## */
-.head_gnav_flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-
-/* ###############検索フォームのスタイル################## */
-/* --検索フォームの親要素-- */
-.head_form_rel {
-    position: relative;
-}
-
-
-/* --検索ボタン-- */
-.head_gnav_submit {
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
-    padding: 0;
-    cursor: pointer;
-
-}
-
-/* 検索ボックス */
-.head_gnav_srchbox {
-    display: block;
-    border: 1px solid black;
+/* キーワード検索ボックス */
+.head_form {
+    border: 3px solid #3E3A39;
     background-color: #FFFFFF;
     border-radius: 20px;
     width: 185px;
-    height: 60px;
+    height: 40px;
+    padding-left: 10px;
 }
 
-/* グローバルナビ用のマージン */
-.head_gnav_pad {
-    padding-left: 20px;
-    padding-right: 29px;
+.head_search {
+    position: relative;
 }
 
-/* 見出し（メニュー）のスタイル */
-.head_gnav_menulist_top_style {
-    margin-top: 120px;
-    font-size: 24px;
-    text-align: center;
+/* 虫眼鏡アイコンをhead_search（フォームとアイコンをくくるdiv）に対して配置する */
+.head_submit {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 全体調整 */
+.hbg_menubox * {
+    font-size: 16px;
+}
+
+.hbg_menubox li {
+    font-size: 14px;
+}
+
+/* ＝＝＝ハンバーガーメニュー＝＝＝ */
+
+/* input非表示 */
+.input-hidden {
+    display: none;
+}
+
+/* label */
+.hbg_btn {
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 0;
+    z-index: 9999;
+    width: 4em;
+    height: 4em;
+}
+
+/* メニュー展開時にハンバーガーアイコンを固定 */
+#hbg:checked~.hbg_btn {
+    position: fixed;
+}
+
+/* 円を用いたハンバーガーデザイン */
+/* 外側の円 */
+.hbg_btn:before {
+    content: "";
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #333;
+    /* 外側の円（枠線）の色 */
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* 真ん中の円 */
+.hbg_btn-circle {
+    height: 3px;
+    width: 25px;
+    background: #39BDFF;
+    /* 真ん中の線（円）の色 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+}
+
+/* 上下の線 */
+.hbg_btn-circle:before, .hbg_btn-circle:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    left: 50%;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.hbg_btn-circle:before {
+    border-top: 4px solid #39BDFF;
+    /* ハンバーガーアイコン上側の線の色 */
+    transform: translate(-50%, -300%);
+}
+
+.hbg_btn-circle:after {
+    border-bottom: 4px solid #39BDFF;
+    /* ハンバーガーアイコン下側の線の色 */
+    transform: translate(-50%, 200%);
+}
+
+/* アイコン･アニメーション */
+#hbg:checked~.hbg_btn .hbg_btn-circle {
+    height: 25px;
+    border-radius: 50%;
+}
+
+#hbg:checked~.hbg_btn .hbg_btn-circle:before {
+    width: 0;
+}
+
+#hbg:checked~.hbg_btn .hbg_btn-circle:after {
+    width: 0;
+}
+
+/* 真ん中の×印 */
+.hbg_btn:after {
+    content: "×";
+    font-size: 0px;
+    position: absolute;
+    color: #fff;
+    /* ハンバーガーの"×"マークの色 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .2s;
+}
+
+#hbg:checked~.hbg_btn:after {
+    font-size: 25px;
+}
+
+/* メニューエリア */
+.hbg_menuwrap {
+    position: fixed;
+    height: 100%;
+    background: #FFFCE3;
+    /* メニューエリアの背景色 */
+    padding: 5em 3% 2em;
+    z-index: 9998;
+    transition: .3s;
+    overflow-y: scroll;
+    /* メニュー内容が多い場合に縦スクロール */
+    top: 0;
+    left: 100%;
+    width: 70%;
+}
+
+/* メニューリスト */
+.hbg_menulist {
+    margin-right: 3%;
+    /* !important＝最優先事項 */
+    padding-left: 5% !important;
+    list-style: none;
+}
+
+.hbg_menulist li a {
+    text-decoration: none;
+    color: #3E3A39;
+    /* メニューエリアの文字色 */
+    display: block;
+}
+
+/* 円を用いたメニューリスト */
+.hbg_menulist-circle li {
+    border: 3px solid #3E3A39;
+    margin-bottom: 5px;
+    border-radius: 2em;
+    background-color: #fff;
+}
+
+.hbg_menulist-circle li a {
+    padding: .5em 2.5em .5em 1em;
+    position: relative;
+}
+
+.hbg_menulist-circle a:before {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background: #FF397B;
+    /* メニューリスト矢印背景（円）の色 */
+    border-radius: 50%;
+    top: 50%;
+    right: .5em;
+    transform: translate(0, -50%);
+}
+
+.hbg_menulist-circle a:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2.5px solid;
+    border-color: #fff #fff transparent transparent;
+    /* メニューリスト矢印の色（#fffのみ変更） */
+    top: 50%;
+    right: .5em;
+    transform: translate(-80%, -50%) rotate(45deg);
+}
+
+/* メニューエリア･アニメーション */
+/* 右から */
+#hbg:checked~.hbg_menuwrap {
+    left: 30%;
+}
+
+/* コンテンツカバー */
+#hbg:checked~.hbg_cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9997;
+    background: rgba(3, 3, 3, .5);
+    display: block;
 }
 
 
-/* メディアクエリ */
-/* スマホ */
-@media screen and (max-width: 770px) {
-
-    .head_gnav_menu_font {
-        font-size: 10px;
-    }
-
-    /* グローバルメニューの項目の表示非表示 */
-    .head_gnav_menu_display {
-        display: none;
-    }
-
-    .head_gnav_item {
-        width: auto;
-        height: 100px;
-        margin: 0;
-        min-width: 0;
-        /* border: 1px solid black; */
-    }
-
-    /* ハンバーガーの表示非表示 */
-    .head_gnav_hbgmenu_display {
-        display: block;
-    }
-
-
+/* hbgのキーワード検索ボックス */
+.hbg_form {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 185px;
+    height: 43px;
+    padding: 10px 12px;
+    outline: none;
+    border: none;
 }
 
-/* タブレット */
-@media screen and (min-width: 771px) and (max-width:1199px) {
-
-    .head_gnav_menu_font {
-        font-size: 10px;
-    }
-
-    /* グローバルメニューの項目の表示非表示 */
-    .head_gnav_menu_display {
-        display: none;
-    }
-
-    .head_gnav_item {
-
-        width: auto;
-        height: 100px;
-        margin: 0;
-        min-width: 0;
-        /* border: 1px solid black; */
-    }
-
-    /* ハンバーガーの表示非表示 */
-    /* ハンバーガーの表示非表示 */
-    .head_gnav_hbgmenu_display {
-        display: block;
-    }
-
+.hbg_search {
+    position: relative;
 }
 
-/* PC */
-@media screen and (min-width: 1200px) {
+.hbg_search_box {
+    margin-top: 50px;
+}
 
-    .head_gnav_menu_font {
-        font-size: 14px;
-    }
+/* 虫眼鏡アイコンをhead_search（フォームとアイコンをくくるdiv）に対して配置する */
+.hbg_submit {
+    position: absolute;
+    top: 30%;
+    right: 3%;
+    padding: 0;
+    cursor: pointer;
+}
 
-    /* グローバルメニューの項目の表示非表示 */
-    .head_gnav_menu_display {
-        display: block;
-    }
 
-    .head_gnav_item {
-
-        /* width: auto; */
-        height: 100px;
-        margin: 0;
-        min-width: 0;
-        /* border: 1px solid black; */
-    }
-
-    /* ハンバーガーの表示非表示 */
-
-    .head_gnav_hbgmenu_display {
+/* PCではハンバーガーメニューを表示しない */
+@media (min-width: 1200px) {
+    .hbg_menubox {
         display: none;
     }
 }
