@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+header {
+    font-weight: bold;
+}
+
 .head_bg {
     width: 100vw;
     height: 80px;
