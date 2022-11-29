@@ -181,68 +181,28 @@
 
 
     <!-- 近くの公園（３つ）カード型を呼び出す -->
-    <!-- 以下参考コード、あとで修正 -->
     <?php
-    // おすすめの記事一覧を取得
-    //$posts =// get_field('recommend');
-    //if ($posts) :
-    //
+    $args = array(
+        'post_type' => 'park', // 投稿タイプを指定
+        'orderby' => 'rand', // ランダムで表示
+        'posts_per_page' => 3, // 表示する記事数
+        'post__not_in' => array($post->ID) // 現在表示している記事を除外
+    );
+    $post_query = new WP_Query($args);
+
+    if ($post_query->have_posts()) :
+        while ($post_query->have_posts()) : $post_query->the_post();
     ?>
-    <div class="post-wrapper">
-        <?php //foreach ($posts as $post) :
-        ?>
-        <div class="post-list">
-            <a href="<?php //echo get_permalink($post->ID);
-                        ?>">
-                <img src="<?php //echo wp_get_attachment_url(get_post_thumbnail_id($post->ID));
-                            ?>">
-                <?php //echo get_the_title($post->ID);
-                ?>
-            </a>
-        </div>
-        <?php //endforeach;
-        ?>
+    <!-- 表示領域 -->
+    <!-- 繰り返しメニューのカード型 -->
+    <div class="col-md-3">
+        <?php get_template_part('template-parts/loop', 'park') ?>
     </div>
-    <? php // endif;
-    ?>
+    <?php endwhile; ?>
+    <!-- ループの終了 -->
+    <?php endif; ?>
+
 </main>
-
-<!--参考その２  -->
-
-<?php
-//$args = array(
-//'post_type' => 'park', // 投稿タイプを指定
-//'orderby' => 'rand', // ランダムで表示
-//'posts_per_page' => 3, // 表示する記事数
-//'post__not_in' => array($post->ID) // 現在表示している記事を除外
-//);
-//$post_query = new WP_Query($args);
-//if ($post_query->have_posts()) :
-//while ($post_query->have_posts()) : $post_query->the_post();
-//
-?>
-
-<!-- ここにhtml -->
-<? php // endwhile;
-//else :
-//
-?>
-<!-- <p>記事は見つかりませんでした</p> -->
-<? //php
-//endif;
-//wp_reset_postdata();
-?>
-
-
-
-
-
-<?php //endwhile;
-?>
-<!-- ループの終了 -->
-<?php //endif;
-?>
-
 
 <?php //フッターテンプレートファイルを読み込む
 ?>
