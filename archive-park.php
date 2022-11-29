@@ -5,7 +5,7 @@
 <h2 class="pageTitle">公園検索<span>park</span></h2>
 
 <!-- パンくずリストを読み込む -->
-<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
 
 <?php
 // タクソノミの要素を取得する

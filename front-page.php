@@ -44,7 +44,7 @@
             ?>
             <a href="<?php echo home_url('newslist/') ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a>
 
-            <!-- <a href="<?php //echo home_url('/post') 
+            <!-- <a href="<?php //echo home_url('/post')
                             ?>" class="btn btn-default">最新情報の一覧<i class="fas fa-angle-right"></i></a> -->
         </p>
     </div>
@@ -58,9 +58,9 @@
 
         <div class="row">
             <div class="col-md-6">
-                <a href="<?php //echo get_permalink('36') 
-                            ?>" class="bnr" style="background-image: url('<?php //echo get_template_directory_uri(); 
-                                                                                                        ?>/assets/img/home/bnr_about@2x.jpg')">
+                <a href="<?php //echo get_permalink('36')
+                            ?>" class="bnr" style="background-image: url('<?php //echo get_template_directory_uri();
+                                                                            ?>/assets/img/home/bnr_about@2x.jpg')">
                     <div class="bnr_inner">
                         わたしたちについて<span>ABOUT</span>
                     </div>
@@ -68,9 +68,9 @@
             </div>
 
             <div class="col-md-6">
-                <a href="<?php //echo get_permalink('44') 
-                            ?>" class="bnr" style="background-image: url('<?php //echo get_template_directory_uri(); 
-                                                                                                        ?>/assets/img/home/bnr_access@2x.jpg')">
+                <a href="<?php //echo get_permalink('44')
+                            ?>" class="bnr" style="background-image: url('<?php //echo get_template_directory_uri();
+                                                                            ?>/assets/img/home/bnr_access@2x.jpg')">
                     <div class="bnr_inner">
                         アクセス<span>ACCESS</span>
                     </div>
@@ -99,14 +99,18 @@
         </div>
 
         <div class="sec_btn">
-            <?php //echo do_shortcode('[mwform_formkey key="81"]'); 
+            <?php //echo do_shortcode('[mwform_formkey key="81"]');
             ?>
 
-            <a href="<?php //echo home_url('/contact/') 
+            <a href="<?php //echo home_url('/contact/')
                         ?>" class="btn btn-default">メールフォーム<i class="fas fa-angle-right"></i></a>
         </div>
     </div>
 </section> -->
+
+
+<!-- インスタの表示 -->
+<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 
 <?php //フッターテンプレートファイルを読み込む
 ?>

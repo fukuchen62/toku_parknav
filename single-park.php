@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <!-- パンくずリストを読み込む -->
-<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
 
 <!-- ループの開始 -->
 <?php //if (have_posts()) :
@@ -202,12 +202,6 @@
     <?php endwhile; ?>
     <!-- ループの終了 -->
     <?php endif; ?>
-
-
-    <!-- インスタの表示 -->
-
-
-
 
 </main>
 

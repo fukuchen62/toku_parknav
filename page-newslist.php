@@ -5,7 +5,7 @@
 <h2 class="pageTitle">おしらせ</h2>
 
 <!-- パンくずリストを読み込む -->
-<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
 
 <?php
 $args = array(
