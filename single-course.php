@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<h2 class="pageTitle">モデルコース一覧</h2>
 
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
@@ -40,10 +40,9 @@
             <?php
                         //写真パス
                         $pic = "";
-                        if (get_field('course_image' . $i) != null) {
+                        if (get_field('course_image' . $i)) {
                             $pic = get_field('course_image' . $i);
-                            // print_r($pic);
-                            $pic_url = $pic['sizes']['large'];
+                            $pic_url = esc_url($pic['url']);
                         }
 
                         // ディスクリプション
@@ -52,12 +51,14 @@
                         $course_time = get_field('course_time' . $i);
                         ?>
 
-            <?php if (!empty($pic)) : ?>
+            <?php if ($pic != '') : ?>
             <div class="container">
                 <ul class="info_list">
                     <li>
                         <span>
-                            <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
+                            <img src="<?php echo $pic_url;
+                                                        ?>" alt="<?php echo $pic['alt'];
+                                                                    ?>">
                         </span>
                     </li>
                     <li>
@@ -72,8 +73,7 @@
             </div>
             <?php endif; ?>
 
-            <?php endfor;
-                    ?>
+            <?php endfor; ?>
 
     </section>
 </main>

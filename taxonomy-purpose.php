@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<h2 class="pageTitle">モデルコース</h2>
 
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
@@ -16,7 +16,8 @@ $args = array(
 $purposes = get_terms($args);
 ?>
 <!-- タクソノミーのメニューボタンを作成 -->
-<?php if (!empty($purposes)) : ?>
+<?php if (!empty($purposes)) :
+?>
 <div class="pageNav">
     <ul>
         <!-- kindに属する種類を一つずつリンクボタンを作成 -->
@@ -33,14 +34,11 @@ $purposes = get_terms($args);
 
 <main class="main">
     <?php
-	// URLのパラメータからタクソノミの値を取得する
-	$purpose_slug = get_query_var('purpose');
-	// タクソノミの値にてそのタクソノミを取得する
-	$purpose = get_term_by('slug',$purpose_slug,'purpose');
-
-    //if( !empty($purpose)):
-        //foreach($purpose as $purpose):
-	?>
+    // URLのパラメータからタクソノミの値を取得する
+    $purpose_slug = get_query_var('purpose');
+    // タクソノミの値にてそのタクソノミを取得する
+    $purpose = get_term_by('slug', $purpose_slug, 'purpose');
+    ?>
 
     <section class="sec">
         <div class="container">
@@ -50,38 +48,39 @@ $purposes = get_terms($args);
 
             <div class="row justify-content-center">
 
-            <?php
+                <?php
                 $args = array(
                     'post_type' => 'course',
-                    'taxonomy' => 'purpose',
-                    'term' => $purpose->slug,
-                    'posts_per_page' => -1,
+                    'post_per_page' => -1,
                 );
-                $the_query = new WP_Query($args);
 
-                //ループの開始
-                if ($the_query->have_posts()) :
-                while ($the_query->have_posts()) :
-                //メニューを取得して$postに代入
-                $the_query->the_post(); ?>
+                $taxquerysp = array('relation' => 'AND');
+                $taxquerysp[] = array(
+                    'taxonomy' => 'purpose',
+                    'terms' => $purpose->slug,
+                    'field' => 'slug',
+                );
 
-                <!-- 繰り返しメニューのカード型 -->
+                $args['tax_query'] = $taxquerysp;
+
+                $query = new WP_Query($args);
+
+                ?>
+
+                <?php if ($query->have_posts()) : ?>
+                <?php while ($query->have_posts()) : ?>
+                <?php $query->the_post(); ?>
+
                 <div class="col-md-3">
-                    <?php get_template_part('template-parts/loop', 'menu') ?>
+                    <?php get_template_part('template-parts/loop', 'course') ?>
                 </div>
 
                 <?php endwhile; ?>
-                <!-- ループの終了 -->
                 <?php endif; ?>
 
             </div>
         </div>
     </section>
-
-    <?php
-        //endforeach;
-    //endif;
-    ?>
 </main>
 
 <?php //フッターテンプレートファイルを読み込む
