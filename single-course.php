@@ -42,7 +42,7 @@
                         $pic = "";
                         if (get_field('course_image' . $i) != null) {
                             $pic = get_field('course_image' . $i);
-                            // print_r($pic);
+                            //print_r($pic);
                             $pic_url = $pic['sizes']['large'];
                         }
 
@@ -57,7 +57,9 @@
                 <ul class="info_list">
                     <li>
                         <span>
-                            <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
+                            <img src="<?php echo $pic_url;
+                                                        ?>" alt="<?php echo $pic['alt'];
+                                                                    ?>">
                         </span>
                     </li>
                     <li>

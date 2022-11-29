@@ -2,7 +2,7 @@
 ?>
 <?php get_header(); ?>
 
-<h2 class="pageTitle">モデルコース<span>course</span></h2>
+<h2 class="pageTitle">モデルコース</h2>
 
 <!-- パンくずリストを読み込む -->
 <?php echo do_shortcode('[flexy_breadcrumb]'); ?>
@@ -34,11 +34,6 @@ $purposes = get_terms($args);
 <main class="main">
     <section class="sec">
         <div class="container">
-            <!-- <div class="sec_header">
-                <h2 class="title title-jp"><?php //echo $kind->name; ?></h2>
-                <span class="title title-en"><?php //echo strtoupper($kind->slug); ?></span>
-            </div> -->
-
             <div class="row justify-content-center">
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : ?>
