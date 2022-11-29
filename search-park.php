@@ -37,26 +37,57 @@ $areas = get_terms($args);
     $selected_terms_purpose = $_GET['purpose'];
     $selected_terms_playground = $_GET['playground'];
 
-    if ($selected_terms) {};
+    // $args = array(
+    //     'post_type' => 'park',
+    //     'post_per_page' => -1,
+    // );
+
+    if ($selected_terms_area) {
+        $taxquery_area = array('relation' => 'AND');
+        $taxquery_area[] = array(
+            'taxonomy' => 'area',
+            'term' => $selected_terms_area,
+            'field' => 'slug',
+        );
+    };
+
+    if ($selected_terms_purpose) {
+        $taxquery_purpose = array('relation' => 'AND');
+        $taxquery_purpose[] = array(
+            'taxonomy' => 'purpose',
+            'term' => $selected_terms_purpose,
+            'field' => 'slug',
+        );
+    }
+
+    if ($selected_terms_playground) {
+        $metaquery = array('relation' => 'AND');
+        $metaquery[] = array(
+            'key' => 'playground_slug',
+            'value' => $selected_terms_playground,
+            'type' => 'CHAR',
+        );
+    }
 
     $args = array(
         'post_type' => 'park',
-        'post_per_page' => -1,
+        'posts_per_page' => -1,
+        's' => get_search_query(),
+        'tax_query' => array(
+            'relation' => 'AND',
+            $taxquery_area,
+            $taxquery_purpose,
+            $metaquery
+        ),
     );
 
-    $taxquerysp = array('relation' => 'AND');
-    $taxquerysp[] = array(
-        'taxonomy' => 'area',
-        'term' => ,
-        'field' => 'slug',
-    );
-
-    $args['tax_query'] = $taxquerysp;
+    // $args['tax_query']
+    //     = $taxquery_area;
 
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
-        while($query->have_posts()) :
+        while ($query->have_posts()) :
             $query->the_post(); ?>
 
     <div class="col-md-3">
@@ -65,27 +96,6 @@ $areas = get_terms($args);
 
     <?php endwhile; ?>
     <?php endif; ?>
-
-
-    // if(selected_terms){
-    // $taxquery_taxonomy = array(
-
-    // )
-    // }
-
-    // $args = array(
-    // 'post_type' => 'park',
-    // 'tax_query' => array(
-    // 'relation' => 'AND',
-    // array(
-    // 'taxonomy' => 'area',
-    // 'field' => 'slug',
-    // 'terms' => array('east','west','north'),
-    // 'operator' => 'IN',
-    // )
-    // ),
-    // );
-    ?>
 </main>
 
 <?php get_footer(); ?>
