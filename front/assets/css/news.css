@@ -56,7 +56,7 @@ section {
     border-radius: 20px;
 }
 
-li {
+.sidebar>ul>li {
     line-height: 3;
 }
 
