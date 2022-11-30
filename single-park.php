@@ -42,8 +42,6 @@
                             <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>">
                         </div>
                     </div>
-
-                    <div><?php echo get_favorites_button(get_the_ID()); ?></div>
                 </div>
             </div>
         </div>
