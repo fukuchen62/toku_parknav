@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    list-style: none;
+}
+
+.foot_copyright {
+    font-size: 12px;
+    margin-top: 100px;
+}
+
+.foot_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 300;
+}
+
+.foot_bgcolor_cream {
+    margin: 0 calc(50% - 50vw);
+    padding: 50px calc(50vw - 50% + 8px) 30px;
+    width: 100vw;
+    background-color: #FFFCE3;
+}
+
+.foot_fontbold {
+    font-weight: bold;
+}
+
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+    .foot_content {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
+    .foot_menu {
+        display: flex;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+/* ＝＝＝トップに戻るボタン＝＝＝ */
+
+/* ボタンの見た目・配置 */
+.foot_top {
+    content: url(../img/totop150x150.png);
+    position: fixed;
+    max-width: 1200px;
+    right: 5%;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+/* キーフレーム設定のためのクラス */
+.foot_rotate {
+    animation-timing-function: ease-in-out;
+
+    /* infiniteを指定すると無限回繰り返す */
+    /* 1を指定してアニメを再生するのを1回だけにしている */
+    animation-iteration-count: 1;
+
+    /* アニメの向きを設定 */
+    /* 今回は反復させないのでnomarで設定 */
+    animation-direction: normal;
+    animation-duration: 1.5s;
+}
+
+/* 要素にキーフレームで設定したアニメをさせるためのクラス */
+.foot_top {
+    animation-name: foot_rotate;
+}
+
+
+/* アニメーション設定 */
+/* Z軸で回転しながら移動するアニメ */
+@keyframes foot_rotate {
+    0% {
+        transform: rotateZ(1270deg);
+        right: -200px;
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+        right: 5%;
+    }
+}
+
+/*＝＝＝豆知識＝＝＝ */
+
+/* ポポの見た目・配置 */
+.popo {
+    width: 200px;
+    position: fixed;
+    left: 0px;
+    bottom: 25px;
+    z-index: 500;
+    cursor: pointer;
+}
+
+.popo_commentbox {
+    position: fixed;
+    left: -50px;
+    bottom: 280px;
+    rotate: -90deg;
+    width: 300px;
+    z-index: 500;
+}
+
+.popo_comment {
+    writing-mode: vertical-rl;
+    font-size: 14px;
+    font-weight: bold;
+    position: fixed;
+    left: 60px;
+    bottom: 250px;
+    z-index: 501;
+    text-align: left;
+}
