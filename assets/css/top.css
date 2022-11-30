@@ -1,0 +1,610 @@
+@charset "UTF-8";
+
+/* ＝＝＝セクションをまたぐ指定＝＝＝ */
+main {
+    margin-bottom: 50px;
+}
+
+section {
+    /* padding-bottom: 50px; */
+    padding-top: 50px;
+}
+
+h2 {
+    letter-spacing: 0.12em;
+}
+
+h2, h3 {
+    margin-bottom: 30px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.section_img {
+    width: 70%;
+    height: auto;
+}
+
+.section_txt {
+    margin: 30px 20px;
+    text-align: left;
+}
+
+.next_btn {
+    margin: 50px auto 0px;
+}
+
+.section_flex_reverse {
+    margin-bottom: 50px;
+}
+
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+
+    /* テキスト＆矢印と写真を横並びにする */
+    .section_flex {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    /* テキストと矢印を縦に余白を持たせて配置する */
+    .inner_flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    /* 矢印ボタンの下にmarginをとらない */
+    .next_btn {
+        margin: 50px auto 0px;
+    }
+
+    /* 右から横並びにする */
+    .section_flex_reverse {
+        display: flex;
+        gap: 50px;
+        flex-direction: row-reverse;
+    }
+}
+
+/* ＝＝＝キービジュアル＝＝＝ */
+
+/* 画面を読み込むと、タイトルロゴが下からフェードインする */
+
+.fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 背景色と幅の設定 */
+.key_bg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFCE3;
+}
+
+/* 以下、キービジュアルのパーツ配置 */
+.key_logo_sp {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    max-width: 950px;
+    z-index: 6;
+}
+
+/* 横長のロゴはSPで非表示に */
+/* その他、SPでは使わない写真も非表示にする */
+.key_logo, .key_photo02, .key_photo03, .key_photo04, .key_circle_pk04, .key_circle_pk03 {
+    display: none;
+}
+
+.key_city {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+/* キャッチコピー */
+.key_catch {
+    position: absolute;
+    top: 15%;
+    left: 12%;
+    width: 150px;
+    z-index: 5;
+}
+
+/* 右上ブランコ少年 */
+.key_photo05 {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 60%;
+    z-index: 4;
+}
+
+/* 三角旗 */
+.key_flag {
+    position: absolute;
+    top: 40px;
+    left: -5%;
+    width: 50vw;
+    z-index: 3;
+}
+
+/* 双子姉妹 */
+.key_photo01 {
+    position: absolute;
+    bottom: 5%;
+    left: -5%;
+    width: 220px;
+    z-index: 4;
+}
+
+/* 家族 */
+.key_photo06 {
+    position: absolute;
+    bottom: 12%;
+    right: 0%;
+    width: 180px;
+    rotate: -15deg;
+    z-index: 4;
+}
+
+.key_circle_pk01 {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    width: 100px;
+    rotate: -10deg;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.key_circle_pk02 {
+    position: absolute;
+    bottom: 15%;
+    left: 230px;
+    width: 20%;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.key_circle_bl01 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 20%;
+    z-index: 2;
+}
+
+.key_circle_bl02 {
+    position: absolute;
+    bottom: 50%;
+    left: 35%;
+    width: 8%;
+    z-index: 2;
+}
+
+.key_circle_bl03 {
+    position: absolute;
+    bottom: 40%;
+    right: 0%;
+    width: 20%;
+    rotate: 90deg;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+    .key_logo, .key_photo02, .key_photo03, .key_photo04, .key_circle_pk04, .key_circle_pk03 {
+        display: block;
+    }
+
+    .key_catch, .key_logo_sp, .key_flag {
+        display: none;
+    }
+
+    .key_logo {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 950px;
+        z-index: 6;
+    }
+
+    /* 右上ブランコ少年 */
+    .key_photo05 {
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        width: 30%;
+        z-index: 4;
+    }
+
+    /* 双子姉妹 */
+    .key_photo01 {
+        position: absolute;
+        bottom: 5%;
+        left: -5%;
+        width: 300px;
+        z-index: 4;
+    }
+
+    /* 3人家族 */
+    .key_photo06 {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        width: 220px;
+        rotate: -15deg;
+        z-index: 4;
+    }
+
+    /* すべり台少年 */
+    .key_photo02 {
+        position: absolute;
+        top: 9%;
+        left: 2%;
+        width: 270px;
+    }
+
+    /* 乗り物3人兄弟 */
+    .key_photo03 {
+        position: absolute;
+        top: 8%;
+        left: 30%;
+        width: 30%;
+    }
+
+    /* グローブジャングル少女 */
+    .key_photo04 {
+        position: absolute;
+        top: 15%;
+        right: 30%;
+        width: 180px;
+    }
+
+    .key_circle_bl01 {
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        width: 80px;
+        z-index: 2;
+    }
+
+    .key_circle_pk01 {
+        position: absolute;
+        top: 8%;
+        left: 70%;
+        width: 130px;
+        z-index: 2;
+    }
+
+    .key_circle_pk02 {
+        position: absolute;
+        bottom: 23%;
+        left: 50%;
+        width: 50px;
+        opacity: 0.6;
+        z-index: 2;
+    }
+
+    .key_circle_pk03 {
+        position: absolute;
+        bottom: 23%;
+        left: 20%;
+        width: 30px;
+        opacity: 0.6;
+        z-index: 2;
+    }
+
+    .key_circle_pk04 {
+        position: absolute;
+        top: 18%;
+        left: 23%;
+        width: 70px;
+        opacity: 0.6;
+        z-index: 2;
+    }
+
+    .key_circle_bl02 {
+        position: absolute;
+        bottom: 45%;
+        left: 15%;
+        width: 8%;
+        z-index: 2;
+        opacity: 0.6;
+    }
+
+}
+
+/* ↑ パーツ配置ここまで ↑ */
+
+/* ＝＝＝公園検索＝＝＝ */
+.search {
+
+    padding-bottom: 0px;
+}
+
+.search_inner {
+    position: relative;
+    width: 65vw;
+    margin: 0 auto;
+}
+
+.search_map {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.map_btn {
+    position: absolute;
+    padding: 2vw;
+    border: #3E3A39 3px solid;
+    border-radius: 50%;
+    background-color: #FFFCE3;
+}
+
+/* マップボタン用のホバー効果 */
+
+.map_btn.circle {
+    background: #FFFCE3;
+    color: #3E3A39;
+    overflow: hidden;
+    transition-duration: .4s;
+    z-index: 2;
+}
+
+.map_btn.circle::after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+    z-index: -1;
+    transform: translateY(-50%) scale(0.1);
+    transition: opacity .5s, transform 0s;
+    transition-delay: 0s, .4s;
+}
+
+.map_btn_east.circle::after {
+    background: #FF397B;
+}
+
+.map_btn_west.circle::after {
+    background: #39BDFF;
+}
+
+.map_btn_south.circle::after {
+    background: #FFEB39;
+}
+
+.map_btn.circle:hover {
+    color: #fff;
+}
+
+.map_btn_south.circle:hover {
+    color: #000;
+}
+
+.map_btn.circle:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    transition-delay: 0s;
+    transition: opacity .8s, transform .6s ease-in-out;
+}
+
+/*マップボタンの位置調整 */
+
+.map_btn_east {
+    top: 13%;
+    right: 23%;
+}
+
+.map_btn_west {
+    top: 23%;
+    left: 20%;
+}
+
+.map_btn_south {
+    bottom: 36%;
+    right: 35%;
+}
+
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+
+    .map_btn {
+        padding: 3vw;
+        font-size: 20px;
+    }
+
+    /* マップボタンの位置調整 */
+    .map_btn_east {
+        top: 17%;
+        right: 23%;
+    }
+
+    .map_btn_west {
+        top: 26%;
+        left: 20%;
+    }
+
+    .map_btn_south {
+        bottom: 30%;
+        right: 35%;
+    }
+}
+
+/* ＝＝＝お知らせ＝＝＝ */
+.news_img {
+    width: 200px;
+}
+
+/* お知らせの記事を改行して表示 */
+.news_article a {
+    display: block;
+    margin: 50px 0;
+}
+
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+
+    /* お知らせの矢印を含めた３つを横並びにして、上下中央に表示させる */
+    .news_next_btn {
+        margin: 0px auto 0px;
+    }
+
+    /* お知らせ記事の表示を整える */
+    .news_article a {
+        margin: 30px auto;
+        text-align: left;
+        font-size: 20px;
+    }
+}
+
+
+/* ＝＝＝インスタのスライダー＝＝＝ */
+
+.slider .slick-slide {
+    width: 200px;
+    height: 200px;
+    margin: 0 15px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .slick-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFCE3;
+    cursor: pointer;
+    border: 3px solid #3E3A39;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    /* filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16)); */
+}
+
+.slider .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #09000d;
+    border-width: 3px 3px 0 0;
+    position: absolute;
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.slider .slick-next {
+    right: -80px;
+}
+
+.slider .slick-prev {
+    left: -80px;
+}
+
+.slider .slick-next::before {
+    left: 20px;
+}
+
+.slider .slick-prev::before {
+    border-width: 0 0 3px 3px;
+    right: 22px;
+}
+
+.dots .slick-dots {
+    text-align: center;
+}
+
+.dots .slick-dots li {
+    display: inline-block;
+}
+
+.slider_dots .slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    font-size: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: #bcbcbc;
+    border-radius: 50%;
+}
+
+.slider_dots .slick-dots .slick-active button {
+    background: #3E3A39;
+}
+
+.slick-dots {
+    position: relative;
+    bottom: 0;
+}
+
+.insta_logo {
+    width: 80px;
+    margin-top: 30px;
+}
+
+/* ＝＝＝リンク集＝＝＝ */
+
+.banner {
+    margin-bottom: 30px;
+}
+
+.banner_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin-top: 50px;
+}

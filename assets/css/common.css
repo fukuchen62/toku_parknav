@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #3E3A39;
+    /* 本文部分のフォントサイズ */
+    font-size: 16px;
+    /* 行間の指定 */
+    line-height: 1.7;
+    /* スマホ横画面対策 */
+    -webkit-text-size-adjust: 100%;
+    /* 横スクロールバー対策 */
+    overflow-x: hidden;
+}
+
+/* セクションによって、背景色をクリーム色にする */
+.bgcolor_cream {
+    margin: 0 calc(50% - 50vw);
+    padding: 50px calc(50vw - 50% + 8px);
+    width: 100vw;
+    background-color: #FFFCE3;
+}
+
+/* リンクのhover時にカーソルをポインターにする */
+a:hover {
+    cursor: pointer;
+}
+
+/* コンテンツ幅を950pxまでに設定 */
+main {
+    max-width: 950px;
+    /* 要素を中央配置にする */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* パンくずのフォントサイズ(SP・TB・PC共通) */
+.pkz {
+    font-size: 14px;
+}
+
+/* SP見出しフォントサイズ */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+/* PC・TBのフォントサイズ */
+@media screen and (min-width: 771px) {
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+}
+
+/* 矢印ボタン next→右向き prev→左向き*/
+.next_btn, .prev_btn {
+    /* 文字に対してrelativeを設定 */
+    position: relative;
+    width: 220px;
+    margin: 50px auto;
+}
+
+.next_btn:hover {
+    transition: 0.2s;
+    transform: translate(30px, 0);
+}
+
+.prev_btn:hover {
+    transition: 0.2s;
+    transform: translate(-30px, 0);
+}
+
+.next_btn p, .prev_btn p {
+    position: absolute;
+    color: #3E3A39;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* PC矢印ボタン ここまで*/
+
+
+
+/* カード型記事 *********************************************** */
+
+/* card_flexの指定 */
+.card_flex {
+    display: flex;
+    justify-content: space-around;
+    /* 縮小幅にあわせて自動でカラム落ち */
+    flex-flow: row wrap;
+}
+
+/* カード1つ分の大枠 */
+.card_wrap {
+    background-color: #fff;
+    width: 300px;
+    height: 430px;
+    /* 枠線表示(写真との間に隙間ができない) */
+    outline: 2px solid #3e3a39;
+    outline-offset: -2px;
+    /* カードの角丸指定 */
+    border-radius: 30px;
+    /* カラム落ちしたときの下余白 */
+    margin-bottom: 50px;
+}
+
+/* 画像の指定 */
+.card_img {
+    width: 100%;
+    height: 200px;
+    /* 画像の角丸指定 */
+    border-radius: 30px;
+}
+
+/* 文章の指定（枠組み） */
+.card_container {
+    width: 100%;
+    height: 230px;
+    /* 画像の角丸指定 */
+    border-radius: 30px;
+    /* テキストを常に中央配置するための枠を指定 */
+    position: relative;
+}
+
+/* 文章の指定（中身） */
+.card_inner {
+    width: 250px;
+    text-align: center;
+    /* テキストを中央配置する中身の部分 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* サブタイトル */
+.card_subttl {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/* タイトル */
+.card_ttl {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    text-decoration: underline 1px solid;
+    margin-bottom: 15px;
+}
+
+/* 記事本文の指定 */
+.card_txt p {
+    font-size: 16px;
+}
