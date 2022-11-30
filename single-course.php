@@ -81,9 +81,7 @@ $purposes = get_terms($args);
                 <ul class="info_list">
                     <li>
                         <span>
-                            <img src="<?php echo $pic_url;
-                                                        ?>" alt="<?php echo $pic['alt'];
-                                                                    ?>">
+                            <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
                         </span>
                     </li>
                     <li>
