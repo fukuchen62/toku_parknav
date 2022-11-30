@@ -275,7 +275,7 @@ h4 {
 /* ギフテッドのリンクボタン */
 /* ギフテッド全体をつつむdiv */
 .gifted_wrap {
-    display: none;
+    margin-top: 50px;
 }
 
 /* ギフテッドのリンクボタン */
@@ -287,6 +287,7 @@ h4 {
 .gifted_link a img {
     width: 300px;
     height: auto;
+    border-radius: 30px;
     border: 1px solid #3e3a39;
     /* ボーダーの太さを各所に指定 */
     border-width: 1px 1px 5px 1px;
@@ -298,9 +299,4 @@ h4 {
     opacity: 0.7;
     /* ボタンが下に5px沈む */
     transform: translate3d(0, 5px, 0);
-}
-
-.gifted_link a img :hover {
-    /* ボーダーの太さを各所に指定 */
-    border-width: none;
 }
