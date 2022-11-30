@@ -9,19 +9,19 @@
 
     <!-- フォント読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
     <!-- 各種css読み込み -->
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/top.css">
 
-
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- fontawesome -->
@@ -68,7 +68,7 @@
 
             <!-- ハンバーガーメニュー -->
             <div class="hbg_menubox">
-                <input id="hbg" type="checkbox" class="input-hidden">
+                <input id="hbg" type="checkbox" class="input-hidden" value="hbg_open">
                 <label for="hbg" class="hbg_btn hbg_btn">
                     <span class="hbg_btn-circle"></span>
                 </label>
@@ -81,9 +81,9 @@
                         <li><a href="mypage.html">お気に入りリスト</a></li>
                         <!-- 検索ボックス -->
                         <li class="hbg_search_box">
-                            <form class="hbg_search" action="">
+                            <form class="hbg_search" action="index.php" method="get">
                                 <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
-                                <input class="hbg_submit fas" type="submit" value="&#xf002;">
+                                <input class="hbg_submit fas" type="submit" value="検索">
                             </form>
                         </li>
                     </ul>
@@ -131,7 +131,7 @@
         <section class="search">
             <h2>今週末、どこ行く？<br>公園検索</h2>
             <div class="search_inner">
-                <img class="search_map" src="assets\img\search_map.png" alt="検索マップ">
+                <img class="search_map" src="assets/img/search_map.png" alt="検索マップ">
                 <a href="#">
                     <div class="map_btn map_btn_east circle">東部</div>
                 </a>
@@ -218,9 +218,10 @@
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="about.html"><img src="./assets/img/next_btn_white.png ">
+                        <a href="about.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                             <p>くわしく</p>
-                    </div></a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -234,7 +235,7 @@
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="#"><img src="./assets/img/next_btn_cream.png ">
+                        <a href="#"><img src="./assets/img/next_btn_cream.png" alt="次の画面へ">
                             <p>一覧へ</p>
                         </a>
                     </div>
@@ -317,7 +318,7 @@
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="nursing.html"><img src="./assets/img/next_btn_white.png ">
+                        <a href="nursing.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                             <p>くわしく</p>
                         </a>
                     </div>
@@ -335,7 +336,7 @@
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
                         <a href="gamestart.html">
-                            <img src="./assets/img/next_btn_cream.png ">
+                            <img src="./assets/img/next_btn_cream.png" alt="次の画面へ">
                             <p>あそぶ</p>
                         </a>
                     </div>
@@ -360,7 +361,7 @@
                     </a>
                 </div>
                 <div class="news_next_btn next_btn">
-                    <a href="archive-post.html"><img src="./assets/img/next_btn_white.png">
+                    <a href="archive-post.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                         <p>一覧へ</p>
                     </a>
                 </div>
@@ -368,7 +369,7 @@
         </section>
 
         <!-- インスタ -->
-        <section>
+        <section class="insta_box">
             <h2>Instagram</h2>
             <ul class="slider" id="JS_slider">
                 <li><a href="#"><img src="./assets/img/slick/slider01.jpg" alt="インスタ写真"></a></li>
@@ -377,17 +378,17 @@
                 <li><a href="#"><img src="./assets/img/slick/slider04.jpg" alt="インスタ写真"></a></li>
             </ul>
             <div class="slider_dots"></div>
-            <a href="#"><img src="./assets/img/insta_logo.png" alt="インスタアカウントリンク" class="insta_logo"></a>
+            <a href="#"><img src="./assets/img/insta_logo.png" alt="インスタリンク" class="insta_logo"></a>
         </section>
 
         <!-- リンク集 -->
-        <section class="banner_flex">
+        <div class="banner_flex">
             <div class="banner"><a href="http://awacamp.site/"><img src="./assets/img/banner01.png" alt="サイトリンク"></a></div>
             <div class="banner"><a href="https://awa-nolife.com/"><img src="./assets/img/banner02.png" alt="サイトリンク"></a></div>
             <div class="banner"><a href="https://arutoku.com/"><img src="./assets/img/banner03.png" alt="サイトリンク"></a></div>
             <div class="banner"><a href="https://kisyanotabi.com/"><img src="./assets/img/banner04.png" alt="サイトリンク"></a></div>
             <div class="banner"><a href="http://mizutokushima.com/"><img src="./assets/img/banner05.png" alt="サイトリンク"></a></div>
-        </section>
+        </div>
     </main>
 
     <!-- フッター -->
@@ -439,7 +440,7 @@
                         <a href="contact.html">お問い合わせ</a>
                     </li>
                     <li>
-                        <a href="">編集後記</a>
+                        <a href="minori.html">サイト制作にあたって</a>
                     </li>
                 </ul>
             </div>
@@ -460,6 +461,8 @@
         </div>
 
         <!-- トップへ戻るボタン -->
+        <!-- <div class="pagetop"> -->
+        <!-- ボタン本体  -->
         <div class="foot_top foot_rotate hoge">
         </div>
     </footer>
