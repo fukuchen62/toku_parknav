@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,15 +20,85 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/park_area.css">
 
-    <title>公園検索</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <title>公園検索</title>
 </head>
+
 <body>
 
+    <!-- Gナビ -->
     <header>
-        <div class="gnav_dummy"></div>
-        <div class="mainVisual_dummy"></div>
+        <nav class="head_bg">
+            <div class="head_content">
+
+
+                <!-- ロゴ -->
+                <div>
+                    <a href="top.html">
+                        <img class="head_logo" src="assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび">
+                    </a>
+                </div>
+
+
+                <!-- メニュー -->
+                <div class="head_menu_item">
+                    <a href="search.html">公園検索</a>
+                    <span> | </span>
+                    <a href="archive-course.html">モデルコース</a>
+                    <span> | </span>
+                    <a href="nursing.html">運動療育について</a>
+                    <span> | </span>
+                    <a href="gamestart.html">ゲーム</a>
+                    <span> | </span>
+                    <a href="">お気に入りリスト</a>
+                </div>
+
+
+                <!-- 検索ボックス -->
+                <div class=" head_menu_item">
+                    <form class="head_search" action="">
+                        <input class="head_form" size="300" type="search" name="search" placeholder="キーワードを入力">
+                        <input class="head_submit fas" type="submit" value="&#xf002;">
+                    </form>
+                </div>
+
+
+            </div>
+
+
+            <!-- ハンバーガーメニュー -->
+            <div class="hbg_menubox">
+                <input id="hbg" type="checkbox" class="input-hidden">
+                <label for="hbg" class="hbg_btn hbg_btn">
+                    <span class="hbg_btn-circle"></span>
+                </label>
+                <div class="hbg_menuwrap hbg_menuwrap-right">
+                    <ul class="hbg_menulist hbg_menulist-circle">
+                        <li><a href="search.html">公園検索</a></li>
+                        <li><a href="archive-course.html">モデルコース</a></li>
+                        <li><a href="nursing.html">運動療育について</a></li>
+                        <li><a href="gamestart.html">ゲーム</a></li>
+                        <li><a href="mypage.html">お気に入りリスト</a></li>
+                        <!-- 検索ボックス -->
+                        <li class="hbg_search_box">
+                            <form class="hbg_search" action="">
+                                <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
+                                <input class="hbg_submit fas" type="submit" value="&#xf002;">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hbg_cover"></div>
+            </div>
+        </nav>
     </header>
+
+    <div class="mainVisual_dummy"></div>
 
     <main>
         <p class="pkz">トップ　＞　公園検索</p>
@@ -36,10 +107,10 @@
 
         <!-- 条件ボタン -->
         <div class="search_btn_wrap">
-            <a href="#"><input type="button" value="東部" class="search_btn search_btn_north"></a>
-            <a href="#"><input type="button" value="南部" class="search_btn search_btn_east"></a>
-            <a href="#"><input type="button" value="西部" class="search_btn search_btn_south"></a>
-            <a href="./park_search.html"><input type="button" value="条件検索" class="search_btn search_btn_terms"></a>
+            <a href="#" class="search_btn search_btn_north">東部</a>
+            <a href="#" class="search_btn search_btn_east">南部</a>
+            <a href="#" class="search_btn search_btn_south">西部</a>
+            <a href="./park_search.html" class="search_btn search_btn_terms">条件検索</a>
         </div>
 
         <!-- カードとページをまとめるdiv -->
@@ -61,7 +132,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +151,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +170,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +189,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +208,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +227,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -176,10 +247,88 @@
                 </div>
             </div>
         </div>
+    </main>
 
-        <footer>
-            <div class="footer_dummy"></div>
-        </footer>
+    <!-- フッター -->
+    <footer class="foot_bgcolor_cream">
+        <div class="foot_content">
+            <div class="foot_menu">
+                <ul class="foot_col">
+                    <li class="foot_fontbold">
+                        公園検索
+                    </li>
+                    <li>
+                        <a href="search.html">県東部</a>
+                    </li>
+                    <li>
+                        <a href="">県西部</a>
+                    </li>
+                    <li>
+                        <a href="">県南部</a>
+                    </li>
+                    <li>
+                        <a href="">条件検索</a>
+                    </li>
+                </ul>
+                <ul class="foot_col">
+                    <li>
+                        <a href="archive-course.html">モデルコース一覧</a>
+                    </li>
+                    <li>
+                        <a href="nursing.html">運動療育について</a>
+                    </li>
+                    <li>
+                        <a href="gamestart.html">ゲーム</a>
+                    </li>
+                </ul>
+                <ul class="foot_col">
+                    <li>
+                        <a href="">ニュース一覧</a>
+                    </li>
+                    <li>
+                        <a href="mypage.html">マイページ</a>
+                    </li>
+                    <li>
+                        <a href="">このサイトについて</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html">プライバシーポリシー・免責事項</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">お問い合わせ</a>
+                    </li>
+                    <li>
+                        <a href="">編集後記</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- コピーライト -->
+            <div class="foot_copyright">
+                copyright©とくしまGo!Go!パークなび All Rights Reserved.
+            </div>
+        </div>
+
+
+        <!-- ポポ二郎の豆知識 -->
+        <div class="popo_trivia hoge">
+            <div class="popo_commentset">
+                <img class="popo_commentbox" src="./assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+                <p id="popo_comment" class="popo_comment"></p>
+            </div>
+            <img class="popo" src="./assets/img/popo_img.png" alt="ポポじろう">
+            <input class="popo" type="image" src="./assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+        </div>
+
+
+        <!-- トップへ戻るボタン -->
+        <div class="foot_top foot_rotate hoge">
+        </div>
+    </footer>
+
+
+    <!-- スクリプト -->
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/common.js"></script>
 </body>
 
 </html>
