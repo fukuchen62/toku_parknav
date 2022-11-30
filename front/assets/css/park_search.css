@@ -7,7 +7,8 @@ body {
 }
 
 /* 見出し下余白 */
-h2, h3 {
+h2,
+h3 {
     margin-bottom: 30px;
 }
 
@@ -35,7 +36,6 @@ h4 {
 
 /* セクションの上下に余白をとる */
 section {
-    /* padding-bottom: 50px; */
     padding-top: 50px;
 }
 
@@ -91,18 +91,6 @@ section {
     }
 }
 
-
-
-
-/* ナビのダミーブロック */
-.gnav_dummy {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: darkgray;
-}
-
 /* メインビジュアルのダミーブロック */
 .mainVisual_dummy {
     width: 100%;
@@ -111,20 +99,8 @@ section {
     margin-top: 80px;
 }
 
-/* フッターのダミーブロック */
-.footer_dummy {
-    width: 100vw;
-    height: 450px;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-    background-color: darkgray;
-}
 
 /* ***************************************************** */
-/* 全体のリストスタイル削除 */
-body {
-    list-style: none;
-}
 
 /* 「公園検索条件」エリア全体 */
 .search_wrap {
@@ -305,7 +281,6 @@ body {
 .search_btn_reset {
     color: #fff;
     background-color: #3E3A39;
-
 }
 
 /* 検索ボタンの設定 */
