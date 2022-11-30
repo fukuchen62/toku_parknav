@@ -5,29 +5,31 @@
 <main>
     <!-- お気に入り一覧表示 -->
     <section>
+        <h2>お気に入り一覧</h2>
         <?php
-        $favorites = get_user_favorites();
-        print_r($favorites);
+        // これよくわからん
+        // fanctionに記述なし
+        if (function_exists('get_user_favorites')) :
+            $favorites = get_user_favorites();
 
-        if ($favorites) :
-            $args[] = array(
-                'post_type' => 'park',
-                'post_per_page' => -1,
-                'ignore_sticky_posts' => true,
-                'post__in' => $favorites,
-                'orderby' => 'post__in',
-            );
+            // id取れてるけど表示されない なに
+            //print_r($favorites);
 
-            $the_query = new WP_Query($args);
+            if ($favorites) :
+                $the_query = new WP_Query([
+                    'post_type' => 'park',
+                    'post_per_page' => -1,
+                    'ignore_sticky_posts' => true,
+                    'post__in' => $favorites,
+                    'orderby' => 'post__in',
+                ]);
 
-            if ($the_query->have_post()) :
-                while ($the_query->have_post()) :
-                    $the_query->the_post(); ?>
+                // $the_query = new WP_Query($args);
 
-        <!-- <div class="col-md-3">
-                    <?php //get_template_part('template-parts/loop', 'park')
-                    ?>
-                </div> -->
+                if ($the_query->have_post()) :
+                    while ($the_query->have_post()) :
+                        $the_query->the_post();
+        ?>
 
         <div class="menu">
             <a href="<?php the_permalink(); ?>">
@@ -45,12 +47,16 @@
             </a>
         </div>
 
-        <?php endwhile; ?>
-        <?php else :
-                // No Favorites
-                echo '<p class="text-center">お気に入りがありません。</p>';
+        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    // No Favorites
+                    echo '<p class="text-center">お気に入りがありません。</p>';
+                endif;
             endif;
-        endif; ?>
+        endif;
+        ?>
     </section>
 
     <!-- マップ表示 -->
