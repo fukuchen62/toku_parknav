@@ -99,13 +99,76 @@ $purposes = get_terms($args);
             <?php endif; ?>
 
             <?php endfor; ?>
+        </div>
+    </section>
 
+    <section>
+        <div>
+            <h2>このコースで紹介した公園はこちら</h2>
+            <div>
+                <?php
+                        $park = get_field('park_id');
+                        // print_r($park);
+
+                        $args = array(
+                            'post_type' => 'park',
+                            'p' => $park,
+                            // 'post_per_page' => -1
+                        );
+
+                        // $metaquerysp =  array('relation' => 'AND');
+                        // $metaquerysp[] = array(
+                        //     'key' => 'park_id',
+                        //     'value' => $park,
+                        //     'type' => 'CHAR',
+                        //     'compare' => '=',
+                        // );
+
+                        // $args['meta_query'] = $metaquerysp;
+
+                        print_r($args);
+
+                        $the_query = new WP_Query($args);
+
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) :
+                                $the_query->the_post();
+                        ?>
+                <div>
+                    <?php //get_template_part('template-part/loop', 'park')
+                                    ?>
+
+                    <div class="menu">
+                        <a href="<?php the_permalink(); ?>">
+                            <figure class="menu_pic">
+                                <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('medium') ?>
+                                <?php else : ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+                                <?php endif; ?>
+                            </figure>
+                            <h3 class="menu_title"><?php the_title(); ?></h3>
+                            <div class="menu_desc">
+                                <?php the_content(); ?>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <?php
+                            endwhile;
+                        endif;
+                        ?>
+            </div>
+        </div>
     </section>
 </main>
 
-<?php endwhile; ?>
+<?php endwhile;
+    ?>
 <!-- ループの終了 -->
-<?php endif; ?>
+<?php endif;
+?>
 
 <?php //フッターテンプレートファイルを読み込む
 ?>
