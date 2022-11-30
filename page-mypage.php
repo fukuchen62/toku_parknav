@@ -6,39 +6,50 @@
     <!-- お気に入り一覧表示 -->
     <section>
         <h2>お気に入り一覧</h2>
+
+        <!-- データの取得 -->
         <?php
-        $favorites = get_user_favorites();
+        if (function_exists('get_user_favorites')) {
+            $favorites = get_user_favorites();
+            krsort($favorites);
 
-        print_r($favorites);
+            //sprint_r($favorites);
+        }
 
-        // if (isset($favorites) && !empty($favorites)) :
-        //     foreach ($favorites as $favorite) :
-        //     //echo '<div>' . get_the_title($favorite) . get_favorites_button($favorite) . '</div>';
-
-
-
-        //     endforeach;
-        // else :
-        //     // No Favorites
-        //     echo '<p class="text-center">お気に入りがありません。</p>';
-        // endif;
-
-
-        if ($favorite) {
-
-            $args = new WP_Query([
+        // サブクエリの発行
+        if ($favorites) {
+            $args = array(
                 'post_type' => 'park',
-                'post_per_page' => -1,
+                'posts_per_page' => -1,
                 'ignore_sticky_posts' => true,
                 'post__in' => $favorites,
                 'orderby' => 'post__in',
-            ]);
+            );
 
             $the_query = new WP_Query($args);
+        }
+        ?>
 
-            if ($the_query->have_post()) :
-                while ($the_query->have_post()) :
-                    $the_query->the_post();
+        <!-- カード表示 -->
+        <?php
+        if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) :
+                $the_query->the_post();
+
+
+                // マップに使用
+                // フィールドから経度の取得
+                $latitude = get_field('latitude');
+                // フィールドから緯度の取得
+                $longtitude = get_field('longtitude');
+                // 公園名の取得
+                $text = esc_html(get_field('park_name'));
+
+                $parks = [];
+
+                $parks['lat'][] = $latitude;
+                $parks['lng'][] = $longtitude;
+                $parks['text'][] = $text;
         ?>
 
         <div class="menu">
@@ -58,14 +69,13 @@
         </div>
 
         <?php
-                endwhile;
-                wp_reset_postdata();
-            else :
-                // No Favorites
-                echo '<p class="text-center">お気に入りがありません。</p>';
-            endif;
-            // endif;
-        }
+            endwhile;
+            wp_reset_postdata();
+        else :
+            // No Favorites
+            echo '<p class="text-center">お気に入りがありません。</p>';
+        endif;
+
         ?>
     </section>
 
