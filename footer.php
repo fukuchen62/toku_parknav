@@ -34,22 +34,22 @@
 
 <?php
 // トップページであれば以下のファイルを読み込む
-if (is_home()) {
-    // slickのCSSファイルを読み込む
-    wp_enqueue_style('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+// if (is_home()) {
+//     // slickのCSSファイルを読み込む
+//     wp_enqueue_style('slick-carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 
-    // slickのJSファイルを読み込む
-    wp_enqueue_script(
-        'slick-carousel',
-        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
-    );
+//     // slickのJSファイルを読み込む
+//     wp_enqueue_script(
+//         'slick-carousel',
+//         'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'
+//     );
 
-    // 独自のJSファイルを読み込む
-    wp_enqueue_script(
-        'bistro-calme-home',
-        get_template_directory_uri() . '/assets/js/home.js'
-    );
-}
+//     // 独自のJSファイルを読み込む
+//     wp_enqueue_script(
+//         'bistro-calme-home',
+//         get_template_directory_uri() . '/assets/js/home.js'
+//     );
+// }
 
 // wp_footer関数を呼び出す
 wp_footer();

@@ -5,36 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <title>サンプルサイト</title> -->
-    <!-- <title><?php bloginfo('name'); ?></title> -->
-
-    <!-- <link href="<?php echo get_template_directory_uri(); ?>/assets/css/styles.min.css" rel="stylesheet"> -->
-    <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script> -->
 
     <?php
-    // fontawesomeのCSSファイルを読み込む
-    wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css');
-
-    // 独自のCSSファイルを読み込む
-    wp_enqueue_style(
-        'bitro-calme-styles-min',
-        get_template_directory_uri() . '/assets/css/styles.min.css'
-    );
-
-    // jQueryライブラリを読み込む
-    wp_enqueue_script('jquery');
-
-    // 独自JSファイルを読み込む
-    wp_enqueue_script(
-        'bistro-calme-main',
-        get_template_directory_uri() . '/assets/js/main.js',
-        '',
-        '',
-        true
-    );
-
     // wp_head()を呼び出す
     wp_head();
     ?>
@@ -67,15 +39,15 @@
                 <!-- <li><a href="<?php //echo home_url('/'); -->
                 ?>">HOME</a></li>
                 <li><a href="<?php //echo home_url('/about/');
-                                    ?>">わたしたちについて</a></li>
+                                ?>">わたしたちについて</a></li>
                 <li><a href="<?php //echo home_url('/access/');
-                                    ?>">アクセス</a></li>
+                                ?>">アクセス</a></li>
                 <li><a href="<?php //echo home_url('/category/news');
-                                    ?>">最新情報</a></li>
+                                ?>">最新情報</a></li>
                 <li><a href="<?php //echo home_url('/menu/');
-                                    ?>">メニュー紹介</a></li>
+                                ?>">メニュー紹介</a></li>
                 <li><a href="<?php //echo home_url('/contact/');
-                                    ?>">お問い合わせ</a></li>
+                                ?>">お問い合わせ</a></li>
 
                 </ul> -->
                 <?php

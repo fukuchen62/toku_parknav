@@ -49,10 +49,10 @@ function add_common_stylesheet_script()
     wp_enqueue_style('toku_parknav-common-style', get_template_directory_uri() . '/assets/css/common.css', array(), false);
 
     // 03.『ヘッダーのCSS（template-header.css）』
-    wp_enqueue_style('toku_parknav-template_header', get_template_directory_uri() . '/assets/css/template_header.css', array(), false);
+    wp_enqueue_style('toku_parknav-header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
     // 04.『フッターのCSS（template-footer.css）』
-    wp_enqueue_style('toku_parknav-template_footer', get_template_directory_uri() . '/assets/css/template_footer.css', array(), false);
+    wp_enqueue_style('toku_parknav-footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
