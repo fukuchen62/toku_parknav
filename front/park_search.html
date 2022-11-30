@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="とくしまGo!Go!パークなびでは、公園にどんな遊具や自然があるのかその場所ならではの楽しみ方をまとめてみました。">
+
+    <!-- フォント読み込み-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <!-- スタイルcss -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/park_search.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <title>公園詳細検索</title>
+</head>
+
+
+<body>
+    <!-- Gナビ -->
+    <header>
+        <nav class="head_bg">
+            <div class="head_content">
+
+
+                <!-- ロゴ -->
+                <div>
+                    <a href="top.html">
+                        <img class="head_logo" src="assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび">
+                    </a>
+                </div>
+
+
+                <!-- メニュー -->
+                <div class="head_menu_item">
+                    <a href="search.html">公園検索</a>
+                    <span> | </span>
+                    <a href="archive-course.html">モデルコース</a>
+                    <span> | </span>
+                    <a href="nursing.html">運動療育について</a>
+                    <span> | </span>
+                    <a href="gamestart.html">ゲーム</a>
+                    <span> | </span>
+                    <a href="">お気に入りリスト</a>
+                </div>
+
+
+                <!-- 検索ボックス -->
+                <div class=" head_menu_item">
+                    <form class="head_search" action="">
+                        <input class="head_form" size="300" type="search" name="search" placeholder="キーワードを入力">
+                        <input class="head_submit fas" type="submit" value="&#xf002;">
+                    </form>
+                </div>
+
+
+            </div>
+
+
+            <!-- ハンバーガーメニュー -->
+            <div class="hbg_menubox">
+                <input id="hbg" type="checkbox" class="input-hidden">
+                <label for="hbg" class="hbg_btn hbg_btn">
+                    <span class="hbg_btn-circle"></span>
+                </label>
+                <div class="hbg_menuwrap hbg_menuwrap-right">
+                    <ul class="hbg_menulist hbg_menulist-circle">
+                        <li><a href="search.html">公園検索</a></li>
+                        <li><a href="archive-course.html">モデルコース</a></li>
+                        <li><a href="nursing.html">運動療育について</a></li>
+                        <li><a href="gamestart.html">ゲーム</a></li>
+                        <li><a href="mypage.html">お気に入りリスト</a></li>
+                        <!-- 検索ボックス -->
+                        <li class="hbg_search_box">
+                            <form class="hbg_search" action="">
+                                <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
+                                <input class="hbg_submit fas" type="submit" value="&#xf002;">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hbg_cover"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mainVisual_dummy"></div>
+
+    <main>
+        <p class="pkz">トップ　＞　公園詳細検索</p>
+
+        <div class="search_wrap">
+            <h2 class="search_ttl">公園詳細検索</h2>
+
+            <div class="search_container">
+                <!-- 検索項目「地域別」 -->
+                <div class="item item_area">
+                    <h3 class="item_ttl i_ttl_1">地域</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="area" value="東部" id="area_1">
+                            <label for="area_1">東部</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="area" value="南部" id="area_2">
+                            <label for="area_2">南部</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="area" value="西部" id="area_3">
+                            <label for="area_3">西部</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 検索項目「目的別」 -->
+                <div class="item item_pur">
+                    <h3 class="item_ttl i_ttl_2">目的</h3>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="purpose" value="BBQ" id="pur_1">
+                            <label for="pur_1">BBQ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="purpose" value="ピクニック " id="pur_2">
+                            <label for="pur_2">ピクニック</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="purpose" value="ボール遊び" id="pur_3">
+                            <label for="pur_3">ボール遊び</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="purpose" value="水遊び" id="pur_4">
+                            <label for="pur_4">水遊び</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="purpose" value="デイキャンプ" id="pur_5">
+                            <label for="pur_5">デイキャンプ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="purpose" value="遊具遊び" id="pur_6">
+                            <label for="pur_6">遊具遊び</label>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- 検索項目「遊具別」 -->
+                <div class="item item_tool">
+                    <h3 class="item_ttl i_ttl_3">遊具</h3>
+                    <ul class="c_tool_flex">
+                        <li>
+                            <input type="checkbox" name="tool" value="すべり台" id="tool_1">
+                            <label for="tool_1">すべり台</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ぶらんこ" id="tool_2">
+                            <label for="tool_2">ぶらんこ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="鉄棒" id="tool_3">
+                            <label for="tool_3">鉄棒</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="上り棒" id="tool_4">
+                            <label for="tool_4">上り棒</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="うんてい" id="tool_5">
+                            <label for="tool_5">うんてい</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="シーソー" id="tool_6">
+                            <label for="tool_6">シーソー</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="スイング" id="tool_7">
+                            <label for="tool_7">スイング<br><span>（スプリング遊具）</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ジャングルジム" id="tool_8">
+                            <label for="tool_8"><span>ジャングルジム</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="複合遊具（小）" id="tool_9">
+                            <label for="tool_9">複合遊具（小）</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="複合遊具（大）" id="tool_10">
+                            <label for="tool_10">複合遊具（大）</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ローラーすべり台" id="tool_11">
+                            <label for="tool_11"><span>ローラーすべり台</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ターザンロープ" id="tool_12">
+                            <label for="tool_12"><span>ターザンロープ</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="砂場" id="tool_13">
+                            <label for="tool_13">砂場</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="水遊び場" id="tool_14">
+                            <label for="tool_14">水遊び場</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ザイルクライミング" id="tool_15">
+                            <label for="tool_15"><span>ザイルクライミング</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tool" value="ユニークな遊具" id="tool_16">
+                            <label for="tool_16"><span>ユニークな遊具</span></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 「リセット」と「検索」ボタン -->
+            <div class="search_btn_wrap">
+                <input type="reset" name="reset" value="リセット" class="search_btn search_btn_reset">
+                <input type="submit" name="submimt" value="検索" class="search_btn search_btn_search">
+            </div>
+        </div>
+        <!-- 詳細検索部分終わり -->
+
+        <!-- カードとページをまとめるdiv -->
+        <div>
+            <!-- ↓ここに選んだカテゴリ名が入る。 -->
+            <h2>検索結果一覧</h2>
+            <div class="card_flex">
+                <!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- カード1つ分 -->
+                <div class="card_wrap">
+                    <a href="#">
+                        <!-- 記事画像 -->
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <!-- 文章部分の枠 -->
+                        <div class="card_container">
+                            <div class="card_inner">
+
+                                <!-- メインタイトル -->
+                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
+                                <!-- 記事本文 -->
+                                <div class="card_txt">
+                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ページネーション -->
+            <div class="nav_links">
+                <div class="pagination">
+                    <a href="#" class="prev">← 前へ</a>
+                    <a href="#" class="page_numbers current">1</a>
+                    <a href="#" class="page_numbers">2</a>
+                    <a href="#" class="dots">…</a>
+                    <a href="#" class="page_numbers">4</a>
+                    <a href="#" class="next">次へ →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="foot_bgcolor_cream">
+        <div class="foot_content">
+            <div class="foot_menu">
+                <ul class="foot_col">
+                    <li class="foot_fontbold">
+                        公園検索
+                    </li>
+                    <li>
+                        <a href="search.html">県東部</a>
+                    </li>
+                    <li>
+                        <a href="">県西部</a>
+                    </li>
+                    <li>
+                        <a href="">県南部</a>
+                    </li>
+                    <li>
+                        <a href="">条件検索</a>
+                    </li>
+                </ul>
+                <ul class="foot_col">
+                    <li>
+                        <a href="archive-course.html">モデルコース一覧</a>
+                    </li>
+                    <li>
+                        <a href="nursing.html">運動療育について</a>
+                    </li>
+                    <li>
+                        <a href="gamestart.html">ゲーム</a>
+                    </li>
+                </ul>
+                <ul class="foot_col">
+                    <li>
+                        <a href="">ニュース一覧</a>
+                    </li>
+                    <li>
+                        <a href="mypage.html">マイページ</a>
+                    </li>
+                    <li>
+                        <a href="">このサイトについて</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html">プライバシーポリシー・免責事項</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">お問い合わせ</a>
+                    </li>
+                    <li>
+                        <a href="">編集後記</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- コピーライト -->
+            <div class="foot_copyright">
+                copyright©とくしまGo!Go!パークなび All Rights Reserved.
+            </div>
+        </div>
+
+
+        <!-- ポポ二郎の豆知識 -->
+        <div class="popo_trivia hoge">
+            <div class="popo_commentset">
+                <img class="popo_commentbox" src="./assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+                <p id="popo_comment" class="popo_comment"></p>
+            </div>
+            <img class="popo" src="./assets/img/popo_img.png" alt="ポポじろう">
+            <input class="popo" type="image" src="./assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+        </div>
+
+
+        <!-- トップへ戻るボタン -->
+        <div class="foot_top foot_rotate hoge">
+        </div>
+    </footer>
+
+
+    <!-- スクリプト -->
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+</body>
+
+</html>
