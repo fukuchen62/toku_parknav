@@ -7,28 +7,38 @@
     <section>
         <h2>お気に入り一覧</h2>
         <?php
-        // これよくわからん
-        // fanctionに記述なし
-        if (function_exists('get_user_favorites')) :
-            $favorites = get_user_favorites();
+        $favorites = get_user_favorites();
 
-            // id取れてるけど表示されない なに
-            //print_r($favorites);
+        print_r($favorites);
 
-            if ($favorites) :
-                $the_query = new WP_Query([
-                    'post_type' => 'park',
-                    'post_per_page' => -1,
-                    'ignore_sticky_posts' => true,
-                    'post__in' => $favorites,
-                    'orderby' => 'post__in',
-                ]);
+        // if (isset($favorites) && !empty($favorites)) :
+        //     foreach ($favorites as $favorite) :
+        //     //echo '<div>' . get_the_title($favorite) . get_favorites_button($favorite) . '</div>';
 
-                // $the_query = new WP_Query($args);
 
-                if ($the_query->have_post()) :
-                    while ($the_query->have_post()) :
-                        $the_query->the_post();
+
+        //     endforeach;
+        // else :
+        //     // No Favorites
+        //     echo '<p class="text-center">お気に入りがありません。</p>';
+        // endif;
+
+
+        if ($favorite) {
+
+            $args = new WP_Query([
+                'post_type' => 'park',
+                'post_per_page' => -1,
+                'ignore_sticky_posts' => true,
+                'post__in' => $favorites,
+                'orderby' => 'post__in',
+            ]);
+
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_post()) :
+                while ($the_query->have_post()) :
+                    $the_query->the_post();
         ?>
 
         <div class="menu">
@@ -48,14 +58,14 @@
         </div>
 
         <?php
-                    endwhile;
-                    wp_reset_postdata();
-                else :
-                    // No Favorites
-                    echo '<p class="text-center">お気に入りがありません。</p>';
-                endif;
+                endwhile;
+                wp_reset_postdata();
+            else :
+                // No Favorites
+                echo '<p class="text-center">お気に入りがありません。</p>';
             endif;
-        endif;
+            // endif;
+        }
         ?>
     </section>
 
@@ -67,7 +77,7 @@
     </section>
 </main>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 function initMap() {
     // 表示設定
     const color = "black"; // ラベルの色
@@ -91,32 +101,22 @@ function initMap() {
 
     // 経度、緯度、公園名を取得
     <?php
-    for ($i = 0; $i < $course_count; $i++) {
-        echo "courses[${i}]={lat:";
-        echo $courses[$i]['lat'];
-        echo ', lng:';
-        echo $courses[$i]['lng'];
-        echo ', text:"';
-        echo $courses[$i]['text'];
-        echo "\",
+        for ($i = 0; $i < $course_count; $i++) {
+            echo "courses[${i}]={lat:";
+            echo $courses[$i]['lat'];
+            echo ', lng:';
+            echo $courses[$i]['lng'];
+            echo ', text:"';
+            echo $courses[$i]['text'];
+            echo "\",
                 color: \"#AD7000\",
                 fontFamilt: 'Kosugi Maru',
                     fontSize: \"14px\",
                 fontWeight: \"bold\",};";
-        echo "\n";
-    }
-    ?>
+            echo "\n";
+        }
+        ?>
 
-    // 例
-    // spots[0] = {
-    //     lat: 34.06505,
-    //     lng: 134.56786,
-    //     text: "みなと公園",
-    //     color: "black",
-    //     fontFamilt: 'Kosugi Maru',
-    //     fontSize: "14px",
-    //     fontWeight: "bold",
-    // };
 
     // マップ上にマーカーの生成
     var marker = new google.maps.Marker();
@@ -134,7 +134,7 @@ function initMap() {
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
-</script> -->
+</script>
 
 
 <?php //フッターテンプレートファイルを読み込む
