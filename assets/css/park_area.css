@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
+body {
+    min-width: 300px;
+    height: 100%;
+}
+
+/* 見出し下余白 */
+h2,
+h3 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+/* カード部分はhのmarginを設定しない */
+.card_ttl {
+    margin-top: 0;
+}
+
+
+/* パンくず */
+.pkz {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* セクションの上下に余白をとる */
+section {
+    /* padding-bottom: 50px; */
+    padding-top: 50px;
+}
+
+/* ＝＝＝ページネーション＝＝＝ */
+
+/* SP幅で１カラムになったとき、下にmarginを50pxとる */
+.pagination {
+    margin: 0 auto 50px;
+}
+
+/* 番号部分を横並びにする */
+.nav_links {
+    display: flex;
+}
+
+/* 番号部分の成形 */
+.pagination .page_numbers {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px 30px;
+    color: #333;
+    border-radius: 50%;
+    border: #333 2px solid;
+    background: #FFF;
+}
+
+/* 現在のページを表す */
+.pagination .current {
+    padding: 20px 30px;
+    border: #333 2px solid;
+    background: rgba(57, 189, 255, 0.5);
+    color: #333;
+}
+
+/* 「前へ」「次へ」の部分 */
+.pagination .prev,
+.pagination .next {
+    background: transparent;
+    box-shadow: none;
+    color: #333;
+}
+
+/* ボタンの間の「…」 */
+.pagination .dots {
+    background: transparent;
+}
+
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .pagination {
+        margin: 0 auto 50px;
+    }
+}
+
+/* メインビジュアルのダミーブロック */
+.mainVisual_dummy {
+    width: 100%;
+    height: 120px;
+    background-color: cadetblue;
+    margin-top: 80px;
+}
+
+/* 条件ボタンの設定********************* */
+/* ボタン位置調整・下余白 */
+.search_btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* ボタンデザイン */
+.search_btn {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width: 160px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    /* line-height: 50px; */
+    border: 2px solid #3E3A39;
+    cursor: pointer;
+}
+
+/* 東部ボタン */
+.search_btn_north {
+    background-color: #FF397B;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* 南部ボタン */
+.search_btn_east {
+    background-color: #39BDFF;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* 西部ボタン */
+.search_btn_south {
+    background-color: #FFEB39;
+}
+
+/* 条件検索ボタン */
+.search_btn_terms {
+    background-color: #FFFCE3;
+}
+
+/* メディアクエリ */
+@media screen and (min-width: 771px) {
+
+    /* 文字を中央に寄せて表示 */
+    .search_btn {
+        height: 80px;
+        line-height: 75px;
+    }
+}
