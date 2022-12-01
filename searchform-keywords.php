@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- <div class=" head_menu_item">
     <form class="header_search" action="<?php echo home_url('/'); ?>" method="get">
         <input type="text" placeholder="キーワードを入力" name="s" value="<?php echo the_search_query(); ?>">
@@ -12,10 +11,3 @@
         <input class="head_submit fas" type="submit" value="&#xf002;">
     </form>
 </div>
-=======
-<form class="header_search" action="<?php echo home_url('/'); ?>" method="get">
-    <input type="hidden" name="search_type" value="keywords">
-    <input type="text" placeholder="キーワードを入力" name="s" value="<?php echo the_search_query(); ?>">
-    <i class="fas fa-search"></i>
-</form>
->>>>>>> 21680f17c6461367475223eb72aab608b671a535
