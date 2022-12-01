@@ -25,71 +25,10 @@ h4 {
     margin-top: 0;
 }
 
-
-/* パンくず */
-.pkz {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    margin-left: 20px;
-}
-
 /* セクションの上下に余白をとる */
 section {
     /* padding-bottom: 50px; */
     padding-top: 50px;
-}
-
-/* ＝＝＝ページネーション＝＝＝ */
-
-/* SP幅で１カラムになったとき、下にmarginを50pxとる */
-.pagination {
-    margin: 0 auto 50px;
-}
-
-/* 番号部分を横並びにする */
-.nav_links {
-    display: flex;
-}
-
-/* 番号部分の成形 */
-.pagination .page_numbers {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 20px 30px;
-    color: #333;
-    border-radius: 50%;
-    border: #333 2px solid;
-    background: #FFF;
-}
-
-/* 現在のページを表す */
-.pagination .current {
-    padding: 20px 30px;
-    border: #333 2px solid;
-    background: rgba(57, 189, 255, 0.5);
-    color: #333;
-}
-
-/* 「前へ」「次へ」の部分 */
-.pagination .prev,
-.pagination .next {
-    background: transparent;
-    box-shadow: none;
-    color: #333;
-}
-
-/* ボタンの間の「…」 */
-.pagination .dots {
-    background: transparent;
-}
-
-
-/* TB幅 */
-@media screen and (min-width: 771px) {
-    .pagination {
-        margin: 0 auto 50px;
-    }
 }
 
 /* メインビジュアルのダミーブロック */
@@ -100,7 +39,7 @@ section {
     margin-top: 80px;
 }
 
-/* 条件ボタンの設定********************* */
+/* 条件ボタンの設定************************************ */
 /* ボタン位置調整・下余白 */
 .search_btn_wrap {
     display: flex;
