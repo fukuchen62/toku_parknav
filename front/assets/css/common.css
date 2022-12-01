@@ -14,6 +14,33 @@ body {
     overflow-x: hidden;
 }
 
+/* キービジュアルの下層ページ用 */
+.key_img {
+    object-fit: cover;
+    /* object-position: 50% 70%; */
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    margin-top: 80px;
+    z-index: -2;
+}
+
+.key_circle {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    top: 180px;
+    z-index: -1;
+    /* 破線を上に表示 */
+    outline-width: 4.5px;
+    outline-style: dashed;
+    outline-color: #fff;
+    outline-offset: 10px;
+}
+
 /* セクションによって、背景色をクリーム色にする */
 .bgcolor_cream {
     margin: 0 calc(50% - 50vw);

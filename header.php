@@ -55,20 +55,16 @@
 
                 <!-- メニュー -->
                 <div class="head_menu_item">
-                    <a href="<? php echo home_url('/park/');
-                                    ?>">公園検索</a>
+                    <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
                     <span>　|　 </span>
-                    <a href="<? php echo home_url('/course/');
-                                ?>">モデルコース</a>
+                    <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
                     <span>　|　</span>
-                    <a href="<? php echo home_url('/nursing/');
-                                ?>">運動療育について</a>
+                    <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
                     <span>　|　</span>
-                    <a href="<? php echo home_url('/gamestart/');
-                                ?>">ゲーム</a>
+                    <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
                     <span>　|　</span>
-                    <a href="<? php echo home_url('/mypage/');
-                                ?>">お気に入りリスト</a>
+                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+
                 </div>
 
                 <!-- 検索ボックス -->
@@ -80,8 +76,8 @@
 
                 <!-- 検索フォームを表示させる -->
                 <?php get_search_form('keywords');
-                    //php get_template_part('searchform','keywords');
-                    ?>
+                //php get_template_part('searchform','keywords');
+                ?>
                 <!-- </div> -->
 
 
