@@ -39,6 +39,7 @@ $purposes = get_terms($args);
 <?php the_post(); ?>
 
 <main class="main">
+    <!-- コース記事の出力 -->
     <section class="sec">
         <div class="container">
             <div class="article article-menu">
@@ -72,6 +73,7 @@ $purposes = get_terms($args);
 
                         // ディスクリプション
                         $course_discription = get_field('course_discription' . $i);
+
                         // コース時間
                         $course_time = get_field('course_time' . $i);
                         ?>
@@ -102,31 +104,19 @@ $purposes = get_terms($args);
         </div>
     </section>
 
+    <!-- 関連する公園ページの出力 -->
     <section>
         <div>
             <h2>このコースで紹介した公園はこちら</h2>
             <div>
                 <?php
                         $park = get_field('park_id');
-                        // print_r($park);
+                        //print_r($park);
 
                         $args = array(
                             'post_type' => 'park',
                             'p' => $park,
-                            // 'post_per_page' => -1
                         );
-
-                        // $metaquerysp =  array('relation' => 'AND');
-                        // $metaquerysp[] = array(
-                        //     'key' => 'park_id',
-                        //     'value' => $park,
-                        //     'type' => 'CHAR',
-                        //     'compare' => '=',
-                        // );
-
-                        // $args['meta_query'] = $metaquerysp;
-
-                        print_r($args);
 
                         $the_query = new WP_Query($args);
 
@@ -149,7 +139,7 @@ $purposes = get_terms($args);
                             </figure>
                             <h3 class="menu_title"><?php the_title(); ?></h3>
                             <div class="menu_desc">
-                                <?php the_content(); ?>
+                                <?php the_excerpt(); ?>
                             </div>
                         </a>
                     </div>
