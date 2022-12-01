@@ -2,6 +2,8 @@
 ?>
 <?php get_header(); ?>
 
+
+
 <h2 class="pageTitle">サイト内検索<span>SEARCH</span></h2>
 
 <main class="main">
