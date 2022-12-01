@@ -102,7 +102,7 @@
             <!-- カードとページをまとめるdiv -->
             <div>
                 <!-- ↓ここに選んだカテゴリ名が入る。 -->
-                <h2>モデルコース一覧</h2>
+                <h2 class="h2_under">モデルコース一覧</h2>
                 <div class="card_flex">
                     <!-- カード1つ分 -->
                     <div class="card_wrap">
@@ -223,16 +223,17 @@
                 </div>
 
                 <!-- ページネーション -->
-                <div class="nav_links">
-                    <div class="pagination">
-                        <a href="#" class="prev">← 前へ</a>
-                        <a href="#" class="page_numbers current">1</a>
-                        <a href="#" class="page_numbers">2</a>
-                        <a href="#" class="dots">…</a>
-                        <a href="#" class="page_numbers">4</a>
-                        <a href="#" class="next">次へ →</a>
-                    </div>
-                </div>
+                <ul class="pagination">
+                    <li class="disabled">
+                        <a href="#"><i class="fas fa-angle-left"></i></a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li>
+                        <a href="#"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
 
             </div>
 
@@ -270,13 +271,7 @@
             </div>
         </div>
 
-        <!-- 左向き矢印ボタン
-        <div class="prev_btn">
-            <a href="">
-                <img src="assets/img/prev_btn_cream.png" alt="左向き矢印ボタン">
-                <p>TOPへ</p>
-            </a>
-        </div> -->
+
     </main>
 
     <!-- フッター -->
