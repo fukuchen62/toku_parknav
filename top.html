@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
     <!-- 各種css読み込み -->
-    <!-- <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/slick-theme.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/top.css"> -->
+    <link rel="stylesheet" href="./assets/css/top.css">
 
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- fontawesome -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
-    <!-- <title>とくしまGo!Go!パークなび</title> -->
-    <?php
-    // wp_head()を呼び出す
-    wp_head();
-    ?>
+    <title>とくしまGo!Go!パークなび</title>
 </head>
 
 <body>
@@ -43,22 +38,22 @@
 
                 <!-- ロゴ -->
                 <div>
-                    <a href="<?php echo home_url('') ?>">
-                        <img class="head_logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび">
+                    <a href="top.html">
+                        <img class="head_logo" src="assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび">
                     </a>
                 </div>
 
                 <!-- メニュー -->
                 <div class="head_menu_item">
-                    <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
+                    <a href="search.html">公園検索</a>
                     <span>　|　 </span>
-                    <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
+                    <a href="archive-course.html">モデルコース</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
+                    <a href="nursing.html">運動療育について</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
+                    <a href="gamestart.html">ゲーム</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                    <a href="">お気に入りリスト</a>
                 </div>
 
                 <!-- 検索ボックス -->
@@ -67,11 +62,6 @@
                         <input class="head_form" size="300" type="search" name="search" placeholder="キーワードを入力">
                         <input class="head_submit fas" type="submit" value="&#xf002;">
                     </form>
-
-                    <!-- 検索フォームを表示させる -->
-                    <? //php get_search_form();
-                    //php get_template_part('searchform','keywords');
-                    ?>
                 </div>
 
             </div>
@@ -84,15 +74,11 @@
                 </label>
                 <div class="hbg_menuwrap hbg_menuwrap-right">
                     <ul class="hbg_menulist hbg_menulist-circle">
-                        <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
-                        <span>　|　 </span>
-                        <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                        <li><a href="search.html">公園検索</a></li>
+                        <li><a href="archive-course.html">モデルコース</a></li>
+                        <li><a href="nursing.html">運動療育について</a></li>
+                        <li><a href="gamestart.html">ゲーム</a></li>
+                        <li><a href="mypage.html">お気に入りリスト</a></li>
                         <!-- 検索ボックス -->
                         <li class="hbg_search_box">
                             <form class="hbg_search" action="index.php" method="get">
@@ -112,47 +98,47 @@
         <div class="key_bg bgcolor_cream">
 
             <!-- タイトルロゴ -->
-            <h1><img class="key_logo fadeIn" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_logo.png" alt="とくしまGo!Go!パークなび"></h1>
-            <h1><img class="key_logo_sp fadeIn" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび"></h1>
+            <h1><img class="key_logo fadeIn" src="assets/img/key-visual/key_logo.png" alt="とくしまGo!Go!パークなび"></h1>
+            <h1><img class="key_logo_sp fadeIn" src="assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび"></h1>
 
             <!-- キャッチコピー -->
-            <img class="key_catch" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_catch.png" alt="あわっこあつまれ！遊び方は無限大">
+            <img class="key_catch" src="assets/img/key-visual/key_catch.png" alt="あわっこあつまれ！遊び方は無限大">
 
             <!-- 装飾写真 -->
-            <img class="key_photo01" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo01.svg" alt="キービジュアル写真(双子姉妹)">
-            <img class="key_photo02" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo02.png" alt="キービジュアル写真(すべり台少年)">
-            <img class="key_photo03" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo03.png" alt="キービジュアル写真(乗り物3人兄弟)">
-            <img class="key_photo04" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo04.png" alt="キービジュアル写真(グローブジャングル少女)">
-            <img class="key_photo05" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo05.svg" alt="キービジュアル写真(ブランコ少年)">
-            <img class="key_photo06" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo06.png" alt="キービジュアル写真(3人家族)">
+            <img class="key_photo01" src="assets/img/key-visual/key_photo01.svg" alt="キービジュアル写真(双子姉妹)">
+            <img class="key_photo02" src="assets/img/key-visual/key_photo02.png" alt="キービジュアル写真(すべり台少年)">
+            <img class="key_photo03" src="assets/img/key-visual/key_photo03.png" alt="キービジュアル写真(乗り物3人兄弟)">
+            <img class="key_photo04" src="assets/img/key-visual/key_photo04.png" alt="キービジュアル写真(グローブジャングル少女)">
+            <img class="key_photo05" src="assets/img/key-visual/key_photo05.svg" alt="キービジュアル写真(ブランコ少年)">
+            <img class="key_photo06" src="assets/img/key-visual/key_photo06.png" alt="キービジュアル写真(3人家族)">
 
             <!-- 丸い飾り -->
-            <img class="key_circle_pk01" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_pk.png" alt="ピンク丸1">
-            <img class="key_circle_pk02" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_pk.png" alt="ピンク丸2">
-            <img class="key_circle_pk03" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_pk.png" alt="ピンク丸3">
-            <img class="key_circle_pk04" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_pk.png" alt="ピンク丸4">
-            <img class="key_circle_bl01" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_bl.png" alt="青丸1">
-            <img class="key_circle_bl02" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_bl.png" alt="青丸2">
-            <img class="key_circle_bl03" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_circle_bl.png" alt="青丸3">
+            <img class="key_circle_pk01" src="assets/img/key-visual/key_circle_pk.png" alt="ピンク丸1">
+            <img class="key_circle_pk02" src="assets/img/key-visual/key_circle_pk.png" alt="ピンク丸2">
+            <img class="key_circle_pk03" src="assets/img/key-visual/key_circle_pk.png" alt="ピンク丸3">
+            <img class="key_circle_pk04" src="assets/img/key-visual/key_circle_pk.png" alt="ピンク丸4">
+            <img class="key_circle_bl01" src="assets/img/key-visual/key_circle_bl.png" alt="青丸1">
+            <img class="key_circle_bl02" src="assets/img/key-visual/key_circle_bl.png" alt="青丸2">
+            <img class="key_circle_bl03" src="assets/img/key-visual/key_circle_bl.png" alt="青丸3">
 
             <!-- 三角の旗 -->
-            <img class="key_flag" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_flag.png" alt="三角旗">
+            <img class="key_flag" src="assets/img/key-visual/key_flag.png" alt="三角旗">
             <!-- 町 -->
-            <img class="key_city" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_city.png" alt="町">
+            <img class="key_city" src="assets/img/key-visual/key_city.png" alt="町">
         </div>
 
         <!-- 公園検索 -->
         <section class="search">
             <h2>今週末、どこ行く？<br>公園検索</h2>
             <div class="search_inner">
-                <img class="search_map" src="<?php echo get_template_directory_uri(); ?>/assets/img/search_map.png" alt="検索マップ">
-                <a href="<?php echo home_url('/area/east/'); ?>">
+                <img class="search_map" src="assets/img/search_map.png" alt="検索マップ">
+                <a href="#">
                     <div class="map_btn map_btn_east circle">東部</div>
                 </a>
-                <a href="<?php echo home_url('/area/west/'); ?>">
+                <a href="#">
                     <div class="map_btn map_btn_west circle">西部</div>
                 </a>
-                <a href="<?php echo home_url('/area/south/'); ?>">
+                <a href="#">
                     <div class="map_btn map_btn_south circle">南部</div>
                 </a>
             </div>
@@ -164,7 +150,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -175,7 +161,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +170,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -195,7 +181,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +190,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -215,7 +201,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -228,11 +214,11 @@
         <section class="bgcolor_cream">
             <h2>このサイトについて</h2>
             <div class="section_flex">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/about_img.png" alt="about写真">
+                <img class="section_img" src="./assets/img/about_img.png" alt="about写真">
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="<?php echo home_url('/minori/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                        <a href="about.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                             <p>くわしく</p>
                         </a>
                     </div>
@@ -244,12 +230,12 @@
         <section>
             <h2>公園をもっと楽しむ！<br>モデルコース</h2>
             <div class="section_flex_reverse">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/course_img.png" alt="course写真">
+                <img class="section_img" src="./assets/img/course_img.png" alt="course写真">
 
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="<?php echo home_url('/course/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
+                        <a href="#"><img src="./assets/img/next_btn_cream.png" alt="次の画面へ">
                             <p>一覧へ</p>
                         </a>
                     </div>
@@ -265,7 +251,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -274,7 +260,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -284,7 +270,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -293,7 +279,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                            </p>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +289,7 @@
                 <div class="card_wrap">
                     <a href="#">
                         <!-- 記事画像 -->
-                        <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
+                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
                         <!-- 文章部分の枠 -->
                         <div class="card_container">
                             <div class="card_inner">
@@ -312,7 +298,7 @@
                                 <!-- 記事本文 -->
                                 <div class="card_txt ">
                                     <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
+                                            </p>
                                 </div>
                             </div>
                         </div>
@@ -327,12 +313,12 @@
                 運動療育と遊具</h2>
 
             <div class="section_flex">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing_img.png" alt="療育写真">
+                <img class="section_img" src="./assets/img/nursing_img.png" alt="療育写真">
 
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                        <a href="nursing.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                             <p>くわしく</p>
                         </a>
                     </div>
@@ -345,12 +331,12 @@
         <section>
             <h2>ポポ二郎と虫キャッチ！</h2>
             <div class="section_flex_reverse">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="キャラクター画像">
+                <img class="section_img" src="./assets/img/popo_img.png" alt="キャラクター画像">
                 <div class="inner_flex">
                     <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                     <div class="next_btn">
-                        <a href="<?php echo home_url('/gamestart/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
+                        <a href="gamestart.html">
+                            <img src="./assets/img/next_btn_cream.png" alt="次の画面へ">
                             <p>あそぶ</p>
                         </a>
                     </div>
@@ -362,7 +348,7 @@
         <section class="bgcolor_cream">
             <h2>お知らせ</h2>
             <div class="section_flex">
-                <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/news_img.png" alt="療育写真">
+                <img class="news_img" src="./assets/img/news_img.png" alt="療育写真">
                 <div class="news_article">
                     <a href="#">
                         <div class="news_date">2022.12.13</div>
@@ -375,7 +361,7 @@
                     </a>
                 </div>
                 <div class="news_next_btn next_btn">
-                    <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                    <a href="archive-post.html"><img src="./assets/img/next_btn_white.png" alt="次の画面へ">
                         <p>一覧へ</p>
                     </a>
                 </div>
@@ -385,16 +371,23 @@
         <!-- インスタ -->
         <section class="insta_box">
             <h2>Instagram</h2>
-            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+            <ul class="slider" id="JS_slider">
+                <li><a href="#"><img src="./assets/img/slick/slider01.jpg" alt="インスタ写真"></a></li>
+                <li><a href="#"><img src="./assets/img/slick/slider02.jpg" alt="インスタ写真"></a></li>
+                <li><a href="#"><img src="./assets/img/slick/slider03.jpg" alt="インスタ写真"></a></li>
+                <li><a href="#"><img src="./assets/img/slick/slider04.jpg" alt="インスタ写真"></a></li>
+            </ul>
+            <div class="slider_dots"></div>
+            <a href="#"><img src="./assets/img/insta_logo.png" alt="インスタリンク" class="insta_logo"></a>
         </section>
 
         <!-- リンク集 -->
         <div class="banner_flex">
-            <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner01.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner02.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner03.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner04.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner05.png" alt="サイトリンク"></a></div>
+            <div class="banner"><a href="http://awacamp.site/"><img src="./assets/img/banner01.png" alt="サイトリンク"></a></div>
+            <div class="banner"><a href="https://awa-nolife.com/"><img src="./assets/img/banner02.png" alt="サイトリンク"></a></div>
+            <div class="banner"><a href="https://arutoku.com/"><img src="./assets/img/banner03.png" alt="サイトリンク"></a></div>
+            <div class="banner"><a href="https://kisyanotabi.com/"><img src="./assets/img/banner04.png" alt="サイトリンク"></a></div>
+            <div class="banner"><a href="http://mizutokushima.com/"><img src="./assets/img/banner05.png" alt="サイトリンク"></a></div>
         </div>
     </main>
 
@@ -407,47 +400,47 @@
                         公園検索
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/area/east/'); ?>">県東部</a>
+                        <a href="search.html">県東部</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/area/west/'); ?>">県西部</a>
+                        <a href="">県西部</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/area/south/'); ?>">県南部</a>
+                        <a href="">県南部</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/park/'); ?>">条件検索</a>
-                    </li>
-                </ul>
-                <ul class="foot_col">
-                    <li>
-                        <a href="<?php echo home_url('/course/'); ?>">モデルコース一覧</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
-                    </li>
-                    <li>
-                        <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
+                        <a href="">条件検索</a>
                     </li>
                 </ul>
                 <ul class="foot_col">
                     <li>
-                        <a href="<?php echo home_url('/newslist/'); ?>">ニュース一覧</a>
+                        <a href="archive-course.html">モデルコース一覧</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                        <a href="nursing.html">運動療育について</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/about/'); ?>">このサイトについて</a>
+                        <a href="gamestart.html">ゲーム</a>
+                    </li>
+                </ul>
+                <ul class="foot_col">
+                    <li>
+                        <a href="">ニュース一覧</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
+                        <a href="mypage.html">マイページ</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
+                        <a href="">このサイトについて</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/minori/'); ?>">サイト制作にあたって</a>
+                        <a href="privacy.html">プライバシーポリシー・免責事項</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">お問い合わせ</a>
+                    </li>
+                    <li>
+                        <a href="minori.html">サイト制作にあたって</a>
                     </li>
                 </ul>
             </div>
@@ -460,11 +453,11 @@
         <!-- ポポ二郎の豆知識 -->
         <div class="popo_trivia hoge">
             <div class="popo_commentset">
-                <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+                <img class="popo_commentbox" src="./assets/img/popo_commentbox.png" alt="ポポ吹き出し">
                 <p id="popo_comment" class="popo_comment"></p>
             </div>
-            <img class="popo" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="ポポじろう">
-            <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+            <img class="popo" src="./assets/img/popo_img.png" alt="ポポじろう">
+            <input class="popo" type="image" src="./assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
         </div>
 
         <!-- トップへ戻るボタン -->
@@ -479,10 +472,5 @@
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/top.js"></script>
 
-    <?php
-    // wp_foot()を呼び出す
-    wp_footer();
-    ?>
 </body>
-
 </html>

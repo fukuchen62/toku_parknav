@@ -178,7 +178,8 @@
     <!-- モデルコースへのリンク -->
     <div class="col-12">
         <div class="sec_btn">
-            <a href="<?php echo get_permalink(115); ?>" class="btn btn-default">モデルコースのカード型<i class="fas fa-angle-right"></i></a>
+            <a href="<?php // echo get_permalink(115); the_field('course_id');
+                        ?>" class="btn btn-default">モデルコースのカード型<i class="fas fa-angle-right"></i></a>
         </div>
     </div>
 

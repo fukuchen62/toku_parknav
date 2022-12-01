@@ -5,29 +5,52 @@
 <main>
     <!-- お気に入り一覧表示 -->
     <section>
-        <?php
-        $favorites = get_user_favorites();
-        print_r($favorites);
+        <h2>お気に入り一覧</h2>
 
-        if ($favorites) :
-            $args[] = array(
+        <!-- データの取得 -->
+        <?php
+        if (function_exists('get_user_favorites')) {
+            $favorites = get_user_favorites();
+            krsort($favorites);
+
+            //sprint_r($favorites);
+        }
+
+        // サブクエリの発行
+        if ($favorites) {
+            $args = array(
                 'post_type' => 'park',
-                'post_per_page' => -1,
+                'posts_per_page' => -1,
                 'ignore_sticky_posts' => true,
                 'post__in' => $favorites,
                 'orderby' => 'post__in',
             );
 
             $the_query = new WP_Query($args);
+        }
+        ?>
 
-            if ($the_query->have_post()) :
-                while ($the_query->have_post()) :
-                    $the_query->the_post(); ?>
+        <!-- カード表示 -->
+        <?php
+        if ($the_query->have_posts()) :
+            while ($the_query->have_posts()) :
+                $the_query->the_post();
 
-        <!-- <div class="col-md-3">
-                    <?php //get_template_part('template-parts/loop', 'park')
-                    ?>
-                </div> -->
+
+                // マップに使用
+                // フィールドから経度の取得
+                $latitude = get_field('latitude');
+                // フィールドから緯度の取得
+                $longtitude = get_field('longtitude');
+                // 公園名の取得
+                $text = esc_html(get_field('park_name'));
+
+                $parks = [];
+
+                $parks['lat'][] = $latitude;
+                $parks['lng'][] = $longtitude;
+                $parks['text'][] = $text;
+        ?>
 
         <div class="menu">
             <a href="<?php the_permalink(); ?>">
@@ -45,12 +68,15 @@
             </a>
         </div>
 
-        <?php endwhile; ?>
-        <?php else :
-                // No Favorites
-                echo '<p class="text-center">お気に入りがありません。</p>';
-            endif;
-        endif; ?>
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        else :
+            // No Favorites
+            echo '<p class="text-center">お気に入りがありません。</p>';
+        endif;
+
+        ?>
     </section>
 
     <!-- マップ表示 -->
@@ -61,7 +87,7 @@
     </section>
 </main>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 function initMap() {
     // 表示設定
     const color = "black"; // ラベルの色
@@ -85,32 +111,22 @@ function initMap() {
 
     // 経度、緯度、公園名を取得
     <?php
-    for ($i = 0; $i < $course_count; $i++) {
-        echo "courses[${i}]={lat:";
-        echo $courses[$i]['lat'];
-        echo ', lng:';
-        echo $courses[$i]['lng'];
-        echo ', text:"';
-        echo $courses[$i]['text'];
-        echo "\",
+        for ($i = 0; $i < $course_count; $i++) {
+            echo "courses[${i}]={lat:";
+            echo $courses[$i]['lat'];
+            echo ', lng:';
+            echo $courses[$i]['lng'];
+            echo ', text:"';
+            echo $courses[$i]['text'];
+            echo "\",
                 color: \"#AD7000\",
                 fontFamilt: 'Kosugi Maru',
                     fontSize: \"14px\",
                 fontWeight: \"bold\",};";
-        echo "\n";
-    }
-    ?>
+            echo "\n";
+        }
+        ?>
 
-    // 例
-    // spots[0] = {
-    //     lat: 34.06505,
-    //     lng: 134.56786,
-    //     text: "みなと公園",
-    //     color: "black",
-    //     fontFamilt: 'Kosugi Maru',
-    //     fontSize: "14px",
-    //     fontWeight: "bold",
-    // };
 
     // マップ上にマーカーの生成
     var marker = new google.maps.Marker();
@@ -128,7 +144,7 @@ function initMap() {
 </script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
-</script> -->
+</script>
 
 
 <?php //フッターテンプレートファイルを読み込む
