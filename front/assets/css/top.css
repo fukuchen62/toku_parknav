@@ -342,11 +342,10 @@ a:hover {
 
 }
 
-/* ↑ パーツ配置ここまで ↑ */
+/* ↑ キービジュアルパーツ配置ここまで ↑ */
 
 /* ＝＝＝公園検索＝＝＝ */
 .search {
-
     padding-bottom: 0px;
 }
 
@@ -446,6 +445,11 @@ a:hover {
 /* TB幅以上 */
 @media screen and (min-width: 771px) {
 
+    .search_map {
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
     .map_btn {
         padding: 3vw;
         font-size: 20px;
@@ -453,18 +457,18 @@ a:hover {
 
     /* マップボタンの位置調整 */
     .map_btn_east {
-        top: 17%;
-        right: 23%;
+        top: 14%;
+        right: 30%;
     }
 
     .map_btn_west {
-        top: 26%;
-        left: 20%;
+        top: 22%;
+        left: 27%;
     }
 
     .map_btn_south {
-        bottom: 30%;
-        right: 35%;
+        bottom: 28%;
+        right: 37%;
     }
 }
 
@@ -496,8 +500,18 @@ a:hover {
 }
 
 
-/* ＝＝＝インスタのスライダー＝＝＝ */
+/* ＝＝＝インスタ＝＝＝ */
 
+/* インスタの写真を囲む枠 */
+.insta_box {
+    margin-top: 50px;
+    padding: 50px;
+    border: #3E3A39 2px solid;
+    border-radius: 30px;
+    background-color: #FFFCE3;
+}
+
+/* スライダー */
 .slider .slick-slide {
     width: 200px;
     height: 200px;
