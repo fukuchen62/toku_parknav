@@ -9,7 +9,7 @@
 
     <!-- フォント読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
     <!-- 各種css読み込み -->
@@ -67,7 +67,7 @@
 
             <!-- ハンバーガーメニュー -->
             <div class="hbg_menubox">
-                <input id="hbg" type="checkbox" class="input-hidden">
+                <input id="hbg" type="checkbox" class="input-hidden" value="hbg_open">
                 <label for="hbg" class="hbg_btn hbg_btn">
                     <span class="hbg_btn-circle"></span>
                 </label>
@@ -125,13 +125,12 @@
 
                 <div class="attention">
                     <p><a href="privacy.html">個人情報の取扱い</a>について</p>
-                    <input type="checkbox"><span>同意する</span>
+                    <input type="checkbox" value="consent"><span>同意する</span>
                 </div>
 
                 <div class="form_row form_row-center">
-                    <button type="submit"><img src="./assets/img/next_btn_cream.png" alt="送信" class="btn btn-send">
-                        <p class="btn_txt">確認画面へ</p>
-                    </button>
+                    <button type="submit"><img src="./assets/img/next_btn_cream.png" alt="送信" class="btn btn-send"></button>
+                    <p class="btn_txt">送信</p>
 
                 </div>
             </form>
