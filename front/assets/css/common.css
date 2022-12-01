@@ -228,6 +228,7 @@ h4 {
 
 .pagination a:hover {
     background-color: #3E3A39;
+    color: white;
 }
 
 /* 選択できない箇所 */
