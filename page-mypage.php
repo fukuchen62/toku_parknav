@@ -9,6 +9,10 @@
 
         <!-- データの取得 -->
         <?php
+        // データ保存
+        $parks = [];
+        $parks_count = 0;
+
         if (function_exists('get_user_favorites')) {
             $favorites = get_user_favorites();
             krsort($favorites);
@@ -41,15 +45,16 @@
                 // フィールドから経度の取得
                 $latitude = get_field('latitude');
                 // フィールドから緯度の取得
-                $longtitude = get_field('longtitude');
+                $longitude = get_field('longitude');
                 // 公園名の取得
                 $text = esc_html(get_field('park_name'));
 
-                $parks = [];
-
+                // フィールドから取得したデータを配列$parksに格納
                 $parks['lat'][] = $latitude;
-                $parks['lng'][] = $longtitude;
+                $parks['lng'][] = $longitude;
                 $parks['text'][] = $text;
+
+                //print_r($parks);
         ?>
 
         <div class="menu">
@@ -63,17 +68,22 @@
                 </figure>
                 <h3 class="menu_title"><?php the_title(); ?></h3>
                 <div class="menu_desc">
-                    <?php the_content(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
             </a>
         </div>
 
         <?php
+                $parks_count++;
+            //print_r($parks_count);
+
             endwhile;
             wp_reset_postdata();
+
         else :
             // No Favorites
             echo '<p class="text-center">お気に入りがありません。</p>';
+
         endif;
 
         ?>
@@ -93,48 +103,60 @@ function initMap() {
     const color = "black"; // ラベルの色
     const font_family = 'Kosugi Maru' //ラベルのフォント
     const font_size = "14px" //ラベルのサイズ
+    const font_weight = "bold"
 
     // 徳島全域が入るように
     var latlng = new google.maps.LatLng(33.9220334, 134.2203203);
     var opts = {
+        // 地図のズームを指定
         zoom: 9.2,
+        // 地図の中心を指定
         center: latlng,
+        // マップタイプの設定
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
     // マップ生成
+    // 地図を生成 → #mapに埋め込み
     var map = new google.maps.Map(document.getElementById("map"), opts);
 
-    // マーカー生成
-    // フォント変えられる
-    let courses = [];
+    // console.log(map);
 
-    // 経度、緯度、公園名を取得
+    // マーカー生成
+    let parks = [];
+
+    //console.log("確認表示");
+
+    // 経度、緯度、公園名を配列$parksから取り出す
+    //
     <?php
-        for ($i = 0; $i < $course_count; $i++) {
-            echo "courses[${i}]={lat:";
-            echo $courses[$i]['lat'];
+        for ($i = 0; $i < $parks_count; $i++) {
+            echo "parks[${i}]={lat:";
+            echo $parks['lat'][$i];
             echo ', lng:';
-            echo $courses[$i]['lng'];
+            echo $parks['lng'][$i];
             echo ', text:"';
-            echo $courses[$i]['text'];
+            echo $parks['text'][$i];
             echo "\",
                 color: \"#AD7000\",
-                fontFamilt: 'Kosugi Maru',
-                    fontSize: \"14px\",
-                fontWeight: \"bold\",};";
+                font_family: 'Kosugi Maru',
+                    font_size: \"14px\",
+                font_weight: \"bold\",};";
+
             echo "\n";
         }
         ?>
 
+    //console.log("かくにん");
 
-    // マップ上にマーカーの生成
+    //マップ上にマーカーの生成
     var marker = new google.maps.Marker();
-    for (let i = 0; i < courses.length; i++) {
+
+    for (let i = 0; i < parks.length; i++) {
         marker = new google.maps.Marker({
-            position: courses[i],
-            label: courses[i],
-            map: map
+            position: parks[i],
+            label: parks[i],
+            map: map,
         });
     }
 
