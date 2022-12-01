@@ -62,7 +62,7 @@
                 'post_type' => 'park', // 投稿タイプを指定
                 'orderby' => 'rand', // ランダムで表示
                 'posts_per_page' => 3, // 表示する記事数
-                'post__not_in' => array($post->ID) // 現在表示している記事を除外
+                // 'post__not_in' => array($post->ID) // 現在表示している記事を除外
             );
             $post_query = new WP_Query($args);
 
