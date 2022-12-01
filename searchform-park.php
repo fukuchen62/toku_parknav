@@ -1,4 +1,6 @@
 <form method="get" action="<?php echo home_url('/'); ?>">
+    <input type="hidden" name="search_type" value="park">
+
     <h3>エリア</h3>
     <?php $terms = get_terms('area'); ?>
     <?php if ($terms) : ?>
@@ -39,6 +41,5 @@
     <?php endif; ?>
 
     <input type="clear" value="クリア">
-    <input type="hidden" name="s" value="<?php the_search_query(); ?>">
     <input type="submit" value="検索">
 </form>
