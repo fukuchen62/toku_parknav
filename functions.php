@@ -289,6 +289,34 @@ function add_individual_stylesheet_script()
     }
 }
 
+////////////////////////////////////////////////////////////////////////
+//以下は とくぱーくナビのオリジナル、必要に応じて加工する
+
+/** 検索結果表示のテンプレートの切り替え*/
+add_action('template_include', 'my_search_template');
+function my_search_template($template)
+{
+    $type = filter_input(INPUT_GET, 'search_type');
+    $new_template = '';
+    if ($type) {
+        switch ($type) {
+            case 'keywords':
+                $new_template = STYLESHEETPATH . '/search-keywords.php';
+                break;
+            case 'park':
+                $new_template = STYLESHEETPATH . '/search-park.php';
+                break;
+            default:
+                $new_template = '';
+        }
+    }
+    if ($new_template) {
+        if (file_exists($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
 
 
 

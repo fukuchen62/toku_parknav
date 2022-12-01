@@ -7,7 +7,7 @@
 
 <!-- 詳細検索フォーム -->
 <form class="search_wrap">
-    <input type="hidden" name="search_type" value="keywords">
+    <input type="hidden" name="search_type" value="park">
     <input type="hidden" name="s" value="">
     <h2 class="search_ttl">公園詳細検索</h2>
 
