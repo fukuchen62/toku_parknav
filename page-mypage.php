@@ -138,7 +138,7 @@ function initMap() {
             echo ', text:"';
             echo $parks['text'][$i];
             echo "\",
-                color: \"#AD7000\",
+                color: \"#000000\",
                 font_family: 'Kosugi Maru',
                     font_size: \"14px\",
                 font_weight: \"bold\",};";
