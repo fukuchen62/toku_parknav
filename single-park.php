@@ -176,15 +176,49 @@
 
 
     <!-- モデルコースへのリンク -->
-    <div class="col-12">
-        <div class="sec_btn">
-            <a href="<?php // echo get_permalink(115); the_field('course_id');
-                        ?>" class="btn btn-default">モデルコースのカード型<i class="fas fa-angle-right"></i></a>
+
+    <h3>この公園はこちらの記事でも<br>
+        紹介しています</h3>
+    <?php
+    $course = get_field('course_id');
+    $args = array(
+        'post_type' => 'course',
+        'c' => $course,
+    );
+
+    $the_query = new WP_Query($args);
+
+    if ($the_query->have_posts()) :
+        while ($the_query->have_posts()) :
+            $the_query->the_post();
+    ?>
+    <div>
+        <div class="menu">
+            <a href="<?php the_permalink(); ?>">
+                <figure class="menu_pic">
+                    <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail('medium') ?>
+                    <?php else : ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+                    <?php endif; ?>
+                </figure>
+                <h3 class="menu_title"><?php the_title(); ?></h3>
+                <div class="menu_desc">
+                    <?php the_content(); ?>
+                </div>
+            </a>
         </div>
+
     </div>
+    <?php
+        endwhile;
+    endif;
+    ?>
+
 
 
     <!-- 近くの公園（３つ）カード型を呼び出す -->
+    <h3>近くの公園はこちら</h3>
     <?php
     $args = array(
         'post_type' => 'park', // 投稿タイプを指定

@@ -15,9 +15,6 @@
     $area = get_term_by('slug', $area_slug, 'area');
     ?>
 
-    <?php //get_search_form();
-    ?>
-
     <section class="sec">
         <div class="container">
             <div class="sec_header">

@@ -35,8 +35,8 @@
     ?>
 </head>
 
-<body>
-    <?php body_class(); ?>>
+<body <?php body_class(); ?>>
+
     <?php
     // wp_body_openを呼び出す
     wp_body_open();
@@ -55,74 +55,62 @@
 
                 <!-- メニュー -->
                 <div class="head_menu_item">
-                    <a href="<?php echo home_url('/park/');
-                                ?>">公園検索</a>
+                    <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
                     <span>　|　 </span>
-                    <a href="<?php echo home_url('/course/');
-                                ?>">モデルコース</a>
+                    <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/nursing/');
-                                ?>">運動療育について</a>
+                    <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/gamestart/');
-                                ?>">ゲーム</a>
+                    <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/mypage/');
-                                ?>">お気に入りリスト</a>
+                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
 
-                    <?php
-                    // $args = array(
-                    //     'menu' => 'global-navigation',
-                    //     'menu_class' => '',
-                    //     'container' => false,
-                    // );
-                    // wp_nav_menu($args);
-                    ?>
                 </div>
 
                 <!-- 検索ボックス -->
-                <div class=" head_menu_item">
-                    <form class="head_search" action="">
+                <!-- <div class=" head_menu_item"> -->
+                <!-- <form class="head_search" action="">
                         <input class="head_form" size="300" type="search" name="search" placeholder="キーワードを入力">
                         <input class="head_submit fas" type="submit" value="&#xf002;">
-                    </form>
+                    </form> -->
 
-                    <!-- 検索フォームを表示させる -->
-                    <? //php get_search_form();
-                    //php get_template_part('searchform','keywords');
-                    ?>
+                <!-- 検索フォームを表示させる -->
+                <?php get_search_form('keywords');
+                //php get_template_part('searchform','keywords');
+                ?>
+                <!-- </div> -->
+
+
+                <!-- ハンバーガーメニュー -->
+                <div class="hbg_menubox">
+                    <input id="hbg" type="checkbox" class="input-hidden" value="hbg_open">
+                    <label for="hbg" class="hbg_btn hbg_btn">
+                        <span class="hbg_btn-circle"></span>
+                    </label>
+                    <div class="hbg_menuwrap hbg_menuwrap-right">
+                        <ul class="hbg_menulist hbg_menulist-circle">
+                            <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
+                            <span>　|　 </span>
+                            <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
+                            <span>　|　</span>
+                            <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
+                            <span>　|　</span>
+                            <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
+                            <span>　|　</span>
+                            <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+
+                            <!-- 検索ボックス -->
+                            <li class="hbg_search_box">
+                                <form class="hbg_search" action="index.php" method="get">
+                                    <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
+                                    <input class="hbg_submit fas" type="submit" value="検索">
+                                </form>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hbg_cover"></div>
                 </div>
-
-            </div>
-
-            <!-- ハンバーガーメニュー -->
-            <div class="hbg_menubox">
-                <input id="hbg" type="checkbox" class="input-hidden" value="hbg_open">
-                <label for="hbg" class="hbg_btn hbg_btn">
-                    <span class="hbg_btn-circle"></span>
-                </label>
-                <div class="hbg_menuwrap hbg_menuwrap-right">
-                    <ul class="hbg_menulist hbg_menulist-circle">
-                        <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
-                        <span>　|　 </span>
-                        <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
-                        <span>　|　</span>
-                        <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
-
-                        <!-- 検索ボックス -->
-                        <li class="hbg_search_box">
-                            <form class="hbg_search" action="index.php" method="get">
-                                <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
-                                <input class="hbg_submit fas" type="submit" value="検索">
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-                <div class="hbg_cover"></div>
-            </div>
         </nav>
     </header>

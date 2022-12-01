@@ -5,30 +5,54 @@
 
 <h2 class="pageTitle">公園検索</h2>
 
-<!-- 地域選択ボタンの設計 -->
-<?php
-$args = array(
-    'taxonomy' => 'area',
-);
-$areas = get_terms($args);
-?>
+<!-- 詳細検索フォーム -->
+<form method="get" action="<?php echo home_url('/'); ?>">
+    <input type="hidden" name="search_type" value="park">
 
-<!-- タクソノミーのメニューボタンを作成 -->
-<?php if (!empty($areas)) : ?>
-<div class="pageNav">
-    <ul>
-        <!-- kindに属する種類を一つずつリンクボタンを作成 -->
-        <?php foreach ($areas as $key => $area) : ?>
+    <h3>エリア</h3>
+    <?php $terms = get_terms('area'); ?>
+    <?php if ($terms) : ?>
+    <ul class="terms">
+        <?php foreach ($terms as $term) : ?>
         <li>
-            <a href="<?php echo get_term_link($area); ?>">
-                <?php echo $area->name; ?>
-            </a>
+            <input type="radio" name="area[]" value="<?php echo esc_attr($term->slug); ?>">
+            <?php echo esc_html($term->name); ?>
         </li>
         <?php endforeach; ?>
     </ul>
-</div>
-<?php endif; ?>
+    <?php endif; ?>
 
+    <h3>目的</h3>
+    <?php $terms = get_terms('purpose'); ?>
+    <?php if ($terms) : ?>
+    <ul class="terms">
+        <?php foreach ($terms as $term) : ?>
+        <li>
+            <input type="radio" name="purpose[]" value="<?php echo esc_attr($term->slug); ?>">
+            <?php echo esc_html($term->name); ?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
+
+    <h3>遊具</h3>
+    <?php $terms = get_field('playground_slug'); ?>
+    <?php if ($terms) : ?>
+    <ul class="terms">
+        <?php foreach ($terms as $term) : ?>
+        <li>
+            <input type="checkbox" name="playground[]" value="<?php echo esc_attr($term->slug); ?>">
+            <?php echo esc_html($term->name); ?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
+
+    <input type="clear" value="クリア">
+    <input type="submit" value="検索">
+</form>
+
+<!-- 詳細検索 結果一覧 -->
 <main class="main">
     <h2 class="pageTitle">公園検索 結果一覧</h2>
 
