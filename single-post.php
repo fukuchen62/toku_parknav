@@ -33,6 +33,7 @@
 
                     <div class="article_body">
                         <div class="content">
+
                             <!-- 記事の詳細内容 -->
                             <?php the_content(); ?>
                         </div>

@@ -86,9 +86,25 @@
         <div class="section_flex">
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/about_img.png" alt="about写真">
             <div class="inner_flex">
-                <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
+                <p class="section_txt">自然豊かな徳島県には、子どもたちが喜ぶ公園がたくさん！
+                    「ほかにはどんな公園があるのかな」
+                    「公園にはどんな遊具があるのかな」
+                    気になったことはありませんか？
+
+                    ・知りたいのに公式サイトがない
+                    ・知りたい情報が載ってない
+                    そんな徳島県民のお悩みを解決するために、
+                    みんなが知りたい公園情報をまとめました。
+
+                    このサイトを通して、
+                    「こんな遊び方あったんだ！」
+                    「この遊具であそんでみたい！」など、
+                    今まで気づかなかった公園の『あたらしい発見』をお届けします。
+
+                    「楽しみ方は無限大！！！」
+                </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/minori/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                    <a href="<?php echo home_url('/about/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
                         <p>くわしく</p>
                     </a>
                 </div>
@@ -103,7 +119,9 @@
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/course_img.png" alt="course写真">
 
             <div class="inner_flex">
-                <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
+                <p class="section_txt">半日コース・１日コースで、公園のおすすめの過ごし方を紹介しています。
+                    公園に行ったことがない方はもちろん、行ったことがある方も、普段とは違った過ごし方を発見できるチャンスかもしれません。
+                </p>
                 <div class="next_btn">
                     <a href="<?php echo home_url('/course/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
                         <p>一覧へ</p>
@@ -151,7 +169,9 @@
                 <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing_img.png" alt="療育写真">
 
                 <div class="inner_flex">
-                    <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
+                    <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
+                        発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
+                    </p>
                     <div class="next_btn">
                         <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
                             <p>くわしく</p>
@@ -185,12 +205,12 @@
             <div class="section_flex">
                 <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/news_img.png" alt="療育写真">
                 <div class="news_article">
-                    <a href="<?php echo home_url('/newslist/'); ?>">
+                    <a href="<?php echo get_permalink('1') ?>">
                         <div class="news_date">2022.12.13</div>
                         <div class="news_ttl">「とくしまGo!Go!パークなび」公開
                         </div>
                     </a>
-                    <a href="<?php echo home_url('/newslist/'); ?>">
+                    <a href="<?php echo get_permalink('224') ?>">
                         <div class="news_date">2022.11.18</div>
                         <div class="news_ttl"> Instagram開設</div>
                     </a>
