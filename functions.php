@@ -128,13 +128,13 @@ function add_individual_stylesheet_script()
         // wp_enqueue_style('toku_parknav-template_top_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
         //slickCSSを読み込む
-        wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
+        //wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
 
         //slick-themeCSSを読み込む
-        wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
+        //wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
 
         // トップページ用のJS（top.js）を読み込む
-        wp_enqueue_script('toku_parknav-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
+        //wp_enqueue_script('toku_parknav-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
 
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('toku_parknav-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
@@ -407,3 +407,16 @@ function span_before_link_list_categories($list)
     // $list = str_replace('</a>', '<span  class="li-right">></span></a>', $list);
     return $list;
 }
+
+
+//////////////////////////////////////////////////////////
+// コース一覧の記事の表示件数を６に設定
+function change_posts_per_page($query)
+{
+    if (is_admin() || !$query->is_main_query())
+        return;
+    if ($query->is_archive('course')) { //カスタム投稿タイプを指定
+        $query->set('posts_per_page', '6'); //表示件数を指定
+    }
+}
+add_action('pre_get_posts', 'change_posts_per_page');

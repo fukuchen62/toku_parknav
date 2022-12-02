@@ -85,9 +85,9 @@
 </footer>
 
 <!-- スクリプト -->
-<script src="./assets/js/slick.min.js"></script>
+<!-- <script src="./assets/js/slick.min.js"></script>
 <script src="./assets/js/common.js"></script>
-<script src="./assets/js/top.js"></script>
+<script src="./assets/js/top.js"></script> -->
 
 <?php
 // wp_foot()を呼び出す
