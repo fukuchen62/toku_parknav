@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* キービジュアルの下層ページ用 */
+.key_img {
+    object-position: 50% 25%;
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* 見出し下余白 */
+h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
