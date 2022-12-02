@@ -148,10 +148,68 @@
     <h2 class="pageTitle">公園検索 結果一覧</h2>
 
     <?php
-    if (isset($_POST['area[]'])) {
+    if (isset($_GET['area[]'])) {
         $selected_terms_area = $_GET['area'];
-        echo "$selected_terms_area";
+        //print_r($selected_terms_area);
     }
+
+    if (isset($_GET['purpose[]'])) {
+        $selected_terms_purpose = $_GET['purpose'];
+        //print($selected_terms_purpose);
+    }
+
+    if (isset($_GET['playground[]'])) {
+        $selected_terms_playground = $_GET['playground'];
+        //print_r($selected_terms_playground);
+
+        if ($selected_terms_playground) {
+            // $metaquery = array('relation' => 'AND');
+            $metaquery[] = array(
+                'key' => 'playground_slug',
+                'value' => $selected_terms_playground,
+                'type' => 'CHAR',
+            );
+        }
+    }
+
+    if (!empty($selected_terms_area)) {
+        $taxquery_area = array('relation' => 'AND');
+        $taxquery_area[] = array(
+            'taxonomy' => 'area',
+            'term' => $selected_terms_area,
+            'field' => 'slug',
+        );
+    };
+
+    if (!empty($selected_terms_purpose)) {
+        // $taxquery_purpose = array('relation' => 'AND');
+        $taxquery_purpose[] = array(
+            'taxonomy' => 'purpose',
+            'term' => $selected_terms_purpose,
+            'field' => 'slug',
+        );
+    }
+
+    $args = array(
+        'post_type' => 'park',
+        'post_per_page' => -1,
+        's' => get_search_query(),
+
+        'tax_query' => array(
+            'relation' => 'AND',
+            $taxquery_area,
+            $taxquery_purpose,
+        ),
+
+        'meta_query' => array(
+            'relation' => 'AND',
+            $metaquery,
+        ),
+    );
+
+
+
+
 
 
 
@@ -204,25 +262,25 @@
     //     // ),
     // );
 
-    // if (!empty($area_slug)) :
-    //     $args['tax_query']
-    //         = $taxquery_area;
-    //     $query = new WP_Query($args);
-    // endif;
+    if (!empty($area_slug)) :
+        $args['tax_query']
+            = $taxquery_area;
+        $query = new WP_Query($args);
+    endif;
 
-    // if ($query->have_posts()) :
-    //     while ($query->have_posts()) :
-    //         $query->the_post();
+    if ($query->have_posts()) :
+        while ($query->have_posts()) :
+            $query->the_post();
     ?>
 
     <div class="col-md-3">
-        <?php //get_template_part('template-parts/loop', 'park')
-        ?>
+        <?php get_template_part('template-parts/loop', 'park')
+                ?>
     </div>
 
-    <?php //endwhile;
-    ?>
-    <?php //endif;
+    <?php endwhile;
+        ?>
+    <?php endif;
     ?>
 </main>
 
