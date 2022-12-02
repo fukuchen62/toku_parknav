@@ -2,10 +2,11 @@
 <div class="card_wrap">
     <a class="test" href="<?php the_permalink(); ?>">
 
-
         <?php if (has_post_thumbnail()) : ?>
+
         <?php the_post_thumbnail('thumbnail') ?>
         <?php else : ?>
+
 
         <!-- 記事画像 -->
         <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
