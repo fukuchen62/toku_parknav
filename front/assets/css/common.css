@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html {
+    /* 横スクロールバー対策 */
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Noto Serif JP', serif;
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -10,8 +15,6 @@ body {
     line-height: 1.7;
     /* スマホ横画面対策 */
     -webkit-text-size-adjust: 100%;
-    /* 横スクロールバー対策 */
-    overflow-x: hidden;
 }
 
 /* キービジュアルの下層ページ用 */
@@ -62,7 +65,15 @@ main {
     /* 要素を中央配置にする */
     margin: 0 auto;
     text-align: center;
+    overflow-x: hidden;
 }
+
+@media screen and (min-width: 950px) {
+    main {
+        overflow-x: visible;
+    }
+}
+
 
 /* パンくず */
 .pkz {
