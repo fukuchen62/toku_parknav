@@ -40,6 +40,73 @@ a:hover {
     margin-bottom: 50px;
 }
 
+.top_separator {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin: 0 calc(50% - 50vw);
+    /* padding: 0px calc(50vw - 50% + 8px) 30px; */
+    overflow: hidden;
+}
+
+/* 以下、h2に装飾をするクラス */
+
+.h2_first {
+    position: relative;
+    font-size: 40px;
+    z-index: 1;
+}
+
+.h2_first::before {
+    content: "";
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    top: -22px;
+    left: -35px;
+    z-index: -1;
+}
+
+.h2_first_pg {
+    color: #FF387A;
+}
+
+.h2_first_pg::before {
+    background-color: #F4F4F4;
+}
+
+.h2_first_bg {
+    color: #39BDFF;
+}
+
+.h2_first_bg::before {
+    background-color: #F4F4F4;
+}
+
+.h2_first_bw {
+    color: #39BDFF;
+}
+
+.h2_first_bw::before {
+    background-color: #fff;
+}
+
+.h2_first_pw {
+    color: #FF387A;
+}
+
+.h2_first_pw::before {
+    background-color: #fff;
+}
+
+.insta_box>h2 {
+    letter-spacing: 0.3em;
+}
+
+.pickup_deco {
+    width: 80px;
+}
+
 /* TB幅以上 */
 @media screen and (min-width: 771px) {
 
@@ -76,7 +143,7 @@ a:hover {
 
 .fadeIn {
     animation-name: fadeInAnime;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -90,6 +157,7 @@ a:hover {
         opacity: 1;
     }
 }
+
 
 /* 背景色と幅の設定 */
 .key_bg {
@@ -342,11 +410,11 @@ a:hover {
 
 }
 
-/* ↑ パーツ配置ここまで ↑ */
+/* ↑ キービジュアルパーツ配置ここまで ↑ */
 
 /* ＝＝＝公園検索＝＝＝ */
-.search {
 
+.search {
     padding-bottom: 0px;
 }
 
@@ -355,6 +423,34 @@ a:hover {
     width: 65vw;
     margin: 0 auto;
 }
+
+/* 太陽の位置 */
+.sun_box {
+    position: relative;
+}
+
+.top_sun, .top_sun_face {
+    position: absolute;
+    width: 35vw;
+    top: -150px;
+    right: -50px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .top_sun, .top_sun_face {
+        right: -80px;
+    }
+}
+
+/* PC幅 */
+@media screen and (min-width: 1200px) {
+    .top_sun, .top_sun_face {
+        right: -250px;
+    }
+}
+
+/* 地図 */
 
 .search_map {
     width: 100%;
@@ -446,6 +542,11 @@ a:hover {
 /* TB幅以上 */
 @media screen and (min-width: 771px) {
 
+    .search_map {
+        width: 70%;
+        margin-bottom: 50px;
+    }
+
     .map_btn {
         padding: 3vw;
         font-size: 20px;
@@ -453,18 +554,18 @@ a:hover {
 
     /* マップボタンの位置調整 */
     .map_btn_east {
-        top: 17%;
-        right: 23%;
+        top: 14%;
+        right: 30%;
     }
 
     .map_btn_west {
-        top: 26%;
-        left: 20%;
+        top: 22%;
+        left: 27%;
     }
 
     .map_btn_south {
-        bottom: 30%;
-        right: 35%;
+        bottom: 28%;
+        right: 37%;
     }
 }
 
@@ -495,9 +596,26 @@ a:hover {
     }
 }
 
+/* ＝＝＝インスタ＝＝＝ */
 
-/* ＝＝＝インスタのスライダー＝＝＝ */
+/* インスタの写真を囲む枠 */
+.insta_box {
+    margin-top: 50px;
+    padding: 50px;
+    border: #3E3A39 2px solid;
+    border-radius: 30px;
+    background-color: #FFFCE3;
+}
 
+/* 12/1/16:24変更 */
+@media screen and (max-width: 950px) {
+    .insta_box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* スライダー */
 .slider .slick-slide {
     width: 200px;
     height: 200px;
