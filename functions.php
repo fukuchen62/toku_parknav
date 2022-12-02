@@ -78,13 +78,13 @@ function add_common_stylesheet_script()
     // wp_enqueue_script('toku_parknav-footer-script', get_template_directory_uri() . '/assets/js/template_footer.js', '', '', true);
 
     //slickCSSを読み込む
-    wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
+    //wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
 
     //slick-themeCSSを読み込む
-    wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
+    //wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
 
     //slickのJSを読み込み
-    wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
+    //wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
 }
 
 /**-----------------------------------------
@@ -125,7 +125,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('toku_parknav-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
 
         //トップページのヘッダーのCSS（header.css）を読み込む
-        wp_enqueue_style('toku_parknav-template_top_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
+        // wp_enqueue_style('toku_parknav-template_top_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
         //slickCSSを読み込む
         wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
