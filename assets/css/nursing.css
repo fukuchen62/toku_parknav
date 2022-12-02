@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/* ＝＝＝ヘッダー~１つ目の写真のセクション＝＝＝ */
-/* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
-body {
-    min-width: 300px;
-}
-
 /* 見出し下余白 */
 h2,
 h3 {
@@ -16,40 +10,12 @@ h4 {
     margin-bottom: 15px;
 }
 
-/* ナビのダミーブロック */
-/* .gnav_dummy {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: darkgray;
-} */
-
 /* メインビジュアルのダミーブロック */
 .mainVisual_dummy {
     width: 100%;
     height: 120px;
     background-color: cadetblue;
     margin-top: 80px;
-}
-
-/* パンくず */
-.pkz {
-    text-align: left;
-    margin-left: 20px;
-}
-
-/* セクションの上下に余白をとる */
-section {
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-/* 画像(矢印以外)のサイズ等指定 */
-section img {
-    width: 300px;
-    margin-bottom: 15px;
-    border-radius: 30px;
 }
 
 /* 記事本文の左右にマージンをとる */
@@ -60,15 +26,6 @@ section img {
 
 /* TB幅 */
 @media screen and (min-width: 771px) {
-
-    .pkz {
-        margin-left: 40px;
-    }
-
-    section img {
-        width: 480px;
-    }
-
     .txt {
         margin: 0 40px;
     }
@@ -77,19 +34,9 @@ section img {
 
 /* PC幅 */
 @media screen and (min-width: 1200px) {
-    .pkz {
-        margin: 0 auto;
-    }
 
-    section img {
-        margin-bottom: 0;
-    }
-
-    .column_flex {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: space-between;
+    .txt {
+        margin: 0;
     }
 
     .row_flex {
@@ -98,61 +45,33 @@ section img {
         margin: 0 auto;
     }
 
-    .txt {
-        margin: 0;
-    }
-
-    th {
-        width: 150px;
-    }
-
-}
-
-/* ＝＝＝遊具データのセクション＝＝＝ */
-
-/* リスト要素の間に余白をとる */
-/* li+li {
-    padding-top: 50px;
-} */
-
-/* ＝＝＝コースや近くの公園のリンクのセクション~フッター＝＝＝ */
-
-.footer_dummy {
-    width: 100%;
-    height: 450px;
-    background-color: darkgray;
-}
-
-.non_bottom_padding {
-    padding-bottom: 0;
-}
-
-.prev_btn a p {
-    font-size: 16px;
 }
 
 
+/* キービジュアルの下層ページ用 */
+.key_img {
+    object-position: 50% 55%;
+}
 
-/* 療育本文****************************** */
+/* 療育本文********************************************* */
+main {
+    margin-bottom: 50px;
+}
 
-/* テーマカラー */
-/* color: #ff387a; */
-/* color: #ffeb39; */
-/* color: #39bdff; */
+/* 大見出し（メモ風）の周囲に余白 */
+.nur_ttl {
+    margin: 50px 20px 30px;
+}
 
 .nur_ttl h2 {
     position: relative;
-    /* background: #fff0cd; */
     background-color: rgba(255, 235, 57, 0.5);
-    background-color: rgba(255, 150, 0, 0.5);
     /* 破線の外側 */
     box-shadow: 0px 0px 0px 10px rgba(255, 235, 57, 0.5);
-    box-shadow: 0px 0px 0px 10px rgba(255, 150, 0, 0.5);
     /* 破線 */
     border: dashed 3.5px white;
     padding: 20px 0;
-    margin: 0 15px 30px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* 端の折れ部分の設定 */
@@ -162,13 +81,11 @@ section img {
     /* 下のメモ部分の端にのる */
     right: -15px;
     top: -15px;
-    /* border-width: 0 30px 30px 0; */
     border-width: 0 40px 40px 0;
     /* 実線の指定 */
     border-style: solid;
     /* 折れ部分の大きさ */
     border-color: #ffeb39 #fff #ffeb39;
-    border-color: #ff9600 #fff #ff9600;
     /* 影 */
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
@@ -176,8 +93,7 @@ section img {
 .nurttl_c_p {
     color: #ff387a;
     font-size: 1.15em;
-    /* 白い縁取り */
-    /* 上、右、下、左、左上、右上、右下、左下 */
+    /* 文字に白い縁取り */
     text-shadow:
         2px 2px 1px #fff,
         -2px 2px 1px #fff,
@@ -187,21 +103,12 @@ section img {
         0px 2px 1px #fff,
         -2px 0px 1px #fff,
         0px -2px 1px #fff;
-    /* text-shadow:
-        1px 1px 0px #fff,
-        -1px -1px 0px #fff,
-        -1px 1px 0px #fff,
-        1px -1px 0px #fff,
-        1px 0px 0px #fff,
-        -1px 0px 0px #fff,
-        0px 1px 0px #fff,
-        0px -1px 0px #fff; */
 }
 
 .nurttl_c_b {
     color: #39bdff;
     font-size: 1.15em;
-    /* 白い縁取り */
+    /* 文字に白い縁取り */
     text-shadow:
         2px 2px 1px #fff,
         -2px 2px 1px #fff,
@@ -219,40 +126,57 @@ section img {
     }
 }
 
-/*  */
-.nur_list li+li {
-    padding-top: 50px;
+/* セクションの上下に余白をとる */
+.nur_session_list {
+    padding-bottom: 50px;
+    margin: 0 20px;
+}
+
+/* 写真のサイズ等指定 */
+.row_flex img {
+    width: 300px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+
+    .row_flex img {
+        width: 480px;
+    }
+}
+
+/* PC幅 */
+@media screen and (min-width: 1200px) {
+    .row_flex img {
+        margin-bottom: 0;
+    }
+}
+
+/* 1つ分の記事 */
+.nur_list {
+    /* padding-top: 50px; */
 }
 
 .title_flex {
     display: flex;
-    /* align-items: center; */
+    margin-top: 50px;
     margin-bottom: 30px;
-    /* position: relative; */
-    /* justify-content: space-around; */
     justify-content: center;
+    /* margin: 0 15px; */
 }
 
 .popo_icon {
-    /* width: 50px; */
-    /* height: 50px; */
     width: 30px;
     height: 30px;
     margin: 5px 5px 0 10px;
-
-    /* position: absolute;
-    top: 0;
-    left: 0; */
 }
 
 /* 小見出し */
 .title_flex h3 {
-    margin: unset;
+    margin-bottom: 15px;
     text-align: start;
-    /* margin: 0 0 30px 30px; */
-
-    /* 破線 */
-    /* border-bottom: dashed 3.5px #ffeb39; */
 }
 
 /* テキスト内のラインマーカー*/
@@ -261,6 +185,15 @@ section img {
 }
 
 /* プロフィール******************** */
+.nur_profile_wrap {
+    margin: 0 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #FFFCE3;
+    border-radius: 20px;
+    border: 1px solid #3e3a39;
+}
+
 .nur_profile_flex {
     display: flex;
     justify-content: center;
@@ -272,34 +205,36 @@ section img {
 
 /* 先生の画像 */
 .nur_profile_img {
-    /* border-radius: 50%; */
     width: auto;
     height: 150px;
-    margin: 0 0 0 20px;
+    margin-bottom: 20px;
+    /* margin: 0 0 0 20px; */
 }
 
-.nur_profile_flex h4,
-.nur_profile_flex p {
+.nur_pro_txt {
+    width: 600px;
+}
+
+/* 先生の名前 */
+.nur_profile_flex h4 {
     text-align: center;
-    margin: 0 20px;
+    margin-top: 30px;
+}
+
+/* プロフィールテキスト */
+.nur_profile_flex p {
+    text-align: left;
 }
 
 /* TB幅 */
 @media screen and (min-width: 771px) {
 
+    /* プロフィールのテキスト */
     .nur_profile_flex h4,
     .nur_profile_flex p {
         text-align: left;
-        margin: 0 40px;
-    }
-}
-
-/* PC幅 */
-@media screen and (min-width: 1200px) {
-
-    .nur_profile_flex h4,
-    .nur_profile_flex p {
-        margin: 0;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     /* 先生の画像 */
@@ -311,7 +246,7 @@ section img {
 /* ギフテッドのリンクボタン */
 /* ギフテッド全体をつつむdiv */
 .gifted_wrap {
-    display: none;
+    margin-top: 50px;
 }
 
 /* ギフテッドのリンクボタン */
@@ -323,6 +258,7 @@ section img {
 .gifted_link a img {
     width: 300px;
     height: auto;
+    border-radius: 30px;
     border: 1px solid #3e3a39;
     /* ボーダーの太さを各所に指定 */
     border-width: 1px 1px 5px 1px;
@@ -334,11 +270,4 @@ section img {
     opacity: 0.7;
     /* ボタンが下に5px沈む */
     transform: translate3d(0, 5px, 0);
-    /* box-shadow: none; */
-    /* background: #fff; */
-}
-
-.gifted_link a img :hover {
-    /* ボーダーの太さを各所に指定 */
-    border-width: none;
 }

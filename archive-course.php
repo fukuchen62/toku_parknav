@@ -36,7 +36,7 @@
 
             </div>
 
-            <!-- ページネーション -->
+            <!-- ページネーション ★あとでphp書き換え必要-->
             <ul class="pagination">
                 <li class="disabled">
                     <a href="#"><i class="fas fa-angle-left"></i></a>
