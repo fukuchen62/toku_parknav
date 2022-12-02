@@ -89,15 +89,11 @@
                     </label>
                     <div class="hbg_menuwrap hbg_menuwrap-right">
                         <ul class="hbg_menulist hbg_menulist-circle">
-                            <a href="<?php echo home_url('/park/'); ?>">公園検索</a>
-                            <span>　|　 </span>
-                            <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
-                            <span>　|　</span>
-                            <a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a>
-                            <span>　|　</span>
-                            <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
-                            <span>　|　</span>
-                            <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                            <li><a href="<?php echo home_url('/park/'); ?>">公園検索</a></li>
+                            <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
+                            <li><a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a></li>
+                            <li><a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a></li>
+                            <li><a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a></li>
 
                             <!-- 検索ボックス -->
                             <li class="hbg_search_box">
@@ -105,7 +101,6 @@
                                     <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力">
                                     <input class="hbg_submit fas" type="submit" value="検索">
                                 </form>
-
 
                             </li>
                         </ul>
