@@ -62,6 +62,11 @@ main {
     cursor: pointer;
 }
 
+/* リンクのhover時にカーソルをポインターにする */
+.search_btn:hover {
+    opacity: 0.7;
+}
+
 /* 東部ボタン */
 .search_btn_north {
     background-color: #FF397B;
