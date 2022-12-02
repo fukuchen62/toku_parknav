@@ -62,7 +62,6 @@
                 'post_type' => 'park', // 投稿タイプを指定
                 'orderby' => 'rand', // ランダムで表示
                 'posts_per_page' => 3, // 表示する記事数
-                // 'post__not_in' => array($post->ID) // 現在表示している記事を除外
             );
             $post_query = new WP_Query($args);
 
@@ -70,7 +69,7 @@
                 while ($post_query->have_posts()) : $post_query->the_post();
             ?>
 
-            <!-- カード1つ分 -->
+            <!-- カード型の呼び出し -->
             <?php get_template_part('template-parts/loop', 'park') ?>
 
             <?php endwhile; ?>
@@ -120,63 +119,24 @@
         <h2>pickup！コース</h2>
         <!-- card_flexの指定 -->
         <div class="card_flex">
-            <!-- カード1つ分 -->
-            <div class="card_wrap">
-                <a href="#">
-                    <!-- 記事画像 -->
-                    <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                    <!-- 文章部分の枠 -->
-                    <div class="card_container">
-                        <div class="card_inner">
-                            <!-- メインタイトル -->
-                            <h2 class="card_ttl ">レインボーオアシスパークでデイキャンプ！</h2>
-                            <!-- 記事本文 -->
-                            <div class="card_txt ">
-                                <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- カード1つ分 -->
-            <div class="card_wrap">
-                <a href="#">
-                    <!-- 記事画像 -->
-                    <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                    <!-- 文章部分の枠 -->
-                    <div class="card_container">
-                        <div class="card_inner">
-                            <!-- メインタイトル -->
-                            <h2 class="card_ttl ">レインボーオアシスパークでデイキャンプ！</h2>
-                            <!-- 記事本文 -->
-                            <div class="card_txt ">
-                                <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- カード1つ分 -->
-            <div class="card_wrap">
-                <a href="#">
-                    <!-- 記事画像 -->
-                    <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                    <!-- 文章部分の枠 -->
-                    <div class="card_container">
-                        <div class="card_inner">
-                            <!-- メインタイトル -->
-                            <h2 class="card_ttl ">レインボーオアシスパークでデイキャンプ！</h2>
-                            <!-- 記事本文 -->
-                            <div class="card_txt ">
-                                <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <?php
+            $args = array(
+                'post_type' => 'course', // 投稿タイプを指定
+                'orderby' => 'rand', // ランダムで表示
+                'posts_per_page' => 3, // 表示する記事数
+            );
+            $post_query = new WP_Query($args);
+
+            if ($post_query->have_posts()) :
+                while ($post_query->have_posts()) : $post_query->the_post();
+            ?>
+
+            <!-- カード型の呼び出し -->
+            <?php get_template_part('template-parts/loop', 'park') ?>
+
+            <?php endwhile; ?>
+            <!-- ループの終了 -->
+            <?php endif; ?>
         </div>
 
 
