@@ -2,32 +2,28 @@
 
 // ＝＝＝フッター＝＝＝
 
-// ポポじろう・トップへ戻るボタンを、FV抜けたら表示させる
+// ポポじろう・トップへ戻るボタンを、スクロールしたら表示させる
 
 $(function() {
-    // 対象コンテンツのIDまたはクラス
-    var topHeader = $('.hoge');
-
-    // 要素は消しておく
-    topHeader.hide();
-
+    var topBtn = $('.foot_scroll');
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        // 画面の高さを取得
-        var windowHeight = $(window).height();
-
-        // スクロール位置を取得
-        var scroll = $(window).scrollTop();
-
-        // スクロール位置を取得
-        if (scroll >= windowHeight) {
-            // フルスクリーン分スクロールされた処理
-            topHeader.fadeIn();
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
         } else {
-            // フルスクリーン分スクロールされてない処理
-            topHeader.fadeOut();
+            topBtn.fadeOut();
         }
     });
+    // //スクロールしてトップ
+    // topBtn.click(function () {
+    //     $('body,html').animate({
+    //         scrollTop: 0
+    //     }, 500);
+    //     return false;
+    // });
 });
+
 
 // トップへ戻るボタンを押したらトップへ戻る！
 
@@ -40,31 +36,99 @@ $(document).ready(function(){
 
 // ポポを押したら吹き出しが出る
 
-$(document).ready(function(){
-    //デフォルトで表示する要素を指定
-    $('.popo_commentset').show();
-    $('.popo_commentset').hide();
+// $(document).ready(function(){
+//     //デフォルトで表示する要素を指定
+//     $('.popo_commentset').fadeIn();
+//     $('.popo_commentset').fadeOut();
 
-    //ポポがクリックされたら処理を実行
-    $('.popo').click(function () {
+//     //ポポがクリックされたら処理を実行
+//     $('.popo').click(function () {
 
-         //toggleClassでshowのclassを追加または削除
-        $('.popo_trivia').toggleClass('show');
+//          //toggleClassでshowのclassを追加または削除
+//         $('.popo_trivia').toggleClass('fadeOut');
 
-        //#appがshowのclassを持っていれば
-        if($('.popo_trivia').hasClass('show')){
+//         //#appがshowのclassを持っていれば
+//         if($('.popo_trivia').hasClass('fadeIn')){
 
-             //要素の表示を切り替える
-            $('.popo_commentset').hide();
-            $('.popo_commentset').show();
-        }else{
+//              //要素の表示を切り替える
+//             $('.popo_commentset').fadeOut();
+//             $('.popo_commentset').fadeIn();
+//         }else{
 
-             //要素の表示を切り替える
-            $('.popo_commentset').show();
-            $('.popo_commentset').hide();
-        }
+//              //要素の表示を切り替える
+//             $('.popo_commentset').fadeIn();
+//             $('.popo_commentset').fadeOut();
+//         }
+//     });
+// });
+
+// ポポを押すと吹き出しが出て、もう一度押すと２秒かけて消える
+
+$(function() {
+
+  // ボタンをクリックしたら発動
+    $('.popo').click(function() {
+
+    // 連打で暴走しないようにstop()も設定
+    $('.popo_commentset').stop().slideToggle(2500);
+
     });
 });
+
+// クリックしたら左から現れるポポ
+// $(".popo").on("click", function () {
+//     $(".popo").animate({
+//         "marginLeft": "100px"
+//     }).animate({
+//         "rotate": "0deg"
+//     });
+// });
+
+// 左へ戻るポポ
+// $(".popo").on("click", function () {
+//     $(".popo").animate({
+//         "marginLeft": "-100px"
+//     }).animate({
+//         "rotate": "45deg"
+//     });
+// });
+
+// ポポをクリックする度に「現れてしゃべる」と「隠れる」を交互に繰り返す
+
+$.fn.clickToggle = function (a, b) {
+    return this.each(function () {
+    var clicked = false;
+    $(this).on('click', function () {
+        clicked = !clicked;
+        if (clicked) {
+        return a.apply(this, arguments);
+    }
+    return b.apply(this, arguments);
+    });
+});
+};
+
+$('.popo').clickToggle(function () {
+//   // １回目のクリック
+    $(".popo").animate({ "marginLeft": "+=100px", }, 1000);
+    $(".popo").animate({ "rotate": "0deg", }, 1000);
+}, function () {
+//   // ２回目のクリック
+    $(".popo").animate({ "marginLeft": "-=100px", }, 1000);
+    $(".popo").animate({ "rotate": "45deg", }, 1000);
+});
+
+// $(function(right){
+// $(".popo").on("click", function(){
+//     $(".popo").animate({ "marginLeft": "+=100px", }, 1000);
+//     $(".popo").animate({ "rotate": "0deg", }, 1000);
+// });
+// });
+// $(function(left){
+// $(".popo").on("click", function(){
+//     $(".popo").animate({ "marginLeft": "-=100px", }, 2000);
+//     $(".popo").animate({ "rotate": "45deg", }, 1000);
+// });
 
 // ランダムに豆知識を表示させる
 

@@ -38,9 +38,13 @@
 
     <!-- 公園検索 -->
     <section class="search">
-        <h2>今週末、どこ行く？<br>公園検索</h2>
+        <h2><span class="h2_first h2_first_bg">今</span>週末、どこ行く？<br>公園検索</h2>
+        <div class="sun_box">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun.png" alt="太陽" class="top_sun">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun_face.png" alt="太陽の顔" class="top_sun_face">
+        </div>
         <div class="search_inner">
-            <img class="search_map" src="<?php echo get_template_directory_uri(); ?>/assets/img/search_map.png" alt="検索マップ">
+            <img class="search_map" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/search_map.png" alt="検索マップ">
             <a href="<?php echo home_url('/area/east/'); ?>">
                 <div class="map_btn map_btn_east circle">東部</div>
             </a>
@@ -54,6 +58,7 @@
 
 
         <!-- ランダムに公園のカードが入るところ -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco">
         <h2>pickup！パーク</h2>
         <!-- card_flexの指定 -->
         <div class="card_flex">
@@ -79,6 +84,8 @@
 
         </div>
     </section>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator.png" alt="セクション区切り" class="top_separator">
 
     <!-- このサイトについて -->
     <section class="bgcolor_cream">
@@ -111,6 +118,8 @@
             </div>
         </div>
     </section>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator_white.png" alt="セクション区切り" class="top_separator">
 
     <!-- コース -->
     <section>
@@ -156,87 +165,93 @@
             <!-- ループの終了 -->
             <?php endif; ?>
         </div>
+    </section>
 
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator.png" alt="セクション区切り" class="top_separator">
 
+    <!-- 療育 -->
+    <section class="bgcolor_cream">
+        <h2>理学療法士の先生と考える<br>
+            運動療育と遊具</h2>
 
+        <div class="section_flex">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing_img.png" alt="療育写真">
 
-        <!-- 療育 -->
-        <section class="bgcolor_cream">
-            <h2>理学療法士の先生と考える<br>
-                運動療育と遊具</h2>
-
-            <div class="section_flex">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing_img.png" alt="療育写真">
-
-                <div class="inner_flex">
-                    <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
-                        発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
-                    </p>
-                    <div class="next_btn">
-                        <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
-                            <p>くわしく</p>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ゲーム -->
-        <section>
-            <h2>ポポ二郎と虫キャッチ！</h2>
-            <div class="section_flex_reverse">
-                <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="キャラクター画像">
-                <div class="inner_flex">
-                    <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
-                    <div class="next_btn">
-                        <a href="<?php echo home_url('/gamestart/'); ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
-                            <p>あそぶ</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- お知らせ -->
-        <section class="bgcolor_cream">
-            <h2>お知らせ</h2>
-            <div class="section_flex">
-                <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/news_img.png" alt="療育写真">
-                <div class="news_article">
-                    <a href="<?php echo get_permalink('1') ?>">
-                        <div class="news_date">2022.12.13</div>
-                        <div class="news_ttl">「とくしまGo!Go!パークなび」公開
-                        </div>
-                    </a>
-                    <a href="<?php echo get_permalink('224') ?>">
-                        <div class="news_date">2022.11.18</div>
-                        <div class="news_ttl"> Instagram開設</div>
-                    </a>
-                </div>
-                <div class="news_next_btn next_btn">
-                    <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
-                        <p>一覧へ</p>
+            <div class="inner_flex">
+                <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
+                    発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
+                </p>
+                <div class="next_btn">
+                    <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                        <p>くわしく</p>
                     </a>
                 </div>
             </div>
-        </section>
 
-        <!-- インスタ -->
-        <section class="insta_box">
-            <h2>Instagram</h2>
-            <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
-        </section>
-
-        <!-- リンク集 -->
-        <div class="banner_flex">
-            <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner01.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner02.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner03.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner04.png" alt="サイトリンク"></a></div>
-            <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner05.png" alt="サイトリンク"></a></div>
         </div>
+    </section>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator_white.png" alt="セクション区切り" class="top_separator">
+
+    <!-- ゲーム -->
+    <section>
+        <h2>ポポ二郎と虫キャッチ！</h2>
+        <div class="section_flex_reverse">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="キャラクター画像">
+            <div class="inner_flex">
+                <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
+                <div class="next_btn">
+                    <a href="<?php echo home_url('/gamestart/'); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
+                        <p>あそぶ</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator.png" alt="セクション区切り" class="top_separator">
+
+    <!-- お知らせ -->
+    <section class="bgcolor_cream">
+        <h2>お知らせ</h2>
+        <div class="section_flex">
+            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/news_img.png" alt="療育写真">
+            <div class="news_article">
+                <a href="<?php echo get_permalink('1') ?>">
+                    <div class="news_date">2022.12.13</div>
+                    <div class="news_ttl">「とくしまGo!Go!パークなび」公開
+                    </div>
+                </a>
+                <a href="<?php echo get_permalink('224') ?>">
+                    <div class="news_date">2022.11.18</div>
+                    <div class="news_ttl"> Instagram開設</div>
+                </a>
+            </div>
+            <div class="news_next_btn next_btn">
+                <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                    <p>一覧へ</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_separator_white.png" alt="セクション区切り" class="top_separator">
+
+    <!-- インスタ -->
+    <section class="insta_box">
+        <h2>Instagram</h2>
+        <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+    </section>
+
+    <!-- リンク集 -->
+    <div class="banner_flex">
+        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner01.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner02.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner03.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner04.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner05.png" alt="サイトリンク"></a></div>
+    </div>
 </main>
 
 <?php //フッターテンプレートファイルを読み込む
