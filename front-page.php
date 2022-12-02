@@ -89,7 +89,7 @@
 
     <!-- このサイトについて -->
     <section class="bgcolor_cream">
-        <h2>このサイトについて</h2>
+        <h2><span class="h2_first h2_first_pw">こ</span>のサイトについて</h2>
         <div class="section_flex">
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_about.svg" alt="about写真">
             <div class="inner_flex">
@@ -123,7 +123,7 @@
 
     <!-- コース -->
     <section>
-        <h2>公園をもっと楽しむ！<br>モデルコース</h2>
+        <h2><span class="h2_first h2_first_bg">公</span>園をもっと楽しむ！<br>モデルコース</h2>
         <div class="section_flex_reverse">
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_course.svg" alt="course写真">
 
@@ -143,6 +143,7 @@
         <!-- ///////////////////////////////////////// -->
 
         <!-- ランダムにコースのカードが入るところ -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco">
         <h2>pickup！コース</h2>
         <!-- card_flexの指定 -->
         <div class="card_flex">
@@ -171,7 +172,7 @@
 
     <!-- 療育 -->
     <section class="bgcolor_cream">
-        <h2>理学療法士の先生と考える<br>
+        <h2><span class="h2_first h2_first_bw">理</span>学療法士の先生と考える<br>
             運動療育と遊具</h2>
 
         <div class="section_flex">
@@ -195,7 +196,7 @@
 
     <!-- ゲーム -->
     <section>
-        <h2>ポポ二郎と虫キャッチ！</h2>
+        <h2><span class="h2_first h2_first_pg">ぽ</span>ぽじろうとむしキャッチ！</h2>
         <div class="section_flex_reverse">
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="キャラクター画像">
             <div class="inner_flex">
@@ -214,7 +215,7 @@
 
     <!-- お知らせ -->
     <section class="bgcolor_cream">
-        <h2>お知らせ</h2>
+        <h2><span class="h2_first h2_first_bw">お</span>知らせ</h2>
         <div class="section_flex">
             <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_news.png" alt="お知らせイラスト">
             <div class="news_article">
@@ -240,7 +241,7 @@
 
     <!-- インスタ -->
     <section class="insta_box">
-        <h2>Instagram</h2>
+        <h2><span class="h2_first h2_first_pw">In</span>stagram</h2>
         <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
     </section>
 
