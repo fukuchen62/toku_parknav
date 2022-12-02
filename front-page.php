@@ -91,7 +91,7 @@
     <section class="bgcolor_cream">
         <h2>このサイトについて</h2>
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/about_img.png" alt="about写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_about.svg" alt="about写真">
             <div class="inner_flex">
                 <p class="section_txt">自然豊かな徳島県には、子どもたちが喜ぶ公園がたくさん！
                     「ほかにはどんな公園があるのかな」
@@ -125,7 +125,7 @@
     <section>
         <h2>公園をもっと楽しむ！<br>モデルコース</h2>
         <div class="section_flex_reverse">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/course_img.png" alt="course写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_course.svg" alt="course写真">
 
             <div class="inner_flex">
                 <p class="section_txt">半日コース・１日コースで、公園のおすすめの過ごし方を紹介しています。
@@ -175,7 +175,7 @@
             運動療育と遊具</h2>
 
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing_img.png" alt="療育写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_nursing.svg" alt="療育写真">
 
             <div class="inner_flex">
                 <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
@@ -216,7 +216,7 @@
     <section class="bgcolor_cream">
         <h2>お知らせ</h2>
         <div class="section_flex">
-            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/news_img.png" alt="療育写真">
+            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_news.png" alt="お知らせイラスト">
             <div class="news_article">
                 <a href="<?php echo get_permalink('1') ?>">
                     <div class="news_date">2022.12.13</div>
