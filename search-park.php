@@ -7,7 +7,7 @@
 
 <!-- 詳細検索フォーム -->
 <form class="search_wrap">
-    <input type="hidden" name="search_type" value="keywords">
+    <input type="hidden" name="search_type" value="park">
     <input type="hidden" name="s" value="">
     <h2 class="search_ttl">公園詳細検索</h2>
 
@@ -148,69 +148,82 @@
     <h2 class="pageTitle">公園検索 結果一覧</h2>
 
     <?php
-    $selected_terms_area = $_GET['area'];
-    $selected_terms_purpose = $_GET['purpose'];
-    $selected_terms_playground = $_GET['playground'];
+    if (isset($_POST['area[]'])) {
+        $selected_terms_area = $_GET['area'];
+        echo "$selected_terms_area";
+    }
+
+
+
+
+    // $selected_terms_area = $_GET['area'];
+    // $selected_terms_purpose = $_GET['purpose'];
+    // $selected_terms_playground = $_GET['playground'];
 
     // $args = array(
     //     'post_type' => 'park',
     //     'post_per_page' => -1,
     // );
 
-    if ($selected_terms_area) {
-        $taxquery_area = array('relation' => 'AND');
-        $taxquery_area[] = array(
-            'taxonomy' => 'area',
-            'term' => $selected_terms_area,
-            'field' => 'slug',
-        );
-    };
+    // if ($selected_terms_area) {
+    //     // $taxquery_area = array('relation' => 'AND');
+    //     $taxquery_area[] = array(
+    //         'taxonomy' => 'area',
+    //         'term' => $selected_terms_area,
+    //         'field' => 'slug',
+    //     );
+    // };
 
-    if ($selected_terms_purpose) {
-        $taxquery_purpose = array('relation' => 'AND');
-        $taxquery_purpose[] = array(
-            'taxonomy' => 'purpose',
-            'term' => $selected_terms_purpose,
-            'field' => 'slug',
-        );
-    }
+    // if ($selected_terms_purpose) {
+    //     // $taxquery_purpose = array('relation' => 'AND');
+    //     $taxquery_purpose[] = array(
+    //         'taxonomy' => 'purpose',
+    //         'term' => $selected_terms_purpose,
+    //         'field' => 'slug',
+    //     );
+    // }
 
-    if ($selected_terms_playground) {
-        $metaquery = array('relation' => 'AND');
-        $metaquery[] = array(
-            'key' => 'playground_slug',
-            'value' => $selected_terms_playground,
-            'type' => 'CHAR',
-        );
-    }
+    // if ($selected_terms_playground) {
+    //     // $metaquery = array('relation' => 'AND');
+    //     $metaquery[] = array(
+    //         'key' => 'playground_slug',
+    //         'value' => $selected_terms_playground,
+    //         'type' => 'CHAR',
+    //     );
+    // }
 
-    $args = array(
-        'post_type' => 'park',
-        'posts_per_page' => -1,
-        's' => get_search_query(),
-        'tax_query' => array(
-            'relation' => 'AND',
-            $taxquery_area,
-            $taxquery_purpose,
-            $metaquery
-        ),
-    );
+    // $args = array(
+    //     'post_type' => 'park',
+    //     'posts_per_page' => -1,
+    //     // 's' => get_search_query(),
+    //     // 'tax_query' => array(
+    //     //     'relation' => 'AND',
+    //     //     $taxquery_area,
+    //     //     $taxquery_purpose,
+    //     //     $metaquery
+    //     // ),
+    // );
 
-    // $args['tax_query']
-    //     = $taxquery_area;
+    // if (!empty($area_slug)) :
+    //     $args['tax_query']
+    //         = $taxquery_area;
+    //     $query = new WP_Query($args);
+    // endif;
 
-    $query = new WP_Query($args);
-
-    if ($query->have_posts()) :
-        while ($query->have_posts()) :
-            $query->the_post(); ?>
+    // if ($query->have_posts()) :
+    //     while ($query->have_posts()) :
+    //         $query->the_post();
+    ?>
 
     <div class="col-md-3">
-        <?php get_template_part('template-parts/loop', 'park') ?>
+        <?php //get_template_part('template-parts/loop', 'park')
+        ?>
     </div>
 
-    <?php endwhile; ?>
-    <?php endif; ?>
+    <?php //endwhile;
+    ?>
+    <?php //endif;
+    ?>
 </main>
 
 <?php get_footer(); ?>
