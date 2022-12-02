@@ -57,19 +57,15 @@
         $area = get_term_by('slug', $area_slug, 'area');
         ?>
 
-        <!-- 東部エリア -->
         <h2 class="h2_under"><?php echo $area->name; ?></h2>
         <div class="card_flex">
             <!-- ループの開始 -->
             <?php if (have_posts()) : ?>
             <?php while (have_posts()) : ?>
-            <!-- メニューを取得して$postに代入 -->
             <?php the_post(); ?>
 
-            <!-- 繰り返しメニューのカード型 -->
-            <div class="col-md-3">
+                <!-- カード型の呼び出し -->
                 <?php get_template_part('template-parts/loop', 'park') ?>
-            </div>
 
             <?php endwhile; ?>
             <!-- ループの終了 -->
