@@ -173,7 +173,7 @@ section {
     /* カラム落ちのときにチェックボックスがはみ出さない */
     margin-left: 15px;
     /* リスト間の高さ */
-    line-height: 2em;
+    line-height: 2.5em;
 }
 
 /* チェックボックスの大きさ・色 */
