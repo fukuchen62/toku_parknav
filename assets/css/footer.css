@@ -4,7 +4,7 @@ footer {
     font-size: 14px;
     text-align: center;
     list-style: none;
-    margin-top: 50px;
+    color: #fff;
 }
 
 .foot_copyright {
@@ -20,10 +20,16 @@ footer {
 }
 
 .foot_bgcolor_cream {
-    margin: 0 calc(50% - 50vw);
+    margin: -5px calc(50% - 50vw) 0;
     padding: 50px calc(50vw - 50% + 8px) 30px;
     width: 100vw;
-    background-color: #29970E;
+    background-color: #309139;
+}
+
+.foot_grass {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin: 0 calc(50% - 50vw);
 }
 
 .foot_fontbold {
@@ -53,8 +59,8 @@ footer {
     content: url(../img/totop.png);
     position: fixed;
     width: 100px;
-    right: 10px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 40px;
     cursor: pointer;
 }
 
@@ -67,16 +73,19 @@ footer {
     animation-iteration-count: 1;
 
     /* アニメの向きを設定 */
-    /* 今回は反復させないのでnomarで設定 */
+    /* 今回は反復させないのでnomarlで設定 */
     animation-direction: normal;
     animation-duration: 2s;
 }
 
 /* 要素にキーフレームで設定したアニメをさせるためのクラス */
 .foot_top {
-    animation-name: foot_rotate;
+    animation: foot_rotate ease-in-out 1 normal 2s;
 }
 
+/* .foot_top:active {
+    animation: bound 1s ease-in alternate infinite;
+} */
 
 /* アニメーション設定 */
 /* Z軸で回転しながら移動するアニメ */
@@ -88,8 +97,23 @@ footer {
 
     100% {
         transform: rotateZ(0deg);
-        right: 10px;
+        right: 20px;
     }
+}
+
+@keyframes bound {
+    0% {
+        transform: translateY(-20%) scale(1, 1);
+    }
+
+    80% {
+        transform: translateY(0%) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(0%) scale(1.1, 0.9);
+    }
+
 }
 
 /*＝＝＝豆知識＝＝＝ */
@@ -121,6 +145,7 @@ footer {
     bottom: 240px;
     z-index: 501;
     text-align: left;
+    color: #3E3A39;
 }
 
 .popo_commentset {
