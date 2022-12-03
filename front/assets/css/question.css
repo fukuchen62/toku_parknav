@@ -20,19 +20,20 @@ h4 {
 }
 
 /* main中身*********************************** */
-main {
-    margin: 0 20px;
+.q_a_wrap {
+    margin: 50px 20px;
 }
 
 /* 中身のコンテンツ幅が950px以上のとき */
 @media screen and (min-width: 950px) {
-    main {
-        margin: 0 auto;
+    .q_a_wrap {
+        margin: 0;
+        margin-bottom: 50px;
     }
 }
 
 /* Q&Aコンテンツ1個分 */
-.q_a_wrap {
+.q_a_innnerwrap {
     width: 100%;
     height: auto;
     margin: 50px 0;
