@@ -80,7 +80,7 @@
     <!-- トップへ戻るボタン -->
     <!-- <div class="pagetop"> -->
     <!-- ボタン本体  -->
-    <div class="foot_top foot_rotate hoge">
+    <div class="foot_top foot_rotate foot_scroll">
     </div>
 </footer>
 

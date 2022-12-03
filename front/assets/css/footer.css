@@ -73,16 +73,19 @@ footer {
     animation-iteration-count: 1;
 
     /* アニメの向きを設定 */
-    /* 今回は反復させないのでnomarで設定 */
+    /* 今回は反復させないのでnomarlで設定 */
     animation-direction: normal;
     animation-duration: 2s;
 }
 
 /* 要素にキーフレームで設定したアニメをさせるためのクラス */
 .foot_top {
-    animation: bound 1s ease-in alternate infinite, foot_rotate center bottom;
+    animation: foot_rotate ease-in-out 1 normal 2s;
 }
 
+/* .foot_top:active {
+    animation: bound 1s ease-in alternate infinite;
+} */
 
 /* アニメーション設定 */
 /* Z軸で回転しながら移動するアニメ */

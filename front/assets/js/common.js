@@ -15,13 +15,7 @@ $(function() {
             topBtn.fadeOut();
         }
     });
-    // //スクロールしてトップ
-    // topBtn.click(function () {
-    //     $('body,html').animate({
-    //         scrollTop: 0
-    //     }, 500);
-    //     return false;
-    // });
+
 });
 
 
@@ -34,32 +28,13 @@ $(document).ready(function(){
 });
 
 
-// ポポを押したら吹き出しが出る
-
 // $(document).ready(function(){
-//     //デフォルトで表示する要素を指定
-//     $('.popo_commentset').fadeIn();
-//     $('.popo_commentset').fadeOut();
-
-//     //ポポがクリックされたら処理を実行
-//     $('.popo').click(function () {
-
-//          //toggleClassでshowのclassを追加または削除
-//         $('.popo_trivia').toggleClass('fadeOut');
-
-//         //#appがshowのclassを持っていれば
-//         if($('.popo_trivia').hasClass('fadeIn')){
-
-//              //要素の表示を切り替える
-//             $('.popo_commentset').fadeOut();
-//             $('.popo_commentset').fadeIn();
-//         }else{
-
-//              //要素の表示を切り替える
-//             $('.popo_commentset').fadeIn();
-//             $('.popo_commentset').fadeOut();
-//         }
-//     });
+// 	$(".pagetop").on("click mouseenter", function(){
+// 		$(".foot_top")
+// 		.animate({top:"-10px"}, 200).animate({top:"-4px"}, 200) // first jump
+// 		.animate({top:"-7px"}, 100).animate({top:"-4px"}, 100) // second jump
+// 		.animate({top:"-6px"}, 100).animate({top:"-4px"}, 100); // the last jump
+// 	});
 // });
 
 // ポポを押すと吹き出しが出て、もう一度押すと２秒かけて消える
@@ -75,23 +50,6 @@ $(function() {
     });
 });
 
-// クリックしたら左から現れるポポ
-// $(".popo").on("click", function () {
-//     $(".popo").animate({
-//         "marginLeft": "100px"
-//     }).animate({
-//         "rotate": "0deg"
-//     });
-// });
-
-// 左へ戻るポポ
-// $(".popo").on("click", function () {
-//     $(".popo").animate({
-//         "marginLeft": "-100px"
-//     }).animate({
-//         "rotate": "45deg"
-//     });
-// });
 
 // ポポをクリックする度に「現れてしゃべる」と「隠れる」を交互に繰り返す
 
@@ -118,17 +76,6 @@ $('.popo').clickToggle(function () {
     $(".popo").animate({ "rotate": "45deg", }, 1000);
 });
 
-// $(function(right){
-// $(".popo").on("click", function(){
-//     $(".popo").animate({ "marginLeft": "+=100px", }, 1000);
-//     $(".popo").animate({ "rotate": "0deg", }, 1000);
-// });
-// });
-// $(function(left){
-// $(".popo").on("click", function(){
-//     $(".popo").animate({ "marginLeft": "-=100px", }, 2000);
-//     $(".popo").animate({ "rotate": "45deg", }, 1000);
-// });
 
 // ランダムに豆知識を表示させる
 

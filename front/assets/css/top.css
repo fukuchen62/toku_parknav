@@ -445,19 +445,23 @@ a:hover {
 }
 
 .top_sun {
-    animation-name: bright;
-    transform: scale(0.85, 0.85);
+    animation: 15s linear infinite rotation;
+    /* transform: scale(0.85, 0.85);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-duration: 1.5s;
-    width: 128px;
+    width: 128px; */
 }
 
 
-@keyframes bright {
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
     100% {
-        transform: scale(1, 1);
+        transform: rotate(360deg);
     }
 }
 
