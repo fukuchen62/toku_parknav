@@ -35,10 +35,6 @@ section {
     text-align: left;
 }
 
-/* section img {
-    width: 300px;
-} */
-
 /* カード型以外の写真のサイズ */
 .course_top_img, .course_img {
     width: 300px;
@@ -213,12 +209,14 @@ td {
     z-index: 3;
 }
 
+/* コースの写真のサイズ以外を指定 */
 .course_img {
     position: absolute;
     top: 20px;
     left: 0;
 }
 
+/* 区切りのタイヤ */
 .separater_img {
     width: 300px;
     margin: 20px;
@@ -234,19 +232,18 @@ td {
         height: 500px;
     }
 
+    /* コースの写真のサイズ以外を指定 */
     .course_img {
         position: absolute;
         top: 20px;
         left: 0;
     }
 
+    /* 区切りのタイヤ */
     .separater_img {
         width: 500px;
-        margin: 20px;
     }
 }
-
-/* ＝＝＝この公園の詳細~フッター＝＝＝ */
 
 
 /* ＝＝＝カテゴリバー＝＝＝ */

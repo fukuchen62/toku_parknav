@@ -20,7 +20,7 @@ footer {
 }
 
 .foot_bgcolor_cream {
-    margin: 0 calc(50% - 50vw);
+    margin: -5px calc(50% - 50vw) 0;
     padding: 50px calc(50vw - 50% + 8px) 30px;
     width: 100vw;
     background-color: #309139;

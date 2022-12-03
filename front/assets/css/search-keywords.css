@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
+body {
+    min-width: 300px;
+}
+
+/* 見出し下余白 */
+h2, h3 {
+    margin-bottom: 30px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+/* セクションの上下に余白をとる */
+section {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}

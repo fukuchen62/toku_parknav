@@ -28,15 +28,6 @@ $(document).ready(function(){
 });
 
 
-// $(document).ready(function(){
-// 	$(".pagetop").on("click mouseenter", function(){
-// 		$(".foot_top")
-// 		.animate({top:"-10px"}, 200).animate({top:"-4px"}, 200) // first jump
-// 		.animate({top:"-7px"}, 100).animate({top:"-4px"}, 100) // second jump
-// 		.animate({top:"-6px"}, 100).animate({top:"-4px"}, 100); // the last jump
-// 	});
-// });
-
 // ポポを押すと吹き出しが出て、もう一度押すと２秒かけて消える
 
 $(function() {
