@@ -49,6 +49,7 @@ section {
 
 main {
     margin-bottom: 50px;
+    overflow-x: unset;
 }
 
 /* 「公園検索条件」エリア全体 */
