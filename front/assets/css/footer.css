@@ -59,8 +59,8 @@ footer {
     content: url(../img/totop.png);
     position: fixed;
     width: 100px;
-    right: 10px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 40px;
     cursor: pointer;
 }
 
@@ -81,6 +81,8 @@ footer {
 /* 要素にキーフレームで設定したアニメをさせるためのクラス */
 .foot_top {
     animation-name: foot_rotate;
+    transform-origin: center bottom;
+    animation: bound 1s ease-in alternate infinite;
 }
 
 
@@ -94,8 +96,23 @@ footer {
 
     100% {
         transform: rotateZ(0deg);
-        right: 10px;
+        right: 20px;
     }
+}
+
+@keyframes bound {
+    0% {
+        transform: translateY(-20%) scale(1, 1);
+    }
+
+    80% {
+        transform: translateY(0%) scale(1, 1);
+    }
+
+    100% {
+        transform: translateY(0%) scale(1.1, 0.9);
+    }
+
 }
 
 /*＝＝＝豆知識＝＝＝ */
@@ -127,6 +144,7 @@ footer {
     bottom: 240px;
     z-index: 501;
     text-align: left;
+    color: #3E3A39;
 }
 
 .popo_commentset {
