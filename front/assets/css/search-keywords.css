@@ -19,3 +19,8 @@ section {
     padding-bottom: 50px;
     padding-top: 50px;
 }
+
+.inner_under {
+    margin-bottom: 30px;
+    /* margin-top: 50px; */
+}
