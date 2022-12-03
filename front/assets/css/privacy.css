@@ -55,6 +55,13 @@ h4 span {
     font-size: 18px;
 }
 
+/* PC・TBのフォントサイズ */
+@media screen and (min-width: 771px) {
+    h4 span {
+        font-size: 24px;
+    }
+}
+
 /* テキスト左寄せ */
 .privacy_wrap p {
     text-align: left;
