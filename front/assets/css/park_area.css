@@ -68,23 +68,43 @@ main {
 }
 
 /* 東部ボタン */
-.search_btn_north {
+.search_btn:nth-child(1) {
     background-color: #FF397B;
     color: #fff;
     margin-bottom: 20px;
 }
 
 /* 南部ボタン */
-.search_btn_east {
+.search_btn:nth-child(2) {
     background-color: #39BDFF;
     color: #fff;
     margin-bottom: 20px;
 }
 
 /* 西部ボタン */
-.search_btn_south {
+.search_btn:nth-child(3) {
     background-color: #FFEB39;
+    margin-bottom: 20px;
 }
+
+/* 東部ボタン */
+/* .search_btn_north {
+    background-color: #FF397B;
+    color: #fff;
+    margin-bottom: 20px;
+} */
+
+/* 南部ボタン */
+/* .search_btn_east {
+    background-color: #39BDFF;
+    color: #fff;
+    margin-bottom: 20px;
+} */
+
+/* 西部ボタン */
+/* .search_btn_south {
+    background-color: #FFEB39;
+} */
 
 /* 条件検索ボタン */
 .search_btn_terms {

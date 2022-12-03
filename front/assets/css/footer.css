@@ -80,9 +80,7 @@ footer {
 
 /* 要素にキーフレームで設定したアニメをさせるためのクラス */
 .foot_top {
-    animation-name: foot_rotate;
-    transform-origin: center bottom;
-    animation: bound 1s ease-in alternate infinite;
+    animation: bound 1s ease-in alternate infinite, foot_rotate center bottom;
 }
 
 
