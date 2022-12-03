@@ -1,45 +1,123 @@
-<?php //ヘッダーテンプレートファイルを読み込む
-?>
+<!-- header -->
 <?php get_header(); ?>
 
+<!-- キービジュアル -->
+<div class="key_wrap">
+    <img class="key_img" src="./assets/img/key-under/key_under_search_keywords.jpg" alt="キービジュアル">
+    <div class="key_circle"></div>
+</div>
 
+<main>
 
-<h2 class="pageTitle">サイト内検索<span>SEARCH</span></h2>
+    <p class="pkz"><?php echo do_shortcode('[flexy_breadcrumb]'); ?></p>
+    <section>
+        <h2 class="h2_under">「<?php the_search_query(); ?>」検索結果</h2>
 
-<main class="main">
-    <div class="container">
-        <h2 class="main_title">「<?php the_search_query(); ?>」の検索結果</h2>
-        <div class="row">
-            <!-- ループの開始 -->
-            <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : ?>
-            <!-- 記事を取得して$postに代入 -->
-            <?php the_post(); ?>
+        <!-- 公園の検索結果 -->
+        <h3>該当する公園</h3>
+        <!-- card_flexの指定 -->
+        <div class="card_flex">
+            <?php
+            $park = get_search_query();
+            //print_r($park);
+            $args = array(
+                'post_type' => 'park',
+                's' => $park,
+            );
 
-            <div class="col-md-4">
-                <!-- テンプレートパーツを読み込む -->
-                <?php get_template_part('template-parts/loop', 'park') ?>
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_posts()) :
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+            ?>
+
+            <!-- カード1つ分 -->
+            <?php //get_template_part('template-part/loop', 'park')
+                    ?>
+            <div class="card_wrap">
+                <a href="<?php the_permalink(); ?>">
+                    <!-- アイキャッチ -->
+                    <figure class="menu_pic">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail('thumbnail') ?>
+                        <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+                        <?php endif; ?>
+                    </figure>
+                    <!-- タイトル -->
+                    <h3 class="menu_title"><?php the_title(); ?></h3>
+                    <!-- 説明文(抜粋) -->
+                    <div class="menu_desc">
+                        <?php the_excerpt(); ?>
+                    </div>
+                </a>
             </div>
-
             <?php endwhile; ?>
             <?php else : ?>
-            <div class="col-12 text-center">
-                <p>検索結果はありませんでした。</p>
-            </div>
-            <!-- ループの終了 -->
+            <p>
+                    <center>該当する記事はありません。</center>
+                </p>
             <?php endif; ?>
         </div>
 
-        <!-- ページNavi -->
-        <?php
-        if (function_exists('wp_pagenavi')) {
-            wp_pagenavi();
-        }
-        ?>
-    </div>
+
+
+
+        <!-- コースの検索結果 -->
+        <h3>該当するモデルコース</h3>
+
+        <!-- card_flexの指定 -->
+        <div class="card_flex">
+            <?php
+            $course = get_search_query();
+            //print_r($park);
+
+            $args = array(
+                'post_type' => 'course',
+                's' => $course,
+            );
+
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_posts()) :
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+            ?>
+
+            <!-- カード1つ分 -->
+            <?php //get_template_part('template-part/loop', 'park')
+                    ?>
+            <div class="card_wrap">
+                <a href="<?php the_permalink(); ?>">
+                    <!-- アイキャッチ -->
+                    <figure class="menu_pic">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail('thumbnail') ?>
+                        <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+                        <?php endif; ?>
+                    </figure>
+                    <!-- タイトル -->
+                    <h3 class="menu_title"><?php the_title(); ?></h3>
+                    <!-- 説明文(抜粋) -->
+                    <div class="menu_desc">
+                        <?php the_excerpt(); ?>
+                    </div>
+                </a>
+            </div>
+            <?php endwhile; ?>
+            <?php else : ?>
+            <p>
+                    <center>該当する記事はありません。</center>
+                </p>
+            <?php endif; ?>
+        </div>
+
+
+    </section>
 
 </main>
 
-<?php //フッターテンプレートファイルを読み込む
-?>
+<!-- フッター -->
 <?php get_footer(); ?>
