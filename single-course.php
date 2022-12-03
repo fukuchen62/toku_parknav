@@ -12,6 +12,7 @@
     <p class="pkz"><?php echo do_shortcode('[flexy_breadcrumb]'); ?></p>
 
     <div class="flex_box">
+
         <!-- ループの開始 -->
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : ?>
@@ -43,10 +44,12 @@
                     <li>遊具遊び</li> -->
                 </ul>
 
-                <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('large') ?>
-                <?php endif; ?>
-                <!-- <img class="course_top_img" src="./assets/img/uploads/c-dummy.jpg" alt="コース詳細一枚目"> -->
+                <?php
+                $pic = get_field('course_image1');
+                // 大サイズ画像URL
+                $pic_url = $pic['sizes']['large'];
+                ?>
+                <img class="course_top_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
 
                 <table>
                     <tr>
@@ -70,54 +73,48 @@
                 </div>
             </section>
 
-            <!-- コースコンテンツ(ループ部分) -->
-            <?php for ($i = 1; $i <= 8; $i++) : ?>
-            <?php
-                        //写真パス
-                        $pic = "";
-                        if (get_field('course_image' . $i)) {
-                            $pic = get_field('course_image' . $i);
-                            $pic_url = esc_url($pic['url']);
-                        }
 
-                        // ディスクリプション
-                        $course_discription = get_field('course_discription' . $i);
-
-                        // コース時間
-                        $course_time = get_field('course_time' . $i);
-                        ?>
-
-            <?php if ($pic != '') : ?>
             <div class="course_box">
-                <div class="time_box">
-                    <img class="course_img" src="<?php //echo $pic_url;
-                                                                    ?>" alt="<?php echo $pic['alt'];
-                                                                                ?>">
-                    <div class="course_time"><?php echo $course_time; ?></div>
+                <!-- コースコンテンツ(ループ部分) -->
+                <?php for ($i = 1; $i <= 8; $i++) : ?>
+                <?php
+                    //写真パス
+                    $pic = "";
+                    if (get_field('course_image' . $i)) {
+                        $pic = get_field('course_image' . $i);
+                        $pic_url = $pic['sizes']['large'];
+                    }
 
+                    // ディスクリプション
+                    $course_discription = get_field('course_discription' . $i);
+
+                    // コース時間
+                    $course_time = get_field('course_time' . $i);
+                ?>
+
+                <?php if ($pic != '') : ?>
+                <div class="time_box">
+                    <!-- <img class="course_img" src="<?php //echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>"> -->
+                    <div class="course_time"><?php echo $course_time; ?></div>
                 </div>
                 <p class="txt"><?php echo $course_discription; ?></p>
                 <img class="separater_img" src="assets/img/course_separater.png" alt="コース区切り画像">
-            </div>
 
-            <?php endif; ?>
+                <?php endif; ?>
             <?php endfor; ?>
+            </div>
 
             <?php endwhile; ?>
             <?php endif; ?>
 
             <!-- 関連する公園ページの出力 -->
             <section>
+                <h3>ここで紹介した公園の<br>詳細情報はこちら</h3>
 
-                <h3>ここで紹介した公園の<br>
-                    詳細情報はこちら</h3>
                 <!-- card_flexの指定 -->
                 <div class="card_flex">
-
                     <?php
                     $park = get_field('park_id');
-                    //print_r($park);
-
                     $args = array(
                         'post_type' => 'park',
                         'p' => $park,
@@ -131,47 +128,10 @@
                     ?>
 
                     <!-- カード1つ分 -->
-                    <?php //get_template_part('template-part/loop', 'park')
-                            ?>
-                    <div class="card_wrap">
-                        <a href="<?php the_permalink(); ?>">
-                            <figure class="menu_pic">
-                                <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('thumbnail') ?>
-                                <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
-                                <?php endif; ?>
-                            </figure>
-                            <h3 class="menu_title"><?php the_title(); ?></h3>
-                            <div class="menu_desc">
-                                <?php the_excerpt(); ?>
-                            </div>
-                        </a>
-                    </div>
+                    <?php get_template_part('template-parts/loop', 'park')?>
 
                     <?php endwhile; ?>
                     <?php endif; ?>
-
-                    <!-- <div class="card_wrap">
-                        <a href="#">
-                            // 記事画像
-                            <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                            // 文章部分の枠
-                            <div class="card_container">
-                                <div class="card_inner">
-                                    // サブタイトル
-                                    <h3 class="card_subttl">西部</h3>
-                                    // メインタイトル
-                                    <h2 class="card_ttl ">レインボーオアシスパーク</h2>
-                                    // 記事本文
-                                    <div class="card_txt ">
-                                        <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
                 </div>
             </section>
         </div>
