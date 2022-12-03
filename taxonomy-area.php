@@ -26,26 +26,17 @@
         <!-- タクソノミーのメニューボタンを作成 -->
         <?php if (!empty($areas)) :
         ?>
-        <div class="pageNav">
-            <ul>
-                <!-- kindに属する種類を一つずつリンクボタンを作成 -->
-                <?php foreach ($areas as $key => $area) : ?>
-                <li>
-                    <a href="<?php echo get_term_link($area); ?>">
-                        <?php echo $area->name; ?>
-                    </a>
-                </li>
-                <?php endforeach; ?>
-                <?php endif; ?>
-                <li><a href="echo get_term_link('/');"></a></li>
-            </ul>
+        <?php foreach ($areas as $key => $area) : ?>
+        <!-- 地域ボタン -->
+        <div class="search_btn search_btn_north">
+            <a href="<?php echo get_term_link($area); ?>"><?php echo $area->name; ?></a>
         </div>
-
-
-        <!-- <a href="#" class="search_btn search_btn_north">東部</a>
-        <a href="#" class="search_btn search_btn_east">南部</a>
-        <a href="#" class="search_btn search_btn_south">西部</a> -->
-        <a href="./park_search.html" class="search_btn search_btn_terms">詳細検索</a>
+        <?php endforeach; ?>
+        <?php endif; ?>
+        <!-- 詳細検索ボタン -->
+        <div class="search_btn search_btn_terms">
+            <a href="./park_search.html">詳細検索</a>
+        </div>
     </div>
 
     <!-- カードとページをまとめるdiv -->
@@ -64,8 +55,8 @@
             <?php while (have_posts()) : ?>
             <?php the_post(); ?>
 
-                <!-- カード型の呼び出し -->
-                <?php get_template_part('template-parts/loop', 'park') ?>
+            <!-- カード型の呼び出し -->
+            <?php get_template_part('template-parts/loop', 'park') ?>
 
             <?php endwhile; ?>
             <!-- ループの終了 -->
