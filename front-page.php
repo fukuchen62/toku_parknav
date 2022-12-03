@@ -249,7 +249,7 @@
 
     <!-- リンク集 -->
     <div class="banner_flex">
-        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner01.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner01.png" alt="サイトリンク"></a></div>
         <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner02.png" alt="サイトリンク"></a></div>
         <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner03.png" alt="サイトリンク"></a></div>
         <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner04.png" alt="サイトリンク"></a></div>
