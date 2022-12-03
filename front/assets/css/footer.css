@@ -4,7 +4,6 @@ footer {
     font-size: 14px;
     text-align: center;
     list-style: none;
-    margin-top: 50px;
     color: #fff;
 }
 
@@ -25,6 +24,12 @@ footer {
     padding: 50px calc(50vw - 50% + 8px) 30px;
     width: 100vw;
     background-color: #309139;
+}
+
+.foot_grass {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin: 0 calc(50% - 50vw);
 }
 
 .foot_fontbold {

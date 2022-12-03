@@ -51,7 +51,6 @@ a:hover {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         margin: 0 calc(50% - 50vw);
-        /* padding: 0px calc(50vw - 50% + 8px) 30px; */
     }
 }
 
@@ -315,17 +314,19 @@ a:hover {
     .key_photo05 {
         position: absolute;
         top: 10%;
-        left: 75%;
+        left: 70%;
         width: 30%;
         z-index: 4;
+        object-fit: cover;
+        overflow: hidden;
     }
 
     /* 双子姉妹 */
     .key_photo01 {
         position: absolute;
         bottom: 5%;
-        left: -5%;
-        width: 300px;
+        left: 0%;
+        width: 22%;
         z-index: 4;
     }
 
@@ -342,16 +343,16 @@ a:hover {
     /* すべり台少年 */
     .key_photo02 {
         position: absolute;
-        top: 9%;
-        left: 2%;
-        width: 270px;
+        top: 13%;
+        left: 9%;
+        width: 16%;
     }
 
     /* 乗り物3人兄弟 */
     .key_photo03 {
         position: absolute;
         top: 8%;
-        left: 30%;
+        left: 28%;
         width: 30%;
     }
 
@@ -359,7 +360,7 @@ a:hover {
     .key_photo04 {
         position: absolute;
         top: 15%;
-        right: 30%;
+        right: 33%;
         width: 180px;
     }
 
@@ -367,7 +368,7 @@ a:hover {
         position: absolute;
         top: 70%;
         left: 70%;
-        width: 80px;
+        width: 9%;
         z-index: 2;
     }
 
@@ -399,8 +400,8 @@ a:hover {
 
     .key_circle_pk04 {
         position: absolute;
-        top: 18%;
-        left: 23%;
+        top: 9%;
+        left: 3%;
         width: 70px;
         opacity: 0.6;
         z-index: 2;
@@ -409,7 +410,7 @@ a:hover {
     .key_circle_bl02 {
         position: absolute;
         bottom: 45%;
-        left: 15%;
+        left: 5%;
         width: 8%;
         z-index: 2;
         opacity: 0.6;
@@ -441,6 +442,23 @@ a:hover {
     width: 25vw;
     top: 0px;
     right: 0px;
+}
+
+.top_sun {
+    animation-name: bright;
+    transform: scale(0.85, 0.85);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    width: 128px;
+}
+
+
+@keyframes bright {
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 /* TB幅 */
@@ -616,109 +634,11 @@ a:hover {
     background-color: #FFFCE3;
 }
 
-/* 12/1/16:24変更 */
 @media screen and (max-width: 950px) {
     .insta_box {
         margin-left: 20px;
         margin-right: 20px;
     }
-}
-
-/* スライダー */
-.slider .slick-slide {
-    width: 200px;
-    height: 200px;
-    margin: 0 15px;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.slider .slick-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slider .slick-arrow {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #FFFCE3;
-    cursor: pointer;
-    border: 3px solid #3E3A39;
-    outline: none;
-    font-size: 0;
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    /* filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16)); */
-}
-
-.slider .slick-arrow::before {
-    content: '';
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #09000d;
-    border-width: 3px 3px 0 0;
-    position: absolute;
-    top: 20px;
-    transform: rotate(45deg);
-}
-
-.slider .slick-next {
-    right: -80px;
-}
-
-.slider .slick-prev {
-    left: -80px;
-}
-
-.slider .slick-next::before {
-    left: 20px;
-}
-
-.slider .slick-prev::before {
-    border-width: 0 0 3px 3px;
-    right: 22px;
-}
-
-.dots .slick-dots {
-    text-align: center;
-}
-
-.dots .slick-dots li {
-    display: inline-block;
-}
-
-.slider_dots .slick-dots button {
-    display: block;
-    width: 10px;
-    height: 10px;
-    margin: 6px;
-    font-size: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    background: #bcbcbc;
-    border-radius: 50%;
-}
-
-.slider_dots .slick-dots .slick-active button {
-    background: #3E3A39;
-}
-
-.slick-dots {
-    position: relative;
-    bottom: 0;
-}
-
-.insta_logo {
-    width: 80px;
-    margin-top: 30px;
 }
 
 /* ＝＝＝リンク集＝＝＝ */
