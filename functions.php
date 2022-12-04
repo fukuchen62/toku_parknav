@@ -92,7 +92,7 @@ function add_common_stylesheet_script()
 /*    02.ページごとに読み込むCSS・JSを変える
 //
 //      02-A:トップページ
-//      02-B:このサイトについて
+//      02-B:このサイトについて⇒なし、その他の固定ページへ
 //      02-C:農業体験⇒⇒公園検索
 //      02:農家さん紹介⇒⇒なし
 //      02-D:農ライフ記事⇒⇒モデルコース
@@ -140,13 +140,13 @@ function add_individual_stylesheet_script()
         // wp_enqueue_script('toku_parknav-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
     }
     //---------------------
-    //  02-B:このサイトについて
+    //  02-B:このサイトについて⇒なし、その他の固定ページへ
     //----------------------
-    elseif (is_page('aboutsite')) {
+    //elseif (is_page('aboutsite')) {
 
-        //このサイトについてのCSS（about.css）を読み込む
-        wp_enqueue_style('toku_parknav-about', get_template_directory_uri() . '/assets/css/about.css', array(), false);
-    }
+    //このサイトについてのCSS（about.css）を読み込む
+    //wp_enqueue_style('toku_parknav-about', get_template_directory_uri() . '/assets/css/about.css', array(), false);
+    //}
 
     //----------------------
     //  02-C:農業体験⇒⇒公園検索

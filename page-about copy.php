@@ -9,9 +9,6 @@
     <?php the_content(); ?>
 
 
-
-
-</div>
-<?php //フッターテンプレートファイルを読み込む
-?>
-<?php get_footer(); ?>
+    <?php //フッターテンプレートファイルを読み込む
+    ?>
+    <?php get_footer(); ?>
