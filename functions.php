@@ -249,7 +249,11 @@ function add_individual_stylesheet_script()
     //----------------------
     //  02-H:その他の固定ページ
     //----------------------
-    else if (is_page('qa')) {
+    else if (is_page('about')) {
+
+        //このサイトについてのCSS（about.css）を読み込む
+        wp_enqueue_style('toku_parknav-about', get_template_directory_uri() . '/assets/css/about.css', array(), false);
+    } else if (is_page('qa')) {
 
         //Q＆AページのCSS（question.css）を読み込む
         wp_enqueue_style('toku_parknav-qa', get_template_directory_uri() . '/assets/css/question.css', array(), false);
@@ -263,8 +267,8 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('toku_parknav-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array(), false);
     } else if (is_page('teamminori')) {
 
-        //サイト制作にあたってのCSS（writer.css）を読み込む
-        wp_enqueue_style('toku_parknav-teamminori', get_template_directory_uri() . '/assets/css/writer.css', array(), false);
+        //サイト制作にあたってのCSS（minori.css）を読み込む
+        wp_enqueue_style('toku_parknav-teamminori', get_template_directory_uri() . '/assets/css/minori.css', array(), false);
     }
     //----------------------
     //  02-I:index.php
@@ -317,6 +321,25 @@ function my_search_template($template)
     }
     return $template;
 }
+
+
+// コース一覧の記事の表示件数を６に設定
+function change_posts_per_page($query)
+{
+    if (is_admin() || !$query->is_main_query())
+        return;
+    if ($query->is_archive('course')) { //カスタム投稿タイプを指定
+        $query->set('posts_per_page', '6'); //表示件数を指定
+    }
+}
+add_action('pre_get_posts', 'change_posts_per_page');
+
+
+
+
+
+
+
 
 
 
@@ -410,13 +433,3 @@ function span_before_link_list_categories($list)
 
 
 //////////////////////////////////////////////////////////
-// コース一覧の記事の表示件数を６に設定
-function change_posts_per_page($query)
-{
-    if (is_admin() || !$query->is_main_query())
-        return;
-    if ($query->is_archive('course')) { //カスタム投稿タイプを指定
-        $query->set('posts_per_page', '6'); //表示件数を指定
-    }
-}
-add_action('pre_get_posts', 'change_posts_per_page');

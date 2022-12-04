@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html {
+    /* 横スクロールバー対策 */
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Noto Serif JP', serif;
     font-family: 'Zen Maru Gothic', sans-serif;
@@ -10,8 +15,33 @@ body {
     line-height: 1.7;
     /* スマホ横画面対策 */
     -webkit-text-size-adjust: 100%;
-    /* 横スクロールバー対策 */
-    overflow-x: hidden;
+}
+
+/* キービジュアルの下層ページ用 */
+.key_img {
+    object-fit: cover;
+    /* object-position: 50% 70%; */
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    margin-top: 80px;
+    z-index: -2;
+}
+
+.key_circle {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    top: 180px;
+    z-index: -1;
+    /* 破線を上に表示 */
+    outline-width: 4.5px;
+    outline-style: dashed;
+    outline-color: #fff;
+    outline-offset: 10px;
 }
 
 /* セクションによって、背景色をクリーム色にする */
@@ -20,11 +50,13 @@ body {
     padding: 50px calc(50vw - 50% + 8px);
     width: 100vw;
     background-color: #FFFCE3;
+    z-index: -2;
 }
 
 /* リンクのhover時にカーソルをポインターにする */
 a:hover {
     cursor: pointer;
+    opacity: 0.7;
 }
 
 /* コンテンツ幅を950pxまでに設定 */
@@ -33,11 +65,30 @@ main {
     /* 要素を中央配置にする */
     margin: 0 auto;
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* パンくずのフォントサイズ(SP・TB・PC共通) */
+@media screen and (min-width: 950px) {
+    main {
+        overflow-x: visible;
+    }
+}
+
+
+/* パンくず */
 .pkz {
     font-size: 14px;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* h2下のアンダーラインデザイン */
+.h2_under {
+    text-underline-offset: 5px;
+    text-align: center;
+    text-decoration: 6px underline dashed #FFEB39;
 }
 
 /* SP見出しフォントサイズ */
@@ -178,4 +229,53 @@ h4 {
 /* 記事本文の指定 */
 .card_txt p {
     font-size: 16px;
+}
+
+
+/* ＝＝＝ページネーション＝＝＝ */
+
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+/* 丸い形を形成 */
+.pagination a {
+    display: inline-block;
+    color: #3E3A39;
+    border-radius: 50%;
+    border: 2px solid #3E3A39;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/* 「＜」・「＞」の大きさ */
+.pagination i {
+    line-height: 40px;
+}
+
+/* 現在選ばれているぺージ */
+.pagination .active a {
+    background-color: #39BDFF;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #3E3A39;
+    color: white;
+}
+
+/* 選択できない箇所 */
+.pagination .disabled a {
+    pointer-events: none;
+    color: #ccc;
+}
+
+.pagination .disabled a:hover {
+    background-color: initial;
+    color: #ccc;
 }
