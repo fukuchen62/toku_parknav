@@ -68,21 +68,21 @@
         </div>
 
         <!-- カテゴリバー -->
-        <?php
-        // タクソノミーpurposeの要素を取得する
-        $args = array(
-            'taxonomy' => 'purpose',
-        );
-        $purposes = get_terms($args);
-
-        //タクソノミーのメニューボタンを作成
-        if (!empty($purposes)) :
-        ?>
-
         <div class="sidebar_box">
             <aside class="sidebar">
+                <!-- サイドバーの設計 -->
+                <?php
+                // タクソノミーpurposeの要素を取得する
+                $args = array(
+                    'taxonomy' => 'purpose',
+                );
+                $purposes = get_terms($args);
+                ?>
+                <!-- タクソノミーのメニューボタンを作成 -->
+                <?php if (!empty($purposes)) : ?>
                 <h3 class="category_ttl">カテゴリ一覧</h3>
                 <ul>
+                    <!-- kindに属する種類を一つずつリンクボタンを作成 -->
                     <?php foreach ($purposes as $key => $purpose) : ?>
                     <li>
                         <a href="<?php echo get_term_link($purpose); ?>">
@@ -91,12 +91,10 @@
                     </li>
                     <?php endforeach; ?>
                 </ul>
-                <?php endif; ?>
             </aside>
         </div>
+        <?php endif; ?>
     </div>
-
-
 </main>
 
 <?php //フッターテンプレートファイルを読み込む

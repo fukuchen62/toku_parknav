@@ -35,7 +35,7 @@
         <?php endif; ?>
         <!-- 詳細検索ボタン -->
         <div class="search_btn search_btn_terms">
-            <a href="./park_search.html">詳細検索</a>
+            <a href="<?php echo home_url('/park/?s='); ?>">詳細検索</a>
         </div>
     </div>
 
