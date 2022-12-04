@@ -45,6 +45,9 @@
                     <a href="<?php echo home_url('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
                 </li>
                 <li>
+                    <a href="<?php echo home_url('/qa/'); ?>">Q＆A</a>
+                </li>
+                <li>
                     <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
                 </li>
                 <li>
