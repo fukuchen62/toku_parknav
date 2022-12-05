@@ -186,6 +186,22 @@ section img {
 
 /* ＝＝＝遊具データのセクション＝＝＝ */
 
+/* 小見出し */
+.sub_ttl_deco {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 235, 57, 0.5);
+    /* 縮小で文字とデザイン端が重ならない */
+    padding: 5px 10px;
+    /* デザインの設定 */
+    outline-style: dashed;
+    outline-width: 1.7px;
+    outline-offset: -5px;
+    outline-color: #fff;
+    border-radius: 0 20px;
+}
+
+
 /* リスト要素の間に余白をとる */
 .row_flex+.row_flex {
     padding-top: 50px;
@@ -219,7 +235,7 @@ td {
 }
 
 .park_icon {
-    width: 80px;
+    width: 100px;
     border-radius: 0px;
 }
 
@@ -249,6 +265,10 @@ td {
 }
 
 /* ＝＝＝コースや近くの公園のリンクのセクション~フッター＝＝＝ */
+
+.pickup_deco {
+    width: 80px;
+}
 
 .footer_dummy {
     height: 450px;
