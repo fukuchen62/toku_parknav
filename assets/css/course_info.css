@@ -218,7 +218,7 @@ td {
 
 /* 区切りのタイヤ */
 .separater_img {
-    width: 300px;
+    width: 200px;
     margin: 20px;
 }
 
@@ -241,7 +241,7 @@ td {
 
     /* 区切りのタイヤ */
     .separater_img {
-        width: 500px;
+        width: 300px;
     }
 }
 
