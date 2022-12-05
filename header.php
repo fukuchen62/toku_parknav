@@ -31,7 +31,7 @@
     <!-- ファビコン -->
     <link rel="icon" href="./assets/img/popo_favicon-16x16.png" id="favicon">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/popo_favicon-180x180.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/popo_favicon-192x192.png">
+    <link rel="android-hrome" sizes="192x192" href="./assets/img/popo_favicon-192x192.png">
 
     <!-- <title>とくしまGo!Go!パークなび</title> -->
     <?php
