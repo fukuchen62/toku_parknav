@@ -4,7 +4,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="./assets/img/key-under/key_img.jpg" alt="">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
     <div class="key_circle"></div>
 </div>
 
@@ -13,14 +13,14 @@
     <p class="pkz"><?php echo do_shortcode('[flexy_breadcrumb]'); ?></p>
 
     <div class="flex_box">
+        <?php
+        // URLのパラメータからタクソノミの値を取得する
+        $purpose_slug = get_query_var('purpose');
+        // タクソノミの値にてそのタクソノミを取得する
+        $purpose = get_term_by('slug', $purpose_slug, 'purpose');
+        ?>
+        <!-- カードとページをまとめるdiv -->
         <div>
-            <?php
-            // URLのパラメータからタクソノミの値を取得する
-            $purpose_slug = get_query_var('purpose');
-            // タクソノミの値にてそのタクソノミを取得する
-            $purpose = get_term_by('slug', $purpose_slug, 'purpose');
-            ?>
-
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
             <h2 class="h2_under"><?php echo $purpose->name; ?></h2>
 

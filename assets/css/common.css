@@ -164,6 +164,8 @@ h4 {
     justify-content: space-around;
     /* 縮小幅にあわせて自動でカラム落ち */
     flex-flow: row wrap;
+    /* カード間の余白 */
+    column-gap: 10px;
 }
 
 /* カード1つ分の大枠 */
@@ -185,7 +187,7 @@ h4 {
     width: 100%;
     height: 200px;
     /* 画像の角丸指定 */
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
 }
 
 /* 文章の指定（枠組み） */
