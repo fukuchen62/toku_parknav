@@ -164,8 +164,6 @@ h4 {
     justify-content: space-around;
     /* 縮小幅にあわせて自動でカラム落ち */
     flex-flow: row wrap;
-    /* カード間の余白 */
-    column-gap: 10px;
 }
 
 /* カード1つ分の大枠 */
@@ -187,7 +185,7 @@ h4 {
     width: 100%;
     height: 200px;
     /* 画像の角丸指定 */
-    border-radius: 30px 30px 0 0;
+    border-radius: 30px;
 }
 
 /* 文章の指定（枠組み） */
@@ -236,14 +234,14 @@ h4 {
 
 /* ＝＝＝ページネーション＝＝＝ */
 
-/* .pagination {
+.pagination {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-} */
+}
 
 /* 丸い形を形成 */
-/* .pagination a {
+.pagination a {
     display: inline-block;
     color: #3E3A39;
     border-radius: 50%;
@@ -253,15 +251,15 @@ h4 {
     height: 40px;
     line-height: 40px;
     text-align: center;
-} */
+}
 
 /* 「＜」・「＞」の大きさ */
-/* .pagination i {
+.pagination i {
     line-height: 40px;
-} */
+}
 
 /* 現在選ばれているぺージ */
-/* .pagination .active a {
+.pagination .active a {
     background-color: #39BDFF;
     color: white;
 }
@@ -269,10 +267,10 @@ h4 {
 .pagination a:hover {
     background-color: #3E3A39;
     color: white;
-} */
+}
 
 /* 選択できない箇所 */
-/* .pagination .disabled a {
+.pagination .disabled a {
     pointer-events: none;
     color: #ccc;
 }
@@ -280,66 +278,4 @@ h4 {
 .pagination .disabled a:hover {
     background-color: initial;
     color: #ccc;
-} */
-
-
-
-/*  */
-.wp-pagenavi {
-    /* 全体 */
-    margin: 20px 0;
-    /* font-size: 12px; */
 }
-
-.wp-pagenavi a {
-    /* フォント色 */
-    /* color: #4a4a4a; */
-    color: #3E3A39;
-}
-
-.pages {
-    /* 左の表記 */
-    margin-right: 20px;
-}
-
-.wp-pagenavi .current,
-.wp-pagenavi a.page {
-    /* ボタン */
-    margin: 0 6px 6px 0;
-    display: inline-block;
-    border: solid 1px #eee;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    line-height: 40px;
-    text-align: center;
-}
-
-.wp-pagenavi .current {
-    /* カレント数字 */
-    /* border: none;
-    background: #87e6e9;
-    color: #fff; */
-    background-color: #39BDFF;
-    color: white;
-}
-
-.wp-pagenavi a.page:hover {
-    /* マウスオーバー */
-    /* background: #87e6e9;
-    color: #fff; */
-    background-color: #3E3A39;
-    color: white;
-}
-
-.wp-pagenavi .first,
-.wp-pagenavi .extend {
-    /* ... */
-    margin-right: 10px;
-}
-
-/* .wp-pagenavi .previouspostslink,
-.wp-pagenavi .nextpostslink { */
-/* 記号の削除 */
-/* display: none; */
-/* } */
