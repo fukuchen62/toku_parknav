@@ -44,11 +44,8 @@ h4 {
 .q_a_flex {
     display: flex;
     margin-bottom: 0;
-    /* justify-content: left; */
     justify-content: flex-start;
-    /* align-items: center; */
     margin-bottom: 15px;
-    /* margin-bottom: 30px; */
 }
 
 /* Q&Aアイコン */
@@ -117,4 +114,15 @@ h4 {
     background-color: #FF397B;
     color: #fff;
     margin: 0 auto;
+    transition: ease-in 0.3s;
+    /* transform: scale(1, 1); */
+}
+
+/* リセットボタンのホバー要素 */
+.contact_btn:hover {
+    color: #FF397B;
+    background-color: #ccc;
+    background-color: #fff;
+    border-radius: unset;
+    /* transform: scale(1.1, 1.1); */
 }
