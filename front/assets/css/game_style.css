@@ -1,0 +1,403 @@
+@charset "UTF-8";
+
+/* テスト用のスタイル */
+/* html {
+    border-color: black;
+    border: solid 1px;
+} */
+* {
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #3E3A39;
+}
+
+header {
+    border-color: black;
+    border: solid 1px;
+    width: 100%;
+    height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.game_backimage {
+    background-image: url(../img/game_backimg2.png);
+
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ゲーム内でオブジェクトを発生させる位置 */
+.game_flex {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* none */
+.jsgame_dnone {
+    display: none;
+}
+
+
+
+/* スコア */
+
+.gama_score {
+    width: 100%;
+    /* height: 80px; */
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 244, 228);
+}
+
+/* 制限時間 */
+.game_timelimit_style {
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 244, 228);
+
+    /* background-color: rgb(255, 252, 227, 0.5);
+    border-radius: 50px;
+    border: solid 1px;
+    padding-top: 30px;
+    padding-bottom: 60px; */
+}
+
+/* 画面下部の戻るボタン */
+
+.game_totop_btn {
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+
+}
+
+.game_totop_btnimg {
+    content: url(../img/prev_btn_cream_sp.png);
+    width: 130%;
+}
+
+.game_totop_btn div {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.game_totop_btn p {
+    position: absolute;
+    top: 42px;
+    left: 5px;
+    width: 150px;
+
+}
+
+/* スタートカウントダウンのスタイル */
+.game_startcountdown_style {
+    font-size: 130px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(255, 244, 228);
+}
+
+/* ゲームオーバー時のスタイル */
+.gameover_position {
+    width: 80%;
+    height: auto;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+    font-weight: bold;
+
+    text-align: center;
+    background-color: rgb(255, 252, 227, 0.5);
+    border-radius: 50px;
+    border: solid 1px;
+}
+
+.gameover_top {
+    top: 120px;
+    font-size: 16px;
+}
+
+/* ゲームオーバー時の選択画面 */
+.gameover_choice {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    font-size: 20px;
+    gap: 30px;
+}
+
+/* .gameoverLabelstyle {
+    padding-bottom: 30px;
+} */
+
+.gameover_dontaimLabelstyle {
+    padding-bottom: 30px;
+}
+
+/* スマホ */
+
+/* 表示するオブジェクトの基準の位置を設定 */
+.game_posi {
+    position: relative;
+    top: 60px;
+}
+
+
+/* スタート画面 */
+.game_start {
+    /* background-image: url(../img/start1100x840.png); */
+    width: 100%;
+    height: 500px;
+    z-index: 100;
+    position: absolute;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clm {
+    width: 80px;
+    height: 80px;
+    /* max-width: 80px; */
+    /* max-height: 80px; */
+    /* 可視化用に色を付けている */
+    /* border: solid 1px black; */
+}
+
+.clm div {
+    width: 100%;
+    height: 100%;
+}
+
+/*################ 表示させる画像 #################*/
+/* 狙う敵 */
+.clm_tgt_aim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt1_aim_200x200.png);
+    display: block;
+}
+
+/* tgt2 */
+.clm_tgt2_aim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt2_aim_200x200.png);
+    display: block;
+}
+
+/* tgt3 */
+.clm_tgt3_aim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt3_aim_200x200.png);
+    display: block;
+}
+
+/* tgt4 */
+.clm_tgt4_aim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt4_aim_200x200.png);
+    display: block;
+}
+
+/* tgt5 */
+.clm_tgt5_aim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt5_aim_200x200.png);
+    display: block;
+}
+
+/* 狙ってはいけない敵 */
+.clm_tgt_dontaim {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_dontami1_200x200.png);
+    display: block;
+}
+
+.clm_tgt_dontaim2 {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_dontami2_200x200.png);
+    display: block;
+}
+
+.clm_tgt_dontaim3 {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_dontami3_200x200.png);
+    display: block;
+}
+
+
+/* ゲームオーバー時のボタンのスタイル */
+.gameover_morebtn {
+    font-size: 15px;
+    color: #504b4a;
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.gameover_morebtn:hover {
+    font-size: 20px;
+    cursor: pointer;
+    color: #504b4a;
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #ffb282;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.gameover_topbtn {
+    font-size: 15px;
+    color: #504b4a;
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.gameover_topbtn:hover {
+    font-size: 20px;
+    cursor: pointer;
+    color: #504b4a;
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #FFFCE3;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+/* ゲームオーバー時のメダルの要素 */
+
+.gameover_medal1 {
+    width: 100%;
+    height: 100%;
+    content: url(../img/game_tgt1_aim_200x200.png);
+    display: block;
+}
+
+/* メディアクエリ */
+/* タブレット */
+@media screen and (min-width: 771px) and (max-width:1199px) {
+
+    /* スタートカウントダウンのスタイル */
+    .game_startcountdown_style {
+        font-size: 130px;
+        margin: 0 auto;
+
+    }
+
+    .gama_score {
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 40px;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgb(255, 244, 228);
+    }
+
+
+    /* 表示するオブジェクトの基準の位置を設定 */
+    .game_posi {
+        position: relative;
+        top: 30px;
+    }
+
+    .clm {
+        width: 136px;
+        height: 136px;
+        /* max-width: 136px; */
+        /* max-height: 136px; */
+        /* 可視化用に色を付けている */
+        /* border: solid 1px black; */
+    }
+
+
+    .gameover_top {
+        top: 200px;
+        font-size: 26px;
+    }
+
+}
+
+/* PC */
+@media screen and (min-width: 1200px) {
+
+    /* スタートカウントダウンのスタイル */
+    .game_startcountdown_style {
+        font-size: 130px;
+        margin: 0 auto;
+    }
+
+    .gama_score {
+        width: 100%;
+        height: 80px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 50px;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgb(255, 244, 228);
+    }
+
+
+    /* 表示するオブジェクトの基準の位置を設定 */
+    .game_posi {
+        position: relative;
+        top: 30px;
+    }
+
+    .clm {
+        width: 200px;
+        height: 200px;
+        /* max-width: 200px;
+        max-height: 200px; */
+        /* 可視化用に色を付けている */
+        /* border: solid 1px black; */
+    }
+
+
+    .gameover_top {
+        top: 250px;
+        font-size: 26px;
+    }
+}
