@@ -162,30 +162,9 @@ td {
 /* TB幅以上 */
 @media screen and (min-width: 771px) {
 
-    /* ぱんくず */
-    .pkz {
-        /* margin-left: 20px; */
-    }
-
     /* 記事本文 */
     .txt {
-        margin: 0px 80px 0;
-        width: auto;
-    }
-
-    /* カード型以外の写真のサイズ */
-    .course_top_img, .course_img {
-        width: 300px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* 時間を写真に被せるための箱 */
-    .time_box {
-        position: relative;
-        width: 300px;
-        height: 210px;
-        margin: 0 auto;
+        width: 580px;
     }
 
     /* コースの写真のサイズ以外を指定 */
@@ -202,6 +181,10 @@ td {
         padding: 10px;
     }
 
+}
+
+@media screen and (min-width: 990px) {
+
     /* 記事とサイドバーにflexをかける  */
     .flex_box {
         display: flex;
@@ -214,31 +197,6 @@ td {
         top: 80px;
         right: 0;
     }
-
-}
-
-/* コンテンツ幅（950px）以上 */
-@media screen and (min-width: 950px) {
-
-    /* カード以外の写真サイズ */
-    .course_top_img, .course_img {
-        width: 600px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* 時間と写真をくくる箱 */
-    .time_box {
-        position: relative;
-        width: 600px;
-        height: 380px;
-        margin: 0 auto;
-    }
-
-    .txt {
-        width: 580px;
-    }
-
 
 }
 
@@ -263,14 +221,10 @@ td {
 
 /* ＝＝＝カテゴリバー＝＝＝ */
 
-.sidebar {
-    margin-right: 20px;
-    /* position: relative; */
-}
-
 /* サイドバーの幅を設定する */
 .sidebar {
     width: 250px;
+    margin-right: 20px;
     margin: 0 auto 50px;
 }
 
