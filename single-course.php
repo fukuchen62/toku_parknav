@@ -45,10 +45,10 @@
                 </ul>
 
                 <?php
-                $pic = get_field('course_image1');
-                // 大サイズ画像URL
-                $pic_url = $pic['sizes']['large'];
-                ?>
+                        $pic = get_field('course_image1');
+                        // 大サイズ画像URL
+                        $pic_url = $pic['sizes']['large'];
+                        ?>
                 <img class="course_top_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
 
                 <table>
@@ -78,30 +78,30 @@
                 <!-- コースコンテンツ(ループ部分) -->
                 <?php for ($i = 1; $i <= 8; $i++) : ?>
                 <?php
-                    //写真パス
-                    $pic = "";
-                    if (get_field('course_image' . $i)) {
-                        $pic = get_field('course_image' . $i);
-                        $pic_url = $pic['sizes']['large'];
-                    }
+                            //写真パス
+                            $pic = "";
+                            if (get_field('course_image' . $i)) {
+                                $pic = get_field('course_image' . $i);
+                                $pic_url = $pic['sizes']['large'];
+                            }
 
-                    // ディスクリプション
-                    $course_discription = get_field('course_discription' . $i);
+                            // ディスクリプション
+                            $course_discription = get_field('course_discription' . $i);
 
-                    // コース時間
-                    $course_time = get_field('course_time' . $i);
-                ?>
+                            // コース時間
+                            $course_time = get_field('course_time' . $i);
+                            ?>
 
                 <?php if ($pic != '') : ?>
                 <div class="time_box">
-                    <!-- <img class="course_img" src="<?php //echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>"> -->
+                    <img class="course_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
                     <div class="course_time"><?php echo $course_time; ?></div>
                 </div>
                 <p class="txt"><?php echo $course_discription; ?></p>
                 <img class="separater_img" src="assets/img/course_separater.png" alt="コース区切り画像">
 
                 <?php endif; ?>
-            <?php endfor; ?>
+                <?php endfor; ?>
             </div>
 
             <?php endwhile; ?>
@@ -128,7 +128,7 @@
                     ?>
 
                     <!-- カード1つ分 -->
-                    <?php get_template_part('template-parts/loop', 'park')?>
+                    <?php get_template_part('template-parts/loop', 'park') ?>
 
                     <?php endwhile; ?>
                     <?php endif; ?>

@@ -30,7 +30,6 @@
         <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('thumbnail') ?>
         <?php else : ?>
-
         <img class="card_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
         <?php endif; ?>
 

@@ -193,6 +193,10 @@ function add_individual_stylesheet_script()
 
         // モデルコースの一覧ページのCSS（course.css）を読み込む
         wp_enqueue_style('toku_parknav-archive-course', get_template_directory_uri() . '/assets/css/course.css', array(), false);
+    } elseif (is_tax("purpose", "bbq") || is_tax("purpose", "daycamp") || is_tax("purpose", "picnic") || is_tax("purpose", "ballplay") || is_tax("purpose", "allday") || is_tax("purpose", "halfday") || is_tax("purpose", "watergame") || is_tax("purpose", "playground")) {
+
+        // 公園の地域検索のCSSなどを書く
+        wp_enqueue_style('toku_parknav-taxonomy-purpose', get_template_directory_uri() . '/assets/css/course.css', array(), false);
     } elseif (is_singular('course')) {
 
         // モデルコースの個別ページのCSS（course_info.css）を読み込む
@@ -229,12 +233,27 @@ function add_individual_stylesheet_script()
     }
 
     //----------------------
-    //  02-F:ゲーム
+    //  02-F:ゲームスタート
     //----------------------
-    else if (is_page('game')) {
+    else if (is_page('gamestart')) {
 
-        //ゲームのCSS（game.css）を読み込む
-        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/game.css', array(), false);
+        //ゲームのリセットCSS（destyle.css）を読み込む
+        wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
+
+        //ゲームスタートのCSS（gamestart_style.css）を読み込む
+        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/gamestart_style.css', array(), false);
+    }
+
+    //----------------------
+    //  02-F:ゲームプレイ
+    //----------------------
+    else if (is_page('gameplay')) {
+
+        //ゲームのリセットCSS（destyle.css）を読み込む
+        wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
+
+        //ゲームプレイのCSS（games_style.css）を読み込む
+        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/game_style.css', array(), false);
     }
 
     //----------------------
