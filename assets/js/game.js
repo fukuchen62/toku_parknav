@@ -334,25 +334,28 @@ function gameScore() {
         JSgameoverScore.innerHTML = score;
         //ゲーム終了時おじゃまムシスコア
         JSgameoverDontaimScore.innerHTML = dontaim_score;
-        // 称号の制御
+        // 称号の制御 ver2
+
         if (score < 10) {
             JSgameoverLv.innerHTML = "むしキャッチビギナーレベル";
             JSgameoverLv.style.color = "green";
+
         } else if (score >= 10 && score < 30) {
             JSgameoverLv.innerHTML = "むしキャッチノーマルレベル";
             JSgameoverLv.style.color = "maroon";
-        } else if (score >= 30 && score < 50) {
+            JSgameoverMedal.classList.add('gameover_medal1');
+        } else if (score >= 30 && score < 60) {
             JSgameoverLv.innerHTML = "むしキャッチベテランレベル";
             JSgameoverLv.style.color = "blue";
-        } else if (score >= 50 && score < 80) {
-            JSgameoverLv.innerHTML = "むしキャッチたつじんレベル";
-            JSgameoverLv.style.color = "fuchsia";
-        } else if (score >= 80 &&  score < 100){
+            JSgameoverMedal.classList.add('gameover_medal2');
+        }else if (score >= 60 &&  score < 100){
             JSgameoverLv.innerHTML = "むしキャッチマスターレベル";
             JSgameoverLv.style.color = "red";
+            JSgameoverMedal.classList.add('gameover_medal3');
         } else if (score >= 100 ) {
             JSgameoverLv.innerHTML = "むしキャッチかみさまレベル";
             JSgameoverLv.style.color = "olive";
+            JSgameoverMedal.classList.add('gameover_medal4');
         }
 }
 
@@ -578,3 +581,15 @@ function gameflgControl() {
     JSchoiceReload.addEventListener('click', function () {
         location.reload();
     });
+
+
+    // スクロールを禁止する関数
+function handle(event) {
+    event.preventDefault();
+}
+
+
+    window.onload = function() {
+  document.addEventListener('touchmove', handle, { passive: false });
+  document.addEventListener('mousewheel', handle, { passive: false });
+}
