@@ -77,14 +77,14 @@ main {
 
 /* 南部ボタン */
 .search_btn:nth-child(2) {
-    background-color: #39BDFF;
+    background-color: #FFEB39;
     color: #fff;
     margin-bottom: 20px;
 }
 
 /* 西部ボタン */
 .search_btn:nth-child(3) {
-    background-color: #FFEB39;
+    background-color: #39BDFF;
     margin-bottom: 20px;
 }
 

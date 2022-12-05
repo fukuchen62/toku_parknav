@@ -60,7 +60,8 @@
 
                 <!-- メニュー -->
                 <div class="head_menu_item">
-                    <a href="<?php echo home_url('/park/?s='); ?>">公園検索</a>
+                    <!-- <input type="hidden" name="search_type" value="keywords"> -->
+                    <a href="<?php echo home_url('/?search_type=park'); ?>">公園検索</a>
                     <span>　|　 </span>
                     <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
                     <span>　|　</span>

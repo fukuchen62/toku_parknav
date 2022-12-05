@@ -49,6 +49,10 @@
                 // タクソノミーpurposeの要素を取得する
                 $args = array(
                     'taxonomy' => 'purpose',
+                    'field' => 'slug',
+                    'exclude' => array(10, 11),
+                    //'operator' => 'NOT IN',
+                    'order' => 'ASC'
                 );
                 $purposes = get_terms($args);
                 ?>
@@ -56,7 +60,11 @@
                 <?php if (!empty($purposes)) : ?>
                 <h3 class="category_ttl">カテゴリ一覧</h3>
                 <ul>
+                    <!-- ベタ打ち -->
+                    <li><a href="http://localhost/toku-parknav/purpose/allday/">一日たっぷり</a></li>
+                    <li><a href="http://localhost/toku-parknav/purpose/halfday/">半日お手軽</a></li>
                     <!-- kindに属する種類を一つずつリンクボタンを作成 -->
+                    <!-- 自動取得 -->
                     <?php foreach ($purposes as $key => $purpose) : ?>
                     <li>
                         <a href="<?php echo get_term_link($purpose); ?>">

@@ -54,12 +54,6 @@ function add_common_stylesheet_script()
     // 04.『フッターのCSS（footer.css）』
     wp_enqueue_style('toku_parknav-footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
-    // 公園の詳細検索のCSS（park_search.css）を読み込む
-    wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
-
-    // キーワード検索のCSS（search-keywords.css）を読み込む
-    wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
-
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
     wp_enqueue_script('jquery');
@@ -76,6 +70,21 @@ function add_common_stylesheet_script()
 
     // 01.『common.js』
     wp_enqueue_script('toku_parknav-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
+
+    // 02.『template-header.js』
+    // wp_enqueue_script('toku_parknav-header-script', get_template_directory_uri() . '/assets/js/template_header.js', '', '', true);
+
+    // 03.『template-footer.js』
+    // wp_enqueue_script('toku_parknav-footer-script', get_template_directory_uri() . '/assets/js/template_footer.js', '', '', true);
+
+    //slickCSSを読み込む
+    //wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
+
+    //slick-themeCSSを読み込む
+    //wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
+
+    //slickのJSを読み込み
+    //wp_enqueue_script('slick-min', get_template_directory_uri() . '/assets/slick/slick.min.js', '', '', true);
 }
 
 /**-----------------------------------------
@@ -83,17 +92,21 @@ function add_common_stylesheet_script()
 /*    02.ページごとに読み込むCSS・JSを変える
 //
 //      02-A:トップページ
-//      02-B:公園検索
-//      02-C:モデルコース
-//      02-D:療育
-//      02-E:ゲームスタート
-//      02-F:ゲームプレイ
-//      02-G:お気に入りリスト
+//      02-B:このサイトについて⇒なし、その他の固定ページへ
+//      02-C:公園検索
+//      02-D:モデルコース
+//      02-E:療育
+//      02-F:ゲーム
+//      02-G:マイページ
 //      02-H:その他の固定ページ
 //      02-I:index.php
 //      02-J:ニュース ←※(is_single)をカスタム投稿(is_singular)より前に書くと，
 //                     カスタム投稿(is_singular)でファイルを読み込まなくなる。
-//      02-K:キーワード検索
+なので，02-Iの後ろに移動させました。(2022.10.07大北)
+
+//////////////////////////////////////////////////
+//1122shibuya  農ライフに上書き、療育とゲームの固定ページ追加、元データは削除もコメントアウトもしていない。
+//
 
 /* -------------------------------------------------------------------------- */
 
@@ -108,19 +121,42 @@ function add_individual_stylesheet_script()
 
         //トップページのCSS（top.css）を読み込む
         wp_enqueue_style('toku_parknav-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
+
+        //トップページのヘッダーのCSS（header.css）を読み込む
+        // wp_enqueue_style('toku_parknav-template_top_header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
+
+        //slickCSSを読み込む
+        //wp_enqueue_style('slick', get_template_directory_uri() . '/assets/css/slick.css', false);
+
+        //slick-themeCSSを読み込む
+        //wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', false);
+
+        // トップページ用のJS（top.js）を読み込む
+        //wp_enqueue_script('toku_parknav-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
+
+        // トップページ用のJS（template_top_footer.js）を読み込む
+        // wp_enqueue_script('toku_parknav-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
     }
+    //---------------------
+    //  02-B:このサイトについて⇒なし、その他の固定ページへ
+    //----------------------
+    //elseif (is_page('aboutsite')) {
+
+    //このサイトについてのCSS（about.css）を読み込む
+    //wp_enqueue_style('toku_parknav-about', get_template_directory_uri() . '/assets/css/about.css', array(), false);
+    //}
 
     //----------------------
-    //  02-B:公園検索
+    //  02-C:農業体験⇒⇒公園検索
     //----------------------
     elseif (is_post_type_archive('park')) {
 
         // 公園の一覧ページのCSS（park_area.css）を読み込む
         wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_area.css', array(), false);
-    } elseif (is_search()) {
+    } elseif (is_search('park')) {
 
         // 公園の詳細検索のCSS（park_search.css）を読み込む
-        // wp_enqueue_style('toku_parknav-search-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
+        wp_enqueue_style('toku_parknav-search-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
     } elseif (is_tax("area", "east") || is_tax("area", "west") || is_tax("area", "south")) {
 
         // 公園の地域検索のCSSなどを書く
@@ -131,7 +167,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/park_info.css', array(), false);
     }
     //----------------------
-    //  02-C:モデルコース
+    //  02-D:農ライフ記事⇒⇒モデルコース
     //----------------------
     elseif (is_post_type_archive('course')) {
 
@@ -147,7 +183,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('toku_parknav-single-course', get_template_directory_uri() . '/assets/css/course_info.css', array(), false);
     }
     //----------------------
-    //  02-D:療育
+    //  02-E:療育
     //----------------------
     else if (is_page('nursing')) {
 
@@ -161,7 +197,7 @@ function add_individual_stylesheet_script()
     }
 
     //----------------------
-    //  02-E:ゲームスタート
+    //  02-F:ゲームスタート
     //----------------------
     else if (is_page('gamestart')) {
 
@@ -188,11 +224,11 @@ function add_individual_stylesheet_script()
     }
 
     //----------------------
-    //  02-G:お気に入りリスト
+    //  02-G:マイページ
     //----------------------
     else if (is_page('mypage')) {
 
-        //お気に入りリストのCSS（mypage.css）を読み込む
+        //マイページのCSS（mypage.css）を読み込む
         wp_enqueue_style('toku_parknav-mypage', get_template_directory_uri() . '/assets/css/mypage.css', array(), false);
     }
 
@@ -220,8 +256,6 @@ function add_individual_stylesheet_script()
         //サイト制作にあたってのCSS（minori.css）を読み込む
         wp_enqueue_style('toku_parknav-teamminori', get_template_directory_uri() . '/assets/css/minori.css', array(), false);
     }
-
-
     //----------------------
     //  02-I:index.php
     //----------------------
@@ -250,7 +284,7 @@ function add_individual_stylesheet_script()
     elseif (is_search('keywords')) {
 
         // キーワード検索のCSS（search-keywords.css）を読み込む
-        //wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
+        wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
     }
 }
 
