@@ -123,39 +123,6 @@ h4 {
     }
 }
 
-/* 矢印ボタン next→右向き prev→左向き*/
-.next_btn, .prev_btn {
-    /* 文字に対してrelativeを設定 */
-    position: relative;
-    width: 220px;
-    margin: 50px auto;
-}
-
-.next_btn:hover {
-    transition: 0.2s;
-    transform: translate(30px, 0);
-}
-
-.prev_btn:hover {
-    transition: 0.2s;
-    transform: translate(-30px, 0);
-}
-
-.next_btn p, .prev_btn p {
-    position: absolute;
-    color: #3E3A39;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* PC矢印ボタン ここまで*/
-
-
-
 /* カード型記事 *********************************************** */
 
 /* card_flexの指定 */
