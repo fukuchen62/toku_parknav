@@ -39,7 +39,7 @@
                         <!-- レベル表示 -->
                         <div><span id="JS_gameover_Lv"></span></div>
                         <!-- メダル表示 -->
-                        <div id="JS_gameover_Medal"></div>
+                        <div id="JS_gameover_Medal" class="gameover_medalstyle"></div>
                         <div id="JSgameover_choice" class="gameover_choice ">
                             <div id="JSchoice_reload" class="gameover_morebtn">もういちどあそぶ</div>
                         </div>
