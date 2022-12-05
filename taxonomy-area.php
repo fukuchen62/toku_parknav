@@ -20,6 +20,8 @@
         // タクソノミーpurposeの要素を取得する
         $args = array(
             'taxonomy' => 'area',
+            'orderby' => 'slug',
+            'order' => 'asc',
         );
         $areas = get_terms($args);
         ?>
