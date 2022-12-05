@@ -64,6 +64,10 @@ footer {
     cursor: pointer;
 }
 
+.foot_top:hover {
+    animation: bound 1s ease-in alternate infinite;
+}
+
 /* キーフレーム設定のためのクラス */
 .foot_rotate {
     animation-timing-function: ease-in-out;
