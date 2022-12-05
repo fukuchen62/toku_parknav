@@ -143,6 +143,170 @@ a:hover {
     }
 }
 
+/* ＝＝＝矢印ボタン next→右向き prev→左向き＝＝＝*/
+/* ホバー効果 */
+.next_btn:hover {
+    transition: 0.2s;
+    transform: translate(20px, 0);
+}
+
+.prev_btn:hover {
+    transition: 0.2s;
+    transform: translate(-20px, 0);
+}
+
+.next_btn a:hover, .prev_btn a:hover {
+    opacity: 1;
+}
+
+
+/* ボタンの大枠 */
+.next_btn {
+    position: relative;
+    width: 150px;
+    height: 100px;
+}
+
+/* 黒い部分全体の位置調整 */
+.next_btn_frame_box {
+    position: absolute;
+    top: 0px;
+    right: -12px;
+}
+
+/* 白い部分全体の位置調整 */
+.next_btn_inner_box {
+    position: absolute;
+    top: 1px;
+    right: -10px
+}
+
+/* ボタンの中のテキスト */
+.next_btn_txt {
+    position: absolute;
+    width: 146px;
+    height: 42px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+}
+
+/* 下に敷く黒い矢印全体 */
+.next_btn_frame {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 黒い三角部分 */
+.next_btn_frame_triangle,
+.next_btn_frame_triangle::before,
+.next_btn_frame_triangle::after {
+    width: 50px;
+    height: 50px;
+    background: #3E3A39;
+}
+
+.next_btn_frame_triangle::before,
+.next_btn_frame_triangle::after {
+    content: "";
+    position: absolute;
+}
+
+.next_btn_frame_triangle {
+    position: relative;
+    top: 10px;
+    right: -15px;
+    border-top-left-radius: 20px;
+    transform: rotate(240deg) skewY(30deg) scaleX(.86666);
+}
+
+.next_btn_frame_triangle::before {
+    border-top-right-radius: 20px;
+    transform: skewX(-45deg);
+}
+
+.next_btn_frame_triangle::after {
+    border-bottom-left-radius: 20px;
+    transform: skewY(-45deg) translateX(-50%);
+}
+
+/* 黒い四角の部分 */
+.next_btn_frame_square {
+    position: absolute;
+    top: 23px;
+    right: 50px;
+    width: 100px;
+    height: 50px;
+    background: #3E3A39;
+    border-radius: 15px;
+}
+
+/* 上に乗る白い矢印全体 */
+.next_btn_inner {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 白い三角部分 */
+.next_btn_inner_triangle,
+.next_btn_inner_triangle::before,
+.next_btn_inner_triangle::after {
+    width: 43px;
+    height: 43px;
+    background: #fff;
+
+}
+
+.next_btn_inner_triangle::before,
+.next_btn_inner_triangle::after {
+    content: "";
+    position: absolute;
+}
+
+.next_btn_inner_triangle {
+    position: relative;
+    top: 7px;
+    left: 18px;
+    border-top-left-radius: 30%;
+    transform: rotate(240deg) skewY(30deg) scaleX(.86666);
+}
+
+.next_btn_inner_triangle::before {
+    border-top-right-radius: 30%;
+    transform: skewX(-45deg);
+}
+
+.next_btn_inner_triangle::after {
+    border-bottom-left-radius: 30%;
+    transform: skewY(-45deg) translateX(-50%);
+}
+
+/* 白い四角部分 */
+.next_btn_inner_square {
+    position: absolute;
+    top: 26px;
+    right: 48px;
+    width: 96px;
+    height: 42px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
 /* ＝＝＝キービジュアル＝＝＝ */
 
 /* 画面を読み込むと、タイトルロゴが下からフェードインする */
