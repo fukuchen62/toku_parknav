@@ -56,8 +56,8 @@
                 </div>
                 <?php endwhile; ?>
                 <?php else : ?>
-                <p>
-                        <center>該当する記事はありません。</center>
+                <p class="search_else">
+                        該当する記事はありません。
                     </p>
                 <?php endif; ?>
             </div>
@@ -108,8 +108,8 @@
                 </div>
                 <?php endwhile; ?>
                 <?php else : ?>
-                <p>
-                        <center>該当する記事はありません。</center>
+                <p class="search_else">
+                        該当する記事はありません。
                     </p>
                 <?php endif; ?>
             </div>

@@ -24,3 +24,8 @@ section {
     margin-bottom: 30px;
     /* margin-top: 50px; */
 }
+
+.search_else {
+    margin-bottom: 50px;
+    text-align: center;
+}
