@@ -682,7 +682,28 @@ a:hover {
 }
 
 
-/* 太陽と遊具 TB幅 */
+/* 太陽と遊具 500px幅~ */
+@media screen and (min-width: 500px) {
+    .top_sun, .top_sun_face {
+        width: 20vw;
+        right: 0px;
+    }
+
+    .top_grove {
+        width: 15vw;
+        top: 200px;
+        left: 100px;
+    }
+
+    .top_seesaw {
+        width: 20vw;
+        top: 220px;
+        right: 30px;
+    }
+
+}
+
+/* 太陽と遊具 TB幅~ */
 @media screen and (min-width: 771px) {
     .top_sun, .top_sun_face {
         width: 20vw;
@@ -697,11 +718,32 @@ a:hover {
 
     .top_seesaw {
         width: 20vw;
-        top: 200px;
-        right: 60px;
+        top: 230px;
+        right: 50px;
     }
 
 }
+
+/* 太陽と遊具 1000px幅~ */
+@media screen and (min-width: 1000px) {
+    .top_sun, .top_sun_face {
+        width: 15vw;
+        right: 0px;
+    }
+
+    .top_grove {
+        width: 12vw;
+        top: 200px;
+        left: 50px;
+    }
+
+    .top_seesaw {
+        width: 15vw;
+        top: 270px;
+        right: 30px;
+    }
+}
+
 
 /* 太陽と遊具 PC幅 */
 @media screen and (min-width: 1200px) {
@@ -718,8 +760,8 @@ a:hover {
 
     .top_seesaw {
         width: 15vw;
-        top: 270px;
-        right: -30px;
+        top: 350px;
+        right: -60px;
     }
 }
 
