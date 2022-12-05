@@ -240,8 +240,9 @@ td {
     padding: 10px;
 }
 
+/* 設備アイコン */
 .park_icon {
-    width: 100px;
+    width: 80px;
     border-radius: 0px;
 }
 
