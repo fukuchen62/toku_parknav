@@ -1,0 +1,592 @@
+@charset "UTF-8";
+
+/* フォントスタイル */
+/* * {
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: #3E3A39;
+    border: solid 1px;
+}
+*/
+
+/* html { */
+/* padding-left: 110px;
+    padding-right: 110px; */
+/* } */
+
+/* h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+} */
+
+/* h3 {
+    font-size: 25px;
+    font-weight: bold;
+} */
+
+.game_h2line {
+    background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
+}
+
+.game_h2line_title {
+    font-size: 26px;
+}
+
+.game_titlestyle {
+    background-color: #FFFFFF;
+    max-width: 950px;
+    /* 中央に置く処理 */
+    margin: 0 auto;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
+    border: 6px dashed #FFA83F;
+}
+
+body {
+    background-color: #FFFCE3;
+    /* width: 100vh; */
+    max-width: 950px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.gamestart_area1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.gamestart_ex1_2 {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    /* 影　下 */
+    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+}
+
+/*################# ゲームの説明1################ */
+
+/* 吹き出し用  スマホ幅だと無効化*/
+.gamestart_popospeech_1 {
+    /* 吹き出しの位置調整用 */
+    margin-top: 20px;
+    /* 吹き出し用 */
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    color: #333333;
+    font-size: 24px;
+    border-radius: 25px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+
+
+/* スマホ幅だと縦並び */
+.gamestart_explanation {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+}
+
+.gamestart_ex1_backgreen {
+    width: 100vw;
+    height: auto;
+    background-color: #e6ffe5;
+    margin: 0 calc(50% - 50vw);
+    padding: 50px calc(50vw - 50% + 8px);
+
+    /* border-bottom: #ffffff 30px dotted; */
+    border-bottom: 20px dashed #FFFFFF;
+}
+
+.gamestart_ex1_backskyblue {
+    width: 100vw;
+    height: auto;
+    background-color: #ddf4ff;
+    margin: 0 calc(50% - 50vw);
+    padding: 50px calc(50vw - 50% + 8px);
+
+    /* border-bottom: #ffffff 30px dotted; */
+    border-bottom: 20px dashed #FFFFFF;
+}
+
+.gamestart_ex1_backskyorange {
+    width: 100vw;
+    height: auto;
+    background-color: #ffe0c1;
+    margin: 0 calc(50% - 50vw);
+    padding: 50px calc(50vw - 50% + 8px);
+
+    /* border-bottom: #ffffff 30px dotted; */
+    border-bottom: 20px dashed #FFFFFF;
+}
+
+.gamestart_explanation_img {
+    content: url(../img/gamestart_popojiro_2.png);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+/* ###############ゲームの説明2############## */
+.gamestart_tgt {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.gamestart_tgt div p {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 24px;
+}
+
+.gamestart_tgt_imgbox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gamestart_tgt_imgbox div {
+    width: 100%;
+    max-width: 138px;
+}
+
+
+.gamestart_tips1 {
+    margin-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+
+    /* チェック柄の処理 */
+    background-color: #fff4db;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
+        -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
+    -webkit-background-size: 10px 10px;
+}
+
+/* ##################画像関係################# */
+.gamestart_tgtimgbox1 {
+    content: url(../img/game_tgt1_aim_200x200.png);
+}
+
+.gamestart_tgtimgbox2 {
+    content: url(../img/game_tgt2_aim_200x200.png);
+}
+
+.gamestart_tgtimgbox3 {
+    content: url(../img/game_tgt3_aim_200x200.png);
+}
+
+.gamestart_tgtimgbox4 {
+    content: url(../img/game_tgt4_aim_200x200.png);
+}
+
+.gamestart_tgtimgbox5 {
+    content: url(../img/game_tgt5_aim_200x200.png);
+}
+
+
+.gamestart_dontaim_img1 {
+    content: url(../img/game_dontami1_200x200.png);
+    position: relative;
+    width: 100%;
+}
+
+.gamestart_dontaim_img2 {
+    content: url(../img/game_dontami2_200x200.png);
+    position: relative;
+    width: 100%;
+}
+
+.gamestart_dontaim_img3 {
+    content: url(../img/game_dontami3_200x200.png);
+    position: relative;
+    width: 100%;
+}
+
+.gamestart_dontaim_img_text {
+    text-align: center;
+    font-size: 16px
+}
+
+/* .gamestart_dontaim_img2 p {
+    position: absolute;
+    z-index: 90;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+
+}
+
+.gamestart_dontaim_img2 p {
+    position: absolute;
+
+} */
+
+/* ###################ゲームの説明2################## */
+.gamestart_dontaim {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+/* .gamestart_dontaim div p {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 20px;
+} */
+
+.gamestart_dontaim_style_p {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 16px;
+    font-size: 20px;
+}
+
+/* ##################ゲームで遊ぶボタン############## */
+.gamestart_startbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+}
+
+/* ボタンのスタイル */
+.gamestart_startbtn_style {
+    display: block;
+    width: 220px;
+    height: 350px;
+    margin: 0 auto;
+    line-height: 60px;
+    padding-top: 120px;
+}
+
+
+.gamestart_startbtn_style a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+
+    /* ボタンのスタイル  */
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    /* height: 100%; */
+
+    text-decoration: none;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #3E3A39;
+    color: #3E3A39;
+    /* font-size: 10px; */
+    font-weight: bold;
+    border-radius: 50px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    transition: all 0.5s ease;
+    /* 影 */
+    box-shadow: 0px 5px 0 #000;
+}
+
+.gamestart_startbtn_style a:hover {
+    background: #FFA83F;
+    color: #3E3A39;
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px solid #3E3A39;
+    box-shadow: none;
+
+    transform: translate3d(0, 5px, 0);
+}
+
+
+/* メディアクエリ */
+/* タブレット */
+@media screen and (min-width: 771px) and (max-width:1199px) {
+    .game_h2line_title {
+        font-size: 50px;
+    }
+
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .gamestart_explanation {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .gamestart_tgt {
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .gamestart_dontaim {
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+
+    /* 吹き出し用  スマホ幅だと無効化*/
+    .gamestart_popospeech_1 {
+        /* 吹き出しの位置調整用 */
+        margin-top: 80px;
+        /* 吹き出し用 */
+        position: relative;
+        width: 100%;
+        /* height: 200px; */
+        background: #FFFFFF;
+        padding: 20px;
+        text-align: left;
+        color: #333333;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+    }
+
+    .gamestart_popospeech_1:after {
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        position: absolute;
+        border-color: rgba(255, 255, 255, 0);
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+        border-left-width: 53px;
+        border-right-width: 53px;
+        margin-top: -10px;
+        border-right-color: #FFFFFF;
+        right: 100%;
+        top: 50%;
+    }
+
+    .gamestart_tgt_imgbox div {
+        width: 100%;
+        max-width: 130px;
+    }
+
+
+    /* ボタンのスタイル */
+    .gamestart_startbtn_style {
+        display: block;
+        width: 550px;
+        height: 350px;
+        margin: 0 auto;
+        line-height: 60px;
+
+        padding-top: 120px;
+    }
+
+    .gamestart_startbtn_style a {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 50px;
+        /* ボタンのスタイル  */
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        /* height: 100%; */
+
+        text-decoration: none;
+        background: #ffffff;
+        text-align: center;
+        border: 1px solid #3E3A39;
+        color: #3E3A39;
+        /* font-size: 10px; */
+        font-weight: bold;
+        border-radius: 50px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        transition: all 0.5s ease;
+        /* 影 */
+        box-shadow: 0px 5px 0 #000;
+    }
+
+    .gamestart_startbtn_style a:hover {
+        background: #FFA83F;
+        color: #3E3A39;
+        margin-left: 0px;
+        margin-top: 0px;
+        border: 1px solid #3E3A39;
+        box-shadow: none;
+
+        transform: translate3d(0, 5px, 0);
+    }
+
+}
+
+/* PC */
+@media screen and (min-width: 1200px) {
+    .game_h2line_title {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .gamestart_explanation {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .gamestart_tgt {
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .gamestart_dontaim {
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+
+    /* 吹き出し用  スマホ幅だと無効化*/
+    .gamestart_popospeech_1 {
+        /* 吹き出しの位置調整用 */
+        /* margin-top: 80px; */
+        /* 吹き出し用 */
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        padding: 20px;
+        text-align: left;
+        color: #333333;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+    }
+
+    .gamestart_popospeech_1:after {
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        pointer-events: none;
+        position: absolute;
+        border-color: rgba(255, 255, 255, 0);
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+        border-left-width: 53px;
+        border-right-width: 53px;
+        margin-top: -10px;
+        border-right-color: #FFFFFF;
+        right: 100%;
+        top: 79%;
+    }
+
+    .gamestart_tgt_imgbox div {
+        width: 100%;
+        max-width: 130px;
+    }
+
+
+    /* ボタンのスタイル */
+    .gamestart_startbtn_style {
+        display: block;
+        width: 550px;
+        height: 450px;
+        margin: 0 auto;
+        line-height: 60px;
+
+        padding-top: 120px;
+    }
+
+    .gamestart_startbtn_style a {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 50px;
+        /* ボタンのスタイル  */
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        /* height: 100%; */
+
+        text-decoration: none;
+        background: #ffffff;
+        text-align: center;
+        border: 1px solid #3E3A39;
+        color: #3E3A39;
+        /* font-size: 10px; */
+        font-weight: bold;
+        border-radius: 50px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        transition: all 0.5s ease;
+        /* 影 */
+        box-shadow: 0px 5px 0 #000;
+    }
+
+    .gamestart_startbtn_style a:hover {
+        background: #FFA83F;
+        color: #3E3A39;
+        margin-left: 0px;
+        margin-top: 0px;
+        border: 1px solid #3E3A39;
+        box-shadow: none;
+
+        transform: translate3d(0, 5px, 0);
+    }
+
+}
