@@ -16,6 +16,7 @@ h4 {
     margin-bottom: 15px;
 }
 
+
 /* メインビジュアルのダミーブロック */
 .mainVisual_dummy {
     width: 100%;
@@ -110,6 +111,7 @@ section {
 .btn_txt {
     position: absolute;
     top: 35px;
+    left: 48%;
     font-weight: bold;
 }
 
