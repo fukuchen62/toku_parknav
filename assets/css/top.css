@@ -148,18 +148,29 @@ a:hover {
 /* 画面を読み込むと、タイトルロゴが下からフェードインする */
 
 .fadeIn {
-    animation-name: fadeInAnime;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+    animation: fadeInAnime 1s ease-in-out 1 forwards;
     opacity: 0;
 }
 
 @keyframes fadeInAnime {
-    from {
+    0% {
+        transform: translateY(-400px);
         opacity: 0;
     }
 
-    to {
+    50% {
+        transform: translateY(30px);
+    }
+
+    65% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+
+    20%, 100% {
         opacity: 1;
     }
 }
@@ -176,9 +187,8 @@ a:hover {
 /* 以下、キービジュアルのパーツ配置 */
 .key_logo_sp {
     position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 38%;
+    left: 8%;
     width: 350px;
     max-width: 950px;
     z-index: 6;
@@ -302,9 +312,9 @@ a:hover {
 
     .key_logo {
         position: absolute;
-        top: 53%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 30%;
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
         width: 90%;
         max-width: 950px;
         z-index: 6;
@@ -548,10 +558,6 @@ a:hover {
     }
 }
 
-
-
-
-
 /* 地図 */
 
 .search_map {
@@ -682,6 +688,14 @@ a:hover {
     margin: 50px 0;
 }
 
+.news_date {
+    font-size: 14px;
+}
+
+.news_ttl {
+    font-size: 16px;
+}
+
 /* TB幅以上 */
 @media screen and (min-width: 771px) {
 
@@ -694,6 +708,13 @@ a:hover {
     .news_article a {
         margin: 30px auto;
         text-align: left;
+    }
+
+    .news_date {
+        font-size: 16px;
+    }
+
+    .news_ttl {
         font-size: 20px;
     }
 }
