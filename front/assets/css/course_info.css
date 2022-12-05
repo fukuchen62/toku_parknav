@@ -185,21 +185,6 @@ td {
 
 @media screen and (min-width: 990px) {
 
-    /* カード以外の写真サイズ */
-    .course_top_img, .course_img {
-        width: 600px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    /* 時間と写真をくくる箱 */
-    .time_box {
-        position: relative;
-        width: 600px;
-        height: 380px;
-        margin: 0 auto;
-    }
-
     /* 記事とサイドバーにflexをかける  */
     .flex_box {
         display: flex;
