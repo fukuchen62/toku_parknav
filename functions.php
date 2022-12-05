@@ -54,6 +54,12 @@ function add_common_stylesheet_script()
     // 04.『フッターのCSS（footer.css）』
     wp_enqueue_style('toku_parknav-footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
+    // 公園の詳細検索のCSS（park_search.css）を読み込む
+    wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
+
+    // キーワード検索のCSS（search-keywords.css）を読み込む
+    wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
+
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
     wp_enqueue_script('jquery');
@@ -111,10 +117,10 @@ function add_individual_stylesheet_script()
 
         // 公園の一覧ページのCSS（park_area.css）を読み込む
         wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_area.css', array(), false);
-    } elseif (is_search('park')) {
+    } elseif (is_search()) {
 
         // 公園の詳細検索のCSS（park_search.css）を読み込む
-        wp_enqueue_style('toku_parknav-search-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
+        // wp_enqueue_style('toku_parknav-search-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
     } elseif (is_tax("area", "east") || is_tax("area", "west") || is_tax("area", "south")) {
 
         // 公園の地域検索のCSSなどを書く
@@ -244,7 +250,7 @@ function add_individual_stylesheet_script()
     elseif (is_search('keywords')) {
 
         // キーワード検索のCSS（search-keywords.css）を読み込む
-        wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
+        //wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
     }
 }
 
