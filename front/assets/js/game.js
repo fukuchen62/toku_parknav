@@ -334,20 +334,37 @@ function gameScore() {
         JSgameoverScore.innerHTML = score;
         //ゲーム終了時おじゃまムシスコア
         JSgameoverDontaimScore.innerHTML = dontaim_score;
-        // 称号の制御
-        if (score < 10) {
+        // 称号の制御 ver1
+        // if (score < 10) {
+        //     JSgameoverLv.innerHTML = "むしキャッチビギナーレベル";
+        //     JSgameoverLv.style.color = "green";
+        // } else if (score >= 10 && score < 30) {
+        //     JSgameoverLv.innerHTML = "むしキャッチノーマルレベル";
+        //     JSgameoverLv.style.color = "maroon";
+        // } else if (score >= 30 && score < 50) {
+        //     JSgameoverLv.innerHTML = "むしキャッチベテランレベル";
+        //     JSgameoverLv.style.color = "blue";
+        // } else if (score >= 50 && score < 80) {
+        //     JSgameoverLv.innerHTML = "むしキャッチたつじんレベル";
+        //     JSgameoverLv.style.color = "fuchsia";
+        // } else if (score >= 80 &&  score < 100){
+        //     JSgameoverLv.innerHTML = "むしキャッチマスターレベル";
+        //     JSgameoverLv.style.color = "red";
+        // } else if (score >= 100 ) {
+        //     JSgameoverLv.innerHTML = "むしキャッチかみさまレベル";
+        //     JSgameoverLv.style.color = "olive";
+        // }
+
+            if (score < 10) {
             JSgameoverLv.innerHTML = "むしキャッチビギナーレベル";
             JSgameoverLv.style.color = "green";
         } else if (score >= 10 && score < 30) {
             JSgameoverLv.innerHTML = "むしキャッチノーマルレベル";
             JSgameoverLv.style.color = "maroon";
-        } else if (score >= 30 && score < 50) {
+        } else if (score >= 30 && score < 60) {
             JSgameoverLv.innerHTML = "むしキャッチベテランレベル";
-            JSgameoverLv.style.color = "blue";
-        } else if (score >= 50 && score < 80) {
-            JSgameoverLv.innerHTML = "むしキャッチたつじんレベル";
             JSgameoverLv.style.color = "fuchsia";
-        } else if (score >= 80 &&  score < 100){
+        } else if (score >= 60 &&  score < 100){
             JSgameoverLv.innerHTML = "むしキャッチマスターレベル";
             JSgameoverLv.style.color = "red";
         } else if (score >= 100 ) {

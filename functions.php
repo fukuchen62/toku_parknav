@@ -93,10 +93,8 @@ function add_common_stylesheet_script()
 //
 //      02-A:トップページ
 //      02-B:このサイトについて⇒なし、その他の固定ページへ
-//      02-C:農業体験⇒⇒公園検索
-//      02:農家さん紹介⇒⇒なし
-//      02-D:農ライフ記事⇒⇒モデルコース
-//      02:野菜⇒⇒なし
+//      02-C:公園検索
+//      02-D:モデルコース
 //      02-E:療育
 //      02-F:ゲーム
 //      02-G:マイページ
@@ -155,7 +153,7 @@ function add_individual_stylesheet_script()
 
         // 公園の一覧ページのCSS（park_area.css）を読み込む
         wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_area.css', array(), false);
-    } elseif (is_search()) {
+    } elseif (is_search('park')) {
 
         // 公園の詳細検索のCSS（park_search.css）を読み込む
         wp_enqueue_style('toku_parknav-search-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
@@ -167,24 +165,6 @@ function add_individual_stylesheet_script()
 
         // 公園の個別ページのCSS（park_info.css）を読み込む
         wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/park_info.css', array(), false);
-    }
-    //----------------------
-    //  02:農家さん紹介⇒⇒なし
-    //----------------------
-    elseif (is_post_type_archive('farmer')) {
-
-        // 農家さんの一覧ページのCSS（farmer.css）を読み込む
-        wp_enqueue_style('toku_parknav-archive-farmer', get_template_directory_uri() . '/assets/css/farmer.css', array(), false);
-
-        //farmer.jsを読み込み
-        wp_enqueue_script('toku_parknav-farmer', get_template_directory_uri() . '/assets/js/farmer.js', '', '', true);
-    } elseif (is_singular('farmer')) {
-
-        // 農家さんの個別ページのCSS（farmer_content.css）を読み込む
-        wp_enqueue_style('toku_parknav-single-farmer', get_template_directory_uri() . '/assets/css/farmer_content.css', array(), false);
-
-        // 野菜の個別ページのJS（farmer_content.js）を読み込む
-        wp_enqueue_script('toku_parknav-farmer_content-script', get_template_directory_uri() . '/assets/js/farmer_content.js', '', '', true);
     }
     //----------------------
     //  02-D:農ライフ記事⇒⇒モデルコース
@@ -202,22 +182,6 @@ function add_individual_stylesheet_script()
         // モデルコースの個別ページのCSS（course_info.css）を読み込む
         wp_enqueue_style('toku_parknav-single-course', get_template_directory_uri() . '/assets/css/course_info.css', array(), false);
     }
-    //----------------------
-    //  02:野菜⇒⇒なし
-    //----------------------
-    elseif (is_post_type_archive('vegetable')) {
-
-        // 野菜の一覧ページのCSS（food.css）を読み込む
-        wp_enqueue_style('toku_parknav-archive-vegetable', get_template_directory_uri() . '/assets/css/food.css', array(), false);
-    } elseif (is_singular('vegetable')) {
-
-        // 野菜の個別ページのCSS（food_info.css）を読み込む
-        wp_enqueue_style('toku_parknav-archive-vegetable', get_template_directory_uri() . '/assets/css/food_info.css', array(), false);
-
-        // 野菜の個別ページのJS（food_info.js）を読み込む
-        wp_enqueue_script('toku_parknav-food_info-script', get_template_directory_uri() . '/assets/js/food_info.js', '', '', true);
-    }
-
     //----------------------
     //  02-E:療育
     //----------------------
@@ -298,7 +262,7 @@ function add_individual_stylesheet_script()
     elseif (is_category()) {
 
         //ニュース一覧のCSS（news.css）を読み込む
-        wp_enqueue_style('toku_parknav-index', get_template_directory_uri() . '/assets/css/index.css', array(), false);
+        wp_enqueue_style('toku_parknav-index', get_template_directory_uri() . '/assets/css/news.css', array(), false);
     }
 
     //----------------------
@@ -312,6 +276,15 @@ function add_individual_stylesheet_script()
 
         //ニュースの個別ページのCSS（news-content.css）を読み込む
         wp_enqueue_style('toku_parknav-news-content', get_template_directory_uri() . '/assets/css/news_content.css', array(), false);
+    }
+
+    //----------------------
+    //  02-K:キーワード検索
+    //----------------------
+    elseif (is_search('keywords')) {
+
+        // キーワード検索のCSS（search-keywords.css）を読み込む
+        wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
     }
 }
 
