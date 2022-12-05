@@ -241,7 +241,7 @@ function add_individual_stylesheet_script()
         wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
 
         //ゲームスタートのCSS（gamestart_style.css）を読み込む
-        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/gamestart_style.css', array(), false);
+        wp_enqueue_style('toku_parknav-gamestart', get_template_directory_uri() . '/assets/css/gamestart_style.css', array(), false);
     }
 
     //----------------------
@@ -252,8 +252,11 @@ function add_individual_stylesheet_script()
         //ゲームのリセットCSS（destyle.css）を読み込む
         wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
 
-        //ゲームプレイのCSS（games_style.css）を読み込む
-        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/game_style.css', array(), false);
+        //ゲームプレイのCSS（game_style.css）を読み込む
+        wp_enqueue_style('toku_parknav-gameplay', get_template_directory_uri() . '/assets/css/game_style.css', array(), false);
+
+        //ゲームプレイ用のJS（game.js）を読み込む
+        wp_enqueue_script('toku_parknav-gameplay-js', get_template_directory_uri() . '/assets/js/game.js', '', '', true);
     }
 
     //----------------------
