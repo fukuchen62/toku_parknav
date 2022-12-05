@@ -110,9 +110,7 @@
         <div class="gamestart_startbtn_style"><a href="./gameplay.html">ゲームであそぶ</a></div>
     </div> -->
 <div class="gamestart_startbtn_style">
-    <a href="<?php echo home_url('/gameplay/'); ?>">
-        <p>ゲームであそぶ</p>
-    </a>
+    <a href="<?php echo home_url('/gameplay/'); ?>">ゲームであそぶ</a>
 </div>
 
 <?php //フッターテンプレートファイルを読み込む
