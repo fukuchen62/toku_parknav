@@ -39,6 +39,7 @@ section {
 /* 条件ボタンの設定************************************ */
 main {
     margin-bottom: 50px;
+    overflow-x: unset;
 }
 
 /* ボタン位置調整・下余白 */

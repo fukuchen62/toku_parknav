@@ -25,14 +25,6 @@ h4 {
 }
 
 
-/* パンくず */
-.pkz {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-    margin-left: 20px;
-}
-
 /* セクションの上下に余白をとる */
 section {
     /* padding-bottom: 50px; */
@@ -56,7 +48,7 @@ section {
     border-radius: 20px;
 }
 
-li {
+.sidebar>ul>li {
     line-height: 3;
 }
 
@@ -80,50 +72,11 @@ li a:hover {
     }
 }
 
-/* ＝＝＝ページネーション＝＝＝ */
 
 /* SP幅で１カラムになったとき、下にmarginを50pxとる */
 .pagination {
     margin: 0 auto 50px;
 }
-
-/* 番号部分を横並びにする */
-.nav_links {
-    display: flex;
-}
-
-/* 番号部分の成形 */
-.pagination .page_numbers {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 20px 30px;
-    color: #333;
-    border-radius: 50%;
-    border: #333 2px solid;
-    background: #FFF;
-}
-
-/* 現在のページを表す */
-.pagination .current {
-    padding: 20px 30px;
-    border: #333 2px solid;
-    background: rgba(57, 189, 255, 0.5);
-    color: #333;
-}
-
-/* 「前へ」「次へ」の部分 */
-.pagination .prev,
-.pagination .next {
-    background: transparent;
-    box-shadow: none;
-    color: #333;
-}
-
-/* ボタンの間の「…」 */
-.pagination .dots {
-    background: transparent;
-}
-
 
 /* TB幅 */
 @media screen and (min-width: 771px) {
@@ -133,30 +86,10 @@ li a:hover {
 }
 
 
-
-
-/* ナビのダミーブロック */
-.gnav_dummy {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: darkgray;
-}
-
 /* メインビジュアルのダミーブロック */
 .mainVisual_dummy {
     width: 100%;
     height: 120px;
     background-color: cadetblue;
     margin-top: 80px;
-}
-
-/* フッターのダミーブロック */
-.footer_dummy {
-    width: 100vw;
-    height: 450px;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-    background-color: darkgray;
 }
