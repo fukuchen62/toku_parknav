@@ -30,22 +30,7 @@ section {
     padding-top: 50px;
 }
 
-/* メインビジュアルのダミーブロック */
-.mainVisual_dummy {
-    width: 100%;
-    height: 120px;
-    background-color: cadetblue;
-    margin-top: 80px;
-}
-
-
 /* ***************************************************** */
-
-/* キービジュアルの下層ページ用 */
-/* .key_img {
-    object-position: 50% 12%;
-} */
-
 
 main {
     margin-bottom: 50px;
@@ -123,7 +108,7 @@ main {
     /* カラム落ちのときにチェックボックスがはみ出さない */
     margin-left: 15px;
     /* リスト間の高さ */
-    line-height: 2em;
+    line-height: 2.5em;
 }
 
 /* チェックボックスの大きさ・色 */
@@ -160,7 +145,25 @@ main {
     width: auto;
 }
 
-/* メディアクエリ ******************************/
+/* ブレイクポイント ******************************/
+/* 表示崩れを防ぐ微調整 */
+@media screen and (min-width: 495px) {
+
+    .item_pur ul li,
+    .item_tool ul li {
+        width: 200px;
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 660px) {
+
+    .item_pur ul li,
+    .item_tool ul li {
+        margin-left: 50px;
+    }
+}
+
 /* 幅771pxからはここを読み込む */
 @media screen and (min-width: 771px) {
 
@@ -225,6 +228,7 @@ main {
     font-weight: bold;
     border: 2px solid #3E3A39;
     cursor: pointer;
+    transition: ease-in 0.3s;
 }
 
 /* リセットボタンの設定 */
@@ -233,9 +237,24 @@ main {
     background-color: #3E3A39;
 }
 
+/* リセットボタンのホバー要素 */
+.search_btn_reset:hover {
+    color: #3E3A39;
+    background-color: rgba(57, 189, 255, 0.2);
+    background-color: #ccc;
+    border-radius: unset;
+}
+
 /* 検索ボタンの設定 */
 .search_btn_search {
     background-color: #fff;
+}
+
+/* 検索ボタンのホバー要素 */
+.search_btn_search:hover {
+    color: #fff;
+    background-color: rgba(255, 57, 123, 1);
+    border-radius: unset;
 }
 
 @media screen and (min-width: 771px) {

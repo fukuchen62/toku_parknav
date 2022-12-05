@@ -4,7 +4,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="./assets/img/key-under/key_img.jpg" alt="">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
     <div class="key_circle"></div>
 </div>
 
@@ -12,18 +12,6 @@
     <p class="pkz"><?php echo do_shortcode('[flexy_breadcrumb]'); ?></p>
 
     <div class="flex_box">
-
-        <?php
-        $args = array(
-            'post-type' => 'post',
-            'orderby' => 'ID',
-            'order' => 'DESC',
-            'posts-per-page' => -1,
-        );
-
-        $newslist = new WP_Query($args);
-
-        ?>
 
         <!-- カードとページをまとめるdiv -->
         <div>
@@ -33,10 +21,10 @@
             <div class="card_flex">
 
                 <!-- ループの開始 -->
-                <?php if ($newslist->have_posts()) : ?>
-                <?php while ($newslist->have_posts()) : ?>
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : ?>
                 <!-- 記事を取得して$postに代入 -->
-                <?php $newslist->the_post(); ?>
+                <?php the_post(); ?>
 
                 <!-- カード -->
                 <div class="card_wrap">

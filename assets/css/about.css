@@ -14,26 +14,8 @@ h4 {
     margin-bottom: 15px;
 }
 
-/* 記事本文の左右にマージンをとる */
-.txt {
-    margin: 0 20px;
-    text-align: left;
-}
-
-/* TB幅 */
-@media screen and (min-width: 771px) {
-    .txt {
-        margin: 0 40px;
-    }
-
-}
-
 /* PC幅 */
 @media screen and (min-width: 1200px) {
-
-    .txt {
-        margin: 0;
-    }
 
     .row_flex {
         display: flex;
@@ -49,33 +31,19 @@ h4 {
 }
 
 /* main中身*********************************** */
-main {
-    /* margin: 0 20px; */
-}
 
 .site_summary_wrap p {
     margin: 0 20px;
+    font-weight: bold;
+    line-height: 2em;
 }
 
-@media screen and (min-width: 951px) {
+/* ブレイクポイント */
+@media screen and (min-width: 950px) {
     .site_summary_wrap p {
         margin: 0;
     }
 }
-
-/* TB幅 */
-/* @media screen and (min-width: 771px) { */
-/* .site_summary_wrap p {
-        margin: 0 auto;
-    } */
-/* } */
-
-/* PC幅 */
-/* @media screen and (min-width: 1200px) { */
-/* main {
-        margin: 0 auto;
-    } */
-/* } */
 
 .site_char_wrap {
     display: flex;
@@ -100,7 +68,6 @@ main {
     display: inline-block;
     width: 320px;
     height: 300px;
-    /* text-align: center; */
     bottom: 0;
     margin: 0;
 }
@@ -109,7 +76,6 @@ main {
 .about_popo_img {
     width: 300px;
     height: auto;
-    /* height: 100%; */
 }
 
 /* ころちゃん */
@@ -117,20 +83,17 @@ main {
     width: 200px;
     height: auto;
     margin-top: 25px;
-    /* height: 100%; */
 }
 
+/* キャラクター紹介テキストのデザイン */
 .about_profile_txt {
     width: 300px;
-    /* width: 100%; */
     height: auto;
     text-align: center;
     padding: 10px;
     color: #fff;
     border: 1px solid rgb(197, 225, 180);
     outline: 10px solid rgb(115, 83, 18);
-    /* outline-offset: -11px; */
     background-color: rgb(47, 105, 16);
-    /* border-radius: 2px; */
     margin: 0 auto;
 }

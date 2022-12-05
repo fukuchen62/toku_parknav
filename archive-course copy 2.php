@@ -4,7 +4,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
+    <img class="key_img" src="./assets/img/key-under/key_img.jpg" alt="">
     <div class="key_circle"></div>
 </div>
 
@@ -37,9 +37,7 @@
             </div>
 
             <!-- ページネーション ★あとでphp書き換え必要-->
-
-            <?php wp_pagenavi(); ?>
-            <!-- <ul class="pagination">
+            <ul class="pagination">
                 <li class="disabled">
                     <a href="#"><i class="fas fa-angle-left"></i></a>
                 </li>
@@ -49,7 +47,7 @@
                 <li>
                     <a href="#"><i class="fas fa-angle-right"></i></a>
                 </li>
-            </ul> -->
+            </ul>
 
         </div>
 

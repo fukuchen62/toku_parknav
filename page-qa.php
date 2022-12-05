@@ -20,15 +20,14 @@
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_q.png" alt="クエスチョン画像">
-                <h3>質問事項が入ります。質問事項が入ります。質問事項が入ります。</h3>
+                <h3>駐車場やトイレはありますか？</h3>
             </div>
 
             <!-- 解答 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_a.png" alt="アンサー画像">
                 <p class="answer_txt">
-                    解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
-                </p>
+                    各公園の詳細ページに記載がありますので、そちらをご確認ください。</p>
             </div>
         </div>
 
@@ -37,15 +36,14 @@
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_q.png" alt="クエスチョン画像">
-                <h3>質問事項が入ります。質問事項が入ります。質問事項が入ります。</h3>
+                <h3>公園の遊具の利用には年齢制限などはありますか？</h3>
             </div>
 
             <!-- 解答 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_a.png" alt="アンサー画像">
-                <p class="answer_txt">
-                    解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
-                </p>
+                <p class="answer_txt">３歳から12歳までの幼児、児童が主な対象となっています。<br>
+                    幼児(3~6歳)と、児童(6~12歳)の範囲で年齢を区分しています。</p>
             </div>
         </div>
 
@@ -54,22 +52,29 @@
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_q.png" alt="クエスチョン画像">
-                <h3>質問事項が入ります。質問事項が入ります。質問事項が入ります。</h3>
+                <h3>こちらのサイトに掲載してある遊具の写真や情報などは最新のものでしょうか？</h3>
             </div>
 
             <!-- 解答 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_a.png" alt="アンサー画像">
-                <p class="answer_txt">
-                    解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。解答が入ります。
-                </p>
+                <p class="answer_txt">こちらは2022年11月時点での情報になります。</p>
             </div>
         </div>
 
-        <div class="q_a_supt">
-            <h2 class="h2_under">掲載されている公園の管理者様へ</h2>
-            <p>テキストがはいります。テキストがはいります。テキストが入ります。テキストがはいります。テキストがはいります。テキストが入ります。テキストがはいります。テキストがはいります。テキストが入ります。テキストがはいります。テキストがはいります。テキストが入ります。テキストがはいります。テキストがはいります。テキストが入ります。
-            </p>
+        <!-- Q&Aコンテンツ1個分 -->
+        <div class="q_a_wrap">
+            <!-- 質問 -->
+            <div class="q_a_flex">
+                <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_q.png" alt="クエスチョン画像">
+                <h3>お気に入りに登録した公園はどこで見られますか？</h3>
+            </div>
+
+            <!-- 解答 -->
+            <div class="q_a_flex">
+                <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/question_a.png" alt="アンサー画像">
+                <p class="answer_txt">当サイトページの一番上にお気に入りリストがございますので、そちらでご確認ください。</p>
+            </div>
         </div>
 
         <!-- お問い合わせボタン -->

@@ -11,11 +11,23 @@
     color: #3E3A39;
 }
 
+.game_warp {
+    /* position: relative; */
+}
+
+.game_size {
+    width: 100vw;
+    height: 100vh;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
 header {
     border-color: black;
     border: solid 1px;
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -28,6 +40,10 @@ header {
     height: 100vh;
     margin: 0 auto;
     text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 /* ゲーム内でオブジェクトを発生させる位置 */
@@ -307,13 +323,40 @@ header {
 }
 
 /* ゲームオーバー時のメダルの要素 */
-
-.gameover_medal1 {
+.gameover_medalstyle {
+    padding-top: 16px;
+    margin: 0 auto;
+    max-width: 120px;
     width: 100%;
     height: 100%;
-    content: url(../img/game_tgt1_aim_200x200.png);
     display: block;
 }
+
+/* 銅メダル */
+.gameover_medal1 {
+    content: url(../img/game_tgt1_aim_200x200.png);
+}
+
+/* 銀メダル */
+.gameover_medal1 {
+    content: url(../img/game_medal1_200x200.png);
+}
+
+/* 銀メダル */
+.gameover_medal2 {
+    content: url(../img/game_medal2_200x200.png);
+}
+
+/* 金メダル */
+.gameover_medal3 {
+    content: url(../img/game_medal3_200x200.png);
+}
+
+/* 神メダル */
+.gameover_medal4 {
+    content: url(../img/game_medal4_200x200.png);
+}
+
 
 /* メディアクエリ */
 /* タブレット */
@@ -387,8 +430,8 @@ header {
     }
 
     .clm {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         /* max-width: 200px;
         max-height: 200px; */
         /* 可視化用に色を付けている */
