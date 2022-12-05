@@ -157,6 +157,7 @@ a:hover {
 
 .next_btn a:hover, .prev_btn a:hover {
     opacity: 1;
+    color: #29970E;
 }
 
 

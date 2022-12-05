@@ -1,4 +1,5 @@
 <!-- フッター -->
+<img src="<?php echo get_template_directory_uri(); ?>/assets/img/foot_grass.png" alt="草" class="foot_grass">
 <footer class="foot_bgcolor_cream">
     <div class="foot_content">
         <div class="foot_menu">
@@ -42,6 +43,9 @@
                 </li>
                 <li>
                     <a href="<?php echo home_url('/privacy/'); ?>">プライバシーポリシー・免責事項</a>
+                </li>
+                <li>
+                    <a href="<?php echo home_url('/qa/'); ?>">Q＆A</a>
                 </li>
                 <li>
                     <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
