@@ -51,8 +51,8 @@
             </div>
 
             <!-- ページネーション -->
-            <ul class="pagination">
-                <li class="disabled">
+            <!-- <ul class="pagination"> -->
+            <!-- <li class="disabled">
                     <a href="#"><i class="fas fa-angle-left"></i></a>
                 </li>
                 <li class="active"><a href="#">1</a></li>
@@ -61,13 +61,18 @@
                 <li>
                     <a href="#"><i class="fas fa-angle-right"></i></a>
                 </li>
-            </ul>
-
+            </ul> -->
+            <!-- ページネーション -->
+            <?php wp_pagenavi(); ?>
         </div>
 
         <!-- カテゴリバー -->
         <?php get_sidebar('category') ?>
+
+
     </div>
+
+
 </main>
 
 <!-- フッター -->
