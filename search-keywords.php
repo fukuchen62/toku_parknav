@@ -3,7 +3,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="./assets/img/key-under/key_under_search_keywords.jpg" alt="キービジュアル">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_under_search_keywords.jpg" alt="キービジュアル">
     <div class="key_circle"></div>
 </div>
 

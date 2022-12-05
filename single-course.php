@@ -3,7 +3,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="./assets/img/key-under/key_img.jpg" alt="">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
     <div class="key_circle"></div>
 </div>
 
@@ -26,22 +26,9 @@
 
                 <!-- このコースのカテゴリ表示 -->
                 <ul class="category_post">
-                    <?php
-                            // URLのパラメータからタクソノミの値を取得する
-                            $purpose_slug = get_query_var('purpose');
-                            // タクソノミの値にてそのタクソノミを取得する
-                            $purpose = get_term_by('slug', $purpose_slug, 'purpose');
-                            ?>
-                    <?php foreach ($purpose as $key => $purpose) : ?>
                     <li>
-                        <a href="<?php echo get_term_link($purpose); ?>">
-                            <?php echo $purpose->name; ?>
-                        </a>
+                        <?php the_field("purpose"); ?>
                     </li>
-                    <?php endforeach; ?>
-                    <!-- <li>一日</li>
-                    <li>ピクニック</li>
-                    <li>遊具遊び</li> -->
                 </ul>
 
                 <?php
@@ -98,7 +85,7 @@
                     <div class="course_time"><?php echo $course_time; ?></div>
                 </div>
                 <p class="txt"><?php echo $course_discription; ?></p>
-                <img class="separater_img" src="assets/img/course_separater.png" alt="コース区切り画像">
+                <img class="separater_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course_separater.png" alt="コース区切り画像">
 
                 <?php endif; ?>
                 <?php endfor; ?>
