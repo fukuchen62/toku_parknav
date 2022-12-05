@@ -245,6 +245,11 @@ td {
     }
 }
 
+.pickup_deco {
+    width: 80px;
+}
+
+
 
 /* ＝＝＝カテゴリバー＝＝＝ */
 
@@ -285,32 +290,4 @@ li a:hover {
         top: 80px;
         right: 0;
     }
-}
-
-/* ＝＝＝ダミー＝＝＝ */
-
-/* ナビのダミーブロック */
-.gnav_dummy {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: darkgray;
-}
-
-/* メインビジュアルのダミーブロック */
-.mainVisual_dummy {
-    width: 100%;
-    height: 120px;
-    background-color: cadetblue;
-    margin-top: 80px;
-}
-
-/* フッターのダミーブロック */
-.footer_dummy {
-    height: 450px;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-    width: 100vw;
-    background-color: darkgray;
 }
