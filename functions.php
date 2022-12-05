@@ -229,12 +229,27 @@ function add_individual_stylesheet_script()
     }
 
     //----------------------
-    //  02-F:ゲーム
+    //  02-F:ゲームスタート
     //----------------------
-    else if (is_page('game')) {
+    else if (is_page('gamestart')) {
 
-        //ゲームのCSS（game.css）を読み込む
-        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/game.css', array(), false);
+        //ゲームのリセットCSS（destyle.css）を読み込む
+        wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
+
+        //ゲームスタートのCSS（gamestart_style.css）を読み込む
+        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/gamestart_style.css', array(), false);
+    }
+
+    //----------------------
+    //  02-F:ゲームプレイ
+    //----------------------
+    else if (is_page('gameplay')) {
+
+        //ゲームのリセットCSS（destyle.css）を読み込む
+        wp_enqueue_style('toku_parknav-gamedestyle', get_template_directory_uri() . '/assets/css/destyle.css', array(), false);
+
+        //ゲームプレイのCSS（games_style.css）を読み込む
+        wp_enqueue_style('toku_parknav-game', get_template_directory_uri() . '/assets/css/game_style.css', array(), false);
     }
 
     //----------------------
