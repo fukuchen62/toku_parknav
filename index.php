@@ -39,7 +39,8 @@
             </div>
 
             <!-- ページネーション -->
-            <ul class="pagination">
+            <?php wp_pagenavi(); ?>
+            <!-- <ul class="pagination">
                 <li class="disabled">
                     <a href="#"><i class="fas fa-angle-left"></i></a>
                 </li>
@@ -49,7 +50,7 @@
                 <li>
                     <a href="#"><i class="fas fa-angle-right"></i></a>
                 </li>
-            </ul>
+            </ul> -->
 
         </div>
 
