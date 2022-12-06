@@ -173,9 +173,9 @@ main {
     }
 
     /* 項目範囲の幅を広げる */
-    .item {
+    /* .item {
         width: 800px;
-    }
+    } */
 
     /* 3項目のタイトルの角丸 */
     .item_ttl {
@@ -205,6 +205,14 @@ main {
     .item_tool ul {
         flex-direction: row;
         align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* 項目範囲の幅を広げる */
+    .item {
+        width: 800px;
     }
 }
 
