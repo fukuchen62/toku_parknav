@@ -43,7 +43,7 @@
             <div class="gamestart_tgt">
                 <div>
                     <h3><span class="game_h2line">どんな虫がいるの？</span></h3>
-                    <p>虫はぜんぶで5しゅるいいるポ！<br>
+                    <p>虫はぜんぶで6しゅるいいるポ！<br>
                         はやくたくさん虫をつかまえるとせいげんじかんによゆうができるポ！</p>
                 </div>
                 <div class="gamestart_tgt_imgbox">
@@ -52,6 +52,7 @@
                     <div class="gamestart_tgtimgbox3"></div>
                     <div class="gamestart_tgtimgbox4"></div>
                     <div class="gamestart_tgtimgbox5"></div>
+                    <div class="gamestart_tgtimgbox6"></div>
                 </div>
             </div>
             <div class="gamestart_tips1">

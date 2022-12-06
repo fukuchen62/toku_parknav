@@ -211,6 +211,9 @@ body {
     content: url(../img/game_tgt5_aim_200x200.png);
 }
 
+.gamestart_tgtimgbox6 {
+    content: url(../img/game_tgt6_aim_200x200.png);
+}
 
 .gamestart_dontaim_img1 {
     content: url(../img/game_dontami1_200x200.png);
