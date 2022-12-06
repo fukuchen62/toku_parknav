@@ -202,6 +202,11 @@ td {
         top: 80px;
         height: 70vh;
     }
+
+    .sidebar_box {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
 
 /* PC幅 */
