@@ -224,26 +224,6 @@
             ?>
 
             <?php get_template_part('template-parts/loop', 'park'); ?>
-            <!-- カード1つ分 -->
-            <!-- <div class="card_wrap">
-                    <a href="#">
-                        // 記事画像
-                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                        //文章部分の枠
-                        <div class="card_container">
-                            <div class="card_inner">
-
-                                //メインタイトル
-                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
-                                // 記事本文
-                                <div class="card_txt">
-                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div> -->
 
             <?php endwhile; ?>
 
