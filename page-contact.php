@@ -1,19 +1,60 @@
-<?php //ヘッダーテンプレートファイルを読み込む
-?>
+<!-- ヘッダー -->
 <?php get_header(); ?>
 
-<!-- パンくずリストを読み込む -->
-<?php echo do_shortcode('[flexy_breadcrumb]'); ?>
+<!-- キービジュアル -->
+<div class="key_wrap">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
+    <div class="key_circle"></div>
+</div>
 
-<main class="main">
-    <div class="container">
-        <div class="content">
-            <!-- 固定ページの内容を読み込んで表示させる -->
-            <?php the_content(); ?>
-        </div>
-    </div>
+<main>
+    <p class="pkz"><?php echo do_shortcode('[flexy_breadcrumb]'); ?></p>
+
+    <section>
+        <h2 class="h2_under">お問い合わせ</h2>
+        <p class="txt">サイトについてご不明点などございましたら、こちらからお問い合わせください。</p>
+
+        <form class="form">
+            <?php echo do_shortcode('[contact-form-7 id="281" title="お問い合わせフォーム"]'); ?>
+        </form>
+
+        <!-- <form class="form">
+            <div class="form_row">
+                <label class="form_label" for="fullname">お名前　<span>必須</span></label>
+                <div class="form_content">
+                    <input type="text" name="fullname" id="fullname" placeholder="徳園 公子">
+                </div>
+            </div>
+
+            <div class="form_row">
+                <label class="form_label" for="email">メールアドレス　<span>必須</span></label>
+                <div class="form_content">
+                    <input type="email" name="email" id="email" placeholder="tokushima_park_love@tmail.com">
+                </div>
+            </div>
+
+            <div class="form_row">
+                <label class="form_label message_ttl" for="message">メッセージ本文</label>
+                <div class="form_content">
+                    <textarea name="message" id="message" placeholder="お問い合わせ内容をご入力ください"></textarea>
+                </div>
+            </div>
+
+            <div class="attention">
+                <p><a href="<?php echo home_url('/privacy/'); ?>">個人情報の取扱い</a>について</p>
+                <input type="checkbox" value="consent"><span>同意する</span>
+            </div>
+
+            <div class="form_row form_row-center">
+                <button type="submit"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="送信" class="btn btn-send"></button>
+                <p class="btn_txt">送信</p>
+
+            </div>
+        </form> -->
+
+    </section>
+
 </main>
 
-<?php //フッターテンプレートファイルを読み込む
-?>
+<!-- フッター -->
 <?php get_footer(); ?>

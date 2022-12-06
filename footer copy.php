@@ -17,7 +17,7 @@
                     <a href="<?php echo home_url('/area/south/'); ?>">県南部</a>
                 </li>
                 <li>
-                    <a href="<?php echo home_url('/?search_type=park'); ?>">条件検索</a>
+                    <a href="<?php echo home_url('/park/'); ?>">条件検索</a>
                 </li>
             </ul>
             <ul class="foot_col">
@@ -75,28 +75,7 @@
     <div class="popo_trivia hoge">
         <div class="popo_commentset">
             <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
-            <p id="popo_comment" class="popo_comment">
-                <?php
-                $args = array(
-                    'post_type' => 'mame', // 投稿タイプを指定
-                    'orderby' => 'rand', // ランダムで表示
-                    'posts_per_page' => 1, // 表示する記事数
-                );
-                $post_query = new WP_Query($args);
-
-                if ($post_query->have_posts()) :
-                    while ($post_query->have_posts()) : $post_query->the_post();
-                ?>
-
-                        <!-- フィールドの呼び出し -->
-                        <?php the_field('mame'); ?>
-
-                    <?php endwhile; ?>
-                    <!-- ループの終了 -->
-                <?php endif; ?>
-            </p>
-
-
+            <p id="popo_comment" class="popo_comment"></p>
         </div>
         <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
         <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">

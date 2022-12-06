@@ -70,16 +70,16 @@ $('.popo').clickToggle(function () {
 
 // ランダムに豆知識を表示させる
 
-// function mame() {
-//     let mame = [
-//         "公園の砂場は英語で“sand box”<br>「砂の箱」って言うんだって！",
-//         "お茶わんいっぱい(150グラム)の<br>ごはんには、やく3000つぶのお米が<br>",
-//         "お茶わんいっぱい(150グラム)の<br>ごはんには、やく3000つぶのお米が<br>はいっているんだって！",
-//         "「Z世代」ってことばがあるけど、<br>現在(2022年時点)で、小学生以下の世代は<br>「a(アルファ)世代」といわれるんだって！",
-//         "ぶらんこの豆知識ぽぽ", ,
-//         "すべりだいの豆知識ぽぽ"
-//     ];
+function mame() {
+    let mame = [
+        "公園の砂場は英語で“sand box”<br>「砂の箱」って言うんだって！",
+        "お茶わんいっぱい(150グラム)の<br>ごはんには、やく3000つぶのお米が<br>",
+        "お茶わんいっぱい(150グラム)の<br>ごはんには、やく3000つぶのお米が<br>はいっているんだって！",
+        "「Z世代」ってことばがあるけど、<br>現在(2022年時点)で、小学生以下の世代は<br>「a(アルファ)世代」といわれるんだって！",
+        "ぶらんこの豆知識ぽぽ", ,
+        "すべりだいの豆知識ぽぽ"
+    ];
     //変数mameに配列を代入
-    // let r = Math.floor(Math.random() * mame.length); //変数ｒに、0以上1以下のランダムな数字とmameのlength(5）を掛けた結果（小数点を切り捨てた数字）を代入
-    // document.getElementById("popo_comment").innerHTML = mame[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
-// }
+    let r = Math.floor(Math.random() * mame.length); //変数ｒに、0以上1以下のランダムな数字とmameのlength(5）を掛けた結果（小数点を切り捨てた数字）を代入
+    document.getElementById("popo_comment").innerHTML = mame[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
+}
