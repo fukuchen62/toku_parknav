@@ -192,15 +192,17 @@ td {
 
     /* 記事とサイドバーにflexをかける  */
     .flex_box {
+        position: relative;
         display: flex;
         gap: 0px;
     }
 
-    .sidebar {
+    .sidebar_box {
         position: sticky;
         /* Gナビの下で固定させる */
         top: 80px;
         right: 0;
+
     }
 
 }

@@ -58,15 +58,23 @@ footer {
 .foot_top {
     content: url(../img/totop.png);
     position: fixed;
-    width: 100px;
+    width: 70px;
     right: 20px;
-    bottom: 40px;
+    bottom: 20px;
     cursor: pointer;
 }
 
-.foot_top:hover {
-    animation: bound 1s ease-in alternate infinite;
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+    .foot_top {
+        width: 100px;
+        bottom: 40px;
+    }
 }
+
+/* .foot_top:hover {
+    animation: bound 1s ease-in alternate infinite;
+} */
 
 /* キーフレーム設定のためのクラス */
 .foot_rotate {
