@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 /* ＝＝＝ヘッダー~１つ目の写真のセクション＝＝＝ */
+
+/* common.cssから個別へ */
+main {
+    overflow-x: hidden;
+}
+
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
 body {
     min-width: 300px;

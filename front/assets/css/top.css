@@ -3,6 +3,7 @@
 /* ＝＝＝セクションをまたぐ指定＝＝＝ */
 main {
     margin-bottom: 50px;
+    overflow-x: hidden;
 }
 
 section {
