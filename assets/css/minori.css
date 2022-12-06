@@ -2,7 +2,7 @@
 
 /* キービジュアルの下層ページ用 */
 .key_img {
-    object-position: 50% 95%;
+    object-position: 50% 30%;
 }
 
 .minori_wrap {
@@ -10,12 +10,11 @@
 }
 
 /* 中身のコンテンツ幅が950px以上のとき */
-@media screen and (min-width: 950px) {
+/* @media screen and (min-width: 950px) {
     .minori_wrap {
-        margin: 0;
         margin-bottom: 50px;
     }
-}
+} */
 
 /* 見出し下余白 */
 h2 {
@@ -26,6 +25,12 @@ h2 {
 h3 {
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: left;
+    /* デザインの設定 */
+    padding-left: 15px;
+    border-left: 10px solid #39bdff;
+    border-radius: 20px 0 0 20px;
+    border-bottom: 1.5px dashed #39bdff;
 }
 
 h4 {
@@ -41,6 +46,50 @@ h4 {
     text-align: left;
 }
 
-.ref_wrap {
-    text-align: left;
+/* サイト制作のワケ */
+.minori_reason {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
+
+.minori_reason img {
+    /* width: 480px; */
+    width: 300px;
+    /* margin: 15px 0 0 15px; */
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .minori_reason img {
+        margin-left: 15px;
+        /* margin-top: 15px; */
+        /* width: 480px; */
+    }
+}
+
+/* 中身のコンテンツ幅が950px以上のとき */
+@media screen and (min-width: 950px) {
+    .minori_reason {
+        flex-direction: row;
+    }
+}
+
+/* 「関係者の皆様」のテキスト部分 */
+.minori_co_txt_wrap p {
+    text-align: center;
+}
+
+.minori_co_txt {
+    margin-bottom: 30px;
+}
+
+/* 参考サイト一覧 */
+/* .ref_wrap {
+    text-align: left;
+} */
