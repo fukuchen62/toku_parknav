@@ -74,11 +74,11 @@
     <!-- ポポ二郎の豆知識 -->
     <div class="popo_trivia hoge">
         <div class="popo_commentset">
-            <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+            <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
             <p id="popo_comment" class="popo_comment"></p>
         </div>
-        <img class="popo" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="ポポじろう">
-        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+        <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
+        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
     </div>
 
     <!-- トップへ戻るボタン -->
@@ -89,9 +89,9 @@
 </footer>
 
 <!-- スクリプト -->
-<!-- <script src="./assets/js/slick.min.js"></script>
-<script src="./assets/js/common.js"></script>
-<script src="./assets/js/top.js"></script> -->
+<!-- <script src="/assets/js/slick.min.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/top.js"></script> -->
 
 <?php
 // wp_foot()を呼び出す
