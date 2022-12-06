@@ -207,61 +207,6 @@
         ),
     );
 
-
-
-
-
-
-
-
-    // $selected_terms_area = $_GET['area'];
-    // $selected_terms_purpose = $_GET['purpose'];
-    // $selected_terms_playground = $_GET['playground'];
-
-    // $args = array(
-    //     'post_type' => 'park',
-    //     'post_per_page' => -1,
-    // );
-
-    // if ($selected_terms_area) {
-    //     // $taxquery_area = array('relation' => 'AND');
-    //     $taxquery_area[] = array(
-    //         'taxonomy' => 'area',
-    //         'term' => $selected_terms_area,
-    //         'field' => 'slug',
-    //     );
-    // };
-
-    // if ($selected_terms_purpose) {
-    //     // $taxquery_purpose = array('relation' => 'AND');
-    //     $taxquery_purpose[] = array(
-    //         'taxonomy' => 'purpose',
-    //         'term' => $selected_terms_purpose,
-    //         'field' => 'slug',
-    //     );
-    // }
-
-    // if ($selected_terms_playground) {
-    //     // $metaquery = array('relation' => 'AND');
-    //     $metaquery[] = array(
-    //         'key' => 'playground_slug',
-    //         'value' => $selected_terms_playground,
-    //         'type' => 'CHAR',
-    //     );
-    // }
-
-    // $args = array(
-    //     'post_type' => 'park',
-    //     'posts_per_page' => -1,
-    //     // 's' => get_search_query(),
-    //     // 'tax_query' => array(
-    //     //     'relation' => 'AND',
-    //     //     $taxquery_area,
-    //     //     $taxquery_purpose,
-    //     //     $metaquery
-    //     // ),
-    // );
-
     if (!empty($area_slug)) :
         $args['tax_query']
             = $taxquery_area;
@@ -282,6 +227,10 @@
         ?>
     <?php endif;
     ?>
+
+    <!-- ページネーション -->
+    <?php wp_pagenavi(); ?>
+
 </main>
 
 <?php get_footer(); ?>

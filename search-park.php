@@ -24,15 +24,15 @@
                 <h3 class="item_ttl i_ttl_1">地域</h3>
                 <ul>
                     <li>
-                        <input type="checkbox" name="area[]" value="east" id="area_1">
+                        <input type="checkbox" name="area[]" value="east" <?php echo $checked["area"]["east"]; ?> id="area_1">
                         <label for="area_1">東部</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="area[]" value="south" id="area_2">
+                        <input type="checkbox" name="area[]" value="south" <?php echo $checked["area"]["south"]; ?> id="area_2">
                         <label for="area_2">南部</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="area[]" value="west" id="area_3">
+                        <input type="checkbox" name="area[]" value="west" <?php echo $checked["area"]["west"]; ?> id="area_3">
                         <label for="area_3">西部</label>
                     </li>
                 </ul>
@@ -43,27 +43,27 @@
                 <h3 class="item_ttl i_ttl_2">目的</h3>
                 <ul>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="bbq" id="pur_1">
+                        <input type="checkbox" name="purpose[]" value="bbq" <?php echo $checked["purpose"]["bbq"]; ?> id="pur_1">
                         <label for="pur_1">BBQ</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="picnic" id="pur_2">
+                        <input type="checkbox" name="purpose[]" value="picnic" <?php echo $checked["purpose"]["picnic"]; ?> id="pur_2">
                         <label for="pur_2">ピクニック</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="ballplay" id="pur_3">
+                        <input type="checkbox" name="purpose[]" value="ballplay" <?php echo $checked["purpose"]["ballplay"]; ?> id="pur_3">
                         <label for="pur_3">ボール遊び</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="watergame" id="pur_4">
+                        <input type="checkbox" name="purpose[]" value="watergame" <?php echo $checked["purpose"]["watergame"]; ?> id="pur_4">
                         <label for="pur_4">水遊び</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="daycamp" id="pur_5">
+                        <input type="checkbox" name="purpose[]" value="daycamp" <?php echo $checked["purpose"]["daycamp"]; ?> id="pur_5">
                         <label for="pur_5">デイキャンプ</label>
                     </li>
                     <li>
-                        <input type="checkbox" name="purpose[]" value="playground" id="pur_6">
+                        <input type="checkbox" name="purpose[]" value="playground" <?php echo $checked["purpose"]["playground"]; ?> id="pur_6">
                         <label for="pur_6">遊具遊び</label>
                     </li>
                 </ul>
