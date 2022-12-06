@@ -4,13 +4,7 @@
 
 /* common.cssから個別へ */
 main {
-    overflow-x: hidden;
-}
-
-@media screen and (min-width: 950px) {
-    main {
-        overflow-x: visible;
-    }
+    /* overflow-x: hidden; */
 }
 
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
@@ -202,13 +196,12 @@ td {
         gap: 0px;
     }
 
-    .sidebar {
+    .sidebar_box {
         position: sticky;
         /* Gナビの下で固定させる */
         top: 80px;
-        right: 0;
+        height: 70vh;
     }
-
 }
 
 /* PC幅 */
@@ -234,7 +227,7 @@ td {
 
 /* サイドバーの幅を設定する */
 .sidebar {
-    width: 250px;
+    width: 200px;
     margin-right: 20px;
     margin: 0 auto 50px;
 }
@@ -242,7 +235,7 @@ td {
 /* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
 .category_ttl {
     display: block;
-    width: 250px;
+    width: 200px;
     padding: 15px;
     background: rgba(255, 235, 57, 0.5);
     border-radius: 20px;

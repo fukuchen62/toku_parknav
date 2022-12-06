@@ -2,7 +2,8 @@
 
 /* common.cssから個別へ */
 main {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    /* overflow-x: visible; */
 }
 
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
@@ -41,7 +42,7 @@ section {
 /* サイドバーの幅を設定する */
 .sidebar_box {
     width: 200px;
-    margin: 0 30px 50px;
+    margin: 0 auto 50px;
 }
 
 /* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
@@ -68,15 +69,13 @@ li a:hover {
     .flex_box {
         display: flex;
         gap: 0px;
-
     }
 
     .sidebar_box {
         position: sticky;
         /* Gナビの下で固定させる */
         top: 80px;
-        right: 0;
-        height: 1000px;
+        height: 70vh;
     }
 }
 
