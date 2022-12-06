@@ -38,32 +38,32 @@
 
     <!-- 公園検索 -->
     <section class="search">
-        <h2><span class="h2_first h2_first_bg">今</span>週末、どこ行く？<br>公園検索</h2>
-        <div class="sun_box">
+        <h2 class="zoom_in"><span class="h2_first h2_first_bg">今</span>週末、どこ行く？<br>公園検索</h2>
+        <div class="sun_box fade_in">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun.png" alt="太陽" class="top_sun">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun_face.png" alt="太陽の顔" class="top_sun_face">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_grove.png"" alt=" グローブジャングル" class="top_grove">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_seesaw.png"" alt=" シーソー" class="top_seesaw">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_grove.svg"" alt=" グローブジャングル" class="top_grove">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_seesaw.svg"" alt=" シーソー" class="top_seesaw">
         </div>
         <div class="search_inner">
-            <img class="search_map" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/search_map.png" alt="検索マップ">
+            <img class="search_map fade_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/search_map.png" alt="検索マップ">
             <a href="<?php echo home_url('/area/east/'); ?>">
-                <div class="map_btn map_btn_east circle">東部</div>
+                <div class="map_btn map_btn_east circle zoom_in">東部</div>
             </a>
             <a href="<?php echo home_url('/area/west/'); ?>">
-                <div class="map_btn map_btn_west circle">西部</div>
+                <div class="map_btn map_btn_west circle zoom_in">西部</div>
             </a>
             <a href="<?php echo home_url('/area/south/'); ?>">
-                <div class="map_btn map_btn_south circle">南部</div>
+                <div class="map_btn map_btn_south circle zoom_in">南部</div>
             </a>
         </div>
 
 
         <!-- ランダムに公園のカードが入るところ -->
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco">
-        <h2>pickup！パーク</h2>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.svg" alt="装飾" class="pickup_deco zoom_in">
+        <h2 class="zoom_in">pickup！パーク</h2>
         <!-- card_flexの指定 -->
-        <div class="card_flex">
+        <div class="card_flex animate_wrap">
             <?php
             $args = array(
                 'post_type' => 'park', // 投稿タイプを指定
@@ -91,9 +91,9 @@
 
     <!-- このサイトについて -->
     <section class="bgcolor_cream">
-        <h2><span class="h2_first h2_first_pw">こ</span>のサイトについて</h2>
+        <h2 class="zoom_in"><span class="h2_first h2_first_pw">こ</span>のサイトについて</h2>
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_about.png" alt="about写真">
+            <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_about.png" alt="about写真">
             <div class="inner_flex">
                 <p class="section_txt">自然豊かな徳島県には、子どもたちが喜ぶ公園がたくさん！
                     「ほかにはどんな公園があるのかな」
@@ -113,8 +113,20 @@
                     「楽しみ方は無限大！！！」
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/about/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
-                        <p>くわしく</p>
+                    <a href="<?php echo home_url('/about/'); ?>">
+                        <div class="next_btn_frame_box">
+                            <div class="next_btn_frame">
+                                <div class='next_btn_frame_triangle'></div>
+                                <div class='next_btn_frame_square'></div>
+                            </div>
+                        </div>
+                        <div class="next_btn_inner_box">
+                            <div class="next_btn_inner">
+                                <div class='next_btn_inner_triangle'></div>
+                                <div class='next_btn_inner_square'></div>
+                                <p class="next_btn_txt">くわしく</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -125,7 +137,7 @@
 
     <!-- コース -->
     <section>
-        <h2><span class="h2_first h2_first_bg">公</span>園をもっと楽しむ！<br>モデルコース</h2>
+        <h2 class="zoom_in"><span class="h2_first h2_first_bg">公</span>園をもっと楽しむ！<br>モデルコース</h2>
         <div class="section_flex_reverse">
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_course.svg" alt="course写真">
 
@@ -134,8 +146,20 @@
                     公園に行ったことがない方はもちろん、行ったことがある方も、普段とは違った過ごし方を発見できるチャンスかもしれません。
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/course/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="次の画面へ">
-                        <p>一覧へ</p>
+                    <a href="<?php echo home_url('/course/'); ?>">
+                        <div class="next_btn_frame_box">
+                            <div class="next_btn_frame">
+                                <div class='next_btn_frame_triangle'></div>
+                                <div class='next_btn_frame_square'></div>
+                            </div>
+                        </div>
+                        <div class="next_btn_inner_box">
+                            <div class="next_btn_inner">
+                                <div class='next_btn_inner_triangle'></div>
+                                <div class='next_btn_inner_square'></div>
+                                <p class="next_btn_txt">一覧へ</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -145,10 +169,10 @@
         <!-- ///////////////////////////////////////// -->
 
         <!-- ランダムにコースのカードが入るところ -->
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco">
-        <h2>pickup！コース</h2>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco zoom_in">
+        <h2 class="zoom_in">pickup！コース</h2>
         <!-- card_flexの指定 -->
-        <div class="card_flex">
+        <div class="card_flex animate_wrap">
             <?php
             $args = array(
                 'post_type' => 'course', // 投稿タイプを指定
@@ -174,19 +198,31 @@
 
     <!-- 療育 -->
     <section class="bgcolor_cream">
-        <h2><span class="h2_first h2_first_bw">理</span>学療法士の先生と考える<br>
+        <h2 class="zoom_in"><span class="h2_first h2_first_bw">理</span>学療法士の先生と考える<br>
             運動療育と遊具</h2>
 
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
+            <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
 
             <div class="inner_flex">
                 <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
                     発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
-                        <p>くわしく</p>
+                    <a href="<?php echo home_url('/nursing/'); ?>">
+                        <div class="next_btn_frame_box">
+                            <div class="next_btn_frame">
+                                <div class='next_btn_frame_triangle'></div>
+                                <div class='next_btn_frame_square'></div>
+                            </div>
+                        </div>
+                        <div class="next_btn_inner_box">
+                            <div class="next_btn_inner">
+                                <div class='next_btn_inner_triangle'></div>
+                                <div class='next_btn_inner_square'></div>
+                                <p class="next_btn_txt">くわしく</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -198,15 +234,26 @@
 
     <!-- ゲーム -->
     <section>
-        <h2><span class="h2_first h2_first_pg">ぽ</span>ぽじろうとむしキャッチ！</h2>
+        <h2 class="zoom_in"><span class="h2_first h2_first_pg">ぽ</span>ぽじろうとむしキャッチ！</h2>
         <div class="section_flex_reverse">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="キャラクター画像">
+            <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/gamestart_popojiro_2.png" alt="キャラクター画像">
             <div class="inner_flex">
                 <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                 <div class="next_btn">
                     <a href="<?php echo home_url('/gamestart/'); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="次の画面へ">
-                        <p>あそぶ</p>
+                        <div class="next_btn_frame_box">
+                            <div class="next_btn_frame">
+                                <div class='next_btn_frame_triangle'></div>
+                                <div class='next_btn_frame_square'></div>
+                            </div>
+                        </div>
+                        <div class="next_btn_inner_box">
+                            <div class="next_btn_inner">
+                                <div class='next_btn_inner_triangle'></div>
+                                <div class='next_btn_inner_square'></div>
+                                <p class="next_btn_txt">あそぶ</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -217,9 +264,9 @@
 
     <!-- お知らせ -->
     <section class="bgcolor_cream">
-        <h2><span class="h2_first h2_first_bw">お</span>知らせ</h2>
+        <h2 class="zoom_in"><span class="h2_first h2_first_bw">お</span>知らせ</h2>
         <div class="section_flex">
-            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_news.png" alt="お知らせイラスト">
+            <img class="news_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_news.png" alt="お知らせイラスト">
             <div class="news_article">
                 <a href="<?php echo get_permalink('1') ?>">
                     <div class="news_date">2022.12.13</div>
@@ -232,8 +279,20 @@
                 </a>
             </div>
             <div class="news_next_btn next_btn">
-                <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
-                    <p>一覧へ</p>
+                <a href="<?php echo home_url('/newslist/'); ?>">
+                    <div class="next_btn_frame_box">
+                        <div class="next_btn_frame">
+                            <div class='next_btn_frame_triangle'></div>
+                            <div class='next_btn_frame_square'></div>
+                        </div>
+                    </div>
+                    <div class="next_btn_inner_box">
+                        <div class="next_btn_inner">
+                            <div class='next_btn_inner_triangle'></div>
+                            <div class='next_btn_inner_square'></div>
+                            <p class="next_btn_txt">一覧へ</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
@@ -243,17 +302,17 @@
 
     <!-- インスタ -->
     <section class="insta_box">
-        <h2><span class="h2_first h2_first_pw">In</span>stagram</h2>
+        <h2 class="zoom_in"><span class="h2_first h2_first_pw">In</span>stagram</h2>
         <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
     </section>
 
     <!-- リンク集 -->
-    <div class="banner_flex">
-        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner01.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner02.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner03.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner04.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner05.png" alt="サイトリンク"></a></div>
+    <div class="banner_flex animate_wrap">
+        <div class="banner animate"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner01.png" alt="サイトリンク"></a></div>
+        <div class="banner animate"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner02.png" alt="サイトリンク"></a></div>
+        <div class="banner animate"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner03.png" alt="サイトリンク"></a></div>
+        <div class="banner animate"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner04.png" alt="サイトリンク"></a></div>
+        <div class="banner animate"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner05.png" alt="サイトリンク"></a></div>
     </div>
 </main>
 
