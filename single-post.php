@@ -28,17 +28,15 @@
                 </ul>
 
                 <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('large') ?>
+                <?php the_post_thumbnail('medium') ?>
                 <?php else : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+                <img class="course_top_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
                 <?php endif; ?>
-                <!-- <img class="course_top_img" src="./uploads/c-dummy.jpg" alt="コース詳細一枚目"> -->
 
                 <p class="txt"><?php the_content(); ?></p>
 
                 <!-- いいね！ボタン -->
                 <div class="iineicon_tooltip">
-                    <!-- <a href="#"><i class="fa-regular fa-heart fa-2x"></i></a> -->
                     <?php echo do_shortcode('[wp_ulike]'); ?>
                     <div class="iineicon_description">いいね！</div>
                 </div>

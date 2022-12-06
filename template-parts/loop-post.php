@@ -1,26 +1,33 @@
 <!-- カード1つ分 -->
-<div class="card_wrap">
+<div class="card_wrap animate">
     <a href="<?php the_permalink(); ?>">
+
         <!-- 記事画像 -->
         <?php if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('thumbnail') ?>
         <?php else : ?>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
         <?php endif; ?>
-        <!-- <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像"> -->
-        <!-- 文章部分の枠 -->
+
         <div class="card_container">
             <div class="card_inner">
                 <!-- サブタイトル(カテゴリー) -->
                 <h3 class="card_subttl"><?php the_category(); ?></h3>
                 <!-- メインタイトル -->
-                <h2 class="card_ttl "><?php the_title(); ?></h2>
+                <h2 class="card_ttl ">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                    </a>
+                </h2>
                 <!-- 記事本文 -->
                 <div class="card_txt ">
-                    <p><?php the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>">
+                        <p><?php the_excerpt(); ?></p>
+                    </a>
                 </div>
             </div>
         </div>
+
     </a>
 </div>
 
