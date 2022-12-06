@@ -2,6 +2,12 @@
 ?>
 <?php get_header(); ?>
 
+<?php
+// データ保存
+$parks = [];
+$parks_count = 0;
+?>
+
 
 <!-- キービジュアルのブロック -->
 <div class="key_wrap">
@@ -39,12 +45,7 @@
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
             <h2 class="h2_under">チェックした公園</h2>
 
-            <!-- データの取得 -->
             <?php
-            // データ保存
-            $parks = [];
-            $parks_count = 0;
-
             if (function_exists('get_user_favorites')) {
                 $favorites = get_user_favorites();
                 krsort($favorites);
@@ -52,8 +53,12 @@
                 //sprint_r($favorites);
             }
 
+            // if($parks_count == 0){
+            //     //echo '<p class="text-center">お気に入りがありません。</p>';
+            // }
+
             // サブクエリの発行
-            if ($favorites) {
+            if (!empty($favorites)) {
                 $args = array(
                     'post_type' => 'park',
                     'posts_per_page' => -1,
@@ -63,7 +68,7 @@
                 );
 
                 $the_query = new WP_Query($args);
-            }
+
             ?>
 
             <!-- カード表示 -->
@@ -85,43 +90,25 @@
                     $parks['lng'][] = $longitude;
                     $parks['text'][] = $text;
 
-                    //print_r($parks);
+                    print_r($parks);
             ?>
 
             <div class="card_flex">
                 <!-- カード型の呼び出し -->
                 <?php get_template_part('template-parts/loop', 'park'); ?>
-                <!-- カード1つ分 -->
-                <!-- <div class="card_wrap">
-                    <a href="#">
-                        // 記事画像
-                        <img class="card_img" src="./assets/img/C-rainbow/P-rainbow-eyecatchig.JPG" alt="ダミー画像">
-                        // 文章部分の枠
-                        <div class="card_container">
-                            <div class="card_inner">
-
-                                // メインタイトル
-                                <h2 class="card_ttl">レインボーオアシスパーク</h2>
-                                // 記事本文
-                                <div class="card_txt">
-                                    <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>-->
-
             </div>
+
             <?php
                     $parks_count++;
                 //print_r($parks_count);
                 endwhile;
                 wp_reset_postdata();
-            else :
-                // No Favorites
-                echo '<p class="text-center">お気に入りがありません。</p>';
             endif;
+
+            } else {
+                // お気に入り登録がない場合
+                echo '<p class="text-center">お気に入りがありません。</p>';
+            };
             ?>
         </div>
     </div>
