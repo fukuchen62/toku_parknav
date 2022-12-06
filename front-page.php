@@ -186,7 +186,7 @@
             ?>
 
             <!-- カード型の呼び出し -->
-            <?php get_template_part('template-parts/loop', 'park') ?>
+            <?php get_template_part('template-parts/loop', 'course') ?>
 
             <?php endwhile; ?>
             <!-- ループの終了 -->
