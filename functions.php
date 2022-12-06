@@ -292,8 +292,41 @@ function change_posts_per_page($query)
 {
     if (is_admin() || !$query->is_main_query())
         return;
+    //----------------------
+    // コース一覧
+    //----------------------
     if ($query->is_archive('course')) { //カスタム投稿タイプを指定
         $query->set('posts_per_page', '6'); //表示件数を指定
+
+        //----------------------
+        //  公園一覧
+        //----------------------
+    } elseif ($query->is_archive('park')) {
+        $query->set('posts_per_page', '6');
+
+        //----------------------
+        //  公園詳細検索 結果
+        //----------------------
+    } elseif ($query->is_search('park')) {
+        $query->set('posts_per_page', '6');
+
+        //----------------------
+        //  キーワード検索 結果
+        //----------------------
+    } elseif ($query->is_search('keywords')) {
+        $query->set('posts_per_page', '6');
+
+        //----------------------
+        //  おしらせ一覧
+        //----------------------
+    } elseif ($query->is_page('newslist')) {
+        $query->set('posts_per_page', '6');
+
+        //----------------------
+        //  ニュース カテゴリー別一覧
+        //----------------------
+    } elseif ($query->is_category()) {
+        $query->set('posts_per_page', '6');
     }
 }
 add_action('pre_get_posts', 'change_posts_per_page');

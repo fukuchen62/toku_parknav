@@ -188,7 +188,7 @@ function tgtArray_control() {
     // tgt表示用の乱数
         function tgtimageSet() {
                 // 乱数生成 tgtの種類分計算する 実際の最大数+1
-                tgtimg_random = Math.floor(Math.random() * 5);
+                tgtimg_random = Math.floor(Math.random() * 6);
                 // 0 clm_tgt_aimを表示
                 if (tgtimg_random === 0) {
                     // 追加するtgt
@@ -198,6 +198,7 @@ function tgtArray_control() {
                     clmID.classList.remove('clm_tgt3_aim');
                     clmID.classList.remove('clm_tgt4_aim');
                     clmID.classList.remove('clm_tgt5_aim');
+                    clmID.classList.remove('clm_tgt6_aim');
                     // 消すdontaim
                     clmID.classList.remove('clm_tgt_dontaim');
                     clmID.classList.remove('clm_tgt_dontaim2');
@@ -213,6 +214,7 @@ function tgtArray_control() {
                     clmID.classList.remove('clm_tgt3_aim');
                     clmID.classList.remove('clm_tgt4_aim');
                     clmID.classList.remove('clm_tgt5_aim');
+                    clmID.classList.remove('clm_tgt6_aim');
                     // 消すdontaim
                     clmID.classList.remove('clm_tgt_dontaim');
                     clmID.classList.remove('clm_tgt_dontaim2');
@@ -228,6 +230,7 @@ function tgtArray_control() {
                     clmID.classList.remove('clm_tgt2_aim');
                     clmID.classList.remove('clm_tgt4_aim');
                     clmID.classList.remove('clm_tgt5_aim');
+                    clmID.classList.remove('clm_tgt6_aim');
                     // 消すdontaim
                     clmID.classList.remove('clm_tgt_dontaim');
                     clmID.classList.remove('clm_tgt_dontaim2');
@@ -243,6 +246,7 @@ function tgtArray_control() {
                     clmID.classList.remove('clm_tgt2_aim');
                     clmID.classList.remove('clm_tgt3_aim');
                     clmID.classList.remove('clm_tgt5_aim');
+                    clmID.classList.remove('clm_tgt6_aim');
                     // 消すdontaim
                     clmID.classList.remove('clm_tgt_dontaim');
                     clmID.classList.remove('clm_tgt_dontaim2');
@@ -258,6 +262,23 @@ function tgtArray_control() {
                     clmID.classList.remove('clm_tgt2_aim');
                     clmID.classList.remove('clm_tgt3_aim');
                     clmID.classList.remove('clm_tgt4_aim');
+                    clmID.classList.remove('clm_tgt6_aim');
+                    // 消すdontaim
+                    clmID.classList.remove('clm_tgt_dontaim');
+                    clmID.classList.remove('clm_tgt_dontaim2');
+                    clmID.classList.remove('clm_tgt_dontaim3');
+                    // 消す非表示
+                    clmID.classList.remove('clm_tgt_dnone');
+            }
+            else if (tgtimg_random === 5) {
+                    // 追加するtgt
+                    clmID.classList.add('clm_tgt6_aim');
+                    // 消すtgt
+                    clmID.classList.remove('clm_tgt_aim');
+                    clmID.classList.remove('clm_tgt2_aim');
+                    clmID.classList.remove('clm_tgt3_aim');
+                    clmID.classList.remove('clm_tgt4_aim');
+                    clmID.classList.remove('clm_tgt5_aim');
                     // 消すdontaim
                     clmID.classList.remove('clm_tgt_dontaim');
                     clmID.classList.remove('clm_tgt_dontaim2');
@@ -279,6 +300,7 @@ function tgtArray_control() {
                 clmID.classList.remove('clm_tgt3_aim');
                 clmID.classList.remove('clm_tgt4_aim');
                 clmID.classList.remove('clm_tgt5_aim');
+                clmID.classList.remove('clm_tgt6_aim');
                 clmID.classList.remove('clm_tgt_dontaim2');
                 clmID.classList.remove('clm_tgt_dontaim3');
                 clmID.classList.remove('clm_tgt_dnone');
@@ -291,6 +313,7 @@ function tgtArray_control() {
                 clmID.classList.remove('clm_tgt3_aim');
                 clmID.classList.remove('clm_tgt4_aim');
                 clmID.classList.remove('clm_tgt5_aim');
+                clmID.classList.remove('clm_tgt6_aim');
                 clmID.classList.remove('clm_tgt_dontaim');
                 clmID.classList.remove('clm_tgt_dontaim3');
                 clmID.classList.remove('clm_tgt_dnone');
@@ -303,6 +326,7 @@ function tgtArray_control() {
                 clmID.classList.remove('clm_tgt3_aim');
                 clmID.classList.remove('clm_tgt4_aim');
                 clmID.classList.remove('clm_tgt5_aim');
+                clmID.classList.remove('clm_tgt6_aim');
                 clmID.classList.remove('clm_tgt_dontaim');
                 clmID.classList.remove('clm_tgt_dontaim2');
                 clmID.classList.remove('clm_tgt_dnone');
@@ -317,6 +341,7 @@ function tgtArray_control() {
             clmID.classList.remove('clm_tgt3_aim');
             clmID.classList.remove('clm_tgt4_aim');
             clmID.classList.remove('clm_tgt5_aim');
+            clmID.classList.remove('clm_tgt6_aim');
             clmID.classList.remove('clm_tgt_dontaim');
             clmID.classList.remove('clm_tgt_dontaim2');
             clmID.classList.remove('clm_tgt_dontaim3');
@@ -415,6 +440,16 @@ function idLoopclick() {
                     // クラスの追加と削除
                     element.classList.add('clm_tgt_dnone');
                     element.classList.remove('clm_tgt5_aim');
+                }
+                else if (element.className === 'clm_tgt6_aim') {
+                    // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                    // スコアを＋1
+                    score = score + 1;
+                    timelimit = timelimit + 1;
+                    jstimelimit.innerHTML = timelimit;
+                    // クラスの追加と削除
+                    element.classList.add('clm_tgt_dnone');
+                    element.classList.remove('clm_tgt6_aim');
                 }
 //##############################狙ってはいけない的をクリックした処理#######################
                 else if (element.className == 'clm_tgt_dontaim') {
