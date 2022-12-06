@@ -218,7 +218,7 @@ function add_individual_stylesheet_script()
 
         //プライバシーポリシーのCSS（privacy.css）を読み込む
         wp_enqueue_style('toku_parknav-privacy', get_template_directory_uri() . '/assets/css/privacy.css', array(), false);
-    } else if (is_page('teamminori')) {
+    } else if (is_page('minori')) {
 
         //サイト制作にあたってのCSS（minori.css）を読み込む
         wp_enqueue_style('toku_parknav-teamminori', get_template_directory_uri() . '/assets/css/minori.css', array(), false);
@@ -313,7 +313,11 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 
 
 
-
+// 豆知識のランダム表示
+function mame_rand()
+{
+}
+add_action('', 'mame_rand');
 
 
 
