@@ -95,7 +95,7 @@
                     </label>
                     <div class="hbg_menuwrap hbg_menuwrap-right">
                         <ul class="hbg_menulist hbg_menulist-circle">
-                            <li><a href="<?php echo home_url('/park/'); ?>">公園検索</a></li>
+                            <li><a href="<?php echo home_url('/?search_type=park'); ?>">公園検索</a></li>
                             <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
                             <li><a href="<?php echo home_url('/nursing/'); ?>">運動療育について</a></li>
                             <li><a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a></li>

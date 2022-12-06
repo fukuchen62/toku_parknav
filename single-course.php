@@ -144,11 +144,11 @@
                 <ul>
                     <!-- ベタ打ち -->
                     <li>
-                        <a href="http://toku-parknavi.com/purpose/allday/">一日たっぷり</a>
+                        <a href="<?php echo home_url('/purpose/allday/'); ?>">一日たっぷり</a>
                         <hr>
                     </li>
                     <li>
-                        <a href="http://toku-parknavi.com/purpose/halfday/">半日お手軽</a>
+                        <a href="<?php echo home_url('/purpose/halfday/'); ?>">半日お手軽</a>
                         <hr>
                     </li>
                     <!-- kindに属する種類を一つずつリンクボタンを作成 -->
