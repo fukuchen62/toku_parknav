@@ -244,7 +244,7 @@ function add_individual_stylesheet_script()
     } elseif (is_single()) {
 
         //ニュースの個別ページのCSS（news-content.css）を読み込む
-        wp_enqueue_style('toku_parknav-news-content', get_template_directory_uri() . '/assets/css/news_content.css', array(), false);
+        wp_enqueue_style('toku_parknav-news-content', get_template_directory_uri() . '/assets/css/news-content.css', array(), false);
     }
 
     //----------------------
