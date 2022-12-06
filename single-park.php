@@ -122,6 +122,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <th>備考</th>
+                    <td>
+                        <?php the_field('memo'); ?>
+                    </td>
+                </tr>
+                <tr>
                     <th colspan="2">
                         <div class="map_dummy">
                             <?php the_field('iflame'); ?>
