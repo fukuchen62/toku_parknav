@@ -8,6 +8,11 @@ main {
     overflow-x: hidden;
 }
 
+@media screen and (min-width: 950px) {
+    main {
+        overflow-x: visible;
+    }
+}
 
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
 body {
