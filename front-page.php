@@ -93,7 +93,7 @@
     <section class="bgcolor_cream">
         <h2><span class="h2_first h2_first_pw">こ</span>のサイトについて</h2>
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_about.png" alt="about写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_about.png" alt="about写真">
             <div class="inner_flex">
                 <p class="section_txt">自然豊かな徳島県には、子どもたちが喜ぶ公園がたくさん！
                     「ほかにはどんな公園があるのかな」
@@ -113,7 +113,7 @@
                     「楽しみ方は無限大！！！」
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/about/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                    <a href="<?php echo home_url('/about/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
                         <p>くわしく</p>
                     </a>
                 </div>
@@ -127,14 +127,14 @@
     <section>
         <h2><span class="h2_first h2_first_bg">公</span>園をもっと楽しむ！<br>モデルコース</h2>
         <div class="section_flex_reverse">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_course.svg" alt="course写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_course.svg" alt="course写真">
 
             <div class="inner_flex">
                 <p class="section_txt">半日コース・１日コースで、公園のおすすめの過ごし方を紹介しています。
                     公園に行ったことがない方はもちろん、行ったことがある方も、普段とは違った過ごし方を発見できるチャンスかもしれません。
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/course/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
+                    <a href="<?php echo home_url('/course/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="次の画面へ">
                         <p>一覧へ</p>
                     </a>
                 </div>
@@ -178,14 +178,14 @@
             運動療育と遊具</h2>
 
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_nursing.png" alt="療育写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
 
             <div class="inner_flex">
                 <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
                     発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
                 </p>
                 <div class="next_btn">
-                    <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                    <a href="<?php echo home_url('/nursing/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
                         <p>くわしく</p>
                     </a>
                 </div>
@@ -200,12 +200,12 @@
     <section>
         <h2><span class="h2_first h2_first_pg">ぽ</span>ぽじろうとむしキャッチ！</h2>
         <div class="section_flex_reverse">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="キャラクター画像">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="キャラクター画像">
             <div class="inner_flex">
                 <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
                 <div class="next_btn">
                     <a href="<?php echo home_url('/gamestart/'); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_cream.png" alt="次の画面へ">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="次の画面へ">
                         <p>あそぶ</p>
                     </a>
                 </div>
@@ -219,7 +219,7 @@
     <section class="bgcolor_cream">
         <h2><span class="h2_first h2_first_bw">お</span>知らせ</h2>
         <div class="section_flex">
-            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_news.png" alt="お知らせイラスト">
+            <img class="news_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_news.png" alt="お知らせイラスト">
             <div class="news_article">
                 <a href="<?php echo get_permalink('1') ?>">
                     <div class="news_date">2022.12.13</div>
@@ -232,7 +232,7 @@
                 </a>
             </div>
             <div class="news_next_btn next_btn">
-                <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/next_btn_white.png" alt="次の画面へ">
+                <a href="<?php echo home_url('/newslist/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_white.png" alt="次の画面へ">
                     <p>一覧へ</p>
                 </a>
             </div>

@@ -7,18 +7,18 @@
     <div class="key_bg bgcolor_cream">
 
         <!-- タイトルロゴ -->
-        <h1><img class="key_logo fadeIn" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_logo.png" alt="とくしまGo!Go!パークなび"></h1>
+        <h1><img class="key_logo fadeIn" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_logo.svg" alt="とくしまGo!Go!パークなび"></h1>
         <h1><img class="key_logo_sp fadeIn" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/header_logo.png" alt="とくしまGo!Go!パークなび"></h1>
 
         <!-- キャッチコピー -->
         <img class="key_catch" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_catch.png" alt="あわっこあつまれ！遊び方は無限大">
 
         <!-- 装飾写真 -->
-        <img class="key_photo01" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo01.svg" alt="キービジュアル写真(双子姉妹)">
+        <img class="key_photo01" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo01.png" alt="キービジュアル写真(双子姉妹)">
         <img class="key_photo02" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo02.png" alt="キービジュアル写真(すべり台少年)">
         <img class="key_photo03" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo03.png" alt="キービジュアル写真(乗り物3人兄弟)">
         <img class="key_photo04" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo04.png" alt="キービジュアル写真(グローブジャングル少女)">
-        <img class="key_photo05" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo05.svg" alt="キービジュアル写真(ブランコ少年)">
+        <img class="key_photo05" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo05.png" alt="キービジュアル写真(ブランコ少年)">
         <img class="key_photo06" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-visual/key_photo06.png" alt="キービジュアル写真(3人家族)">
 
         <!-- 丸い飾り -->
@@ -42,6 +42,8 @@
         <div class="sun_box">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun.png" alt="太陽" class="top_sun">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_sun_face.png" alt="太陽の顔" class="top_sun_face">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_grove.png"" alt=" グローブジャングル" class="top_grove">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_seesaw.png"" alt=" シーソー" class="top_seesaw">
         </div>
         <div class="search_inner">
             <img class="search_map" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/search_map.png" alt="検索マップ">
@@ -91,7 +93,7 @@
     <section class="bgcolor_cream">
         <h2><span class="h2_first h2_first_pw">こ</span>のサイトについて</h2>
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_about.svg" alt="about写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_about.png" alt="about写真">
             <div class="inner_flex">
                 <p class="section_txt">自然豊かな徳島県には、子どもたちが喜ぶ公園がたくさん！
                     「ほかにはどんな公園があるのかな」
@@ -176,7 +178,7 @@
             運動療育と遊具</h2>
 
         <div class="section_flex">
-            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_nursing.svg" alt="療育写真">
+            <img class="section_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/top/top_nursing.png" alt="療育写真">
 
             <div class="inner_flex">
                 <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
@@ -247,11 +249,11 @@
 
     <!-- リンク集 -->
     <div class="banner_flex">
-        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner01.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner02.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner03.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner04.png" alt="サイトリンク"></a></div>
-        <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>./assets/img/banner05.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="http://awacamp.site/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner01.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://awa-nolife.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner02.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://arutoku.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner03.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="https://kisyanotabi.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner04.png" alt="サイトリンク"></a></div>
+        <div class="banner"><a href="http://mizutokushima.com/"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/banner05.png" alt="サイトリンク"></a></div>
     </div>
 </main>
 
