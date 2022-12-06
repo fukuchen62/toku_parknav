@@ -1,6 +1,6 @@
 <!-- カード1つ分 -->
 <div class="card_wrap animate">
-    <a class="test" href="<?php the_permalink(); ?>">
+    <a href="<?php the_permalink(); ?>">
 
         <!-- 記事画像 -->
         <?php $img = get_field('park_image_1'); ?>
