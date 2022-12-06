@@ -32,7 +32,7 @@
         </div>
 
         <!-- Q&Aコンテンツ1個分 -->
-        <div class="q_a_wrap">
+        <div class="q_a_innerwrap">
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/question_q.png" alt="クエスチョン画像">
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Q&Aコンテンツ1個分 -->
-        <div class="q_a_wrap">
+        <div class="q_a_innerwrap">
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/question_q.png" alt="クエスチョン画像">
@@ -63,7 +63,7 @@
         </div>
 
         <!-- Q&Aコンテンツ1個分 -->
-        <div class="q_a_wrap">
+        <div class="q_a_innerwrap">
             <!-- 質問 -->
             <div class="q_a_flex">
                 <img class="q_a_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/question_q.png" alt="クエスチョン画像">
