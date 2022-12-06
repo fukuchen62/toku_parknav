@@ -136,7 +136,7 @@
             <img class="section_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_course.svg" alt="course写真">
 
             <div class="inner_flex">
-                <p class="section_txt">半日コース・１日コースで、公園のおすすめの過ごし方を紹介しています。
+                <p class="section_txt">半日コース・１日コースで、公園のおすすめの過ごし方を紹介しています。<br>
                     公園に行ったことがない方はもちろん、行ったことがある方も、普段とは違った過ごし方を発見できるチャンスかもしれません。
                 </p>
                 <div class="next_btn">
@@ -199,7 +199,7 @@
             <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
 
             <div class="inner_flex">
-                <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。
+                <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。<br>
                     発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
                 </p>
                 <div class="next_btn">
@@ -232,7 +232,7 @@
         <div class="section_flex_reverse">
             <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/gamestart_popojiro_2.png" alt="キャラクター画像">
             <div class="inner_flex">
-                <p class="section_txt">このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。このメニューについての概要が入ります。</p>
+                <p class="section_txt">カンタン操作、単純ルールで小さいお子様でも安心して遊べるゲームアプリです。<br>制限時間内に出てくる「むし」をタッチするとスコアが加算され、むしと一緒に登場する「おじゃまむし」をタッチすると時間が減り、時間が0になるとゲームオーバー！<br>目指せ、神レベル！！</p>
                 <div class="next_btn">
                     <a href="<?php echo home_url('/gamestart/'); ?>">
                         <div class="next_btn_frame_box">
