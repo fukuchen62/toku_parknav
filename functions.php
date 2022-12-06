@@ -108,6 +108,9 @@ function add_individual_stylesheet_script()
 
         //トップページのCSS（top.css）を読み込む
         wp_enqueue_style('toku_parknav-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
+
+        //トップページのjs（top.js）を読み込む
+        wp_enqueue_script('toku_parknav-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
     }
 
     //----------------------
