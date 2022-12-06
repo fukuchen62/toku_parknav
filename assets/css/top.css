@@ -27,13 +27,15 @@ a:hover {
     height: auto;
 }
 
+.section_img_popo {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
 .section_txt {
     margin: 30px 20px;
     text-align: left;
-}
-
-.next_btn {
-    margin: 50px auto 0px;
 }
 
 .section_flex_reverse {
@@ -52,6 +54,65 @@ a:hover {
         margin-left: calc(-50vw + 50%);
         margin: 0 calc(50% - 50vw);
     }
+}
+
+/* 各セクションの要素の位置までいったら要素が現れる */
+
+/* .zoomIn {
+    animation-name: zoomInAnime;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomInAnime {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+} */
+
+/* 要素を順番に表示するためのクラス */
+
+.animate {
+    opacity: 0;
+    /* flex: 0 1 30%; */
+    transform: translateY(10px);
+    transition: all 1.0s;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate.show:nth-of-type(1) {
+    transition-delay: 0s;
+}
+
+.animate.show:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+
+.animate.show:nth-of-type(3) {
+    transition-delay: 0.4s;
+}
+
+.animate.show:nth-of-type(4) {
+    transition-delay: 0.5s;
+}
+
+.animate.show:nth-of-type(5) {
+    transition-delay: 0.6s;
 }
 
 /* 以下、h2に装飾をするクラス */
@@ -166,6 +227,7 @@ a:hover {
     position: relative;
     width: 150px;
     height: 100px;
+    margin: 0 auto;
 }
 
 /* 黒い部分全体の位置調整 */
@@ -310,7 +372,7 @@ a:hover {
 
 /* ＝＝＝キービジュアル＝＝＝ */
 
-/* 画面を読み込むと、タイトルロゴが下からフェードインする */
+/* 画面を読み込むと、タイトルロゴが上からフェードインする */
 
 .fadeIn {
     animation: fadeInAnime 1s ease-in-out 1 forwards;
@@ -682,7 +744,28 @@ a:hover {
 }
 
 
-/* 太陽と遊具 TB幅 */
+/* 太陽と遊具 500px幅~ */
+@media screen and (min-width: 500px) {
+    .top_sun, .top_sun_face {
+        width: 20vw;
+        right: 0px;
+    }
+
+    .top_grove {
+        width: 15vw;
+        top: 200px;
+        left: 100px;
+    }
+
+    .top_seesaw {
+        width: 20vw;
+        top: 220px;
+        right: 30px;
+    }
+
+}
+
+/* 太陽と遊具 TB幅~ */
 @media screen and (min-width: 771px) {
     .top_sun, .top_sun_face {
         width: 20vw;
@@ -697,11 +780,32 @@ a:hover {
 
     .top_seesaw {
         width: 20vw;
-        top: 200px;
-        right: 60px;
+        top: 230px;
+        right: 50px;
     }
 
 }
+
+/* 太陽と遊具 1000px幅~ */
+@media screen and (min-width: 1000px) {
+    .top_sun, .top_sun_face {
+        width: 15vw;
+        right: 0px;
+    }
+
+    .top_grove {
+        width: 12vw;
+        top: 200px;
+        left: 50px;
+    }
+
+    .top_seesaw {
+        width: 15vw;
+        top: 270px;
+        right: 30px;
+    }
+}
+
 
 /* 太陽と遊具 PC幅 */
 @media screen and (min-width: 1200px) {
@@ -718,8 +822,8 @@ a:hover {
 
     .top_seesaw {
         width: 15vw;
-        top: 270px;
-        right: -30px;
+        top: 350px;
+        right: -60px;
     }
 }
 
