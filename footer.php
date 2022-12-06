@@ -71,30 +71,65 @@
         </div>
     </div>
 
+    <!-- 豆知識データの取得 -->
+    <?php
+    // 配列をつくってデータ保存
+    $mames = [];
+    $mames_count = 0;
+
+    // サブクエリの発行
+    $args = array(
+        'post_type' => 'mame',
+        'posts_per_page' => 1,
+        'orderby' => 'rand',
+    );
+
+    $the_query = new WP_Query($args);
+
+    if ($the_query->have_posts()) :
+        while ($the_query->have_posts()) :
+            $the_query->the_post();
+
+            // フィールドから豆知識の取得
+            $mm = get_field('mame');
+            // フィールドから取得したデータを配列$mamesに格納
+            $mames[] = $mm;
+            $mames_count++;
+        endwhile;
+        wp_reset_postdata();
+    endif;
+
+    // print_r($mames);
+    ?>
+
+    <!-- js -->
+    <script>
+    // 豆知識の配列を生成
+    let mames = [];
+    //console.log("確認表示");
+
+    // 豆知識を配列$mamesから取り出す
+    <?php
+        for ($i = 0; $i < $mames_count; $i++) {
+            echo "mames[${i}]={text:";
+            echo $mames[$i];
+            echo "};\n";
+        }
+        ?>
+    </script>
+
+
     <!-- ポポ二郎の豆知識 -->
     <div class="popo_trivia hoge">
         <div class="popo_commentset">
             <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+
             <p id="popo_comment" class="popo_comment">
-                <?php
-                $args = array(
-                    'post_type' => 'mame', // 投稿タイプを指定
-                    'orderby' => 'rand', // ランダムで表示
-                    'posts_per_page' => 1, // 表示する記事数
-                );
-                $post_query = new WP_Query($args);
-
-                if ($post_query->have_posts()) :
-                    while ($post_query->have_posts()) : $post_query->the_post();
-                ?>
-
-                        <!-- フィールドの呼び出し -->
-                        <?php the_field('mame'); ?>
-
-                    <?php endwhile; ?>
-                    <!-- ループの終了 -->
-                <?php endif; ?>
+                <?php foreach ($mames as $key => $mame) {
+                    echo $mame;
+                } ?>
             </p>
+
 
 
         </div>
