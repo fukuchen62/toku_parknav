@@ -6,7 +6,7 @@
 
 <!-- キービジュアルの下層ページのブロック -->
 <div class="key_wrap">
-    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/key-under/key_under_about.jpg" alt="キービジュアル">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_under_about.jpg" alt="キービジュアル">
     <div class="key_circle"></div>
 </div>
 
@@ -40,7 +40,7 @@
     <div class="site_char_wrap">
         <div class="char_wrap">
             <div class="cha_img">
-                <img class="about_popo_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_img.png" alt="ぽぽじろう画像">
+                <img class="about_popo_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ぽぽじろう画像">
             </div>
             <div class="about_profile_txt">
                 <p>なまえ：ぽぽじろう</p>
@@ -54,7 +54,7 @@
 
         <div class="char_wrap">
             <div class="cha_img">
-                <img class="about_koro_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/koro.png" alt="ころちゃん画像">
+                <img class="about_koro_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/koro.png" alt="ころちゃん画像">
             </div>
             <div class="about_profile_txt">
                 <p>なまえ：ころちゃん</p>

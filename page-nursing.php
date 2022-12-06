@@ -4,7 +4,7 @@
 
 <!-- キービジュアルのダミーブロック -->
 <div class="key_wrap">
-    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/key-under/key_under_nursing.jpg" alt="キービジュアル">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_under_nursing.jpg" alt="キービジュアル">
     <div class="key_circle"></div>
 </div>
 
@@ -27,12 +27,12 @@
         <!-- 1 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>代表の自己紹介とギフテッドについて教えてください。</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-morden2.JPG" alt="運動療育個別写真１枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-morden2.JPG" alt="運動療育個別写真１枚目">
 
                 <div class="column_flex">
                     <p class="txt">
@@ -45,12 +45,12 @@
         <!-- 2 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>読者の理解を深めるために、そもそも療育とは何か教えていただけますでしょうか？</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-swing3.JPG" alt="運動療育個別写真2枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-swing3.JPG" alt="運動療育個別写真2枚目">
 
                 <div class="column_flex">
                     <p class="txt">療育とは<span class="txt_mark">「治療しながら保育をする」</span>こと。という意味で、様々な障害を持つ子供たちに<span class="txt_mark">それぞれの発達に応じたアプローチ</span>のことを指します。代表的なものでは、音楽療法やモンテッソーリ教育、感覚統合療法などがあります。
@@ -62,12 +62,12 @@
         <!-- 3 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>ギフテッドさんの療育の特色について教えてください。</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-land8.JPG" alt="運動療育個別写真3枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-land8.JPG" alt="運動療育個別写真3枚目">
 
                 <div class="column_flex">
                     <p class="txt">ギフテッド・トレラグループ最大の特徴は、○○療育教室のように療育方針を決めていないところです。子供さんや保護者との面談や体験利用の様子から、<span class="txt_mark">一人一人に対してオーダーメイドで療育プランを組み立て</span>ていきます。そのために私のような元教員(児童指導員)、保育士、作業療法士、理学療法士、心理士などの<span class="txt_mark">専門的な知識や経験、資格を持つ職員が全施設に常勤職員として在籍</span>しています。また我々だけでは、気が付かない視点も当然ありますから定期的に、県外の有名セラピストの先生方にも子供さんの様子を見てもらい指示を仰ぐこともしています。
@@ -79,12 +79,12 @@
         <!-- 4 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>ギフテッドさんでは、療育の目的で公園に行かれていると思いますが、公園を利用するメリットは何でしょうか？</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-land9.JPG" alt="運動療育個別写真4枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-land9.JPG" alt="運動療育個別写真4枚目">
 
                 <div class="column_flex">
                     <p class="txt">発達障害は関係なく、<span class="txt_mark">全ての子供の発達には運動が大切</span>です。我々だって霊長類、哺乳類の動物ですから。しかし現代では子供たちが自由に遊べる空き地や里山などがありません。そもそも親が育った環境もすでにその状況で、親ですら外遊びの経験が乏しいのです。<span class="txt_mark">特に四つ這い姿勢やロープを引くような腕や肩、背中を連動させる遊び</span>が発達段階においてはとても大切です。これらを施設内で訓練することも可能ですが、<span class="txt_mark">より自然に近い形で楽しみながら体を動かせるように公園を活用</span>しています。</p>
@@ -95,13 +95,13 @@
         <!-- 5 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>公園での遊びは療育の観点から子供の発達にどのような役に立っていますか？
                 </h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-climbing2.JPG" alt="運動療育個別写真5枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-climbing2.JPG" alt="運動療育個別写真5枚目">
 
                 <div class="column_flex">
                     <p class="txt">例えばビジョントレーニング（眼球運動）と、手先の訓練は「鬼ごっこ」をすることで育ちます。人間は走っている時全身が上下に揺れます。<span class="txt_mark">揺れているときにものを見ると前庭覚が働くと同時に眼球運動が生じます。</span>たくさん公園で遊ぶ子どもは<span class="txt_mark">運動時に目をたくさん動かすし、公園の遊具での遊びで手をたくさん使います</span>から、自然と身についていきます。ボールを投げたりすることもいいです。
@@ -113,13 +113,13 @@
         <!-- 6 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>ゲームやテレビを見る時間が増えて、子供の外遊び時間は減り、体力の低下につながると言われてますが。
                 </h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-look.JPG" alt="運動療育個別写真6枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-look.JPG" alt="運動療育個別写真6枚目">
 
                 <div class="column_flex">
                     <p class="txt">TV番組やゲームは子どもの興味を引くよう研究され、作られていますので、どうしても子どもたちがそっちにいくのは、当たり前だろうと思います。
@@ -134,12 +134,12 @@
         <!-- 7 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>公園での遊びの中で、発達支援(療育)を意識した遊び方でおすすめの遊具はありますか？</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-swing2.JPG" alt="運動療育個別写真7枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-swing2.JPG" alt="運動療育個別写真7枚目">
 
                 <div class="column_flex">
                     <p class="txt">大切なことは親が干渉しないことです。<span class="txt_mark">「遊び」は子供の学びの時間なのに親が「あれをこんな風に使いなさい」というのが最もいけません。</span>子供は公園に遊びに来ているのに親だけがが鼻息荒く「よーしここで体を鍛えてやるぞ！」なんて考えたらシラケるだけです。子供が使いたい遊具を使いたいだけ使わせてあげましょう。あえておすすめをあげるなら、危なそうな遊び、幼稚園でしたら止められそうな使い方がとても体にはいいです。（笑）
@@ -151,12 +151,12 @@
         <!-- 8 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>家庭内での対応のポイントを教えてください。</h3>
             </div>
 
             <div class="row_flex">
-                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-swing.JPG" alt="運動療育個別写真8枚目">
+                <img class="park_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-swing.JPG" alt="運動療育個別写真8枚目">
 
                 <div class="column_flex">
                     <p class="txt">発達障害は、<span class="txt_mark">自閉スペクトラム症、注意欠如多動性障害、学習障害</span>の３つを指します。診断基準にDSM-5というものがあり、<span class="txt_mark"></span>その中では３障害ともに共通して「そのこと(障害)が原因で明確に困りが出ているか」<span class="txt_mark"></span>と問われています。つまり、単純に<span class="txt_mark">みんなと同じ行動が出来ない、学年の他の子と同じことが出来ていないから＝発達障害ではない</span>のです。決して親や教員の目線で、単に他の子と違うというだけで発達障害と決めつけて『普通になる』ことを目標にせず、親ではなく<span class="txt_mark">本人が何に困っているか</span>をしっかりと確認しましょう。</p>
@@ -167,7 +167,7 @@
         <!-- 9 -->
         <div class="nur_list">
             <div class="title_flex">
-                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>./assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
+                <img class="popo_icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_circle_50.png" alt="ぽぽ次郎アイコン">
                 <h3>療育を受けるためには、どのようにしたらいいでしょうか？手順を教えてください。</h3>
             </div>
 
@@ -183,7 +183,7 @@
 
     <div class="nur_profile_wrap">
         <div class="nur_profile_flex">
-            <img class="nur_profile_img" src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-gifted-profile.jpg" alt="先生のプロフィール写真">
+            <img class="nur_profile_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-gifted-profile.jpg" alt="先生のプロフィール写真">
             <div class="nur_pro_txt">
                 <h4>新田 昌広（にった まさひろ）先生</h4>
                 <p class="txt">株式会社高徳 代表取締役　ギフテッド代表<br>
@@ -199,7 +199,7 @@
             <p>↓ギフテッドのHPへ↓</p>
             <div class="gifted_link">
                 <a href="https://www.kt-gifted.com/" class="gifted_btn">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assets/img/nursing/R-gifted-logo.jpg" alt="ギフテッドのリンク">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/nursing/R-gifted-logo.jpg" alt="ギフテッドのリンク">
                 </a>
             </div>
         </div>
