@@ -125,56 +125,46 @@
 
         <!-- カテゴリバー -->
         <div class="sidebar_box">
-            <?php
-                    // タクソノミーpurposeの要素を取得する
-                    $args = array(
-                        'taxonomy' => 'purpose',
-                    );
-                    $purposes = get_terms($args);
-                    ?>
-            <!-- タクソノミーのメニューボタンを作成 -->
-            <?php if (!empty($purposes)) :
-                    ?>
             <aside class="sidebar">
+                <!-- サイドバーの設計 -->
+                <?php
+                        // タクソノミーpurposeの要素を取得する
+                        $args = array(
+                            'taxonomy' => 'purpose',
+                            'field' => 'slug',
+                            'exclude' => array(10, 11),
+                            //'operator' => 'NOT IN',
+                            'order' => 'ASC'
+                        );
+                        $purposes = get_terms($args);
+                        ?>
+                <!-- タクソノミーのメニューボタンを作成 -->
+                <?php if (!empty($purposes)) : ?>
                 <h3 class="category_ttl">カテゴリ一覧</h3>
                 <ul>
+                    <!-- ベタ打ち -->
+                    <li>
+                        <a href="http://localhost/toku-parknav/purpose/allday/">一日たっぷり</a>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="http://localhost/toku-parknav/purpose/halfday/">半日お手軽</a>
+                        <hr>
+                    </li>
                     <!-- kindに属する種類を一つずつリンクボタンを作成 -->
+                    <!-- 自動取得 -->
                     <?php foreach ($purposes as $key => $purpose) : ?>
                     <li>
                         <a href="<?php echo get_term_link($purpose); ?>">
                             <?php echo $purpose->name; ?>
                         </a>
+                        <hr>
                     </li>
                     <?php endforeach; ?>
-                    <!-- <li><a href="#">たっぷり一日コース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">お手軽半日コース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">BBQコース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">ピクニックコース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">デイキャンプコース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">ボール遊びコース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">水遊びコース</a>
-                        <hr>
-                    </li>
-                    <li><a href="#">遊具遊びコース</a>
-                        <hr>
-                    </li> -->
                 </ul>
             </aside>
-            <?php endif; ?>
         </div>
-    </div>
+        <?php endif; ?>
     </div>
 </main>
 
