@@ -9,8 +9,8 @@
 
 
 <main>
-    <p class="pkz"><?php //echo do_shortcode('[flexy_breadcrumb]');
-                    ?></p>
+    <!-- <p class="pkz"><?php //echo do_shortcode('[flexy_breadcrumb]');
+                        ?></p> -->
 
     <form class="search_wrap">
         <input type="hidden" name="search_type" value="park">

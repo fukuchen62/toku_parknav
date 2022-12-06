@@ -9,7 +9,7 @@
 
 <main>
 
-    <!-- <p class="pkz"><?php //echo do_shortcode('[flexy_breadcrumb]'); 
+    <!-- <p class="pkz"><?php //echo do_shortcode('[flexy_breadcrumb]');
                         ?></p> -->
     <section>
         <h2 class="h2_under">「<?php the_search_query(); ?>」検索結果</h2>
@@ -62,6 +62,7 @@
                     </p>
                 <?php endif; ?>
             </div>
+
         </div>
 
         <div class="inner_under">
