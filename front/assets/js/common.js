@@ -58,7 +58,7 @@ $.fn.clickToggle = function (a, b) {
 
 $('.popo').clickToggle(function () {
 //   // １回目のクリック
-    $(".popo").animate({ "marginLeft": "+=100px", }, 1000);
+    $(".popo").animate({ "marginLeft": "+=60px", }, 1000);
     $(".popo").animate({ "rotate": "0deg", }, 1000);
 }, function () {
 //   // ２回目のクリック
