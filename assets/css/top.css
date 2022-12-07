@@ -7,6 +7,7 @@ main {
     overflow-x: hidden;
 }
 
+/* ブラウザ幅がコンテンツ幅以上になったらoverflow-xを外す */
 @media screen and (min-width: 950px) {
     main {
         overflow-x: visible;
@@ -31,10 +32,11 @@ a:hover {
 }
 
 .section_img {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
+/* ゲームセクションの画像（ぽぽ） */
 .section_img_popo {
     width: 400px;
     height: auto;
@@ -43,8 +45,16 @@ a:hover {
 
 .section_txt {
     margin: 30px 20px;
-    text-align: left;
+    text-align: center;
+    font-weight: bold;
 }
+
+@media screen and (min-width: 771px) {
+    .section_txt {
+        text-align: left;
+    }
+}
+
 
 .section_flex_reverse {
     margin-bottom: 50px;
@@ -52,8 +62,6 @@ a:hover {
 
 .top_separator {
     object-fit: none;
-    /* overflow-x: hidden; */
-    /* display: none; */
 }
 
 /* コンテンツ幅以上 */
@@ -62,7 +70,7 @@ a:hover {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         margin: 0 calc(50% - 50vw);
-        /* overflow-x: unset; */
+        object-fit: cover;
     }
 }
 
@@ -902,22 +910,40 @@ a:hover {
     width: 280px;
 }
 
+/* 日付部分 */
+.news_date {
+    padding-left: 10px;
+    color: #3E3A39;
+    background-color: rgba(57, 189, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* 記事タイトル部分 */
+.news_ttl {
+    padding: 0 5px;
+    border-bottom: 1.5px dashed #3E3A39;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
 /* お知らせの記事を改行して表示 */
 .news_article a {
     display: block;
     margin: 50px 0;
 }
 
-.news_date {
-    font-size: 14px;
-}
+/* メディアクエリ */
+@media screen and (max-width: 771px) {
+    .news_article {
+        margin: 0 20px;
+    }
 
-.news_ttl {
-    font-size: 16px;
-}
-
-/* TB幅以上 */
-@media screen and (min-width: 771px) {
+    .news_date {
+        padding-left: 0;
+    }
 
     /* お知らせの矢印を含めた３つを横並びにして、上下中央に表示させる */
     .news_next_btn {
@@ -929,15 +955,14 @@ a:hover {
         margin: 30px auto;
         text-align: left;
     }
-
-    .news_date {
-        font-size: 16px;
-    }
-
-    .news_ttl {
-        font-size: 20px;
-    }
 }
+
+/* @media screen and (max-width: 950px) {
+    .news_article {
+        margin: 0 20px;
+    }
+} */
+
 
 /* ＝＝＝インスタ＝＝＝ */
 

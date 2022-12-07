@@ -6,6 +6,13 @@ main {
     overflow-x: hidden;
 }
 
+/* ブラウザ幅がコンテンツ幅以上になったらoverflow-xを外す */
+@media screen and (min-width: 951px) {
+    main {
+        overflow-x: visible;
+    }
+}
+
 section {
     /* padding-bottom: 50px; */
     padding-top: 50px;
@@ -28,6 +35,7 @@ a:hover {
     height: auto;
 }
 
+/* ゲームセクションの画像（ぽぽ） */
 .section_img_popo {
     width: 400px;
     height: auto;
@@ -36,7 +44,14 @@ a:hover {
 
 .section_txt {
     margin: 30px 20px;
-    text-align: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 771px) {
+    .section_txt {
+        text-align: left;
+    }
 }
 
 .section_flex_reverse {
@@ -44,8 +59,7 @@ a:hover {
 }
 
 .top_separator {
-    object-fit: cover;
-    overflow: hidden;
+    object-fit: none;
 }
 
 /* コンテンツ幅以上 */
@@ -54,6 +68,7 @@ a:hover {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
         margin: 0 calc(50% - 50vw);
+        object-fit: cover;
     }
 }
 
@@ -661,6 +676,7 @@ a:hover {
 /* ＝＝＝公園検索＝＝＝ */
 
 .search {
+    margin-top: 50px;
     padding-bottom: 0px;
 }
 
@@ -952,22 +968,57 @@ a:hover {
     width: 280px;
 }
 
+.news_article {
+    margin: 0 20px;
+}
+
+/* 日付部分 */
+.news_date {
+    padding-left: 10px;
+    color: #3E3A39;
+    background-color: rgba(57, 189, 255, 0.5);
+    border-radius: 15px 15px 0 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 記事タイトル部分 */
+.news_ttl {
+    padding: 0 5px;
+    border-bottom: 1.5px dashed #3E3A39;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* お知らせの記事を改行して表示 */
 .news_article a {
     display: block;
     margin: 50px 0;
 }
 
-.news_date {
-    font-size: 14px;
-}
-
-.news_ttl {
-    font-size: 16px;
-}
-
-/* TB幅以上 */
+/* メディアクエリ */
 @media screen and (min-width: 771px) {
+
+    .news_article {
+        width: 40%;
+    }
+
+    .news_article {
+        margin: 0 20px;
+    }
+
+    .news_date {
+        padding-left: 10px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .news_ttl {
+        padding: 0 5px;
+        text-align: left;
+        margin: 0 auto;
+    }
 
     /* お知らせの矢印を含めた３つを横並びにして、上下中央に表示させる */
     .news_next_btn {
@@ -977,17 +1028,17 @@ a:hover {
     /* お知らせ記事の表示を整える */
     .news_article a {
         margin: 30px auto;
-        text-align: left;
-    }
-
-    .news_date {
-        font-size: 16px;
-    }
-
-    .news_ttl {
-        font-size: 20px;
     }
 }
+
+/* @media screen and (max-width: 950px) {
+    .news_article {
+        margin: 0 20px;
+    }
+} */
+
+
+
 
 /* ＝＝＝インスタ＝＝＝ */
 
@@ -1020,4 +1071,96 @@ a:hover {
     flex-flow: row wrap;
     gap: 30px;
     margin-top: 50px;
+}
+
+/* ＝＝＝スライダー＝＝＝ */
+.slider .slick-slide {
+    width: 300px;
+    height: 430px;
+    margin: 0 10px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* .slider .slick-slide {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* .slider .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFCE3;
+    cursor: pointer;
+    border: 3px solid #3E3A39;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    /* filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+} */
+
+/* .slider .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #09000d;
+    border-width: 3px 3px 0 0;
+    position: absolute;
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.slider .slick-next {
+    right: -80px;
+}
+
+.slider .slick-prev {
+    left: -80px;
+}
+
+.slider .slick-next::before {
+    left: 20px;
+}
+
+.slider .slick-prev::before {
+    border-width: 0 0 3px 3px;
+    right: 22px;
+} */
+
+.dots .slick-dots {
+    text-align: center;
+}
+
+.dots .slick-dots li {
+    display: inline-block;
+}
+
+.slider_dots .slick-dots button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    font-size: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background: #bcbcbc;
+    border-radius: 50%;
+}
+
+.slider_dots .slick-dots .slick-active button {
+    background: #3E3A39;
+}
+
+.slick-dots {
+    position: relative;
+    bottom: 0;
 }
