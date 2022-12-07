@@ -90,7 +90,7 @@ $parks_count = 0;
                         $parks['lng'][] = $longitude;
                         $parks['text'][] = $text;
 
-                        print_r($parks);
+                        //print_r($parks);
                 ?>
 
             <div class="card_flex">
