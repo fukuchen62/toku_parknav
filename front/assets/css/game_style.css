@@ -16,7 +16,7 @@
 }
 
 .game_size {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     max-width: 950px;
     margin: 0 auto;
@@ -44,6 +44,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 /* ゲーム内でオブジェクトを発生させる位置 */
@@ -54,6 +57,7 @@ header {
     justify-content: center;
     width: 100%;
     height: auto;
+    z-index: 99;
 }
 
 
@@ -72,7 +76,7 @@ header {
     /* height: 80px; */
     text-align: center;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-shadow: 0 0 10px rgb(255, 244, 228);
 }
@@ -133,15 +137,19 @@ header {
 
 /* ゲームオーバー時のスタイル */
 .gameover_position {
-    width: 80%;
+    width: 100%;
     height: auto;
     padding-top: 36px;
     padding-bottom: 36px;
+    padding-left: 5px;
+    padding-right: 5px;
     position: absolute;
 
+    top: 30%;
     left: 0;
-    right: 0;
+
     margin: auto;
+
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -149,14 +157,25 @@ header {
     font-weight: bold;
 
     text-align: center;
-    background-color: rgb(255, 252, 227, 0.5);
+    background-color: rgba(255, 254, 243, 0.84);
     border-radius: 50px;
-    border: solid 1px;
+    /* border: solid 2px; */
+    outline: 2px solid rgb(91, 91, 91);
+    outline-offset: -8px;
+}
+
+.gameover_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .gameover_top {
-    top: 120px;
-    font-size: 16px;
+    /* top: 120px; */
+    font-size: 14px;
 }
 
 /* ゲームオーバー時の選択画面 */
@@ -183,15 +202,26 @@ header {
 /* 表示するオブジェクトの基準の位置を設定 */
 .game_posi {
     position: relative;
-    top: 60px;
+    top: 30px;
+    /* height: 100%; */
 }
 
+/* ぽぽじろう */
+.game_popo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: url(../img/gamestart_popojiro_2.png);
+    max-width: 200px;
+    width: 100%;
+}
 
 /* スタート画面 */
 .game_start {
     /* background-image: url(../img/start1100x840.png); */
     width: 100%;
-    height: 500px;
+    height: auto;
+    /* height: 500px; */
     z-index: 100;
     position: absolute;
     flex-wrap: nowrap;
@@ -199,11 +229,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 .clm {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     /* max-width: 80px; */
     /* max-height: 80px; */
     /* 可視化用に色を付けている */
@@ -334,35 +365,59 @@ header {
 .gameover_medalstyle {
     padding-top: 16px;
     margin: 0 auto;
-    max-width: 120px;
+    /* max-width: 320px;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     display: block;
 }
 
-/* 銅メダル */
-.gameover_medal1 {
-    content: url(../img/game_tgt1_aim_200x200.png);
+/* ビギナー賞 */
+.gameover_medal_beginner {
+    content: url(../img/game_medal_beginner_200x200.png);
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
 }
 
-/* 銀メダル */
+/* ノーマル賞 */
+.gameover_medal_nomal {
+    content: url(../img/game_medal_nomal_200x200.png);
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 銅メダル */
 .gameover_medal1 {
     content: url(../img/game_medal1_200x200.png);
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 /* 銀メダル */
 .gameover_medal2 {
     content: url(../img/game_medal2_200x200.png);
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 /* 金メダル */
 .gameover_medal3 {
     content: url(../img/game_medal3_200x200.png);
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 /* 神メダル */
 .gameover_medal4 {
     content: url(../img/game_medal4_200x200.png);
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
 }
 
 /* 矢印ボタン用 */
@@ -566,8 +621,8 @@ header {
     }
 
     .clm {
-        width: 136px;
-        height: 136px;
+        width: 126px;
+        height: 126px;
         /* max-width: 136px; */
         /* max-height: 136px; */
         /* 可視化用に色を付けている */
@@ -576,8 +631,52 @@ header {
 
 
     .gameover_top {
-        top: 200px;
+        /* top: 150px; */
         font-size: 26px;
+    }
+
+    /* ゲームオーバー時のメダルの要素 */
+    .gameover_medalstyle {
+        padding-top: 16px;
+        margin: 0 auto;
+        /* max-width: 200px;
+        width: 100%;
+        height: 100%; */
+        display: block;
+    }
+
+    /* メダルのサイズ */
+
+    /* 銅メダル */
+    .gameover_medal1 {
+        content: url(../img/game_medal1_200x200.png);
+        max-width: 130px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 銀メダル */
+    .gameover_medal2 {
+        content: url(../img/game_medal2_200x200.png);
+        max-width: 130px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 金メダル */
+    .gameover_medal3 {
+        content: url(../img/game_medal3_200x200.png);
+        max-width: 130px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 神メダル */
+    .gameover_medal4 {
+        content: url(../img/game_medal4_200x200.png);
+        max-width: 130px;
+        width: 100%;
+        height: 100%;
     }
 
 }
@@ -619,7 +718,17 @@ header {
 
 
     .gameover_top {
-        top: 250px;
+        /* top: 200px; */
         font-size: 26px;
+    }
+
+    /* ゲームオーバー時のメダルの要素 */
+    .gameover_medalstyle {
+        padding-top: 16px;
+        margin: 0 auto;
+        /* max-width: 400px;
+        width: 100%;
+        height: 100%; */
+        display: block;
     }
 }

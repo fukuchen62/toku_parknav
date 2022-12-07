@@ -6,18 +6,20 @@
 <section>
     <div class="gamestart_area1">
         <div class="game_titlestyle">
-            <h2><span class="game_h2line_title">ぽぽじろうのむしキャッチ</span></h2>
+            <h2>
+                <img class="game_title_img" src="" alt="ぽぽじろうとむしキャッチ">
+            </h2>
         </div>
     </div>
 </section>
 
 <!-- どんなゲーム -->
 <section>
-    <div class="gamestart_ex1_backskyblue">
-        <div class="gamestart_ex1_2">
+    <div class="gamestart_ex1_backCream">
+        <div class="gamestart_ex1_2_skyblue">
+            <h3><span class="game_h2line">どんなゲームなの？</span></h3>
             <div class="gamestart_explanation">
                 <div>
-                    <h3><span class="game_h2line">どんなゲームなの？</span></h3>
                     <div class="gamestart_explanation_img"></div>
                 </div>
                 <div class="gamestart_popospeech_1">
@@ -38,11 +40,11 @@
 
 <!-- 的紹介 -->
 <section>
-    <div class="gamestart_ex1_backgreen">
-        <div class="gamestart_ex1_2">
+    <div class="gamestart_ex1_backCream">
+        <div class="gamestart_ex1_2_green">
+            <h3><span class="game_h2line">どんな虫がいるの？</span></h3>
             <div class="gamestart_tgt">
                 <div>
-                    <h3><span class="game_h2line">どんな虫がいるの？</span></h3>
                     <p>虫はぜんぶで6しゅるいいるポ！<br>
                         はやくたくさん虫をつかまえるとせいげんじかんによゆうができるポ！</p>
                 </div>
@@ -55,7 +57,7 @@
                     <div class="gamestart_tgtimgbox6"></div>
                 </div>
             </div>
-            <div class="gamestart_tips1">
+            <div class="gamestart_tips2">
                 <h4>特別保護地区</h4>
                 <p>公園によっては、特別保護地区に指定されている場合があります。<br>
                     その場合、昆虫採集などが禁止されていることがありますので、<br>
@@ -67,11 +69,12 @@
 
 <!-- 狙ってはいけない的 -->
 <section>
-    <div class="gamestart_ex1_backskyorange">
-        <div class="gamestart_ex1_2">
+    <div class="gamestart_ex1_backCream">
+        <div class="gamestart_ex1_2_orange">
+            <h3><span class="game_h2line">おじゃまむしはさわっちゃダメ！</span></h3>
             <div class="gamestart_dontaim">
                 <div>
-                    <h3><span class="game_h2line">おじゃまむしはさわっちゃダメ！</span></h3>
+
                     <div class="gamestart_dontaim_style_p">
                         <p>おじゃまむしをつかまえるとじかんがへるポポ。<br>
                             かんきょうをこわしたり、つよい毒をもっているキケンな生き物だポ！</p>
@@ -96,7 +99,7 @@
                 </div>
 
             </div>
-            <div class="gamestart_tips1">
+            <div class="gamestart_tips3">
                 <h4>特定外来生物とは？</h4>
                 <p>飼育、栽培、保管及び運搬することが法律により禁止されている生物のことです。<br>
                     特定の施設でしか飼うことが出来ず、持って帰ることも禁止されています。
@@ -111,9 +114,13 @@
         <div class="gamestart_startbtn_style"><a href="./gameplay.html">ゲームであそぶ</a></div>
     </div> -->
 <div class="gamestart_startbtn_style">
-    <a href="<?php echo home_url('/gameplay/'); ?>">ゲームであそぶ</a>
+    <a target="_blank" href="<?php echo home_url('/gameplay/'); ?> ">ゲームであそぶ</a>
 </div>
 
-<?php //フッターテンプレートファイルを読み込む
-?>
-<?php get_footer(); ?>
+<!-- スクリプト -->
+<script src="./assets/js/slick.min.js"></script>
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/top.js"></script>
+</body>
+
+</html>

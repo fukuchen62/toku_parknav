@@ -364,9 +364,13 @@ function gameScore() {
         if (score < 10) {
             JSgameoverLv.innerHTML = "むしキャッチビギナーレベル";
             JSgameoverLv.style.color = "green";
-
-        } else if (score >= 10 && score < 30) {
+            JSgameoverMedal.classList.add('gameover_medal_beginner');
+        } else if (score >= 10 && score < 20) {
             JSgameoverLv.innerHTML = "むしキャッチノーマルレベル";
+            JSgameoverLv.style.color = "navy";
+            JSgameoverMedal.classList.add('gameover_medal_nomal');
+        } else if (score >= 20 && score < 40) {
+            JSgameoverLv.innerHTML = "むしキャッチミドルレベル";
             JSgameoverLv.style.color = "maroon";
             JSgameoverMedal.classList.add('gameover_medal1');
         } else if (score >= 30 && score < 60) {

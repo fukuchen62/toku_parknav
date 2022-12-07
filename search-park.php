@@ -256,7 +256,7 @@
 
             <?php else : ?>
             <!-- no data -->
-            <p>検索結果がありません</p>
+            <p>条件に合う公園がありません</p>
 
             <?php endif; ?>
         </div>
@@ -266,21 +266,22 @@
 
     </div>
 </main>
+
 <script>
 'use strict';
 
-//全選択・解除のチェックボックス
-let checkbox_all = document.querySelector("#reset-btn");
+//全解除のチェックボックス
+let checkbox_reset = document.querySelector("#reset-btn");
 //チェックボックスのリスト
 let checkbox_list = document.querySelectorAll(".checkbox_list");
 
 //全選択のチェックボックスイベント
-checkbox_all.addEventListener('change', change_all);
+checkbox_reset.addEventListener('change', change_all);
 
 
 function change_all() {
     //チェックされているか
-    if (checkbox_all.checked) {
+    if (checkbox_reset.checked) {
         {
             //全て解除
             for (let i in checkbox_list) {
