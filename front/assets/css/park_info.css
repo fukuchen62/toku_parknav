@@ -283,18 +283,66 @@ td {
     width: 80px;
 }
 
-.footer_dummy {
-    height: 450px;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-    width: 100vw;
-    background-color: darkgray;
-}
-
 .non_bottom_padding {
     padding-bottom: 0;
 }
 
 .prev_btn a p {
     font-size: 16px;
+}
+
+/* ＝＝＝スライダー＝＝＝ */
+.slider .slick-slide {
+    width: 500px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider_area {
+    width: 500px;
+}
+
+.slick-slide {
+    margin: 0 5px;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev, .slick-next {
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #000;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.thumb {
+    margin: 20px 0 0;
+}
+
+.thumb .slick-slide {
+    cursor: pointer;
+}
+
+.thumb .slick-slide:hover {
+    opacity: .7;
 }
