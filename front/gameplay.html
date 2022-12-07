@@ -16,22 +16,29 @@
     <link rel="stylesheet" href="./assets/css/destyle.css">
     <!-- 各CSS -->
     <link rel="stylesheet" href="./assets/css/game_style.css">
-    <title>ぽぽじろうのむしキャッチ</title>
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>ぽぽじろうとむしキャッチ</title>
 </head>
 <body>
+    <!-- Gナビ -->
+    <header>
+
+    </header>
+    <!-- ゲーム本体 -->
     <div class="game_warp">
         <div class="game_backimage">
             <!-- ゲーム範囲調整 -->
             <div class="game_size">
+                <!-- ぽぽじろう -->
+                <div class="game_popo"> </div>
                 <!-- オブジェクトの基準位置 -->
                 <div class=" game_posi">
-                    <!-- 戻るボタン -->
-                    <div>
-                        <!-- <div class="">
-                            <div class="next_btn"></div>
-                            <p>トップにもどる</p>
-                        </div> -->
-                    </div>
+
                     <!-- スタート画面 d-none で要素そのものを非表示 -->
                     <!-- 親要素にflex-startuiを設定してボタンの位置を設定 -->
                     <div id="JS_game_start" class="game_start ">
@@ -60,6 +67,7 @@
                             <div id="JSchoice_reload" class="gameover_morebtn">もういちどあそぶ</div>
                         </div>
                     </div>
+
 
                     <!-- ゲーム処理用 -->
                     <!-- フレックスでオブジェクトの表示位置を指定する -->
@@ -132,15 +140,14 @@
                                 <div id="JSclm3_6" class=""></div>
                             </div>
                         </div>
-                        <!-- 残り時間 -->
 
                     </div>
-
 
                 </div>
                 <!-- ゲームの大きさ指定 -->
             </div>
             <!-- warp終了 -->
+
         </div>
         <!-- ↑画像ここまで -->
     </div>
