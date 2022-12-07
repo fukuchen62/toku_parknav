@@ -45,12 +45,21 @@
                     </li>
                 </ul>
 
-                <?php
-                        $pic = get_field('course_image1');
-                        // 大サイズ画像URL
-                        $pic_url = $pic['sizes']['large'];
-                        ?>
-                <img class="course_top_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
+                <!-- サムネイル画像表示 -->
+                <?php if (has_post_thumbnail()) : ?>
+                <img src="<?php the_post_thumbnail_url() ?>" alt="<?php get_the_title(); ?>" class="course_top_img">
+                <?php else : ?>
+                <img class="course_top_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/uploads/c-dummy.jpg" alt="コース詳細一枚目">
+                <?php endif; ?>
+
+                <!-- <?php
+                                // $pic = get_field('course_image1');
+                                // // 大サイズ画像URL
+                                // $pic_url = $pic['sizes']['large'];
+                                ?>
+                <img class="course_top_img" src="<?php //echo $pic_url;
+                                                    ?>" alt="<?php //echo $pic['alt'];
+                                                                ?>"> -->
 
                 <table>
                     <tr>
