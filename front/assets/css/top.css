@@ -1083,12 +1083,12 @@ a:hover {
     overflow: hidden;
 }
 
-/* .slider .slick-slide {
+.slider .slick-slide {
     display: block;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     object-fit: cover;
-} */
+}
 
 /* .slider .slick-arrow {
     width: 60px;
