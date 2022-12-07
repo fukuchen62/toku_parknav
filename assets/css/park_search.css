@@ -9,6 +9,9 @@
     margin-top: 50px;
     margin-bottom: 50px;
     padding-bottom: 50px;
+    /* 横幅の調整 */
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .search_wrap h2 {
@@ -78,7 +81,7 @@
 /* 項目詳細の要素の調整 */
 .item ul li {
     /* 要素幅の微調整 */
-    width: 150px;
+    width: 180px;
     /* 文字の左詰め */
     text-align: left;
     /* カラム落ちのときにチェックボックスがはみ出さない */
@@ -113,30 +116,38 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 /* 「地域別」の項目詳細の大きさ */
 .item_area ul li {
-    width: auto;
+    width: 180px;
 }
 
 /* ブレイクポイント ******************************/
 /* 表示崩れを防ぐ微調整 */
-@media screen and (min-width: 495px) {
+@media screen and (min-width: 425px) {
 
-    .item_pur ul li,
-    .item_tool ul li {
-        width: 200px;
-        margin-left: 30px;
+    /* 「地域別」 */
+    .item_area ul li {
+        width: auto;
     }
+
 }
 
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 575px) {
 
     .item_pur ul li,
     .item_tool ul li {
         margin-left: 50px;
+    }
+}
+
+@media screen and (min-width: 680px) {
+
+    .item_pur ul li,
+    .item_tool ul li {
+        width: 200px;
     }
 }
 
@@ -187,12 +198,6 @@
     }
 }
 
-/* @media screen and (min-width: 1200px) {
-    .item {
-        width: 800px;
-    }
-} */
-
 
 /* クリア・検索ボタンの設定********************* */
 /* ボタン位置調整・下余白 */
@@ -200,12 +205,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* ボタンデザイン */
 .search_btn {
     font-family: 'Zen Maru Gothic', sans-serif;
-    width: 160px;
+    width: 150px;
     height: 50px;
     border-radius: 20px;
     text-align: center;
@@ -233,6 +240,7 @@
 /* 検索ボタンの設定 */
 .search_btn_search {
     background-color: #fff;
+    margin-top: 15px;
 }
 
 /* 検索ボタンのホバー要素 */
@@ -240,6 +248,34 @@
     color: #fff;
     background-color: rgba(255, 57, 123, 1);
     border-radius: unset;
+}
+
+/* ブレイクポイント************************************* */
+/* 表示崩れを防ぐ微調整 */
+@media screen and (min-width: 425px) {
+
+    .search_btn {
+        width: 250px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 560px) {
+
+    /* ボタンを囲む枠 */
+    .search_btn_wrap {
+        flex-direction: unset;
+    }
+
+    /* ボタンデザイン */
+    .search_btn {
+        width: 170px;
+    }
+
+    /* 検索ボタンの上余白の削除 */
+    .search_btn_search {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 771px) {
