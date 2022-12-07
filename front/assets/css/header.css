@@ -132,7 +132,7 @@ header {
 
 /* 真ん中の円 */
 .hbg_btn-circle {
-    height: 3px;
+    height: 4px;
     width: 25px;
     background: #3E3A39;
     /* 真ん中の線（円）の色 */
@@ -152,7 +152,6 @@ header {
     top: 50%;
     left: 50%;
     transition: .3s;
-    border-radius: 10px;
 }
 
 .hbg_btn-circle:before {
@@ -188,7 +187,7 @@ header {
     position: absolute;
     color: #fff;
     /* ハンバーガーの"×"マークの色 */
-    top: 50%;
+    top: 48%;
     left: 50%;
     margin-top: 7px;
     transform: translate(-50%, -50%);
@@ -216,7 +215,7 @@ header {
 }
 
 /* メニューリスト */
-.hbg_menulist {
+.hbg_menuwrap {
     margin-right: 3%;
     /* !important＝最優先事項 */
     padding-left: 5% !important;
@@ -231,7 +230,7 @@ header {
 }
 
 /* 円を用いたメニューリスト */
-.hbg_menulist-circle li {
+.hbg_menulist-circle li, .hbg_search_box {
     border: 3px solid #3E3A39;
     margin-bottom: 5px;
     border-radius: 2em;
@@ -309,20 +308,21 @@ header {
 
 }
 
+/* 以下、念のため保留 */
 /* ×ボタン対策で検索ボックスの長さを決め打ち */
 .hbg_search_box {
     margin-top: 50px;
-    width: 200px;
+    /* width: 200px; */
 }
 
 /* TB幅以上でボックスの長さを長くする */
 @media (min-width: 771px) {
     .hbg_search_box {
-        width: 400px;
+        /* width: 400px; */
     }
 
     .hbg_form {
-        width: 370px;
+        /* width: 370px; */
     }
 
 }

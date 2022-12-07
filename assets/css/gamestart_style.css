@@ -1,32 +1,5 @@
 @charset "UTF-8";
 
-/* フォントスタイル */
-/* * {
-    font-family: 'Noto Serif JP', serif;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    color: #3E3A39;
-    border: solid 1px;
-}
-*/
-
-/* html { */
-/* padding-left: 110px;
-    padding-right: 110px; */
-/* } */
-
-/* h2 {
-    font-size: 30px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: bold;
-} */
-
-/* h3 {
-    font-size: 25px;
-    font-weight: bold;
-} */
-
 .game_h2line {
     background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
 }
@@ -35,15 +8,22 @@
     font-size: 26px;
 }
 
+
+.game_title_img {
+    width: 100%;
+    content: url(../img/game_titlelogo.png);
+}
+
 .game_titlestyle {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     max-width: 950px;
     /* 中央に置く処理 */
     margin: 0 auto;
     padding-bottom: 16px;
     padding-top: 16px;
+    margin-top: 100px;
 
-    border: 6px dashed #FFA83F;
+    /* border: 6px dashed #FFA83F; */
 }
 
 body {
@@ -62,6 +42,36 @@ body {
     padding-bottom: 30px;
 }
 
+.gamestart_ex1_2_skyblue {
+    width: 100%;
+    height: auto;
+    background-color: rgb(176, 239, 255);
+    padding: 20px;
+    border-radius: 10px;
+    /* 影　下 */
+    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+}
+
+.gamestart_ex1_2_green {
+    width: 100%;
+    height: auto;
+    background-color: rgb(193, 255, 182);
+    padding: 20px;
+    border-radius: 10px;
+    /* 影　下 */
+    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+}
+
+.gamestart_ex1_2_orange {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 173, 154);
+    padding: 20px;
+    border-radius: 10px;
+    /* 影　下 */
+    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+}
+
 .gamestart_ex1_2 {
     width: 100%;
     height: auto;
@@ -71,6 +81,7 @@ body {
     /* 影　下 */
     box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
 }
+
 
 /*################# ゲームの説明1################ */
 
@@ -103,38 +114,14 @@ body {
     margin: 0;
 }
 
-.gamestart_ex1_backgreen {
+.gamestart_ex1_backCream {
     width: 100vw;
     height: auto;
-    background-color: #e6ffe5;
+    background-color: #FFFCE3;
     margin: 0 calc(50% - 50vw);
     padding: 50px calc(50vw - 50% + 8px);
-
-    /* border-bottom: #ffffff 30px dotted; */
-    border-bottom: 20px dashed #FFFFFF;
 }
 
-.gamestart_ex1_backskyblue {
-    width: 100vw;
-    height: auto;
-    background-color: #ddf4ff;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-
-    /* border-bottom: #ffffff 30px dotted; */
-    border-bottom: 20px dashed #FFFFFF;
-}
-
-.gamestart_ex1_backskyorange {
-    width: 100vw;
-    height: auto;
-    background-color: #ffe0c1;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-
-    /* border-bottom: #ffffff 30px dotted; */
-    border-bottom: 20px dashed #FFFFFF;
-}
 
 .gamestart_explanation_img {
     content: url(../img/gamestart_popojiro_2.png);
@@ -142,6 +129,7 @@ body {
     max-width: 400px;
     margin: 0 auto;
 }
+
 
 
 
@@ -153,6 +141,10 @@ body {
     justify-content: center;
 }
 
+.gamestart_tgt p {
+    text-align: left;
+}
+
 .gamestart_tgt div p {
     background-color: hsl(0, 0%, 100%);
     border-radius: 25px;
@@ -160,17 +152,23 @@ body {
     font-size: 24px;
 }
 
+
 .gamestart_tgt_imgbox {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* flex-flow: column; */
+    gap: 10px;
+    padding-bottom: 40px;
 }
+
 
 .gamestart_tgt_imgbox div {
     width: 100%;
-    max-width: 138px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 
@@ -183,7 +181,39 @@ body {
     text-align: left;
 
     /* チェック柄の処理 */
-    background-color: #fff4db;
+    background-color: #e7faff;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
+        -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
+    -webkit-background-size: 10px 10px;
+}
+
+.gamestart_tips2 {
+    margin-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+
+    /* チェック柄の処理 */
+    background-color: #eaffea;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
+        -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
+    -webkit-background-size: 10px 10px;
+}
+
+.gamestart_tips3 {
+    margin-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+
+    /* チェック柄の処理 */
+    background-color: #fff6f2;
     border-radius: 10px;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
         -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
@@ -335,10 +365,15 @@ body {
 /* メディアクエリ */
 /* タブレット */
 @media screen and (min-width: 771px) and (max-width:1199px) {
+    .game_h2line {
+        background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
+        text-align: left;
+        width: 100%;
+    }
+
     .game_h2line_title {
         font-size: 50px;
     }
-
 
     h2 {
         font-size: 30px;
@@ -411,15 +446,16 @@ body {
 
     .gamestart_tgt_imgbox div {
         width: 100%;
-        max-width: 130px;
+        max-width: 120px;
+        max-height: 120px;
     }
 
 
     /* ボタンのスタイル */
     .gamestart_startbtn_style {
         display: block;
-        width: 550px;
-        height: 350px;
+        width: 500px;
+        height: 400px;
         margin: 0 auto;
         line-height: 60px;
 
@@ -439,7 +475,7 @@ body {
         text-decoration: none;
         background: #ffffff;
         text-align: center;
-        border: 1px solid #3E3A39;
+        border: 4px solid #3E3A39;
         color: #3E3A39;
         /* font-size: 10px; */
         font-weight: bold;
@@ -450,6 +486,7 @@ body {
         /* 影 */
         box-shadow: 0px 5px 0 #000;
     }
+
 
     .gamestart_startbtn_style a:hover {
         background: #FFA83F;
@@ -466,6 +503,10 @@ body {
 
 /* PC */
 @media screen and (min-width: 1200px) {
+    .game_h2line {
+        background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
+    }
+
     .game_h2line_title {
         font-size: 50px;
     }
@@ -541,15 +582,15 @@ body {
 
     .gamestart_tgt_imgbox div {
         width: 100%;
-        max-width: 130px;
+        max-width: 120px;
+        max-height: 120px;
     }
-
 
     /* ボタンのスタイル */
     .gamestart_startbtn_style {
         display: block;
-        width: 550px;
-        height: 450px;
+        width: 500px;
+        height: 400px;
         margin: 0 auto;
         line-height: 60px;
 

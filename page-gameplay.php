@@ -7,15 +7,10 @@
         <div class="game_backimage">
             <!-- ゲーム範囲調整 -->
             <div class="game_size">
+                <!-- ぽぽじろう -->
+                <div class="game_popo"> </div>
                 <!-- オブジェクトの基準位置 -->
                 <div class=" game_posi">
-                    <!-- 戻るボタン -->
-                    <div>
-                        <div class="game_totop_btn">
-                            <div class="game_totop_btnimg"></div>
-                            <p>トップにもどる</p>
-                        </div>
-                    </div>
                     <!-- スタート画面 d-none で要素そのものを非表示 -->
                     <!-- 親要素にflex-startuiを設定してボタンの位置を設定 -->
                     <div id="JS_game_start" class="game_start ">
@@ -129,8 +124,4 @@
         </div>
         <!-- ↑画像ここまで -->
     </div>
-
-
-    <?php //フッターテンプレートファイルを読み込む
-    ?>
-    <?php get_footer(); ?>
+    <?php get_footer() ?>
