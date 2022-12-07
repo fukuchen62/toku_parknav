@@ -18,6 +18,7 @@ body {
 }
 
 /* キービジュアルの下層ページ用 */
+
 .key_img {
     object-fit: cover;
     /* object-position: 50% 70%; */

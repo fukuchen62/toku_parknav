@@ -82,3 +82,21 @@ function mame() {
     let r = Math.floor(Math.random() * mame.length); //変数ｒに、0以上1以下のランダムな数字とmameのlength(5）を掛けた結果（小数点を切り捨てた数字）を代入
     document.getElementById("popo_comment").innerHTML = mame[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
 }
+
+
+// slickスライダー
+
+$(function () {
+            $('#JS_slider').slick({
+                // autoplay: true, // 自動でスクロール
+                // autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+                // speed: 5000, // スライドが流れる速度を設定
+                // cssEase: "linear", // スライドの流れ方を等速に設定
+                arrows: true, // 前・次のボタンを表示する
+                dots: true, // ドットナビゲーションを表示する
+                appendDots: $('.slider_dots'), // ドットナビゲーションの生成位置を変更
+                slidesToShow: 6, // 表示させるスライド数
+                centerMode: true, // slidesToShowが奇数のとき、現在のスライドを中央に表示する
+                variableWidth: true, // スライド幅の自動計算を無効化
+            });
+});
