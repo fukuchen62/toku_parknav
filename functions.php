@@ -131,6 +131,8 @@ function add_individual_stylesheet_script()
     } elseif (is_singular('park')) {
 
         // 公園の個別ページのCSS（park_info.css）を読み込む
+        wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
+        wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
         wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/park_info.css', array(), false);
     }
     //----------------------

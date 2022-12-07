@@ -21,16 +21,31 @@
             <h2 class="h2_under"><?php the_title(); ?></h2>
             <div class="row_flex">
                 <div class="slider">
-                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真１枚目">
-                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真2枚目">
-                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真3枚目">
+                    <?php
+                            $pic1 = get_field('park_image_1');
+                            // 大サイズ画像URL
+                            $pic_url1 = $pic1['sizes']['medium'];
+                            ?>
+                    <img class="park_img" src="<?php echo $pic_url1; ?>" alt="<?php echo $pic1['filename']; ?>">
+                    <?php
+                            $pic2 = get_field('park_image_2');
+                            // 大サイズ画像URL
+                            $pic_url2 = $pic2['sizes']['medium'];
+                            ?>
+                    <img class="park_img" src="<?php echo $pic_url2; ?>" alt="<?php echo $pic2['filename']; ?>">
+                    <?php
+                            $pic3 = get_field('park_image_3');
+                            // 大サイズ画像URL
+                            $pic_url3 = $pic3['sizes']['medium'];
+                            ?>
+                    <img class="park_img" src="<?php echo $pic_url3; ?>" alt="<?php echo $pic3['filename']; ?>">
                 </div>
                 <?php
-                        $pic = get_field('park_image_1');
-                        // 大サイズ画像URL
-                        $pic_url = $pic['sizes']['medium'];
+                        // $pic = get_field('park_image_1');
+                        // // 大サイズ画像URL
+                        // $pic_url = $pic['sizes']['medium'];
                         ?>
-                <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>" class="park_img">
+                <!-- <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>" class="park_img"> -->
 
                 <div class="column_flex">
                     <p class="txt"><?php the_content(); ?></p>
