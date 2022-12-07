@@ -12,7 +12,7 @@
     <!-- <p class="pkz"><?php //echo do_shortcode('[flexy_breadcrumb]');
                         ?></p> -->
     <section>
-        <h2 class="h2_under">「<?php the_search_query(); ?>」検索結果</h2>
+        <h2 class="h2_under">「<?php the_search_query(); ?>」の検索結果</h2>
 
         <!-- 公園の検索結果 -->
         <div class="inner_under">
@@ -22,21 +22,24 @@
                 <?php
                 $park = get_search_query();
                 //print_r($park);
-                $args = array(
-                    'post_type' => 'park',
-                    's' => $park,
-                );
 
-                $the_query = new WP_Query($args);
+                if (!empty($park)) {
 
-                if ($the_query->have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
+                    $args = array(
+                        'post_type' => 'park',
+                        's' => $park,
+                    );
+
+                    $the_query = new WP_Query($args);
+
+                    if ($the_query->have_posts()) :
+                        while ($the_query->have_posts()) :
+                            $the_query->the_post();
                 ?>
 
                 <!-- カード1つ分 -->
                 <?php //get_template_part('template-part/loop', 'park')
-                        ?>
+                            ?>
                 <div class="card_wrap">
                     <a href="<?php the_permalink(); ?>">
                         <!-- アイキャッチ -->
@@ -58,9 +61,15 @@
                 <?php endwhile; ?>
                 <?php else : ?>
                 <p class="search_else">
-                        該当する記事はありません。
-                    </p>
+                            該当する公園はありません。
+                        </p>
                 <?php endif; ?>
+
+                <?php } else { ?>
+                <p class="search_else">
+                        該当する公園はありません。
+                    </p>
+                <?php } ?>
             </div>
 
         </div>
@@ -75,21 +84,22 @@
                 $course = get_search_query();
                 //print_r($park);
 
-                $args = array(
-                    'post_type' => 'course',
-                    's' => $course,
-                );
+                if (!empty($course)) {
+                    $args = array(
+                        'post_type' => 'course',
+                        's' => $course,
+                    );
 
-                $the_query = new WP_Query($args);
+                    $the_query = new WP_Query($args);
 
-                if ($the_query->have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
+                    if ($the_query->have_posts()) :
+                        while ($the_query->have_posts()) :
+                            $the_query->the_post();
                 ?>
 
                 <!-- カード1つ分 -->
                 <?php //get_template_part('template-part/loop', 'park')
-                        ?>
+                            ?>
                 <div class="card_wrap">
                     <a href="<?php the_permalink(); ?>">
                         <!-- アイキャッチ -->
@@ -111,9 +121,15 @@
                 <?php endwhile; ?>
                 <?php else : ?>
                 <p class="search_else">
-                        該当する記事はありません。
-                    </p>
+                            該当するコースはありません。
+                        </p>
                 <?php endif; ?>
+
+                <?php } else { ?>
+                <p class="search_else">
+                        該当するコースはありません。
+                    </p>
+                <?php } ?>
             </div>
         </div>
 
