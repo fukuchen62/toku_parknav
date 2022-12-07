@@ -10,14 +10,6 @@ h4 {
     margin-bottom: 15px;
 }
 
-/* メインビジュアルのダミーブロック */
-.mainVisual_dummy {
-    width: 100%;
-    height: 120px;
-    background-color: cadetblue;
-    margin-top: 80px;
-}
-
 /* 記事本文の左右にマージンをとる */
 .txt {
     margin: 0 20px;
@@ -154,11 +146,6 @@ main {
     }
 }
 
-/* 1つ分の記事 */
-.nur_list {
-    /* padding-top: 50px; */
-}
-
 .title_flex {
     display: flex;
     margin-top: 50px;
@@ -199,20 +186,19 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
 }
 
 /* 先生の画像 */
 .nur_profile_img {
     width: auto;
-    height: 150px;
-    margin-bottom: 20px;
-    /* margin: 0 0 0 20px; */
+    width: 120px;
+    height: auto;
 }
 
 .nur_pro_txt {
-    width: 600px;
+    width: auto;
 }
 
 /* 先生の名前 */
@@ -224,22 +210,34 @@ main {
 /* プロフィールテキスト */
 .nur_profile_flex p {
     text-align: left;
+    margin: 0 20px;
 }
 
-/* TB幅 */
-@media screen and (min-width: 771px) {
+/* ブレイクポイント */
+@media screen and (min-width: 850px) {
+    .nur_profile_flex {
+        flex-direction: row;
+        width: 100%;
+    }
 
-    /* プロフィールのテキスト */
-    .nur_profile_flex h4,
-    .nur_profile_flex p {
+    .nur_pro_txt {
+        width: 650px;
+    }
+
+    .nur_pro_txt h4 {
         text-align: left;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .nur_pro_txt p {
+        text-align: left;
+        /* margin-right: 20px; */
     }
 
     /* 先生の画像 */
     .nur_profile_img {
-        margin-right: 30px;
+        margin: 0 auto;
     }
 }
 
