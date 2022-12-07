@@ -20,12 +20,18 @@
         <section>
             <h2 class="h2_under"><?php the_title(); ?></h2>
             <div class="row_flex">
+                <div class="slider">
+                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真１枚目">
+                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真2枚目">
+                    <img class="park_img" src="./assets/img/uploads/p-dummy.jpg" alt="公園詳細個別写真3枚目">
+                </div>
                 <?php
                         $pic = get_field('park_image_1');
                         // 大サイズ画像URL
                         $pic_url = $pic['sizes']['medium'];
                         ?>
-                <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>">
+                <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>" class="park_img">
+
                 <div class="column_flex">
                     <p class="txt"><?php the_content(); ?></p>
                     <div class="icon_flex">
