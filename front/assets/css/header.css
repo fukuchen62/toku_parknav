@@ -63,6 +63,9 @@ header {
     width: 185px;
     height: 40px;
     padding-left: 10px;
+    padding-right: 30px;
+    font-size: 14px;
+    text-align: left;
 }
 
 .head_search {
@@ -296,12 +299,32 @@ header {
     border: none;
 }
 
-.hbg_search {
-    position: relative;
+#clearbutton7::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    /* デフォルトのサーチキャンセルボタンを非表示にする場合 */
 }
 
+.hbg_search {
+    position: relative;
+
+}
+
+/* ×ボタン対策で検索ボックスの長さを決め打ち */
 .hbg_search_box {
     margin-top: 50px;
+    width: 200px;
+}
+
+/* TB幅以上でボックスの長さを長くする */
+@media (min-width: 771px) {
+    .hbg_search_box {
+        width: 400px;
+    }
+
+    .hbg_form {
+        width: 370px;
+    }
+
 }
 
 /* 虫眼鏡アイコンをhead_search（フォームとアイコンをくくるdiv）に対して配置する */
