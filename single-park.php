@@ -117,40 +117,76 @@
                     <td>
                         <?php
                                 $facility = get_field('facility');
-                                //print_r($facility);
+                                // print_r($facility);
 
                                 if (!empty($facility)) {
                                     foreach ($facility as $value) {
-                                        if ($value == 'トイレ') {
-                                            echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon01.svg" alt="トイレ">';
-                        } else if ($value == '授乳室') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon02.svg" alt="授乳室">';
-                        } else if ($value == 'おむつ替え') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon03.svg" alt="おむつ替え">';
-                        } else if ($value == '無料駐車場') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon04.svg" alt="無料駐車場">';
-                        } else if ($value == '有料駐車場') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon05.svg" alt="有料駐車場">';
-                        } else if ($value == 'BBQエリア') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon06.svg" alt="BBQエリア">';
-                        } else if ($value == 'キャンプエリア') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon07.svg" alt="キャンプエリア">';
-                        } else if ($value == '芝生エリア') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon08.svg" alt="芝生エリア">';
-                        } else if ($value == '自動販売機') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon09.svg" alt="自動販売機">';
-                        } else if ($value == '売店') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon10.svg" alt="売店">';
-                        } else if ($value == '屋根付き休憩所') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon11.svg" alt="屋根付き休憩所">';
-                        } else if ($value == 'ユニバーサルデザイン') {
-                        echo '<img src="<?php echo get_template_directory_uri(); ?>/assets/img/park-icon/park_icon12.svg" alt="ユニバーサルデザイン">';
-                        };
-                        };
-                        };
+                                        if (trim($value) == 'トイレ') {
+                                            echo '<img src="';
+                                            echo  get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon10.svg"' . ' alt="トイレ"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '授乳室') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon07.svg"' . ' alt="授乳室"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == 'おむつ替え') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon03.svg"' . ' alt="おむつ替え"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '無料駐車場') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon09.svg"' . ' alt="無料駐車場"' . 'class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '有料駐車場') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon08.svg"' . ' alt="有料駐車場"' . 'class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == 'BBQエリア') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon11.svg"' . ' alt="BBQエリア"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == 'キャンプエリア') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon12.svg"' . ' alt="キャンプエリア"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '芝生エリア') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon01.svg"' . ' alt="芝生エリア"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '自動販売機') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon06.svg"' . ' alt="自動販売機"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '売店') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon04.svg"' . ' alt="売店"' . 'class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == '屋根付き休憩所') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon05.svg"' . ' alt="屋根付き休憩所"' . ' class="park_icon"';
+                                            echo '>';
+                                        } elseif ($value == 'ユニバーサルデザイン') {
+                                            echo '<img src="';
+                                            echo get_template_directory_uri();
+                                            echo '/assets/img/park-icon/park_icon02.svg"' . ' alt="ユニバーサルデザイン"' . 'class="park_icon"';
+                                            echo '>';
+                                        };
+                                    };
+                                };
 
-                        //echo implode('、', $facility);
-                        ?>
+                                //echo implode('、', $facility);
+                                ?>
                     </td>
                 </tr>
                 <tr>

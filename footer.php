@@ -99,7 +99,7 @@
         wp_reset_postdata();
     endif;
 
-    print_r($mames);
+    //print_r($mames);
     ?>
 
     <!-- js -->
