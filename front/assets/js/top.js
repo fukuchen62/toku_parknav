@@ -1,6 +1,6 @@
 'use strict';
 
-// // スクロールに合わせて要素を標示させる(h2)
+// // スクロールに合わせて要素を表示させる(h2)
 
 $(function () {
   const fade_bottom = 100; // 画面下からどの位置でフェードさせるか(px)
@@ -60,4 +60,48 @@ $(function() {
       }
     })
   });
+});
+
+
+// slickスライダー
+
+$(function () {
+            $('#JS_slider').slick({
+                autoplay: true, // 自動でスクロール
+                autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
+                speed: 5000, // スライドが流れる速度を設定
+                cssEase: "linear", // スライドの流れ方を等速に設定
+                arrows: true, // 前・次のボタンを表示する
+                dots: true, // ドットナビゲーションを表示する
+                appendDots: $('.slider_dots'), // ドットナビゲーションの生成位置を変更
+                slidesToShow: 1, // 表示させるスライド数
+                centerMode: true, // slidesToShowが奇数のとき、現在のスライドを中央に表示する
+                variableWidth: true, // スライド幅の自動計算を無効化
+            });
+});
+
+//SP幅（770以下）はslick、TB幅以上は並べて静止画表示
+
+$(function(){
+    function sliderSetting(){
+
+        var width = $(window).width();
+
+        if(width <= 770){
+            $('.slider').not('.slick-initialized').slick({
+                autoplay: true,
+                fade: true,
+                dots: true,
+                arrows: false
+            });
+        } else {
+            $('.slider.slick-initialized').slick('unslick');
+        }
+    }
+
+    sliderSetting();
+
+    $(window).resize( function() {
+        sliderSetting();
+    });
 });
