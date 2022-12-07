@@ -73,25 +73,25 @@ $parks_count = 0;
 
             <!-- カード表示 -->
             <?php
-            if ($the_query->have_posts()) :
-                while ($the_query->have_posts()) :
-                    $the_query->the_post();
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) :
+                        $the_query->the_post();
 
-                    // マップに使用
-                    // フィールドから経度の取得
-                    $latitude = get_field('latitude');
-                    // フィールドから緯度の取得
-                    $longitude = get_field('longitude');
-                    // 公園名の取得
-                    $text = esc_html(get_field('park_name'));
+                        // マップに使用
+                        // フィールドから経度の取得
+                        $latitude = get_field('latitude');
+                        // フィールドから緯度の取得
+                        $longitude = get_field('longitude');
+                        // 公園名の取得
+                        $text = esc_html(get_field('park_name'));
 
-                    // フィールドから取得したデータを配列$parksに格納
-                    $parks['lat'][] = $latitude;
-                    $parks['lng'][] = $longitude;
-                    $parks['text'][] = $text;
+                        // フィールドから取得したデータを配列$parksに格納
+                        $parks['lat'][] = $latitude;
+                        $parks['lng'][] = $longitude;
+                        $parks['text'][] = $text;
 
-                    print_r($parks);
-            ?>
+                        print_r($parks);
+                ?>
 
             <div class="card_flex">
                 <!-- カード型の呼び出し -->
@@ -99,12 +99,11 @@ $parks_count = 0;
             </div>
 
             <?php
-                    $parks_count++;
-                //print_r($parks_count);
-                endwhile;
-                wp_reset_postdata();
-            endif;
-
+                        $parks_count++;
+                    //print_r($parks_count);
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
             } else {
                 // お気に入り登録がない場合
                 echo '<p class="text-center">お気に入りがありません。</p>';
@@ -184,6 +183,7 @@ function initMap() {
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
 </script>
+
 
 <?php //フッターテンプレートファイルを読み込む
 ?>
