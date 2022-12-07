@@ -80,7 +80,7 @@
     // サブクエリの発行
     $args = array(
         'post_type' => 'mame',
-        'posts_per_page' => 1,
+        'posts_per_page' => -1,
         'orderby' => 'rand',
     );
 
@@ -99,23 +99,36 @@
         wp_reset_postdata();
     endif;
 
-    // print_r($mames);
+    print_r($mames);
     ?>
 
     <!-- js -->
-    <script>
+    <script type="text/javascript">
     // 豆知識の配列を生成
+
     let mames = [];
+
+    // let mames = [];
     //console.log("確認表示");
 
     // 豆知識を配列$mamesから取り出す
     <?php
         for ($i = 0; $i < $mames_count; $i++) {
-            echo "mames[${i}]={text:";
+            echo "mames[${i}]='";
             echo $mames[$i];
-            echo "};\n";
+            echo "';\n";
         }
         ?>
+
+    // ランダムに豆知識を表示させる
+
+    function mame() {
+        // 変数mameに配列を代入
+        //変数ｒに、0以上1以下のランダムな数字とmameのlength(5）を掛けた結果（小数点を切り捨てた数字）を代入
+        let r = Math.floor(Math.random() * mames.length);
+
+        document.getElementById("popo_comment").innerHTML = mames[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
+    }
     </script>
 
 
@@ -125,12 +138,12 @@
             <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
 
             <p id="popo_comment" class="popo_comment">
-                <?php foreach ($mames as $key => $mame) {
-                    echo $mame;
-                } ?>
+                <?php
+                // foreach ($mames as $key => $mame) {
+                //     echo $mame;
+                // }
+                ?>
             </p>
-
-
 
         </div>
         <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
