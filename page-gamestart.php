@@ -7,7 +7,7 @@
     <div class="gamestart_area1">
         <div class="game_titlestyle">
             <h2>
-                <img class="game_title_img" src="" alt="ぽぽじろうとむしキャッチ">
+                <img class="game_title_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/game_titlelogo.png" alt="ぽぽじろうとむしキャッチ">
             </h2>
         </div>
     </div>
@@ -114,13 +114,9 @@
         <div class="gamestart_startbtn_style"><a href="./gameplay.html">ゲームであそぶ</a></div>
     </div> -->
 <div class="gamestart_startbtn_style">
-    <a target="_blank" href="<?php echo home_url('/gameplay/'); ?> ">ゲームであそぶ</a>
+    <a href="<?php echo home_url('/gameplay/'); ?> " target="_blank">ゲームであそぶ</a>
 </div>
 
-<!-- スクリプト -->
-<script src="./assets/js/slick.min.js"></script>
-<script src="./assets/js/common.js"></script>
-<script src="./assets/js/top.js"></script>
-</body>
-
-</html>
+<?php //フッターテンプレートファイルを読み込む
+?>
+<?php get_footer(); ?>

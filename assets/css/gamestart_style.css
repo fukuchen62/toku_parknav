@@ -8,10 +8,9 @@
     font-size: 26px;
 }
 
-
 .game_title_img {
     width: 100%;
-    content: url(../img/game_titlelogo.png);
+
 }
 
 .game_titlestyle {
@@ -38,7 +37,7 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-    padding-top: 150px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -81,7 +80,6 @@ body {
     /* 影　下 */
     box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
 }
-
 
 /*################# ゲームの説明1################ */
 
@@ -132,12 +130,11 @@ body {
 
 
 
-
 /* ###############ゲームの説明2############## */
 .gamestart_tgt {
     width: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
     justify-content: center;
 }
 
@@ -152,7 +149,6 @@ body {
     font-size: 24px;
 }
 
-
 .gamestart_tgt_imgbox {
     width: 100%;
     height: auto;
@@ -163,7 +159,6 @@ body {
     gap: 10px;
     padding-bottom: 40px;
 }
-
 
 .gamestart_tgt_imgbox div {
     width: 100%;
@@ -245,6 +240,8 @@ body {
     content: url(../img/game_tgt6_aim_200x200.png);
 }
 
+
+
 .gamestart_dontaim_img1 {
     content: url(../img/game_dontami1_200x200.png);
     position: relative;
@@ -265,7 +262,7 @@ body {
 
 .gamestart_dontaim_img_text {
     text-align: center;
-    font-size: 16px
+    font-size: 12px
 }
 
 /* .gamestart_dontaim_img2 p {
@@ -286,7 +283,7 @@ body {
 .gamestart_dontaim {
     width: 100%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column-reverse;
     justify-content: center;
 }
 
@@ -302,6 +299,7 @@ body {
     border-radius: 25px;
     padding: 16px;
     font-size: 20px;
+    text-align: left;
 }
 
 /* ##################ゲームで遊ぶボタン############## */
@@ -338,7 +336,7 @@ body {
     text-decoration: none;
     background: #ffffff;
     text-align: center;
-    border: 1px solid #3E3A39;
+    border: 4px solid #3E3A39;
     color: #3E3A39;
     /* font-size: 10px; */
     font-weight: bold;
@@ -355,7 +353,7 @@ body {
     color: #3E3A39;
     margin-left: 0px;
     margin-top: 0px;
-    border: 1px solid #3E3A39;
+    border: 4px solid #3E3A39;
     box-shadow: none;
 
     transform: translate3d(0, 5px, 0);
@@ -374,6 +372,7 @@ body {
     .game_h2line_title {
         font-size: 50px;
     }
+
 
     h2 {
         font-size: 30px;
@@ -395,6 +394,7 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: center;
+
     }
 
     .gamestart_dontaim {
@@ -487,17 +487,18 @@ body {
         box-shadow: 0px 5px 0 #000;
     }
 
-
     .gamestart_startbtn_style a:hover {
         background: #FFA83F;
         color: #3E3A39;
         margin-left: 0px;
         margin-top: 0px;
-        border: 1px solid #3E3A39;
+        border: 4px solid #3E3A39;
         box-shadow: none;
 
         transform: translate3d(0, 5px, 0);
     }
+
+
 
 }
 
@@ -532,6 +533,8 @@ body {
         flex-flow: row;
         justify-content: center;
     }
+
+
 
     .gamestart_dontaim {
         font-size: 24px;
@@ -586,6 +589,7 @@ body {
         max-height: 120px;
     }
 
+
     /* ボタンのスタイル */
     .gamestart_startbtn_style {
         display: block;
@@ -610,7 +614,7 @@ body {
         text-decoration: none;
         background: #ffffff;
         text-align: center;
-        border: 1px solid #3E3A39;
+        border: 4px solid #3E3A39;
         color: #3E3A39;
         /* font-size: 10px; */
         font-weight: bold;
@@ -627,7 +631,7 @@ body {
         color: #3E3A39;
         margin-left: 0px;
         margin-top: 0px;
-        border: 1px solid #3E3A39;
+        border: 4px solid #3E3A39;
         box-shadow: none;
 
         transform: translate3d(0, 5px, 0);
