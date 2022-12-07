@@ -109,7 +109,6 @@
                                 <form class="hbg_search" action="index.php" method="get">
                                     <input type="hidden" name="search_type" value="keywords">
                                     <input class="hbg_form" size="300" type="search" name="s" placeholder="キーワードを入力" maxlength="20" value="<?php echo the_search_query(); ?>">
-                                    <!-- <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力"> -->
                                     <input class="hbg_submit fas" type="submit" value="検索">
                                 </form>
 
