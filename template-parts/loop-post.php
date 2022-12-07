@@ -9,6 +9,7 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
         <?php endif; ?>
 
+        <!-- 文章部分の枠 -->
         <div class="card_container">
             <div class="card_inner">
                 <!-- サブタイトル(カテゴリー) -->

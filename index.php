@@ -26,11 +26,8 @@
                 <!-- 記事を取得して$postに代入 -->
                 <?php the_post(); ?>
 
-                <!-- カード -->
-                <div class="card_wrap">
-                    <!-- テンプレートパーツの読み込み -->
-                    <?php get_template_part('template-parts/loop', 'post') ?>
-                </div>
+                <!-- カード型テンプレートパーツの読み込み -->
+                <?php get_template_part('template-parts/loop', 'post') ?>
 
                 <?php endwhile; ?>
                 <!-- ループの終了 -->
