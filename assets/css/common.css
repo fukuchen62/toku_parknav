@@ -19,11 +19,9 @@ body {
 
 /* キービジュアルの下層ページ用 */
 
-.key_img {
+/* .key_img {
     object-fit: cover;
-    /* object-position: 50% 70%; */
     position: relative;
-    /* width: 100vw; */
     width: 100%;
     height: 150px;
     margin-top: 80px;
@@ -39,12 +37,63 @@ body {
     border-radius: 50% 50% 0 0;
     top: 180px;
     z-index: -1;
-    /* 破線を上に表示 */
+
     outline-width: 4.5px;
     outline-style: dashed;
     outline-color: #fff;
     outline-offset: 10px;
+} */
+
+/* 検証 */
+/* キービジュアルの下層ページ用 */
+.key_wrap {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    margin-bottom: 100px;
 }
+
+.key_img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    z-index: -3;
+}
+
+.key_circle {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    top: -50px;
+    left: -3px;
+    z-index: -2;
+
+    /* 検証 */
+    /* border: 4.5px dashed #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; */
+}
+
+.key_circle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 0 0;
+    border: 4.5px dashed #fff;
+    top: -10px;
+    left: -3px;
+    z-index: -1;
+}
+
+
+
+
 
 /* セクションによって、背景色をクリーム色にする */
 .bgcolor_cream {
