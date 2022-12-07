@@ -70,6 +70,7 @@ body {
     border-radius: 50% 50% 0 0;
     top: -50px;
     left: -3px;
+    right: -5px;
     z-index: -2;
 
     /* 検証 */
@@ -88,6 +89,7 @@ body {
     border: 4.5px dashed #fff;
     top: -10px;
     left: -3px;
+    right: -5px;
     z-index: -1;
 }
 
