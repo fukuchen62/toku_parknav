@@ -12,7 +12,7 @@
 
     <section>
         <h2 class="h2_under">お問い合わせ</h2>
-        <p class="txt">サイトについてご不明点などございましたら、こちらからお問い合わせください。</p>
+        <p class="txt">サイトについてご不明点などございましたら、こちらからお問い合わせください。<br>個人情報の取り扱いについては<a href="<?php echo home_url('/privacy/'); ?>">こちら</a>をご覧ください。</p>
 
         <form class="form">
             <?php echo do_shortcode('[contact-form-7 id="281" title="お問い合わせフォーム"]'); ?>
@@ -45,10 +45,10 @@
                 <input type="checkbox" value="consent"><span>同意する</span>
             </div>
 
-            <div class="form_row form_row-center">
-                <button type="submit"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/next_btn_cream.png" alt="送信" class="btn btn-send"></button>
-                <p class="btn_txt">送信</p>
-
+            <div class="contact_btn_wrap">
+                <div class="contact_btn">
+                    <a href="./contact.html">送信</a>
+                </div>
             </div>
         </form> -->
 
