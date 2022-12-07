@@ -86,17 +86,16 @@ function mame() {
 
 // slickスライダー
 
-$(function () {
-            $('#JS_slider').slick({
-                // autoplay: true, // 自動でスクロール
-                // autoplaySpeed: 0, // 自動再生のスライド切り替えまでの時間を設定
-                // speed: 5000, // スライドが流れる速度を設定
-                // cssEase: "linear", // スライドの流れ方を等速に設定
-                arrows: true, // 前・次のボタンを表示する
-                dots: true, // ドットナビゲーションを表示する
-                appendDots: $('.slider_dots'), // ドットナビゲーションの生成位置を変更
-                slidesToShow: 6, // 表示させるスライド数
-                centerMode: true, // slidesToShowが奇数のとき、現在のスライドを中央に表示する
-                variableWidth: true, // スライド幅の自動計算を無効化
-            });
+// $(document).on('ready', function() {
+//   $(".regular").slick({
+//     autoplay: true, // 自動再生を設定
+//     autoplaySpeed: 4000, // 自動再生のスピード（ミリ秒単位）
+//     dots: true // ドットインジケーターの表示
+//   });
+// });
+
+$('.slider').slick({
+    autoplay:true,
+    autoplaySpeed:5000,
+    dots:true,
 });
