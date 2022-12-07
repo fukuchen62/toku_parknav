@@ -7,12 +7,6 @@ main {
     overflow-x: hidden;
 }
 
-@media screen and (min-width: 950px) {
-    main {
-        overflow-x: visible;
-    }
-}
-
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
 body {
     min-width: 300px;
@@ -40,8 +34,8 @@ section {
     padding-top: 50px;
 }
 
-/* 画像(矢印以外)のサイズ等指定 */
-section img {
+/* 遊具画像のサイズ等指定 */
+.toy_img {
     width: 300px;
     margin-bottom: 15px;
     border-radius: 30px;
@@ -53,7 +47,46 @@ section img {
     text-align: left;
 }
 
-/* アイコン２つを横並びにする */
+/* スライダー部分（公園写真３枚）*/
+.slider {
+    margin: 0px auto;
+    width: 300px;
+}
+
+.slider img {
+    height: auto;
+    width: 300px;
+    border-radius: 30px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .slider img {
+        max-width: 480px;
+    }
+
+    .slider {
+        margin: 0px auto;
+        width: 480px;
+    }
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    /* color: #ddd; */
+}
+
+.slick-dots button:before {
+    background: #3E3A39;
+    background-size: contain !important;
+    border-radius: 50%;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+/* アイコン部分 */
 .icon_flex {
     position: relative;
     display: flex;
@@ -61,7 +94,7 @@ section img {
     align-items: center;
     flex-direction: row;
     column-gap: 10px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 /* アイコンにホバーすると説明が出る */
@@ -103,11 +136,6 @@ section img {
     display: inline-block;
     top: -50px;
     left: -40px;
-}
-
-/* お気に入り後の色変更 */
-.blue {
-    color: #39BDFF;
 }
 
 /* アイコンにホバーすると説明が出る */
@@ -158,7 +186,7 @@ section img {
         margin-left: 40px;
     }
 
-    section img {
+    .toy_img {
         width: 480px;
     }
 
@@ -174,21 +202,22 @@ section img {
         margin: 0 auto;
     }
 
-    section img {
+    .toy_img {
         margin-bottom: 0;
     }
 
-    .column_flex {
+    /* .column_flex {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-between;
-    }
+    } */
 
     .row_flex {
         display: flex;
         column-gap: 30px;
         margin: 0 auto;
+        align-items: flex-start;
     }
 
     .txt {
@@ -257,15 +286,10 @@ td {
     padding: 10px;
 }
 
+/* 設備アイコン */
 .park_icon {
     width: 80px;
     border-radius: 0px;
-}
-
-.map_dummy {
-    width: 100%;
-    height: 200px;
-    background-color: darkgray;
 }
 
 
@@ -291,14 +315,6 @@ td {
 
 .pickup_deco {
     width: 80px;
-}
-
-.footer_dummy {
-    height: 450px;
-    margin: 0 calc(50% - 50vw);
-    padding: 50px calc(50vw - 50% + 8px);
-    width: 100vw;
-    background-color: darkgray;
 }
 
 .non_bottom_padding {
