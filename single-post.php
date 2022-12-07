@@ -22,16 +22,22 @@
             <section>
                 <h2 class="h2_under"><?php the_title(); ?></h2>
 
-                <!-- このコースのカテゴリ表示 -->
+                <!-- このコースのカテゴリ表示(リンクなし) -->
                 <ul class="category_post">
-                    <li><?php the_category(); ?></li>
+                    <li><?php $cat = get_the_category();
+                                $cat = $cat[0]; {
+                                    echo $cat->cat_name;
+                                } ?></li>
                 </ul>
 
+                <!-- サムネイル画像表示 -->
                 <?php if (has_post_thumbnail()) : ?>
-                <?php the_post_thumbnail('medium') ?>
+                <?php the_post_thumbnail('small') ?>
                 <?php else : ?>
-                <img class="course_top_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="noimage_600x400">
+
+                <img class="course_top_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/uploads/c-dummy.jpg" alt="コース詳細一枚目">
                 <?php endif; ?>
+
 
                 <p class="txt"><?php the_content(); ?></p>
 
@@ -46,6 +52,7 @@
             <!-- ループの終了 -->
             <?php endif; ?>
         </div>
+
 
         <!-- カテゴリバー -->
         <?php get_sidebar('category') ?>
