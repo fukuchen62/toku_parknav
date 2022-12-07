@@ -105,6 +105,11 @@ section img {
     left: -40px;
 }
 
+/* お気に入り後の色変更 */
+.blue {
+    color: #39BDFF;
+}
+
 /* アイコンにホバーすると説明が出る */
 /* いいね！ボタン（ハート） */
 .iineicon_tooltip {
