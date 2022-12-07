@@ -27,7 +27,21 @@
                 <!-- このコースのカテゴリ表示 -->
                 <ul class="category_post">
                     <li>
-                        <?php the_field("purpose"); ?>
+                        <?php //the_field("purpose");
+                                ?>
+                        <?php
+                                $taxonomy_slug = 'purpose'; // 任意のタクソノミースラッグを指定
+                                $category_terms = wp_get_object_terms($post->ID, $taxonomy_slug); // タームの情報を取得
+                                if (!empty($category_terms)) { // 変数が空でなければ true
+                                    if (!is_wp_error($category_terms)) { // 変数が WordPress Error でなければ true
+                                        echo '<ul>';
+                                        foreach ($category_terms as $category_term) { // タームのループを開始
+                                            echo '#' .  $category_term->name . ' ';
+                                        } // ループの終了
+                                        echo '</ul>';
+                                    }
+                                }
+                                ?>
                     </li>
                 </ul>
 
