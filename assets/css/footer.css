@@ -157,6 +157,7 @@ footer {
     z-index: 500;
     cursor: pointer;
     rotate: 45deg;
+    background-color: none;
 }
 
 /* TB幅以上 */
