@@ -30,36 +30,38 @@ section {
     border-radius: 30px;
 }
 
-/* 記事本文 */
+/* 記事本文の左右にマージンをとる */
 .txt {
-    width: 300px;
+    margin: 0 20px;
     text-align: left;
-    margin: 0 auto;
 }
 
-@media screen and (min-width: 540px) {
-    .toy_img, .park_img, .slider img {
+/* TB幅 */
+@media screen and (min-width: 771px) {
+
+    .pkz {
+        margin-left: 40px;
+    }
+
+    .toy_img {
         width: 480px;
     }
 
     .txt {
-        width: 480px;
-    }
-}
-
-@media screen and (min-width: 660px) {
-
-    .toy_img, .park_img, .slider img {
-        width: 600px;
+        margin: 0 40px;
     }
 
-    .txt {
-        width: 600px;
-    }
 }
 
 /* PC幅 */
 @media screen and (min-width: 1200px) {
+    .pkz {
+        margin: 0 auto;
+    }
+
+    .toy_img {
+        margin-bottom: 0;
+    }
 
     .row_flex {
         display: flex;
@@ -68,14 +70,12 @@ section {
         align-items: flex-start;
     }
 
-    .toy_img, .park_img, .slider img {
-        width: 480px;
+    .txt {
+        margin: 0;
     }
 
-    .txt {
-        width: 440px;
-    }
 }
+
 
 
 
@@ -89,6 +89,18 @@ section {
     height: auto;
     width: 300px;
     border-radius: 30px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .slider img {
+        max-width: 480px;
+    }
+
+    .slider {
+        margin: 0px auto;
+        width: 480px;
+    }
 }
 
 
@@ -106,17 +118,6 @@ section {
     padding-bottom: 20px;
 }
 
-/* TB幅 */
-@media screen and (min-width: 540px) {
-    .slider img {
-        width: 480px;
-    }
-
-    .slider {
-        margin: 0px auto;
-        width: 480px;
-    }
-}
 
 
 
@@ -238,7 +239,13 @@ section {
     }
 }
 
-/* 遊具ごとの区切り線 */
+
+/* リスト要素の間に余白をとる */
+.row_flex+.row_flex {
+    padding-top: 50px;
+}
+
+
 /* フォントオーサムの設定 */
 .row_flex h4 {
     text-decoration: 10px underline solid rgba(255, 56, 122, 0.5);
@@ -268,26 +275,24 @@ section {
     border-bottom: none;
 }
 
-/* リスト要素の間に余白をとる */
-.row_flex+.row_flex {
-    padding-top: 50px;
-}
+
 
 /* ＝＝＝基本情報のセクション＝＝＝ */
+
 
 /* テーブルの成形 */
 table {
     width: 90%;
     font-size: 14px;
     margin: 0 auto;
-    /* border: #3E3A39 2px solid; */
+    border: #3E3A39 2px solid;
     padding: 10px;
     border-collapse: separate;
     border-spacing: 5px;
     border-radius: 20px;
     overflow: hidden;
     table-layout: fixed;
-    background-color: rgba(255, 252, 227);
+    background-color: #FFFCE3;
 }
 
 tr {
@@ -330,18 +335,15 @@ td {
 
 /* PC幅 */
 @media screen and (min-width: 1200px) {
-    table {
-        width: 950px;
-    }
-
     th {
-        width: 15%;
+        width: 20%;
     }
 
     td {
         width: 70%;
     }
 }
+
 
 /* ＝＝＝コースや近くの公園のリンクのセクション~フッター＝＝＝ */
 
