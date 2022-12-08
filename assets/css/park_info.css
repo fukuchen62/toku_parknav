@@ -279,12 +279,12 @@ section {
     color: #3E3A39;
 }
 
-li {
+.toy_underline {
     padding-bottom: 50px;
     border-bottom: 2px dashed rgba(62, 58, 57, 0.3);
 }
 
-li:last-child {
+.toy_underline:last-child {
     padding: 0;
     border-bottom: none;
 }

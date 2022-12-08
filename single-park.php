@@ -82,7 +82,7 @@
                             ?>
 
                 <?php if ($pic != '') : ?>
-                <li class="row_flex">
+                <li class="row_flex toy_underline">
                     <img class="toy_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
                     <div>
                         <h4><span class="writing_pen_img"></span><?php echo $playground_name ?></h4>

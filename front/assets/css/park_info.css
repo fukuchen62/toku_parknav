@@ -243,6 +243,16 @@ section {
 }
 
 
+.toy_underline {
+    padding-bottom: 50px;
+    border-bottom: 2px dashed rgba(62, 58, 57, 0.3);
+}
+
+.toy_underline:last-child {
+    padding: 0;
+    border-bottom: none;
+}
+
 /* リスト要素の間に余白をとる */
 .row_flex+.row_flex {
     padding-top: 50px;
