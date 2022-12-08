@@ -104,9 +104,16 @@ section {
     font-weight: bold;
     border: 2px solid #3E3A39;
     cursor: pointer;
-    background-color: #39BDFF;
-    color: #fff;
+    background-color: rgba(57, 189, 255, 0.5);
+    color: #3E3A39;
     margin: 0 auto;
+}
+
+.contact_btn:hover {
+    color: #fff;
+    background-color: #39bdff;
+    /* background-color: #ccc; */
+    border-radius: unset;
 }
 
 /* TB幅以上 */

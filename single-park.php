@@ -228,30 +228,36 @@
         <?php endif; ?>
 
         <section>
+            <?php
+            $course = get_field('course_id');
+
+            if (!empty($course)) {
+            ?>
             <h3>
-                この公園はこちらの記事でも<br>紹介しています
-            </h3>
+                    この公園はこちらの記事でも<br>紹介しています
+                </h3>
             <!-- card_flexの指定 -->
             <div class="card_flex">
                 <?php
-                $course = get_field('course_id');
-                $args = array(
-                    'post_type' => 'course',
-                    'p' => $course,
-                );
+                    $course = get_field('course_id');
+                    $args = array(
+                        'post_type' => 'course',
+                        'p' => $course,
+                    );
 
-                $the_query = new WP_Query($args);
+                    $the_query = new WP_Query($args);
 
-                if ($the_query->have_posts()) :
-                    while ($the_query->have_posts()) :
-                        $the_query->the_post();
-                ?>
+                    if ($the_query->have_posts()) :
+                        while ($the_query->have_posts()) :
+                            $the_query->the_post();
+                    ?>
 
                 <?php get_template_part('template-parts/loop', 'course') ?>
 
                 <?php endwhile; ?>
                 <!-- ループの終了 -->
                 <?php endif; ?>
+                <?php } ?>
             </div>
     </div>
 

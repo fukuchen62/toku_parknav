@@ -119,22 +119,28 @@
 
             <!-- 関連する公園ページの出力 -->
             <section>
+                <?php
+                $park = get_field('park_id');
+                ?>
+
                 <h3>ここで紹介した公園の<br>詳細情報はこちら</h3>
 
                 <!-- card_flexの指定 -->
                 <div class="card_flex">
                     <?php
-                    $park = get_field('park_id');
-                    $args = array(
-                        'post_type' => 'park',
-                        'p' => $park,
-                    );
+                    //$park = get_field('park_id');
 
-                    $the_query = new WP_Query($args);
+                    if (!empty($park)) {
+                        $args = array(
+                            'post_type' => 'park',
+                            'p' => $park,
+                        );
 
-                    if ($the_query->have_posts()) :
-                        while ($the_query->have_posts()) :
-                            $the_query->the_post();
+                        $the_query = new WP_Query($args);
+
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) :
+                                $the_query->the_post();
                     ?>
 
                     <!-- カード1つ分 -->
@@ -142,6 +148,8 @@
 
                     <?php endwhile; ?>
                     <?php endif; ?>
+                    <?php }; ?>
+
                 </div>
             </section>
         </div>
