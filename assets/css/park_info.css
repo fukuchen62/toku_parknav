@@ -292,6 +292,7 @@ table {
     border-radius: 20px;
     overflow: hidden;
     table-layout: fixed;
+    background-color: #FFFCE3;
 }
 
 tr {
