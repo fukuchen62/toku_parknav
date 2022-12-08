@@ -78,13 +78,13 @@ main {
 /* 南部ボタン */
 .search_btn:nth-child(2) {
     background-color: #FFEB39;
-    color: #fff;
     margin-bottom: 20px;
 }
 
 /* 西部ボタン */
 .search_btn:nth-child(3) {
     background-color: #39BDFF;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -110,6 +110,7 @@ main {
 /* 条件検索ボタン */
 .search_btn_terms {
     background-color: #FFFCE3;
+    margin-bottom: 20px;
 }
 
 /* メディアクエリ */

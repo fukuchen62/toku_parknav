@@ -7,7 +7,10 @@ header {
 .head_bg {
     width: 100vw;
     height: 80px;
+    /* background-color: rgba(111, 207, 254, 0.5); */
     background-color: rgba(255, 252, 227, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* background-color: rgba(48, 145, 57, 0.5); */
     position: fixed;
     top: 0;
     left: 0;
@@ -24,11 +27,16 @@ header {
 
 .head_menu_item {
     display: none;
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+        -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+        0px 1px 0 #FFF, 0-1px 0 #FFF,
+        -1px 0 0 #FFF, 1px 0 0 #FFF;
+
 }
 
 .head_logo {
     width: 130px;
-    margin-left: 20px;
+    margin: 10px 30px;
 }
 
 /* PC幅 */
@@ -37,7 +45,7 @@ header {
         max-width: 1200px;
         z-index: 100;
         /* 要素を中央配置にする */
-        margin: 10px auto 0;
+        margin: 0px auto 0;
         text-align: center;
         display: flex;
         justify-content: space-between;
@@ -47,7 +55,7 @@ header {
 
     .head_menu_item {
         display: block;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.18em;
     }
 
     .head_logo {
@@ -66,6 +74,10 @@ header {
     padding-right: 30px;
     font-size: 14px;
     text-align: left;
+}
+
+.head_form:focus {
+    background-color: rgba(255, 56, 122, 0.2);
 }
 
 .head_search {
@@ -101,7 +113,7 @@ header {
 .hbg_btn {
     cursor: pointer;
     position: absolute;
-    right: 3%;
+    right: 30px;
     top: 0;
     z-index: 9999;
     width: 4em;
@@ -127,12 +139,14 @@ header {
     border: 2px solid #333;
     /* 外側の円（枠線）の色 */
     border-radius: 50%;
+    /* ハンバーガーボタンの中の色 */
     background-color: #fff;
+
 }
 
 /* 真ん中の円 */
 .hbg_btn-circle {
-    height: 4px;
+    height: 3px;
     width: 25px;
     background: #3E3A39;
     /* 真ん中の線（円）の色 */
@@ -155,15 +169,15 @@ header {
 }
 
 .hbg_btn-circle:before {
-    border-top: 4px solid #3E3A39;
+    border-top: 3px solid #3E3A39;
     /* ハンバーガーアイコン上側の線の色 */
-    transform: translate(-50%, -300%);
+    transform: translate(-50%, -350%);
 }
 
 .hbg_btn-circle:after {
-    border-bottom: 4px solid #3E3A39;
+    border-bottom: 3px solid #3E3A39;
     /* ハンバーガーアイコン下側の線の色 */
-    transform: translate(-50%, 200%);
+    transform: translate(-50%, 250%);
 }
 
 /* アイコン･アニメーション */

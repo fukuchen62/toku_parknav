@@ -4,7 +4,7 @@
 
 <!-- キービジュアル -->
 <div class="key_wrap">
-    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_img.jpg" alt="">
+    <img class="key_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/key-under/key_under_single_post.jpg" alt="キービジュアル写真">
     <div class="key_circle"></div>
 </div>
 
@@ -31,26 +31,17 @@
                 </ul>
 
                 <!-- サムネイル画像表示 -->
-                <?php if (has_post_thumbnail()) :
-                        ?>
-
-                <?php the_post_thumbnail(
-                                'medium', /* 任意の画像サイズ */
-                                array(
-                                    'class' => 'course_top_img'
-                                )
-                            );
-                            ?>
-
-                <?php else :
-                        ?>
-                <img class="course_top_img" src="<?php echo get_template_directory_uri();
-                                                                ?>/assets/img/uploads/c-dummy.jpg" alt="コース詳細一枚目">
-
+                <!-- サムネイル画像表示 -->
+                <?php if (has_post_thumbnail()) : ?>
+                <img class="course_top_img" src="<?php the_post_thumbnail_url() ?>" alt="<?php get_the_title(); ?>">
+                <?php else : ?>
+                <img class="course_top_img" src="<?php echo get_template_directory_uri(); ?>/assets/img/uploads/c-dummy.jpg" alt="コース詳細一枚目">
                 <?php endif; ?>
 
                 <!-- 記事テキスト -->
-                <p class="txt"><?php the_content(); ?></p>
+                <div class="txt">
+                    <?php the_content(); ?>
+                </div>
 
                 <!-- いいね！ボタン -->
                 <div class="iineicon_tooltip">

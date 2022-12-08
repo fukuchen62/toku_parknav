@@ -31,11 +31,12 @@ header {
         -1px 1px 0 #FFF, 1px -1px 0 #FFF,
         0px 1px 0 #FFF, 0-1px 0 #FFF,
         -1px 0 0 #FFF, 1px 0 0 #FFF;
+
 }
 
 .head_logo {
     width: 130px;
-    margin-left: 20px;
+    margin: 10px 30px;
 }
 
 /* PC幅 */
@@ -44,18 +45,17 @@ header {
         max-width: 1200px;
         z-index: 100;
         /* 要素を中央配置にする */
-        margin: 10px auto 0;
+        margin: 0px auto 0;
         text-align: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         gap: 10px;
     }
 
     .head_menu_item {
         display: block;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.18em;
     }
 
     .head_logo {
@@ -76,8 +76,8 @@ header {
     text-align: left;
 }
 
-input:focus {
-    background-color: #FFFCE3;
+.head_form:focus {
+    background-color: rgba(255, 56, 122, 0.2);
 }
 
 .head_search {
@@ -139,7 +139,8 @@ input:focus {
     border: 2px solid #333;
     /* 外側の円（枠線）の色 */
     border-radius: 50%;
-    /* background-color: #fff; */
+    /* ハンバーガーボタンの中の色 */
+    background-color: #fff;
 
 }
 
