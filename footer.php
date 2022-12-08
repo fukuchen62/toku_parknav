@@ -122,7 +122,7 @@
 
     // ランダムに豆知識を表示させる
 
-    function mame() {
+    function msgOutput() {
         // 変数mameに配列を代入
         //変数ｒに、0以上1以下のランダムな数字とmameのlength(5）を掛けた結果（小数点を切り捨てた数字）を代入
         let r = Math.floor(Math.random() * mames.length);
@@ -147,7 +147,7 @@
 
         </div>
         <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
-        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ポポじろう">
     </div>
 
     <!-- トップへ戻るボタン -->
