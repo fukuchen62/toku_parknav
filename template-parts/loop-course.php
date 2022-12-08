@@ -8,15 +8,36 @@
 
         <!-- 文章部分の枠 -->
         <div class="card_container">
-            <div class="card_inner">
-                <!-- メインタイトル -->
-                <h2 class="card_ttl "><?php the_title(); ?></h2>
-                <!-- 記事本文 -->
-                <div class="card_txt ">
-                    <?php the_excerpt(); ?>
-                    <!-- <p>2022年8月にリニューアルされたレインボーオアシスパーク。吉野川ハイウェイオアシスに併設されているため、旅の途中でも寄りや…
-                    </p> -->
-                </div>
+            <!-- メインタイトル -->
+            <div class="card_ttl">
+                <h2>
+                    <?php
+                    // 文字数制限の設定
+                    $ttl = get_the_title();
+                    if (mb_strlen($ttl) >= 20) {
+                        $title = mb_substr($ttl, 0, 20) . "…";
+                    } else {
+                        $title = $ttl;
+                    }
+                    echo $title;
+                    ?>
+                </h2>
+            </div>
+
+            <!-- 記事本文 -->
+            <div class="card_txt">
+                <p>
+                    <?php
+                    // 文字数制限の設定
+                    $exc = get_the_excerpt();
+                    if (mb_strlen($exc) >= 75) {
+                        $except = mb_substr($exc, 0, 75) . "…";
+                    } else {
+                        $except = $exc;
+                    }
+                    echo $except;
+                    ?>
+                </p>
             </div>
         </div>
     </a>
