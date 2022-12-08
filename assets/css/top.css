@@ -14,6 +14,19 @@ main {
     }
 }
 
+/* ブラウザ幅がコンテンツ幅以下で左右のマージンをとる */
+.margin_inner {
+    margin: 0 30px;
+}
+
+/* ブラウザ幅がコンテンツ幅以上になったら左右のマージンを外す */
+@media screen and (min-width: 950px) {
+    .margin_inner {
+        margin: 0 auto;
+    }
+}
+
+
 section {
     /* padding-bottom: 50px; */
     padding-top: 50px;
@@ -38,13 +51,13 @@ a:hover {
 
 /* ゲームセクションの画像（ぽぽ） */
 .section_img_popo {
-    width: 400px;
+    width: 50%;
     height: auto;
     object-fit: cover;
 }
 
 .section_txt {
-    margin: 30px 20px;
+    margin: 30px 0px;
     text-align: center;
     font-weight: bold;
 }
@@ -973,12 +986,13 @@ a:hover {
     border: #3E3A39 2px solid;
     border-radius: 30px;
     background-color: #FFFCE3;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 951px) {
     .insta_box {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 auto;
     }
 }
 
