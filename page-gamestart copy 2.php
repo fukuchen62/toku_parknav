@@ -23,7 +23,7 @@
                     <div class="gamestart_explanation_img"></div>
                 </div>
                 <div class="gamestart_popospeech_1">
-                    <p>せいげんじかんまでに虫をたくさんタップしてつかまえるポポ！<br>
+                    <p>せいげんじかんまでにたくさん虫をタップしてつかまえるポポ！<br>
                         虫をつかまえるとじかんがちょっとふえるポ。でもおじゃまムシをつかまえるとじかんがへるポポ。
                     </p>
                 </div>
