@@ -44,13 +44,12 @@ header {
         max-width: 1200px;
         z-index: 100;
         /* 要素を中央配置にする */
-        margin: 0 auto;
+        margin: 10px auto 0;
         text-align: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        display: table-cell;
-        vertical-align: middle;
+
         gap: 10px;
     }
 
