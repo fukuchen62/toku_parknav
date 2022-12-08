@@ -3,6 +3,7 @@
 //全体を管理するための変数
 let game_flg = 0;
 let executionInterval = 1000;
+let game_stopflg = 0; //0動いている 1止まっている
 
 // スタートのカウント
 let startCount = 4;
@@ -24,6 +25,11 @@ let tgtArray_1 = [
     0, 0, 0, 0, 0, 0
 ];
 // ############各種IDの取得##########
+// ポーズメニュー
+let JSgameStop = document.getElementById('JS_gameStop');
+let JSgameStopBtn = document.getElementById('JS_gameStopbtn');
+let JSgameChoiceRestart  = document.getElementById('JS_gameChoiceRestart');
+
 let JSgame = document.getElementById('JS_game');
 //let JSgame2 = document.getElementById('JS_game2');
 //let JSgame3 = document.getElementById('JS_game3');
@@ -55,6 +61,7 @@ let JSgameoverMedal = document.getElementById('JS_gameover_Medal');
 // ゲームオーバー時の選択
 let JSgameoverchoice = document.getElementById('JSgameover_choice');
 let JSchoiceReload = document.getElementById('JSchoice_reload');
+let JSchoiceClose = document.getElementById('JSchoice_close');
 
 // 現在のスコア
 let score = 0;
@@ -391,103 +398,127 @@ function gameScore() {
 
 // idをfor文で回して、tgtをクリックしたか判定する処理
 function idLoopclick() {
-        for (let i = 0; i < 18; i++) {
-            // IDをクリックしただけの判定
-            let element = document.getElementById(tgtID[i]);
-            element.onclick = function () {
-                // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                if (element.className === 'clm_tgt_aim') {
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt_aim');
+    for (let i = 0; i < 18; i++) {
+                if (game_stopflg === 0) {
+                    // IDをクリックしただけの判定
+                    let element = document.getElementById(tgtID[i]);
+                    element.onclick = function () {
+                        // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                        if (element.className === 'clm_tgt_aim') {
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt_aim');
 
-                } else if (element.className === 'clm_tgt2_aim') {
-                    // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt2_aim');
-                }
-                else if (element.className === 'clm_tgt3_aim') {
-                // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt3_aim');
-                }
-                else if (element.className === 'clm_tgt4_aim') {
-                // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt4_aim');
-                }
-                else if (element.className === 'clm_tgt5_aim') {
-                    // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt5_aim');
-                }
-                else if (element.className === 'clm_tgt6_aim') {
-                    // clm_tgt_aimクラスを含む要素をクリックしたときの処理
-                    // スコアを＋1
-                    score = score + 1;
-                    timelimit = timelimit + 1;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt6_aim');
-                }
-//##############################狙ってはいけない的をクリックした処理#######################
-                else if (element.className == 'clm_tgt_dontaim') {
-                    dontaim_score = dontaim_score + 1;
-                    timelimit = timelimit - 3;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt_dontaim');
-                }
-                else if (element.className == 'clm_tgt_dontaim2') {
-                    //狙ってはいけない的をクリックした処理
-                    dontaim_score = dontaim_score + 1;
-                    timelimit = timelimit - 3;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt_dontaim2');
-                }
-                else if (element.className == 'clm_tgt_dontaim3') {
-                    //狙ってはいけない的をクリックした処理
-                    dontaim_score = dontaim_score + 1;
-                    timelimit = timelimit - 3;
-                    jstimelimit.innerHTML = timelimit;
-                    // クラスの追加と削除
-                    element.classList.add('clm_tgt_dnone');
-                    element.classList.remove('clm_tgt_dontaim3');
-                }
+                        } else if (element.className === 'clm_tgt2_aim') {
+                            // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt2_aim');
+                        }
+                        else if (element.className === 'clm_tgt3_aim') {
+                            // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt3_aim');
+                        }
+                        else if (element.className === 'clm_tgt4_aim') {
+                            // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt4_aim');
+                        }
+                        else if (element.className === 'clm_tgt5_aim') {
+                            // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt5_aim');
+                        }
+                        else if (element.className === 'clm_tgt6_aim') {
+                            // clm_tgt_aimクラスを含む要素をクリックしたときの処理
+                            // スコアを＋1
+                            score = score + 1;
+                            timelimit = timelimit + 1;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt6_aim');
+                        }
+                        //##############################狙ってはいけない的をクリックした処理#######################
+                        else if (element.className == 'clm_tgt_dontaim') {
+                            dontaim_score = dontaim_score + 1;
+                            timelimit = timelimit - 3;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt_dontaim');
+                        }
+                        else if (element.className == 'clm_tgt_dontaim2') {
+                            //狙ってはいけない的をクリックした処理
+                            dontaim_score = dontaim_score + 1;
+                            timelimit = timelimit - 3;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt_dontaim2');
+                        }
+                        else if (element.className == 'clm_tgt_dontaim3') {
+                            //狙ってはいけない的をクリックした処理
+                            dontaim_score = dontaim_score + 1;
+                            timelimit = timelimit - 3;
+                            jstimelimit.innerHTML = timelimit;
+                            // クラスの追加と削除
+                            element.classList.add('clm_tgt_dnone');
+                            element.classList.remove('clm_tgt_dontaim3');
+                        }
+                    }
             }
             if (i >= 18) {
                 i = 0;
             }
         }
 }
+
+// ポーズメニューの処理
+function stopBtnclick() {
+    // 閉じるボタンをクリック
+    if (game_stopflg === 0) {
+        // 右上のボタンをクリックした
+        JSgameStopBtn.onclick = function () {
+            JSgameStop.classList.remove('jsgame_dnone');
+            JSgameStopBtn.classList.add('jsgame_dnone');
+            game_stopflg = 1;
+        }
+    } else if (game_stopflg === 1) {
+        // ポーズメニューの中の続けるボタンをクリックした
+        JSgameChoiceRestart.onclick = function () {
+            JSgameStop.classList.add('jsgame_dnone');
+            JSgameStopBtn.classList.remove('jsgame_dnone');
+            game_stopflg = 0;
+        }
+    }
+
+}
+
 
 // 各要素の表示
 // グローバル変数flgで制御するクラス
@@ -589,37 +620,64 @@ function gameflgControl() {
     //1秒ごとに更新する制御
     window.addEventListener('load', function () {
         setInterval(function () {
+            if (game_stopflg === 0) {
             // カウントダウン
             timelimitCountdown();
             // スタートカウントダウン
             gameStartCount();
+            }
         }, 1000);
     });
 
     //常に更新する処理
     window.addEventListener('load', function () {
         setInterval(function () {
+            if (game_stopflg === 0) {
+            // グローバル変数flgで制御するクラス
             gameflgControl();
+            // ゲームのスコア
             gameScore();
             // 的をクリックしたときの処理
             idLoopclick();
+            // 制限時間の更新
             executionIntervalUpdate();
+            }
         }, 1);
     });
 
-    //
+    //的を出す処理
     window.addEventListener('load', function () {
         setInterval(function () {
+            if (game_stopflg === 0) {
             // 的を更新する処理
             tgtArray_control();
+            }
         }, 900);
     });
 
     // リロードボタンを押した処理
     // ページをリロードする処理
-    JSchoiceReload.addEventListener('click', function () {
-        location.reload();
+JSchoiceReload.addEventListener('click', function () {
+        if (game_stopflg === 0) {
+            location.reload();
+        }
     });
+
+    // ウインドウを閉じる処理
+JSchoiceClose.addEventListener('click', function () {
+        if (game_stopflg === 0) {
+            window.close();
+        }
+    });
+
+    // メニューを開いたか判断する
+    //常に更新する処理
+window.addEventListener('click', function () {
+        setInterval(function () {
+            stopBtnclick();
+        }, 1);
+    });
+
 
 
     // スクロールを禁止する関数
@@ -627,8 +685,7 @@ function handle(event) {
     event.preventDefault();
 }
 
-
-    window.onload = function() {
-  document.addEventListener('touchmove', handle, { passive: false });
-  document.addEventListener('mousewheel', handle, { passive: false });
+window.onload = function() {
+    document.addEventListener('touchmove', handle, { passive: false });
+    document.addEventListener('mousewheel', handle, { passive: false });
 }

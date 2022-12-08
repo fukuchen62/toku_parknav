@@ -4,17 +4,30 @@
 
 <div class="game_warp">
     <div class="game_backimage">
+        <!-- ストップメニュー -->
+        <div id="JS_gameStop" class="game_stopmenu jsgame_dnone">
+            <div class="game_stopmenubox">
+                <!-- メニュー -->
+                <div class="gameover_stopmenu_headline">ゲームをやめますか？（このタブが閉じます）</div>
+                <div id="JS_gameChoiceRestart" class="gameover_stopmenu_btn">ゲームをつづける</div>
+                <div class="gameover_stopmenu_btn"><a href="#" onclick="window.close()">ゲームをやめる</a></div>
+            </div>
+        </div>
         <!-- ゲーム範囲調整 -->
         <div class="game_size">
             <!-- やめるボタン -->
-            <a href="#" onclick="window.close()">
-                <div class="game_closebtn_style">
-                </div>
-            </a>
+
+            <!-- 押すとウインドウを閉じるボタン -->
+            <!-- <a href="#" onclick="window.close()">
+                    <div class="game_closebtn_style"></div>
+                </a> -->
+            <!-- 押すとメニューを開く -->
+            <div id="JS_gameStopbtn" class="game_closebtn_style"></div>
             <!-- ぽぽじろう -->
             <div class="game_popo"> </div>
             <!-- オブジェクトの基準位置 -->
             <div class=" game_posi">
+
                 <!-- スタート画面 d-none で要素そのものを非表示 -->
                 <!-- 親要素にflex-startuiを設定してボタンの位置を設定 -->
                 <div id="JS_game_start" class="game_start ">
@@ -41,7 +54,8 @@
                     <div id="JS_gameover_Medal" class="gameover_medalstyle"></div>
                     <div id="JSgameover_choice" class="gameover_choice ">
                         <div id="JSchoice_reload" class="gameover_morebtn">もういちどあそぶ</div>
-                        <div class="gameover_morebtn"><a href="#" onclick="window.close()">ゲームをやめる</a></div>
+                        <div id="JSchoice_close" class="gameover_morebtn">ゲームをやめる</div>
+                        <!-- <div class="gameover_morebtn"><a href="#" onclick="window.close()">ゲームをやめる</a></div> -->
                     </div>
                 </div>
 

@@ -12,7 +12,7 @@
 }
 
 .game_warp {
-    /* position: relative; */
+    position: relative;
 }
 
 .game_size {
@@ -22,6 +22,66 @@
     margin: 0 auto;
 }
 
+/* ストップメニュー */
+.game_stopmenu {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 20%;
+    left: 0;
+    z-index: 100;
+
+    /* メニュー部分 */
+    background-color: rgba(255, 252, 227, 0);
+}
+
+.game_stopmenubox {
+    /* メニュー部分 */
+    background-color: rgba(255, 252, 227, 0.931);
+    width: 100%;
+
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 16px;
+    padding-top: 16px;
+
+    gap: 16px;
+    margin: 0 auto;
+
+    border-radius: 50px;
+
+    outline: 2px solid rgb(91, 91, 91);
+    outline-offset: -8px;
+}
+
+.game_stopmenubox div {
+    /* max-width: 300px; */
+}
+
+
+.gameover_stopmenu_headline {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gameover_stopmenu_btn {
+    cursor: pointer;
+    max-width: 250px;
+    width: 100%;
+    font-size: 15px;
+    color: #504b4a;
+    border: solid 1px black;
+    border-radius: 50px;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: 0.5s;
+}
 
 header {
     border-color: black;
@@ -174,7 +234,7 @@ header {
 
 /* ゲームオーバー時の選択画面 */
 .gameover_choice {
-    padding-top: 30px;
+    padding-top: 5px;
     width: 100%;
     display: flex;
     flex-flow: wrap;
@@ -264,7 +324,7 @@ header {
     width: 100%;
     height: auto;
     /* height: 500px; */
-    z-index: 100;
+    z-index: 50;
     position: absolute;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -771,6 +831,11 @@ header {
     .game_closebtn_style:hover {
         outline: 2px solid rgb(87, 87, 87);
 
+        background-color: #ffb282;
+        transition: 0.5s;
+    }
+
+    .gameover_stopmenu_btn:hover {
         background-color: #ffb282;
         transition: 0.5s;
     }
