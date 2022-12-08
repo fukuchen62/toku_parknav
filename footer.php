@@ -147,7 +147,7 @@
 
         </div>
         <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
-        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
+        <input class="popo" type="button" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="mame()" alt="ポポじろう">
     </div>
 
     <!-- トップへ戻るボタン -->
