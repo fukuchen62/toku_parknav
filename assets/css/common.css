@@ -292,6 +292,31 @@ h4 {
     font-size: 16px;
 }
 
+/* カードホバー時の動き */
+.card_wrap:hover {
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    45% {
+        transform: translate(0, -7px);
+    }
+
+    75% {
+        transform: translate(0, 7px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
 /* safariに対応する */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
