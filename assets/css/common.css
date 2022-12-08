@@ -309,6 +309,7 @@ h4 {
     width: 100%;
     height: 135px;
     font-size: 16px;
+    text-align: left;
 }
 
 /* カードホバー時の動き */
