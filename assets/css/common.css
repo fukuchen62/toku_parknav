@@ -209,7 +209,6 @@ h4 {
 
 
 /* カード型記事 *********************************************** */
-
 /* card_flexの指定 */
 .card_flex {
     display: flex;
@@ -222,7 +221,7 @@ h4 {
 
 /* カード1つ分の大枠 */
 .card_wrap {
-    background-color: #fff;
+    background-color: #FFFCE3;
     width: 300px;
     height: 430px;
     /* カードの角丸指定 */
@@ -237,13 +236,15 @@ h4 {
 .card_wrap::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    right: -3px;
+    bottom: -3px;
     width: 100%;
     height: 100%;
     display: block;
-    border: 2px solid #3E3A39;
+    border-right: 3px solid #3E3A39;
+    border-bottom: 3px solid #3E3A39;
     border-radius: 30px;
+    z-index: -1;
 }
 
 /* 画像の指定 */
@@ -263,7 +264,6 @@ h4 {
 
 /* 文章の指定（枠組み） */
 .card_container {
-    /* width: 100%; */
     width: 250px;
     height: 230px;
     /* 画像の角丸指定 */
@@ -271,13 +271,6 @@ h4 {
     margin: 0 auto;
     text-align: center;
 }
-
-/* 文章の指定（中身） */
-/* .card_inner {
-    margin: 0 auto;
-    width: 250px;
-    text-align: center;
-} */
 
 /* サブタイトル */
 /* .card_subttl {
@@ -299,6 +292,7 @@ h4 {
 }
 
 .card_ttl h2 {
+    text-decoration: underline 1px solid #3E3A39;
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
