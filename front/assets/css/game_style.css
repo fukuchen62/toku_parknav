@@ -91,11 +91,6 @@ header {
     font-weight: bold;
     text-shadow: 0 0 10px rgb(255, 244, 228);
 
-    /* background-color: rgb(255, 252, 227, 0.5);
-    border-radius: 50px;
-    border: solid 1px;
-    padding-top: 30px;
-    padding-bottom: 60px; */
 }
 
 /* 画面下部の戻るボタン */
@@ -174,7 +169,6 @@ header {
 }
 
 .gameover_top {
-    /* top: 120px; */
     font-size: 14px;
 }
 
@@ -186,12 +180,8 @@ header {
     flex-flow: wrap;
     justify-content: center;
     font-size: 20px;
-    gap: 30px;
+    gap: 16px;
 }
-
-/* .gameoverLabelstyle {
-    padding-bottom: 30px;
-} */
 
 .gameover_dontaimLabelstyle {
     padding-bottom: 30px;
@@ -216,9 +206,61 @@ header {
     width: 100%;
 }
 
+/* 閉じるボタンのスタイル */
+.game_closebtn_style {
+    cursor: pointer;
+    position: relative;
+
+    background-color: rgb(255, 252, 227);
+    width: 100%;
+    height: 100px;
+
+    border-radius: 25px;
+    max-width: 50px;
+    max-height: 50px;
+
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    font-weight: bold;
+
+    margin-left: auto;
+    margin-right: 0px;
+    transition: 0.5s;
+    outline: 2px solid rgb(87, 87, 87);
+    outline-offset: -5px;
+    rotate: rotate(-45deg);
+}
+
+.game_closebtn_style::before, .game_closebtn_style::after {
+    /* 共通設定 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    /* 棒の幅（太さ） */
+    height: 30px;
+    /* 棒の高さ */
+    background: #333;
+}
+
+.game_closebtn_style::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.game_closebtn_style::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* ゲーム右上の閉じるボタン */
+
+
 /* スタート画面 */
 .game_start {
-    /* background-image: url(../img/start1100x840.png); */
     width: 100%;
     height: auto;
     /* height: 500px; */
@@ -235,8 +277,6 @@ header {
 .clm {
     width: 70px;
     height: 70px;
-    /* max-width: 80px; */
-    /* max-height: 80px; */
     /* 可視化用に色を付けている */
     /* border: solid 1px black; */
 }
@@ -330,7 +370,7 @@ header {
 }
 
 .gameover_morebtn:hover {
-    font-size: 20px;
+
     cursor: pointer;
     color: #504b4a;
     border: solid 1px black;
@@ -421,10 +461,6 @@ header {
 }
 
 /* 矢印ボタン用 */
-/* サンプルコード */
-/* < !-- 矢印ボタン --><div class="next_btn"><a href="#"><div class="next_btn_frame_box"><div class="next_btn_frame"><div class='next_btn_frame_triangle'></div><div class='next_btn_frame_square'></div></div></div><div class="next_btn_inner_box"><div class="next_btn_inner"><div class='next_btn_inner_triangle'></div><div class='next_btn_inner_square'></div><p class="next_btn_txt">あそぶ</p></div></div></a></div> */
-
-/* ＝＝＝矢印ボタン next→右向き prev→左向き＝＝＝*/
 /* ホバー効果 */
 .next_btn:hover {
     transition: 0.2s;
@@ -730,5 +766,12 @@ header {
         width: 100%;
         height: 100%; */
         display: block;
+    }
+
+    .game_closebtn_style:hover {
+        outline: 2px solid rgb(87, 87, 87);
+
+        background-color: #ffb282;
+        transition: 0.5s;
     }
 }
