@@ -167,11 +167,12 @@ footer {
     }
 }
 
+/* 吹き出しの画像 */
 .popo_commentbox {
     position: fixed;
-    left: 50px;
-    bottom: 80px;
-    width: 280px;
+    left: 45px;
+    bottom: 70px;
+    width: 250px;
     z-index: 500;
 }
 
@@ -183,17 +184,29 @@ footer {
     }
 }
 
+/* ポポのセリフ */
 .popo_comment {
     font-size: 14px;
     font-weight: bold;
     position: fixed;
-    left: 90px;
-    bottom: 200px;
+    left: 75px;
+    bottom: 120px;
     z-index: 501;
     text-align: left;
     color: #3E3A39;
+    width: 200px;
+    word-wrap: break-word;
 }
 
+/* TB幅以上 */
+@media screen and (min-width: 771px) {
+    .popo_comment {
+        left: 110px;
+        bottom: 160px;
+    }
+}
+
+/* 吹き出しとセリフのセット */
 .popo_commentset {
     display: none;
 }
