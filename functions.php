@@ -60,7 +60,7 @@ function add_common_stylesheet_script()
     wp_enqueue_style('toku_parknav-footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
     // 06.『公園の詳細検索のCSS（park_search.css）を読み込む』
-    wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
+    wp_enqueue_style('toku_parknav-park-search', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
 
     // 07.『キーワード検索のCSS（search-keywords.css）を読み込む』
     wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
@@ -145,11 +145,21 @@ function add_individual_stylesheet_script()
         );
 
         // slickのcss
-        // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
-        // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
+        wp_enqueue_style(
+            'toku_parknav-slick',
+            get_template_directory_uri() . '/assets/css/slick.css',
+            array(),
+            false
+        );
+        wp_enqueue_style('toku_parknav-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
 
         // slickのjs
-        // wp_enqueue_script('toku_parknav-single-park', get_template_directory_uri() . '/assets/js/slick.min.js', array(), false);
+        wp_enqueue_script(
+            'toku_parknav-slick-min',
+            get_template_directory_uri() . '/assets/js/slick.min.js',
+            array(),
+            false
+        );
     }
     //----------------------
     //  02-C:モデルコース
@@ -271,7 +281,7 @@ function add_individual_stylesheet_script()
     elseif (is_search('keywords')) {
 
         // キーワード検索のCSS（search-keywords.css）を読み込む
-        //wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
+        // wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
     }
 }
 
