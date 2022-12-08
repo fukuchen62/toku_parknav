@@ -1007,7 +1007,7 @@ a:hover {
 
 @media screen and (min-width: 951px) {
     .insta_box {
-        margin: 0 auto;
+        margin: 50px auto;
     }
 }
 

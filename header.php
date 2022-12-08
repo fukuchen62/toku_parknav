@@ -69,7 +69,7 @@
                     <span>　|　</span>
                     <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入り</a>
 
                 </div>
 
@@ -99,7 +99,7 @@
                             <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
                             <li><a href="<?php echo home_url('/nursing/'); ?>">運動療育とは</a></li>
                             <li><a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a></li>
-                            <li><a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a></li>
+                            <li><a href="<?php echo home_url('/mypage/'); ?>">お気に入り</a></li>
 
                             <!-- 検索ボックス -->
                             <li class="hbg_search_box">
