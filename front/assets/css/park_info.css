@@ -262,13 +262,14 @@ table {
     width: 90%;
     font-size: 14px;
     margin: 0 auto;
-    border: #3E3A39 2px solid;
+    /* border: #3E3A39 2px solid; */
     padding: 10px;
     border-collapse: separate;
     border-spacing: 5px;
     border-radius: 20px;
     overflow: hidden;
     table-layout: fixed;
+    background-color: rgba(255, 252, 227);
 }
 
 tr {
@@ -311,6 +312,10 @@ td {
 
 /* PC幅 */
 @media screen and (min-width: 1200px) {
+    table {
+        width: 950px;
+    }
+
     th {
         width: 20%;
     }
