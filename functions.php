@@ -45,19 +45,24 @@ function add_common_stylesheet_script()
     // 01.『リセットCSS（reset.css）』
     wp_enqueue_style('toku_parknav-reset', get_template_directory_uri() . '/assets/css/reset.css', array(), false);
 
-    // 02.『common.css』
+    // 02.『slickのcss』
+    // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
+
+    // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
+
+    // 03.『common.css』
     wp_enqueue_style('toku_parknav-common-style', get_template_directory_uri() . '/assets/css/common.css', array(), false);
 
-    // 03.『ヘッダーのCSS（header.css）』
+    // 04.『ヘッダーのCSS（header.css）』
     wp_enqueue_style('toku_parknav-header', get_template_directory_uri() . '/assets/css/header.css', array(), false);
 
-    // 04.『フッターのCSS（footer.css）』
+    // 05.『フッターのCSS（footer.css）』
     wp_enqueue_style('toku_parknav-footer', get_template_directory_uri() . '/assets/css/footer.css', array(), false);
 
-    // 公園の詳細検索のCSS（park_search.css）を読み込む
+    // 06.『公園の詳細検索のCSS（park_search.css）を読み込む』
     wp_enqueue_style('toku_parknav-search-area-park', get_template_directory_uri() . '/assets/css/park_search.css', array(), false);
 
-    // キーワード検索のCSS（search-keywords.css）を読み込む
+    // 07.『キーワード検索のCSS（search-keywords.css）を読み込む』
     wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
 
     // 共通のJavaScriptを読み込む
@@ -140,11 +145,11 @@ function add_individual_stylesheet_script()
         );
 
         // slickのcss
-        wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
-        wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
+        // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
+        // wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
 
         // slickのjs
-        wp_enqueue_script('toku_parknav-single-park', get_template_directory_uri() . '/assets/js/slick.min.js', array(), false);
+        // wp_enqueue_script('toku_parknav-single-park', get_template_directory_uri() . '/assets/js/slick.min.js', array(), false);
     }
     //----------------------
     //  02-C:モデルコース
@@ -343,21 +348,6 @@ function change_posts_per_page($query)
     }
 }
 add_action('pre_get_posts', 'change_posts_per_page');
-
-
-/** svg画像の表示*/
-function add_file_types_to_uploads($file_types)
-{
-
-    $new_filetypes = array();
-    $new_filetypes['svg'] = 'image / svg + xml';
-    $file_types = array_merge($file_types, $new_filetypes);
-
-    return $file_types;
-}
-add_action('upload_mimes', 'add_file_types_to_uploads');
-
-
 
 // 豆知識のランダム表示
 function mame_rand()
