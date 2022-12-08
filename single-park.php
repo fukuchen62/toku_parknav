@@ -20,32 +20,25 @@
         <section>
             <h2 class="h2_under"><?php the_title(); ?></h2>
             <div class="row_flex">
+                <!-- 概要部分写真スライダー -->
                 <div class="slider">
+
+                    <!-- フィールドから画像を取得 -->
+                    <?php for ($i = 1; $i <= 3; $i++) : ?>
                     <?php
-                            $pic1 = get_field('park_image_1');
-                            // 大サイズ画像URL
-                            $pic_url1 = $pic1['sizes']['medium'];
-                            ?>
-                    <img class="park_img" src="<?php echo $pic_url1; ?>" alt="<?php echo $pic1['filename']; ?>">
-                    <?php
-                            $pic2 = get_field('park_image_2');
-                            // 大サイズ画像URL
-                            $pic_url2 = $pic2['sizes']['medium'];
-                            ?>
-                    <img class="park_img" src="<?php echo $pic_url2; ?>" alt="<?php echo $pic2['filename']; ?>">
-                    <?php
-                            $pic3 = get_field('park_image_3');
-                            // 大サイズ画像URL
-                            $pic_url3 = $pic3['sizes']['medium'];
-                            ?>
-                    <img class="park_img" src="<?php echo $pic_url3; ?>" alt="<?php echo $pic3['filename']; ?>">
+                                $pic = "";
+                                if (get_field('park_image_' . $i)) {
+                                    $pic = get_field('park_image_' . $i);
+                                    $pic_url = $pic['sizes']['medium'];
+                                }
+                                ?>
+                    <?php if ($pic != '') : ?>
+
+                    <!-- 画像表示 -->
+                    <img class="park_img" src="<?php echo $pic_url ?>" alt="<?php echo $pic['alt']; ?>">
+                    <?php endif; ?>
+                    <?php endfor; ?>
                 </div>
-                <?php
-                        // $pic = get_field('park_image_1');
-                        // // 大サイズ画像URL
-                        // $pic_url = $pic['sizes']['medium'];
-                        ?>
-                <!-- <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['filename']; ?>" class="park_img"> -->
 
                 <div class="column_flex">
                     <p class="txt"><?php the_content(); ?></p>
@@ -64,7 +57,7 @@
         </section>
 
         <section class="bgcolor_cream">
-            <h3>遊具データ</h3>
+            <h3 class="sub_ttl_deco">遊具データ</h3>
 
             <ul>
                 <!-- 療育コンテンツ(ループ部分) -->
@@ -86,9 +79,9 @@
 
                 <?php if ($pic != '') : ?>
                 <li class="row_flex">
-                    <img src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
+                    <img class="toy_img" src="<?php echo $pic_url; ?>" alt="<?php echo $pic['alt']; ?>">
                     <div>
-                        <h4><?php echo $playground_name ?></h4>
+                        <h4><span class="writing_pen_img"></span><?php echo $playground_name ?></h4>
                         <p class="txt"><?php echo $playground_description ?></p>
                     </div>
                 </li>

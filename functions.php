@@ -131,9 +131,20 @@ function add_individual_stylesheet_script()
     } elseif (is_singular('park')) {
 
         // 公園の個別ページのCSS（park_info.css）を読み込む
+        // 公園詳細ページ用のcss
+        wp_enqueue_style(
+            'toku_parknav-single-park',
+            get_template_directory_uri() . '/assets/css/park_info.css',
+            array(),
+            false
+        );
+
+        // slickのcss
         wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick.css', array(), false);
         wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), false);
-        wp_enqueue_style('toku_parknav-single-park', get_template_directory_uri() . '/assets/css/park_info.css', array(), false);
+
+        // slickのjs
+        wp_enqueue_script('toku_parknav-single-park', get_template_directory_uri() . '/assets/js/slick.min.js', array(), false);
     }
     //----------------------
     //  02-C:モデルコース
