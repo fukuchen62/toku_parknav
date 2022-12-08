@@ -139,7 +139,8 @@ input:focus {
     border: 2px solid #333;
     /* 外側の円（枠線）の色 */
     border-radius: 50%;
-    /* background-color: #fff; */
+    /* ハンバーガーボタンの中の色 */
+    background-color: #fff;
 
 }
 
