@@ -276,8 +276,8 @@ h4 {
     line-height: 3;
 }
 
-/* TB幅 */
-@media screen and (min-width: 771px) {
+/* 950px以上の幅になったらカテゴリバーを右に設置 */
+@media screen and (min-width: 950px) {
 
     /* カードとサイドバーにflexをかける  */
     .flex_box {
