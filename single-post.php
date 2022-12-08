@@ -31,7 +31,6 @@
                 </ul>
 
                 <!-- サムネイル画像表示 -->
-                <!-- サムネイル画像表示 -->
                 <?php if (has_post_thumbnail()) : ?>
                 <img class="course_top_img" src="<?php the_post_thumbnail_url() ?>" alt="<?php get_the_title(); ?>">
                 <?php else : ?>
