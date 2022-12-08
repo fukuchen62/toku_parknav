@@ -67,7 +67,7 @@ function add_common_stylesheet_script()
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
-    wp_enqueue_script('jquery');
+    //wp_enqueue_script('jquery');
 
     // 00.『jQuery』
     // WordPress本体のjquery.jsを読み込まない
@@ -81,6 +81,14 @@ function add_common_stylesheet_script()
 
     // 01.『common.js』
     wp_enqueue_script('toku_parknav-common-script', get_template_directory_uri() . '/assets/js/common.js', '', '', true);
+
+    // 02.『スライダー部分のslick』
+    // wp_enqueue_script(
+    //     'toku_parknav-park',
+    //     get_template_directory_uri() . '/assets/js/park_slider.js',
+    //     array(),
+    //     false
+    // );
 }
 
 /**-----------------------------------------
@@ -164,7 +172,7 @@ function add_individual_stylesheet_script()
         // スライダー部分のslick
         wp_enqueue_script(
             'toku_parknav-park',
-            get_template_directory_uri() . '/assets/js/park.js',
+            get_template_directory_uri() . '/assets/js/park_slider.js',
             array(),
             false
         );
