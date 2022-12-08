@@ -49,6 +49,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        display: table-cell;
+        vertical-align: middle;
         gap: 10px;
     }
 

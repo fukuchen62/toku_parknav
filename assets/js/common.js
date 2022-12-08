@@ -87,3 +87,13 @@ $('.popo').clickToggle(function () {
 
 //     document.getElementById("popo_comment").innerHTML = mames[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
 // }
+
+
+// 公園詳細ページのslickスライダー
+
+$('.slider').slick({
+    autoplay:true,
+    autoplaySpeed: 5000,
+    arrows:true,
+    dots:true,
+});
