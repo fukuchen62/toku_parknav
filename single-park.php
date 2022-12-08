@@ -41,7 +41,11 @@
                 </div>
 
                 <div class="column_flex">
-                    <p class="txt"><?php the_content(); ?></p>
+                    <div class="txt">
+                        <?php the_content(); ?>
+                    </div>
+
+
                     <div class="icon_flex">
                         <div class="clipicon_tooltip">
                             <?php echo get_favorites_button(get_the_ID()); ?>

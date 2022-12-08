@@ -39,7 +39,9 @@
                 <?php endif; ?>
 
                 <!-- 記事テキスト -->
-                <p class="txt"><?php the_content(); ?></p>
+                <div class="txt">
+                    <?php the_content(); ?>
+                </div>
 
                 <!-- いいね！ボタン -->
                 <div class="iineicon_tooltip">
