@@ -225,13 +225,25 @@ h4 {
     background-color: #fff;
     width: 300px;
     height: 430px;
-    /* 枠線表示(写真との間に隙間ができない) */
-    outline: 2px solid #3e3a39;
-    outline-offset: -2px;
     /* カードの角丸指定 */
     border-radius: 30px;
     /* カラム落ちしたときの下余白 */
     margin-bottom: 50px;
+    /* 線を外に引くためのafter疑似要素を追加 */
+    position: relative;
+}
+
+/* 線を外枠に引くための疑似要素 */
+.card_wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 2px solid #3E3A39;
+    border-radius: 30px;
 }
 
 /* 画像の指定 */
@@ -255,40 +267,47 @@ h4 {
     height: 230px;
     /* 画像の角丸指定 */
     border-radius: 30px;
-    /* テキストを常に中央配置するための枠を指定 */
-    position: relative;
 }
 
 /* 文章の指定（中身） */
 .card_inner {
+    margin: 0 auto;
     width: 250px;
     text-align: center;
-    /* テキストを中央配置する中身の部分 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* サブタイトル */
-.card_subttl {
+/* .card_subttl {
     font-size: 20px;
     line-height: 20px;
     font-weight: normal;
     margin-bottom: 8px;
-}
+} */
 
 /* タイトル */
 .card_ttl {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* 中の要素を中央に寄せる */
+    display: table;
+}
+
+.card_ttl h2 {
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
-    text-decoration: underline 1px solid;
-    margin-bottom: 15px;
+    /* 中央寄せの指定 */
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* 記事本文の指定 */
 .card_txt p {
+    width: 100%;
+    height: 135px;
     font-size: 16px;
 }
 
@@ -316,9 +335,8 @@ h4 {
 }
 
 
-
 /* safariに対応する */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
     _::-webkit-full-page-media, _:future,
     .card_wrap {
@@ -332,8 +350,7 @@ h4 {
     .card_container {
         border-radius: 30px;
     }
-}
-
+} */
 
 /* ＝＝＝ページネーション＝＝＝ */
 
