@@ -260,7 +260,7 @@ h4 {
 .sidebar_box {
     max-width: 200px;
 
-    margin: 0 auto 50px;
+    /* margin: 0 auto 50px; */
 }
 
 /* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
@@ -290,7 +290,7 @@ h4 {
         /* Gナビの下で固定させる */
         top: 80px;
         height: 50vh;
-        margin-right: 30px;
+        /* margin-right: 30px; */
         margin-left: 30px;
     }
 }
