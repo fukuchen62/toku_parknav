@@ -160,6 +160,14 @@ function add_individual_stylesheet_script()
             array(),
             false
         );
+
+        // スライダー部分のslick
+        wp_enqueue_script(
+            'toku_parknav-park',
+            get_template_directory_uri() . '/assets/js/park.js',
+            array(),
+            false
+        );
     }
     //----------------------
     //  02-C:モデルコース
