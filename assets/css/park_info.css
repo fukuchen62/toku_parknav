@@ -259,6 +259,37 @@ section {
     padding-top: 50px;
 }
 
+
+/* フォントオーサムの設定 */
+.row_flex h4 {
+    text-decoration: 10px underline solid rgba(255, 56, 122, 0.5);
+    text-underline-offset: -5px;
+}
+
+.writing_pen_img::before {
+    font-family: "Font Awesome 5 Free";
+    /* 刷毛フォント */
+    content: '\f55d';
+    display: inline-block;
+    transform: scale(1, --1);
+    transform: rotate(-145deg);
+    font-weight: 900;
+    /* 文字との間に余白 */
+    margin: 0 5px;
+    color: #3E3A39;
+}
+
+li {
+    padding-bottom: 50px;
+    border-bottom: 2px dashed rgba(62, 58, 57, 0.3);
+}
+
+li:last-child {
+    padding: 0;
+    border-bottom: none;
+}
+
+
 /* ＝＝＝基本情報のセクション＝＝＝ */
 
 /* テーブルの成形 */
@@ -272,6 +303,7 @@ table {
     border-spacing: 0;
     border-radius: 15px;
     overflow: hidden;
+    background-color: #FFFCE3;
 }
 
 /* 項目の幅を固定 */
