@@ -263,18 +263,21 @@ h4 {
 
 /* 文章の指定（枠組み） */
 .card_container {
-    width: 100%;
+    /* width: 100%; */
+    width: 250px;
     height: 230px;
     /* 画像の角丸指定 */
     border-radius: 30px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* 文章の指定（中身） */
-.card_inner {
+/* .card_inner {
     margin: 0 auto;
     width: 250px;
     text-align: center;
-}
+} */
 
 /* サブタイトル */
 /* .card_subttl {
