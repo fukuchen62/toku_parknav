@@ -13,10 +13,6 @@ main {
     }
 }
 
-/* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
-body {
-    min-width: 300px;
-}
 
 /* 見出し下余白 */
 h2, h3 {
@@ -25,13 +21,6 @@ h2, h3 {
 
 h4 {
     margin-bottom: 15px;
-}
-
-
-/* パンくず */
-.pkz {
-    text-align: left;
-    padding-left: 20px;
 }
 
 /* セクションの上下に余白をとる */
@@ -47,104 +36,40 @@ section {
     width: 300px;
 }
 
+img {
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-bottom: 10px;
+
+}
+
 /* カード型以外の写真のサイズ */
 .course_top_img, .course_img {
-    width: 300px;
-    margin-bottom: 10px;
+    min-width: 300px;
+    width: 70%;
     border-radius: 30px;
+    text-align: center;
 }
 
-/* ＝＝＝タイムテーブルのセクション＝＝＝ */
-
-/* 時間を写真に被せるための箱 */
-.time_box {
-    position: relative;
-    width: 300px;
-    height: 210px;
-    margin: 0 auto;
+@media screen and (min-width: 771px) {
+    .course_top_img, .course_img {
+        max-width: 480px;
+        width: 50%;
+    }
 }
 
-/* 時間表示の部分 */
-.course_time {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 120px;
-    height: 40px;
-    background-color: #FFFCE3;
-    border: 2px solid #3E3A39;
-    border-radius: 30px;
-    font-size: 20px;
-    z-index: 3;
+@media screen and (min-width: 950px) {
+    .course_top_img, .course_img {
+        width: 600px;
+    }
 }
-
-/* コースの写真のサイズ以外を指定 */
-.course_img {
-    position: absolute;
-    top: 20px;
-    left: 0;
-}
-
-/* 区切りのタイヤ */
-.separater_img {
-    width: 200px;
-    margin: 20px;
-}
-
-.pickup_deco {
-    width: 80px;
-}
-
-/* ＝＝＝概要などのセクション＝＝＝ */
-
-/* このコースのカテゴリ表示 */
-.category_post {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.category_post li {
-    height: 30px;
-    border: #3E3A39 1px solid;
-    border-radius: 10px;
-    padding: 0 20px;
-    margin-bottom: 15px;
-
-}
-
-/* テーブルの成形 */
-table {
-    width: 90%;
-    font-size: 16px;
-    margin: 0 auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-/* 項目の幅を固定 */
-th {
-    width: 90px;
-    text-align: right;
-    padding: 10px;
-}
-
-td {
-    text-align: left;
-    padding: 10px;
-}
-
 
 /* 写真大サイズ幅(+マージン)の620px以上 */
 @media screen and (min-width: 620px) {
 
-    /* カード型以外の写真のサイズ */
+    /*写真のサイズ */
     .course_top_img, .course_img {
         width: 600px;
-        margin: 0 auto;
-        text-align: center;
     }
 
     /* 時間を写真に被せるための箱 */
@@ -233,33 +158,87 @@ td {
 
 }
 
+/* ＝＝＝タイムテーブルのセクション＝＝＝ */
 
-/* ＝＝＝カテゴリバー＝＝＝ */
+/* 時間を写真に被せるための箱 */
+.time_box {
+    position: relative;
+    width: 300px;
+    height: 210px;
+    margin: 0 auto;
+}
 
-/* サイドバーの幅を設定する */
-.sidebar {
+/* 時間表示の部分 */
+.course_time {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 40px;
+    background-color: #FFFCE3;
+    border: 2px solid #3E3A39;
+    border-radius: 30px;
+    font-size: 20px;
+    z-index: 3;
+}
+
+/* コースの写真のサイズ以外を指定 */
+.course_img {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+/* 区切りのタイヤ */
+.separater_img {
     width: 200px;
-    margin-right: 20px;
-    margin: 0 auto 50px;
+    margin: 20px;
 }
 
-/* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
-.category_ttl {
-    display: block;
-    width: 200px;
-    padding: 15px;
-    background: rgba(255, 235, 57, 0.5);
-    border-radius: 20px;
+.pickup_deco {
+    width: 80px;
 }
 
-.sidebar>ul>li {
-    line-height: 3;
+/* ＝＝＝概要などのセクション＝＝＝ */
+
+/* このコースのカテゴリ表示 */
+.category_post {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
-li a:hover {
-    color: darkgrey;
+.category_post li {
+    height: 30px;
+    border: #3E3A39 1px solid;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+
 }
 
+/* テーブルの成形 */
+table {
+    width: 90%;
+    font-size: 16px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* 項目の幅を固定 */
+th {
+    width: 90px;
+    text-align: right;
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+    padding: 10px;
+}
 
 
 /* ＝＝＝いいね！ボタン（ハート）＝＝＝ */

@@ -35,6 +35,10 @@ a:hover {
     height: auto;
 }
 
+.section_img_popo {
+    width: 50%;
+}
+
 /* ゲームセクションの画像（ぽぽ） */
 .section_img_popo {
     width: 400px;
@@ -430,9 +434,9 @@ a:hover {
 /* 以下、キービジュアルのパーツ配置 */
 .key_logo_sp {
     position: absolute;
-    top: 38%;
+    top: 36%;
     left: 8%;
-    width: 350px;
+    width: 340px;
     max-width: 950px;
     z-index: 6;
 }
@@ -454,7 +458,7 @@ a:hover {
 /* キャッチコピー */
 .key_catch {
     position: absolute;
-    top: 15%;
+    top: 16%;
     left: 12%;
     width: 150px;
     z-index: 5;
@@ -490,10 +494,10 @@ a:hover {
 /* 家族 */
 .key_photo06 {
     position: absolute;
-    bottom: 12%;
+    bottom: 4%;
     right: 0%;
-    width: 180px;
-    rotate: -15deg;
+    width: 220px;
+    rotate: 15deg;
     z-index: 4;
 }
 
@@ -566,9 +570,9 @@ a:hover {
     /* 右上ブランコ少年 */
     .key_photo05 {
         position: absolute;
-        top: 10%;
-        left: 70%;
-        width: 30%;
+        top: 12%;
+        left: 68%;
+        width: 32%;
         z-index: 4;
         object-fit: cover;
         overflow: hidden;
@@ -577,17 +581,16 @@ a:hover {
     /* 双子姉妹 */
     .key_photo01 {
         position: absolute;
-        bottom: 5%;
-        left: 0%;
-        width: 22%;
-        z-index: 4;
+        bottom: 50%;
+        left: 5%;
+        width: 24%;
     }
 
     /* 3人家族 */
     .key_photo06 {
         position: absolute;
-        bottom: 10%;
-        right: 5%;
+        bottom: 4%;
+        right: 2%;
         width: 220px;
         rotate: -15deg;
         z-index: 4;
@@ -596,25 +599,26 @@ a:hover {
     /* すべり台少年 */
     .key_photo02 {
         position: absolute;
-        top: 13%;
-        left: 9%;
-        width: 16%;
+        bottom: 0%;
+        left: -5%;
+        width: 29%;
+        z-index: 4;
     }
 
     /* 乗り物3人兄弟 */
     .key_photo03 {
         position: absolute;
-        top: 8%;
-        left: 28%;
-        width: 30%;
+        top: 14%;
+        right: 40%;
+        width: 28%;
     }
 
     /* グローブジャングル少女 */
     .key_photo04 {
         position: absolute;
-        top: 15%;
+        top: 6%;
         right: 33%;
-        width: 180px;
+        width: 17%;
     }
 
     .key_circle_bl01 {
@@ -663,12 +667,104 @@ a:hover {
     .key_circle_bl02 {
         position: absolute;
         bottom: 45%;
-        left: 5%;
+        left: 15%;
         width: 8%;
         z-index: 2;
         opacity: 0.6;
     }
 
+}
+
+/* PC幅以上 */
+@media screen and (min-width: 1200px) {
+
+    /* 右上ブランコ少年 */
+    .key_photo05 {
+        top: 10%;
+        left: 68%;
+        width: 32%;
+        z-index: 4;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    /* 双子姉妹 */
+    .key_photo01 {
+        bottom: 58%;
+        left: 10%;
+        width: 16%;
+    }
+
+    /* 3人家族 */
+    .key_photo06 {
+        bottom: 4%;
+        right: 2%;
+        width: 240px;
+    }
+
+    /* すべり台少年 */
+    .key_photo02 {
+        bottom: 0%;
+        left: -3%;
+        width: 27%;
+    }
+
+    /* 乗り物3人兄弟 */
+    .key_photo03 {
+        top: 8%;
+        right: 42%;
+        width: 30%;
+    }
+
+    /* グローブジャングル少女 */
+    .key_photo04 {
+        top: 8%;
+        right: 33%;
+        width: 17%;
+    }
+
+    .key_circle_bl01 {
+        top: 70%;
+        left: 70%;
+        width: 9%;
+    }
+
+    .key_circle_pk01 {
+        top: 8%;
+        left: 70%;
+        width: 130px;
+
+    }
+
+    .key_circle_pk02 {
+        bottom: 23%;
+        left: 50%;
+        width: 50px;
+    }
+
+    .key_circle_pk03 {
+        bottom: 23%;
+        left: 20%;
+        width: 30px;
+    }
+
+    .key_circle_pk04 {
+        top: 9%;
+        left: 3%;
+        width: 70px;
+    }
+
+    .key_circle_bl02 {
+        bottom: 45%;
+        left: 20%;
+        width: 8%;
+    }
+
+    .key_circle_bl03 {
+        top: 13%;
+        width: 60px;
+
+    }
 }
 
 /* ↑ キービジュアルパーツ配置ここまで ↑ */
@@ -700,12 +796,6 @@ a:hover {
 
 .top_sun {
     animation: 15s linear infinite sun-rotation;
-    /* transform: scale(0.85, 0.85);
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-duration: 1.5s;
-    width: 128px; */
 }
 
 /* 太陽のくるくるアニメ */
@@ -1083,12 +1173,12 @@ a:hover {
     overflow: hidden;
 }
 
-.slider .slick-slide {
+/* .slider .slick-slide {
     display: block;
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-}
+} */
 
 /* .slider .slick-arrow {
     width: 60px;
