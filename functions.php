@@ -331,6 +331,74 @@ function my_search_template($template)
 }
 
 
+/**
+ * サイト内検索の範囲に、カテゴリー名、タグ名、を含める
+ */
+//全角スペースを入れての検索に対応させる
+function SearchFilter($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) { //全角スペースでも検索可能にする
+        $s = $query->get('s');
+        $s = str_replace('　', ' ', $s);
+        $query->set('s', $s);
+    }
+    // 検索結果に公園とコースを含める
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) { //検索する投稿タイプ
+        $query->set('post_type', array('park', 'course'));
+    }
+}
+add_action('pre_get_posts', 'SearchFilter');
+
+//検索対象＜カテゴリー・タグ・カスタムタクソノミー・カスタムフィールド・ユーザー表示名から＞
+function custom_search($search, $wp_query)
+{
+    global $wpdb;
+
+    if (!$wp_query->is_search)
+        return $search;
+    if (!isset($wp_query->query_vars))
+        return $search;
+
+    $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
+    if (count($search_words) > 0) {
+        $search = '';
+        /*$search .= "AND post_type = 'post'";*/
+        foreach ($search_words as $word) {
+            if (!empty($word)) {
+                $search_word = '%' . esc_sql($word) . '%';
+                $search .= " AND (
+                                 {$wpdb->posts}.post_title LIKE '{$search_word}'
+                                OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+           OR {$wpdb->posts}.ID IN (
+             SELECT distinct r.object_id
+             FROM {$wpdb->term_relationships} AS r
+             INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
+             INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
+             WHERE t.name LIKE '{$search_word}'
+           OR t.slug LIKE '{$search_word}'
+           OR tt.description LIKE '{$search_word}'
+           )
+                                OR {$wpdb->posts}.ID IN (
+                                SELECT distinct post_id
+                                FROM {$wpdb->postmeta}
+                                WHERE meta_value LIKE '{$search_word}'
+                                )
+           OR {$wpdb->posts}.post_author IN (
+             SELECT distinct ID
+             FROM {$wpdb->users}
+             WHERE display_name LIKE '{$search_word}'
+             )
+                            ) ";
+            }
+        }
+    }
+
+    return $search;
+}
+add_filter('posts_search', 'custom_search', 10, 2);
+
+
+
 // 記事の表示件数を全て６に設定
 function change_posts_per_page($query)
 {
@@ -388,86 +456,86 @@ add_action('pre_get_posts', 'change_posts_per_page');
 /**
  * wp_body_openのタイミングで出力したいソースコードを挿入する
  */
-add_action('wp_body_open', function () {
-    // ここに挿入したいソースコードを記述
-    // echo '<h2>こんにちは、テストです。</h2>';
-});
+// add_action('wp_body_open', function () {
+//     // ここに挿入したいソースコードを記述
+//     // echo '<h2>こんにちは、テストです。</h2>';
+// });
 
 // タイトルのセパレータを変更する
-add_filter('document_title_separator', 'awa_nolife_document_title_separator');
-function awa_nolife_document_title_separator($separator)
-{
-    $separator = '@'; //タイトルの区切り文字を「｜」にする
-    return $separator;
-}
+// add_filter('document_title_separator', 'awa_nolife_document_title_separator');
+// function awa_nolife_document_title_separator($separator)
+// {
+//     $separator = '@'; //タイトルの区切り文字を「｜」にする
+//     return $separator;
+// }
 
 // タイトルを変更する
-add_filter('document_title_parts', 'awa_nolife_document_title_parts');
-function awa_nolife_document_title_parts($title)
-{
-    if (is_home()) {
-        // print_r($title);
-        // unset($title['tagline']);   //タグラインを削除
-        // $title['tagline'] = '最高最高！！！';
-        // $title['title'] = "BISTRO CALMEは、カジュアルワインバーよりなビストロ";
+// add_filter('document_title_parts', 'awa_nolife_document_title_parts');
+// function awa_nolife_document_title_parts($title)
+// {
+//     if (is_home()) {
+//         // print_r($title);
+//         // unset($title['tagline']);   //タグラインを削除
+//         // $title['tagline'] = '最高最高！！！';
+//         // $title['title'] = "BISTRO CALMEは、カジュアルワインバーよりなビストロ";
 
-    } else if (is_search()) {
-        $title['title'] = "体験をさがす";
-    }
-    return $title;
-}
+//     } else if (is_search()) {
+//         $title['title'] = "体験をさがす";
+//     }
+//     return $title;
+// }
 
-add_filter('comment_form_default_fields', 'awa_nolife_comment_form_default_fields');
-function awa_nolife_comment_form_default_fields($args)
-{
-    $args['url'] = '';
-    $args['author'] = '';
-    $args['email'] = '';
-    return $args;
-}
+// add_filter('comment_form_default_fields', 'awa_nolife_comment_form_default_fields');
+// function awa_nolife_comment_form_default_fields($args)
+// {
+//     $args['url'] = '';
+//     $args['author'] = '';
+//     $args['email'] = '';
+//     return $args;
+// }
 
-add_action('pre_get_posts', 'awa_nolife_pre_get_posts');
-function awa_nolife_pre_get_posts($query)
-{
-    if (is_admin() || !$query->is_main_query()) {
-        return; //関数から抜け出す
-    }
-    // 管理画面とメインクエリのページ
-    // 更にトップページの場合は
-    if ($query->is_home()) {
-        // $query->set('category_name', 'news');
-        $query->set('posts_per_page', 3);
-    }
-}
+// add_action('pre_get_posts', 'awa_nolife_pre_get_posts');
+// function awa_nolife_pre_get_posts($query)
+// {
+//     if (is_admin() || !$query->is_main_query()) {
+//         return; //関数から抜け出す
+//     }
+//     // 管理画面とメインクエリのページ
+//     // 更にトップページの場合は
+//     if ($query->is_home()) {
+//         // $query->set('category_name', 'news');
+//         $query->set('posts_per_page', 3);
+//     }
+// }
 
-add_action('wp', 'awa_nolife_wpautop');
-function awa_nolife_wpautop()
-{
-    if (is_page('contact')) {
-        remove_filter('the_content', 'wpautop');
-    }
-}
+// add_action('wp', 'awa_nolife_wpautop');
+// function awa_nolife_wpautop()
+// {
+//     if (is_page('contact')) {
+//         remove_filter('the_content', 'wpautop');
+//     }
+// }
 
 // 検索条件を体験（event）だけにする
-function SearchFilter($query)
-{
-    // if ($query->is_search) {
-    //     $query->set('post_type', 'event');
-    // }
-    return $query;
-}
-add_filter('pre_get_posts', 'SearchFilter');
+// function SearchFilter($query)
+// {
+//     // if ($query->is_search) {
+//     //     $query->set('post_type', 'event');
+//     // }
+//     return $query;
+// }
+// add_filter('pre_get_posts', 'SearchFilter');
 
 // 農ライフ特集 抜粋を投稿可とする
-add_post_type_support('special', 'excerpt');
+// add_post_type_support('special', 'excerpt');
 
 // カテゴリー一覧の各項目の右に '>' を表示する
-add_filter('wp_list_categories', 'span_before_link_list_categories');
-function span_before_link_list_categories($list)
-{
-    // $list = str_replace('</a>', '<span  class="li-right">></span></a>', $list);
-    return $list;
-}
+// add_filter('wp_list_categories', 'span_before_link_list_categories');
+// function span_before_link_list_categories($list)
+// {
+//     // $list = str_replace('</a>', '<span  class="li-right">></span></a>', $list);
+//     return $list;
+// }
 
 
 //////////////////////////////////////////////////////////
