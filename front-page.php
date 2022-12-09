@@ -268,7 +268,7 @@
     <!-- お知らせ -->
     <section class="bgcolor_cream">
         <div class="margin_inner">
-            <h2 class="zoom_in"><span class="h2_first h2_first_bw">お</span>知らせ</h2>
+            <h2 class="zoom_in"><span class="h2_first h2_first_bw">ニ</span>ュース</h2>
             <div class="section_flex">
                 <img class="news_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_news.png" alt="お知らせイラスト">
                 <div class="news_article">
