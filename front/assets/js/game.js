@@ -28,7 +28,8 @@ let tgtArray_1 = [
 // ポーズメニュー
 let JSgameStop = document.getElementById('JS_gameStop');
 let JSgameStopBtn = document.getElementById('JS_gameStopbtn');
-let JSgameChoiceRestart  = document.getElementById('JS_gameChoiceRestart');
+let JSgameChoiceRestart = document.getElementById('JS_gameChoiceRestart');
+let JSgamestopmenuClose = document.getElementById('JS_gamestopmenu_close');
 
 let JSgame = document.getElementById('JS_game');
 //let JSgame2 = document.getElementById('JS_game2');
@@ -502,24 +503,28 @@ function idLoopclick() {
 // ポーズメニューの処理
 function stopBtnclick() {
     // 閉じるボタンをクリック
-    if (game_stopflg === 0) {
+    if (game_stopflg == 0) {
         // 右上のボタンをクリックした
-        JSgameStopBtn.onclick = function () {
+        // JSgameStopBtn.onclick = function () {
             JSgameStop.classList.remove('jsgame_dnone');
             JSgameStopBtn.classList.add('jsgame_dnone');
             game_stopflg = 1;
         }
-    } else if (game_stopflg === 1) {
-        // ポーズメニューの中の続けるボタンをクリックした
-        JSgameChoiceRestart.onclick = function () {
-            JSgameStop.classList.add('jsgame_dnone');
-            JSgameStopBtn.classList.remove('jsgame_dnone');
-            game_stopflg = 0;
-        }
-    }
 
 }
 
+// ポーズメニューの処理
+function JSgameChoiceRestartBtnclick() {
+    // 閉じるボタンをクリック
+    if (game_stopflg === 1) {
+        // ポーズメニューの中の続けるボタンをクリックした
+        // JSgameChoiceRestart.onclick = function () {
+            JSgameStop.classList.add('jsgame_dnone');
+            JSgameStopBtn.classList.remove('jsgame_dnone');
+            game_stopflg = 0;
+        // }
+    }
+}
 
 // 各要素の表示
 // グローバル変数flgで制御するクラス
@@ -631,7 +636,7 @@ function gameflgControl() {
     });
 
     //常に更新する処理
-    window.addEventListener('load', function () {
+window.addEventListener('load', function () {
         setInterval(function () {
                 if (game_stopflg === 0) {
                 // グローバル変数flgで制御するクラス
@@ -644,17 +649,64 @@ function gameflgControl() {
                 executionIntervalUpdate();
             }
         }, 1);
-    });
+});
 
     //的を出す処理
-    window.addEventListener('load', function () {
+window.addEventListener('load', function () {
         setInterval(function () {
             if (game_stopflg === 0) {
-            // 的を更新する処理
-            tgtArray_control();
+                if (score < 20) {
+                // 的を更新する処理
+                tgtArray_control();
+                }
             }
-        }, 900);
-    });
+            // 経過時間の
+        }, 1800);
+});
+window.addEventListener('load', function () {
+        setInterval(function () {
+            if (game_stopflg === 0) {
+                if (score >= 20 && score < 40) {
+                // 的を更新する処理
+                tgtArray_control();
+                }
+            }
+            // 経過時間の
+        }, 1500);
+});
+window.addEventListener('load', function () {
+        setInterval(function () {
+            if (game_stopflg === 0) {
+                if (score >= 40 && score < 70) {
+                // 的を更新する処理
+                tgtArray_control();
+                }
+            }
+            // 経過時間の
+        }, 1300);
+});
+window.addEventListener('load', function () {
+        setInterval(function () {
+            if (game_stopflg === 0) {
+                if (score >= 70 && score < 100) {
+                // 的を更新する処理
+                tgtArray_control();
+                }
+            }
+            // 経過時間の
+        }, 1000);
+});
+window.addEventListener('load', function () {
+        setInterval(function () {
+            if (game_stopflg === 0) {
+                if (score >= 100 ) {
+                // 的を更新する処理
+                tgtArray_control();
+                }
+            }
+            // 経過時間の
+        }, 700);
+});
 
     // リロードボタンを押した処理
     // ページをリロードする処理
@@ -669,17 +721,22 @@ JSchoiceClose.addEventListener('click', function () {
         if (game_stopflg === 0) {
             window.close();
         }
-    });
-
+});
+    // ストップメニューからウインドウを閉じる処理
+JSgamestopmenuClose.addEventListener('click', function () {
+        if (game_stopflg === 1) {
+            window.close();
+        }
+});
     // メニューを開いたか判断する
     //常に更新する処理
-window.addEventListener('click', function () {
-        setInterval(function () {
-            stopBtnclick();
-        }, 1);
-    });
-
-
+JSgameStopBtn.addEventListener('click', function () {
+    stopBtnclick();
+});
+    // メニュー内の続行ボタンをクリック
+JSgameChoiceRestart.addEventListener('click', function () {
+    JSgameChoiceRestartBtnclick();
+});
 
     // スクロールを禁止する関数
 function handle(event) {

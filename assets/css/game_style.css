@@ -61,9 +61,7 @@
     outline-offset: -8px;
 }
 
-.game_stopmenubox div {
-    /* max-width: 300px; */
-}
+
 
 
 .gameover_stopmenu_headline {
@@ -204,8 +202,9 @@ header {
     top: 30%;
     left: 0;
 
-    margin: auto;
-
+    /* margin-right: 20px;
+    margin-left: 20px; */
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -216,8 +215,8 @@ header {
     background-color: rgba(255, 254, 243, 0.84);
     border-radius: 50px;
     /* border: solid 2px; */
-    outline: 2px solid rgb(91, 91, 91);
-    outline-offset: -8px;
+    border: 2px solid rgb(91, 91, 91);
+    /* outline-offset: -8px; */
 }
 
 .gameover_flex {
@@ -273,13 +272,13 @@ header {
     cursor: pointer;
     position: relative;
 
-    background-color: rgb(255, 252, 227);
+    background-color: rgb(255, 174, 126);
     width: 100%;
     height: 100px;
 
-    border-radius: 25px;
-    max-width: 50px;
-    max-height: 50px;
+    border-radius: 50px;
+    max-width: 80px;
+    max-height: 80px;
 
     font-size: 14px;
     padding-left: 10px;
@@ -292,8 +291,8 @@ header {
     margin-left: auto;
     margin-right: 0px;
     transition: 0.5s;
-    outline: 2px solid rgb(87, 87, 87);
-    outline-offset: -5px;
+    border: 2px solid rgb(255, 255, 255);
+    /* outline-offset: -5px; */
     rotate: rotate(-45deg);
 }
 
@@ -832,14 +831,24 @@ header {
     }
 
     .game_closebtn_style:hover {
-        outline: 2px solid rgb(87, 87, 87);
+        /* outline: 2px solid rgb(87, 87, 87); */
 
-        background-color: #ffb282;
+        background-color: #ff3700;
         transition: 0.5s;
     }
 
     .gameover_stopmenu_btn:hover {
         background-color: #ffb282;
+        transition: 0.5s;
+    }
+
+    .gameover_morebtn:hover {
+        cursor: pointer;
+        color: #504b4a;
+        /* border: solid 1px black; */
+        border-radius: 50px;
+        background-color: #ffb282;
+        /* padding: 20px; */
         transition: 0.5s;
     }
 }

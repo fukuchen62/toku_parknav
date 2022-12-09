@@ -8,19 +8,14 @@
         <div id="JS_gameStop" class="game_stopmenu jsgame_dnone">
             <div class="game_stopmenubox">
                 <!-- メニュー -->
-                <div class="gameover_stopmenu_headline">ゲームをやめますか？（このタブが閉じます）</div>
+                <div class="gameover_stopmenu_headline">ゲームをやめますか？<br>（このタブがとじます）</div>
                 <div id="JS_gameChoiceRestart" class="gameover_stopmenu_btn">ゲームをつづける</div>
-                <div class="gameover_stopmenu_btn"><a href="#" onclick="window.close()">ゲームをやめる</a></div>
+                <div id="JS_gamestopmenu_close" class="gameover_stopmenu_btn">ゲームをやめる</div>
             </div>
         </div>
         <!-- ゲーム範囲調整 -->
         <div class="game_size">
             <!-- やめるボタン -->
-
-            <!-- 押すとウインドウを閉じるボタン -->
-            <!-- <a href="#" onclick="window.close()">
-                    <div class="game_closebtn_style"></div>
-                </a> -->
             <!-- 押すとメニューを開く -->
             <div id="JS_gameStopbtn" class="game_closebtn_style"></div>
             <!-- ぽぽじろう -->
