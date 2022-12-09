@@ -213,9 +213,11 @@ main {
     box-shadow: none;
 }
 
-/* カード型の疑似要素を削除 */
-.card_wrap::after {
-    content: none;
+/* カードホバー時の動き無し */
+.card_wrap:hover {
+    top: 0;
+    box-shadow: none;
+    animation: none;
 }
 
 /* 画像の指定 */
