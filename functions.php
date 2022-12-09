@@ -339,31 +339,41 @@ function change_posts_per_page($query)
     //----------------------
     // コース一覧のカード型
     //----------------------
+    // コース一覧
     if ($query->is_archive('course')) { //カスタム投稿タイプを指定
         $query->set('posts_per_page', '6'); //表示件数を指定
-
-        //----------------------
-        //  公園一覧のカード型
-        //----------------------
     }
+    // 目的別一覧
+    if ($query->is_tax('purpose')) {
+        $query->set('posts_per_page', '6');
+    }
+
+    //----------------------
+    //  公園一覧のカード型
+    //----------------------
+    //公園一覧
     if ($query->is_archive('park')) {
         $query->set('posts_per_page', '6');
-
-        //----------------------
-        //  公園詳細検索 結果
-        //----------------------
     }
+    // 地域別一覧
+    if ($query->is_tax('area')) {
+        $query->set('posts_per_page', '6');
+    }
+
+    //----------------------
+    //  公園詳細検索 結果
+    //----------------------
     if ($query->is_search('park')) {
         $query->set('posts_per_page', '6');
-
-        //----------------------
-        //  キーワード検索 結果
-        //----------------------
     }
+
+    //----------------------
+    //  キーワード検索 結果
+    //----------------------
     if ($query->is_search('keywords')) {
         $query->set('posts_per_page', '6');
     }
-}
+};
 add_action('pre_get_posts', 'change_posts_per_page');
 
 
