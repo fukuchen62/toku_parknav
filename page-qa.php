@@ -80,9 +80,7 @@
         <!-- お問い合わせボタン -->
         <div class="contact_btn_wrap">
             <h3>ご不明な点があればこちらへ</h3>
-            <div class="contact_btn">
-                <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
-            </div>
+            <a href="<?php echo home_url('/contact/'); ?>" class="contact_btn">お問い合わせ</a>
         </div>
     </div>
 
