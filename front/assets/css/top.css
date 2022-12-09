@@ -796,7 +796,15 @@ a:hover {
 /* 太陽の位置 */
 .sun_box {
     position: relative;
+    display: none;
 }
+
+@media screen and (min-width: 771px) {
+    .sun_box {
+        display: block;
+    }
+}
+
 
 .top_sun, .top_sun_face {
     position: absolute;

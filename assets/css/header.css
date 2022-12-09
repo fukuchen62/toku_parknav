@@ -37,8 +37,16 @@ header {
 
 .head_logo {
     width: 130px;
-    margin: 13px 30px;
+    margin: 13px 20px;
 }
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .head_logo {
+        margin: 13px 30px;
+    }
+}
+
 
 /* PC幅 */
 @media screen and (min-width: 1200px) {

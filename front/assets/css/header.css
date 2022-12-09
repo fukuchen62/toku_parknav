@@ -37,7 +37,14 @@ header {
 
 .head_logo {
     width: 130px;
-    margin: 13px 30px;
+    margin: 13px 20px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .head_logo {
+        margin: 13px 30px;
+    }
 }
 
 /* PC幅 */
@@ -114,12 +121,20 @@ header {
 .hbg_btn {
     cursor: pointer;
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 0;
     z-index: 9999;
     width: 4em;
     height: 4em;
 }
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .hbg_btn {
+        right: 30px;
+    }
+}
+
 
 /* メニュー展開時にハンバーガーアイコンを固定 */
 #hbg:checked~.hbg_btn {
