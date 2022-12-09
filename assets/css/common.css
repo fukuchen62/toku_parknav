@@ -462,6 +462,19 @@ h4 {
 }
 
 
+/* SP幅で１カラムになったとき、下にmarginを50pxとる */
+.pagination {
+    margin: 0 auto 50px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .pagination {
+        margin: 0 auto 50px;
+    }
+}
+
+
 /* ＝＝＝カテゴリバー＝＝＝ */
 
 /* サイドバーの幅を設定する */
@@ -490,7 +503,7 @@ h4 {
     /* カードとサイドバーにflexをかける  */
     .flex_box {
         display: flex;
-        gap: 0px;
+
     }
 
     .sidebar_box {
@@ -501,17 +514,5 @@ h4 {
         margin-right: 20px;
         margin-left: 20px;
     }
-}
 
-
-/* SP幅で１カラムになったとき、下にmarginを50pxとる */
-.pagination {
-    margin: 0 auto 50px;
-}
-
-/* TB幅 */
-@media screen and (min-width: 771px) {
-    .pagination {
-        margin: 0 auto 50px;
-    }
 }

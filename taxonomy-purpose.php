@@ -20,7 +20,7 @@
         $purpose = get_term_by('slug', $purpose_slug, 'purpose');
         ?>
         <!-- カードとページをまとめるdiv -->
-        <div>
+        <div class="article_bar">
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
             <h2 class="h2_under"><?php echo $purpose->name; ?></h2>
 
