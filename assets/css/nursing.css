@@ -209,7 +209,8 @@ main {
     /* カラム落ちしたときの下余白 */
     margin-bottom: 50px;
     position: relative;
-    box-shadow: none;
+    /* box-shadow: none; */
+    box-shadow: 3px 1.5px #fff;
 }
 
 /* カードホバー時の動き無し */
