@@ -99,6 +99,7 @@ h4 {
 
 /* ボタンデザイン */
 .contact_btn {
+    display: block;
     font-family: 'Zen Maru Gothic', sans-serif;
     width: 200px;
     height: 80px;
@@ -112,7 +113,6 @@ h4 {
     color: #fff;
     margin: 0 auto;
     transition: ease-in 0.3s;
-    /* transform: scale(1, 1); */
 }
 
 /* リセットボタンのホバー要素 */
@@ -121,5 +121,5 @@ h4 {
     background-color: #ccc;
     background-color: #fff;
     border-radius: unset;
-    /* transform: scale(1.1, 1.1); */
+    opacity: 1;
 }
