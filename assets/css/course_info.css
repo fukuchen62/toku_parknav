@@ -146,6 +146,12 @@ td {
         width: 480px;
     }
 
+    /* 見出しの幅・位置 */
+    .h2_under {
+        width: 480px;
+        margin: 0 auto 30px;
+    }
+
     /* 概要テーブル */
     table {
         width: 480px;
@@ -170,6 +176,12 @@ td {
     /* カード型以外の写真のサイズ */
     .course_top_img, .course_img {
         width: 600px;
+    }
+
+    /* 見出しの幅・位置 */
+    .h2_under {
+        width: 600px;
+        margin: 0 auto 30px;
     }
 
     /* 概要テーブル */
@@ -217,8 +229,8 @@ td {
         margin-left: 120px;
     }
 
-    /* カード型以外の写真のサイズ */
-    .course_top_img, .course_img {
+    /* 見出しの幅・カード型以外の写真のサイズ */
+    .course_top_img, .course_img, .h2_under {
         width: 480px;
     }
 
@@ -243,8 +255,8 @@ td {
 /* PC幅 */
 @media screen and (min-width: 1200px) {
 
-    /* カード型以外の写真のサイズ */
-    .course_top_img, .course_img {
+    /* 見出しの幅・カード型以外の写真のサイズ */
+    .course_top_img, .course_img, .h2_under {
         width: 600px;
     }
 

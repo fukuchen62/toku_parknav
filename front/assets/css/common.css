@@ -254,13 +254,27 @@ h4 {
     color: #ccc;
 }
 
+
+
+/* SP幅で１カラムになったとき、下にmarginを50pxとる */
+.pagination {
+    margin: 0 auto 50px;
+}
+
+/* TB幅 */
+@media screen and (min-width: 771px) {
+    .pagination {
+        margin: 0 auto 50px;
+    }
+}
+
 /* ＝＝＝カテゴリバー＝＝＝ */
 
 /* サイドバーの幅を設定する */
 .sidebar_box {
     max-width: 200px;
 
-    /* margin: 0 auto 50px; */
+    margin: 0 auto 50px;
 }
 
 /* 「カテゴリ一覧」の後ろに薄い黄色を敷く */
@@ -292,18 +306,5 @@ h4 {
         height: 50vh;
         /* margin-right: 30px; */
         margin-left: 30px;
-    }
-}
-
-
-/* SP幅で１カラムになったとき、下にmarginを50pxとる */
-.pagination {
-    margin: 0 auto 50px;
-}
-
-/* TB幅 */
-@media screen and (min-width: 771px) {
-    .pagination {
-        margin: 0 auto 50px;
     }
 }
