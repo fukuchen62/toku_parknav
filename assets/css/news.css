@@ -36,6 +36,7 @@ section {
     padding-top: 50px;
 }
 
+
 /* ＝＝＝カテゴリバー＝＝＝ */
 
 .sidebar_box {
@@ -64,6 +65,16 @@ section {
         height: 50vh;
         margin-right: 20px;
         margin-left: 20px;
+    }
+
+}
+
+/* 950px以上の幅になったらカテゴリバーを右に設置 */
+@media screen and (min-width: 950px) {
+
+    /* カードとサイドバーにflexをかける  */
+    .flex_box {
+        justify-content: space-around;
     }
 
 }
