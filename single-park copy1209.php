@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="bgcolor_cream">
             <h3 class="sub_ttl_deco">遊具データ</h3>
 
             <ul>
@@ -123,7 +123,7 @@
                 </tr>
 
                 <tr>
-                    <th>メール</th>
+                    <th>E-mail</th>
                     <td><?php the_field('email'); ?></td>
                 </tr>
                 <tr>
