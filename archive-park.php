@@ -32,9 +32,7 @@
         <!-- 地域ボタン -->
         <a href="<?php echo get_term_link($area); ?>" class="search_btn">
             <div class="search_btn_north">
-                <!-- <a href="<?php echo get_term_link($area); ?>"> -->
                 <?php echo $area->name; ?>
-                <!-- </a> -->
             </div>
         </a>
         <?php endforeach; ?>
