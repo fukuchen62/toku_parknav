@@ -51,9 +51,9 @@ a:hover {
 
 /* ゲームセクションの画像（ぽぽ） */
 .section_img_popo {
-    width: 50%;
+    width: 40%;
     height: auto;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .section_txt {

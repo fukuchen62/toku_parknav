@@ -332,10 +332,11 @@ td {
 @media screen and (min-width: 1200px) {
     table {
         width: 950px;
+        padding: 5% 15%;
     }
 
     th {
-        width: 15%;
+        width: 12%;
     }
 
     td {
@@ -347,12 +348,4 @@ td {
 
 .pickup_deco {
     width: 80px;
-}
-
-.non_bottom_padding {
-    padding-bottom: 0;
-}
-
-.prev_btn a p {
-    font-size: 16px;
 }
