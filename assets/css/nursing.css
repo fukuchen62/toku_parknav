@@ -208,7 +208,6 @@ main {
     border-radius: 30px;
     /* カラム落ちしたときの下余白 */
     margin-bottom: 50px;
-    /* 線を外に引くためのafter疑似要素を追加 */
     position: relative;
     box-shadow: none;
 }
