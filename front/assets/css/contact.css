@@ -107,14 +107,16 @@ section {
     background-color: rgba(57, 189, 255, 0.5);
     color: #3E3A39;
     margin: 0 auto;
+    transition: ease-in 0.3s;
 }
 
 .contact_btn:hover {
-    color: #fff;
-    background-color: #39bdff;
+    background-color: #fff;
+    color: #39bdff;
     /* background-color: #ccc; */
     border-radius: unset;
 }
+
 
 /* TB幅以上 */
 @media screen and (min-width: 771px) {

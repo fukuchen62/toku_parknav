@@ -162,11 +162,12 @@ section {
     background-color: rgb(57, 189, 255, 0.5);
     color: #3E3A39;
     margin: 0 auto;
+    transition: ease-in 0.3s;
 }
 
 .contact_btn:hover {
-    color: #fff;
-    background-color: #39bdff;
+    background-color: #fff;
+    color: #39bdff;
     /* background-color: #ccc; */
     border-radius: unset;
     opacity: 1;
