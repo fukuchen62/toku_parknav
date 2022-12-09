@@ -70,13 +70,6 @@ main {
     opacity: 1;
 }
 
-/* 検索ボタンのホバー要素 */
-.search_btn_search:hover {
-    color: #fff;
-    background-color: rgba(255, 57, 123, 1);
-    border-radius: unset;
-}
-
 /* 東部ボタン */
 .search_btn:nth-child(1) {
     background-color: #FF397B;
