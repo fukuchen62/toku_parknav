@@ -137,6 +137,7 @@ section {
     position: relative;
     cursor: pointer;
     display: inline-block;
+    margin-right: 50px;
 }
 
 .clipicon_tooltip a {
