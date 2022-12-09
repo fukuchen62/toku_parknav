@@ -21,6 +21,12 @@ section {
     text-align: center;
 }
 
+/* ＝＝＝プライバシーポリシーリンク装飾＝＝＝ */
+
+.privacy_link {
+    text-decoration: underline;
+}
+
 
 /* ＝＝＝フォーム部分＝＝＝ */
 
