@@ -35,10 +35,10 @@ h4 {
         display: flex;
         column-gap: 30px;
         margin: 0 auto;
-        /* vertical-align: middle; */
     }
 
 }
+
 
 /* キービジュアルの下層ページ用 */
 .key_img {
@@ -80,11 +80,6 @@ main {
     border-color: #ffeb39 #fff #ffeb39;
     /* 影 */
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
-}
-
-/* タイトル部分の文字装飾 */
-.nur_ttl p {
-    text-align: left;
 }
 
 .nurttl_c_p {
@@ -129,20 +124,11 @@ main {
     margin: 0 20px;
 }
 
-/* ブレイクポイント */
-@media screen and (min-width: 950px) {
-    .nur_session_list {
-        margin: 0;
-    }
-}
-
-
 /* 写真のサイズ等指定 */
 .row_flex img {
     width: 300px;
     margin-bottom: 15px;
     border-radius: 30px;
-    object-fit: cover;
 }
 
 /* TB幅 */
@@ -185,124 +171,6 @@ main {
     background: linear-gradient(transparent 60%, rgba(255, 235, 57, 0.7) 60%);
 }
 
-
-/* カード型記事 *********************************************** */
-
-/* card_flexの指定 */
-.card_flex {
-    display: flex;
-    justify-content: space-around;
-    /* 縮小幅にあわせて自動でカラム落ち */
-    flex-flow: row wrap;
-    /* カード間の余白 */
-    column-gap: 10px;
-}
-
-/* カード1つ分の大枠 */
-.card_wrap {
-    background-color: #fff;
-    width: 300px;
-    height: 510px;
-    height: auto;
-    /* カードの角丸指定 */
-    border-radius: 30px;
-    /* カラム落ちしたときの下余白 */
-    margin-bottom: 50px;
-    /* 線を外に引くためのafter疑似要素を追加 */
-    position: relative;
-    box-shadow: none;
-}
-
-/* カード型の疑似要素を削除 */
-.card_wrap::after {
-    content: none;
-}
-
-/* 画像の指定 */
-.card_img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    /* 画像の角丸指定 */
-    border-radius: 30px;
-}
-
-.wp-post-image {
-    width: 100%;
-    height: 200px;
-    /* 画像の角丸指定 */
-    border-radius: 30px 30px 0 0;
-}
-
-/* 文章の指定（枠組み） */
-.card_container {
-    width: 250px;
-    height: 350px;
-    height: auto;
-    /* 画像の角丸指定 */
-    border-radius: 30px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* タイトル */
-.card_ttl {
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    height: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    /* 中の要素を中央に寄せる */
-    display: table;
-    text-decoration: none;
-}
-
-.card_ttl h2 {
-    text-decoration: underline 1px solid #3E3A39;
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: bold;
-    /* 中央寄せの指定 */
-    display: table-cell;
-    vertical-align: middle;
-}
-
-/* 記事本文の指定 */
-.card_txt p {
-    width: 100%;
-    height: 135px;
-    height: auto;
-    font-size: 16px;
-    text-align: left;
-}
-
-/* card_flexの指定 */
-.card_flex {
-    display: flex;
-    justify-content: space-around;
-    /* 縮小幅にあわせて自動でカラム落ち */
-    flex-flow: row wrap;
-    /* カード間の余白 */
-    column-gap: 10px;
-}
-
-/* カード型のみの設定 */
-.h2_under {
-    margin-top: 100px;
-}
-
-/* カードホバー時の動き */
-.card_wrap:hover {
-    animation: none;
-}
-
-.nur_list:last-child {
-    margin-top: 30px;
-}
-
 /* プロフィール******************** */
 .nur_profile_wrap {
     margin: 0 20px;
@@ -324,9 +192,9 @@ main {
 
 /* 先生の画像 */
 .nur_profile_img {
+    width: auto;
     width: 120px;
     height: auto;
-    object-fit: cover;
 }
 
 .nur_pro_txt {
@@ -364,6 +232,7 @@ main {
 
     .nur_pro_txt p {
         text-align: left;
+        /* margin-right: 20px; */
     }
 
     /* 先生の画像 */
