@@ -48,16 +48,10 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
-    margin-bottom: 50px;
-    column-gap: 5px;
-    row-gap: 20px;
 }
 
-/* aタグの要素をデザインできるようにする */
 /* ボタンデザイン */
 .search_btn {
-    display: block;
-    /* margin-bottom: 20px; */
     font-family: 'Zen Maru Gothic', sans-serif;
     width: 160px;
     height: 50px;
@@ -67,70 +61,63 @@ main {
     /* line-height: 50px; */
     border: 2px solid #3E3A39;
     cursor: pointer;
-    transition: ease-in 0.3s;
 }
 
-/* リンク要素をボタンいっぱいに広げる */
-/* .search_btn a {
+.search_btn a {
     display: block;
     width: 100%;
     height: 100%;
-} */
+}
 
-/* リンクのhover時に文字が薄くなるのを防ぐ */
+/* リンクのhover時にカーソルをポインターにする */
 .search_btn:hover {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 /* 東部ボタン */
 .search_btn:nth-child(1) {
     background-color: #FF397B;
     color: #fff;
-    /* margin-bottom: 20px; */
-}
-
-.search_btn:nth-child(1):hover {
-    background-color: #fff;
-    color: #FF397B;
-    border-radius: unset;
+    margin-bottom: 20px;
 }
 
 /* 南部ボタン */
 .search_btn:nth-child(2) {
     background-color: #FFEB39;
-    /* margin-bottom: 20px; */
-}
-
-.search_btn:nth-child(2):hover {
-    background-color: #fff;
-    color: #ffb639;
-    border-radius: unset;
+    margin-bottom: 20px;
 }
 
 /* 西部ボタン */
 .search_btn:nth-child(3) {
     background-color: #39BDFF;
     color: #fff;
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 
-.search_btn:nth-child(3):hover {
-    background-color: #fff;
-    color: #39BDFF;
-    border-radius: unset;
-}
+/* 東部ボタン */
+/* .search_btn_north {
+    background-color: #FF397B;
+    color: #fff;
+    margin-bottom: 20px;
+} */
+
+/* 南部ボタン */
+/* .search_btn_east {
+    background-color: #39BDFF;
+    color: #fff;
+    margin-bottom: 20px;
+} */
+
+/* 西部ボタン */
+/* .search_btn_south {
+    background-color: #FFEB39;
+} */
 
 /* 条件検索ボタン */
 .search_btn_terms {
     background-color: #FFFCE3;
     border-radius: 20px;
-    /* margin-bottom: 20px; */
-}
-
-.search_btn_terms:hover {
-    background-color: #309139;
-    color: #FFFCE3;
-    border-radius: unset;
+    margin-bottom: 20px;
 }
 
 /* メディアクエリ */
