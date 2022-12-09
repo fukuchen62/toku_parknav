@@ -66,9 +66,9 @@ main {
 }
 
 /* リンクのhover時に文字が薄くなるのを防ぐ */
-.search_btn a:hover {
+/* .search_btn a:hover {
     opacity: 1;
-}
+} */
 
 /* 東部ボタン */
 .search_btn:nth-child(1) {
