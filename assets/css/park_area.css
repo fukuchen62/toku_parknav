@@ -77,11 +77,11 @@ main {
     margin-bottom: 20px;
 }
 
-.search_btn:nth-child(1):hover {
+/* .search_btn:nth-child(1):hover {
     background-color: #fff;
     color: #FF397B;
     border-radius: unset;
-}
+} */
 
 /* 南部ボタン */
 .search_btn:nth-child(2) {
@@ -89,11 +89,11 @@ main {
     margin-bottom: 20px;
 }
 
-.search_btn:nth-child(2):hover {
+/* .search_btn:nth-child(2):hover {
     background-color: #fff;
     color: #ffb639;
     border-radius: unset;
-}
+} */
 
 /* 西部ボタン */
 .search_btn:nth-child(3) {
@@ -102,11 +102,11 @@ main {
     margin-bottom: 20px;
 }
 
-.search_btn:nth-child(3):hover {
+/* .search_btn:nth-child(3):hover {
     background-color: #fff;
     color: #39BDFF;
     border-radius: unset;
-}
+} */
 
 /* 条件検索ボタン */
 .search_btn_terms {
@@ -114,11 +114,11 @@ main {
     margin-bottom: 20px;
 }
 
-.search_btn_terms:hover {
+/* .search_btn_terms:hover {
     background-color: #309139;
     color: #FFFCE3;
     border-radius: unset;
-}
+} */
 
 /* メディアクエリ */
 @media screen and (min-width: 771px) {
