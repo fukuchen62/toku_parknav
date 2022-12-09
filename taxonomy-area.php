@@ -30,15 +30,19 @@
         ?>
         <?php foreach ($areas as $key => $area) : ?>
         <!-- 地域ボタン -->
-        <div class="search_btn search_btn_north">
-            <a href="<?php echo get_term_link($area); ?>"><?php echo $area->name; ?></a>
-        </div>
+        <a href="<?php echo get_term_link($area); ?>">
+            <div class="search_btn search_btn_north">
+                <?php echo $area->name; ?>
+            </div>
+        </a>
         <?php endforeach; ?>
         <?php endif; ?>
         <!-- 詳細検索ボタン -->
-        <div class="search_btn search_btn_terms">
-            <a href="<?php echo home_url('/?search_type=park'); ?>">詳細検索</a>
-        </div>
+        <a href="<?php echo home_url('/?search_type=park'); ?>">
+            <div class="search_btn search_btn_terms">
+                詳細検索
+            </div>
+        </a>
     </div>
 
     <!-- カードとページをまとめるdiv -->
