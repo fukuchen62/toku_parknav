@@ -38,8 +38,8 @@
         <?php endforeach; ?>
         <?php endif; ?>
         <!-- 詳細検索ボタン -->
-        <a href="<?php echo home_url('/?search_type=park'); ?>">
-            <div class="search_btn search_btn_terms">
+        <a href="<?php echo home_url('/?search_type=park'); ?>" class="search_btn">
+            <div class="search_btn_terms">
                 詳細検索
             </div>
         </a>
