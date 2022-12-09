@@ -128,7 +128,7 @@
                 </tr>
                 <tr>
                     <th>公式HP</th>
-                    <td><a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></td></a>
+                    <td><a href="<?php the_field('url'); ?>"><?php the_field('url'); ?></a></td>
                 </tr>
                 <tr>
                     <th>設備など</th>
