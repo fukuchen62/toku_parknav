@@ -133,7 +133,7 @@
 
 
     <!-- ポポ二郎の豆知識 -->
-    <div class="popo_trivia hoge">
+    <div class="popo_trivia foot_scroll">
         <div class="popo_commentset">
             <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
 
