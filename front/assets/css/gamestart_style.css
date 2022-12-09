@@ -2,15 +2,11 @@
 
 .game_h2line {
     background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
-}
-
-.game_h2line_title {
     font-size: 26px;
 }
 
 .game_title_img {
     width: 100%;
-
 }
 
 .game_titlestyle {
@@ -365,7 +361,7 @@ body {
 @media screen and (min-width: 771px) and (max-width:1199px) {
     .game_h2line {
         background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
-        text-align: left;
+        /* text-align: left; */
         width: 100%;
     }
 
