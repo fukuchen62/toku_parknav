@@ -22,26 +22,33 @@
         <!-- カードとページをまとめるdiv -->
         <div class="article_bar">
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
-            <h2 class="h2_under"><?php echo $purpose->name; ?></h2>
+            <?php
+            $args = array(
+                'post_type' => 'course',
+                'post_per_page' => -1,
+            );
+
+            $taxquerysp = array('relation' => 'AND');
+            $taxquerysp[] = array(
+                'taxonomy' => 'purpose',
+                'terms' => $purpose->slug,
+                'field' => 'slug',
+            );
+
+            $args['tax_query'] = $taxquerysp;
+
+            $query = new WP_Query($args);
+            $num = $query->found_posts;
+            ?>
+
+            <h2 class="h2_under">
+                <?php echo $purpose->name; ?>
+                （<?php echo $num; ?>）
+            </h2>
 
             <div class="card_flex">
+
                 <?php
-                $args = array(
-                    'post_type' => 'course',
-                    'post_per_page' => -1,
-                );
-
-                $taxquerysp = array('relation' => 'AND');
-                $taxquerysp[] = array(
-                    'taxonomy' => 'purpose',
-                    'terms' => $purpose->slug,
-                    'field' => 'slug',
-                );
-
-                $args['tax_query'] = $taxquerysp;
-
-                $query = new WP_Query($args);
-
                 if ($query->have_posts()) :
                     while ($query->have_posts()) :
                         $query->the_post(); ?>
@@ -51,10 +58,10 @@
                 <?php endwhile;
                 endif; ?>
             </div>
+            <?php wp_reset_postdata(); ?>
 
             <!-- ページネーション -->
             <?php wp_pagenavi(); ?>
-
 
         </div>
 

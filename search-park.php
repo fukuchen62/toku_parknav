@@ -261,6 +261,7 @@
             <?php endif; ?>
         </div>
 
+        <?php wp_reset_postdata(); ?>
         <!-- ページネーション -->
         <?php wp_pagenavi(); ?>
 

@@ -114,9 +114,9 @@
     // 豆知識を配列$mamesから取り出す
     <?php
         for ($i = 0; $i < $mames_count; $i++) {
-            echo "mames[${i}]='";
+            echo "mames[${i}]=\"";
             echo $mames[$i];
-            echo "';\n";
+            echo "\";\n";
         }
         ?>
 
