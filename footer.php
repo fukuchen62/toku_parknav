@@ -135,7 +135,7 @@
     <!-- ポポ二郎の豆知識 -->
     <div class="popo_trivia foot_scroll">
         <div class="popo_commentset">
-            <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ポポ吹き出し">
+            <img class="popo_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_commentbox.png" alt="ぽぽ吹き出し">
 
             <p id="popo_comment" class="popo_comment">
                 <?php
@@ -146,8 +146,8 @@
             </p>
 
         </div>
-        <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ポポじろう">
-        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ポポじろう">
+        <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ぽぽじろう">
+        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ぽぽじろう">
     </div>
 
     <!-- トップへ戻るボタン -->
