@@ -238,7 +238,7 @@
         <div class="margin_inner">
             <h2 class="zoom_in"><span class="h2_first h2_first_pg">ぽ</span>ぽじろうとむしキャッチ！</h2>
             <div class="section_flex_reverse">
-                <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_game.png" alt="キャラクター画像">
+                <img class="section_img_popo zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_game.png" alt="キャラクター画像">
                 <div class="inner_flex">
                     <p class="section_txt">カンタン操作、単純ルールで小さいお子様でも安心して遊べるゲームアプリです。<br>制限時間内に出てくる「むし」をタッチするとスコアが加算され、むしと一緒に登場する「おじゃまむし」をタッチすると時間が減り、時間が0になるとゲームオーバー！<br>目指せ、神レベル！！</p>
                     <div class="next_btn">
