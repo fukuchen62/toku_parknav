@@ -1161,6 +1161,12 @@ a:hover {
     margin-top: 50px;
 }
 
+@media screen and (min-width: 950px) {
+    .banner_flex {
+        justify-content: space-between;
+    }
+}
+
 /* ＝＝＝アニメーション＝＝＝ */
 
 /* 各セクションの要素の位置までいったら要素が現れる */
