@@ -30,13 +30,13 @@
         ?>
         <?php foreach ($areas as $key => $area) : ?>
         <!-- 地域ボタン -->
-        <!-- <a href="<?php echo get_term_link($area); ?>" class="search_btn"> -->
-        <div class="search_btn search_btn_north">
-            <a href="<?php echo get_term_link($area); ?>">
+        <a href="<?php echo get_term_link($area); ?>" class="search_btn">
+            <div class="search_btn_north">
+                <!-- <a href="<?php echo get_term_link($area); ?>"> -->
                 <?php echo $area->name; ?>
-            </a>
-        </div>
-        <!-- </a> -->
+                <!-- </a> -->
+            </div>
+        </a>
         <?php endforeach; ?>
         <?php endif; ?>
         <!-- 詳細検索ボタン -->
