@@ -30,8 +30,8 @@
         ?>
         <?php foreach ($areas as $key => $area) : ?>
         <!-- 地域ボタン -->
-        <a href="<?php echo get_term_link($area); ?>">
-            <div class="search_btn search_btn_north">
+        <a href="<?php echo get_term_link($area); ?>" class="search_btn">
+            <div class="search_btn_north">
                 <?php echo $area->name; ?>
             </div>
         </a>
