@@ -28,7 +28,7 @@
         <!-- カードとページをまとめるdiv -->
         <div>
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
-            <h2 class="h2_under">お知らせ一覧</h2>
+            <h2 class="h2_under">ニュース一覧</h2>
             <!-- card_flexの指定 -->
             <div class="card_flex">
 

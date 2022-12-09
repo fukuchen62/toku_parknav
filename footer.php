@@ -36,7 +36,7 @@
                     <a href="<?php echo home_url('/newslist/'); ?>">ニュース一覧</a>
                 </li>
                 <li>
-                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入りリスト</a>
+                    <a href="<?php echo home_url('/mypage/'); ?>">お気に入り</a>
                 </li>
                 <li>
                     <a href="<?php echo home_url('/about/'); ?>">このサイトについて</a>
