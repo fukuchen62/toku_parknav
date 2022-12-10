@@ -56,14 +56,6 @@
             </ul>
         </div>
 
-        <?php
-        // $args = array(
-        //     'menu' => 'footer-menu',
-        //     'menu_class' => '',
-        //     'container' => false,
-        // );
-        // wp_nav_menu($args);
-        ?>
 
         <!-- コピーライト -->
         <div class="foot_copyright">
@@ -147,7 +139,7 @@
             </p>
 
         </div>
-        <!-- <img class="popo" src="<?php //echo get_template_directory_uri(); 
+        <!-- <img class="popo" src="<?php //echo get_template_directory_uri();
                                     ?>/assets/img/popo_img.png" alt="ぽぽじろう"> -->
         <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ぽぽじろう" onsubmit="return false">
     </div>
@@ -159,10 +151,7 @@
     </div>
 </footer>
 
-<!-- スクリプト -->
-<!-- <script src="/assets/js/slick.min.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/top.js"></script> -->
+<!-- スクリプト functions.phpで読み込んでいます-->
 
 <?php
 // wp_foot()を呼び出す
