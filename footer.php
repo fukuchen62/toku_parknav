@@ -128,6 +128,7 @@
         let r = Math.floor(Math.random() * mames.length);
 
         document.getElementById("popo_comment").innerHTML = mames[r]; //上の式で出た結果をHTMLで"popo_comment"に表示する
+        return false;
     }
     </script>
 
@@ -147,7 +148,7 @@
 
         </div>
         <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ぽぽじろう">
-        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ぽぽじろう">
+        <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ぽぽじろう" onsubmit="return false">
     </div>
 
     <!-- トップへ戻るボタン -->
