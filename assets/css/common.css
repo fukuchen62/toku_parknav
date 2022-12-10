@@ -237,7 +237,6 @@ h4 {
 /* カードホバー時の動き */
 .card_wrap:hover {
     top: -10px;
-    box-shadow: 6px 6px rgba(62, 58, 57, 0.7);
     animation: bounce 0.3s ease;
 }
 
