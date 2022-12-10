@@ -103,7 +103,7 @@ header {
     top: 0;
     left: 0;
 
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 100px;
 }
 
@@ -192,8 +192,8 @@ header {
 .gameover_position {
     width: 100%;
     height: auto;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 5px;
     padding-right: 5px;
     position: absolute;
@@ -243,7 +243,7 @@ header {
 }
 
 .gameover_dontaimLabelstyle {
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 }
 
 /* スマホ */
@@ -427,6 +427,7 @@ header {
     padding: 20px;
     transition: 0.5s;
     font-weight: bold;
+    width: 200px;
 }
 
 .gameover_topbtn {
@@ -834,7 +835,7 @@ header {
         cursor: pointer;
         color: #504b4a;
         /* border: solid 1px black; */
-        border-radius: 50px;
+        /* border-radius: 50px; */
         background-color: #ffb282;
         /* padding: 20px; */
         transition: 0.5s;
