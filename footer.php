@@ -103,7 +103,7 @@
     ?>
 
     <!-- js -->
-    <script type="text/javascript">
+    <script>
     // 豆知識の配列を生成
 
     let mames = [];
