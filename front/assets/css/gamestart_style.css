@@ -3,6 +3,8 @@
 .game_h2line {
     background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
     font-size: 26px;
+    text-align: center;
+    width: 100%;
 }
 
 .game_title_img {
@@ -44,7 +46,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     /* 影　下 */
-    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+    /* box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5) */
 }
 
 .gamestart_ex1_2_green {
@@ -54,7 +56,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     /* 影　下 */
-    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+    /* box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5) */
 }
 
 .gamestart_ex1_2_orange {
@@ -64,7 +66,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     /* 影　下 */
-    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+    /* box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5) */
 }
 
 .gamestart_ex1_2 {
@@ -74,7 +76,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     /* 影　下 */
-    box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5)
+    /* box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5) */
 }
 
 /*################# ゲームの説明1################ */
@@ -361,8 +363,7 @@ body {
 @media screen and (min-width: 771px) and (max-width:1199px) {
     .game_h2line {
         background: linear-gradient(transparent 50%, rgba(255, 247, 128, 0.934) 50%);
-        /* text-align: left; */
-        width: 100%;
+
     }
 
     .game_h2line_title {
@@ -390,7 +391,11 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: center;
+    }
 
+    .gamestart_tgt p {
+        text-align: left;
+        margin-top: 46px;
     }
 
     .gamestart_dontaim {
@@ -529,6 +534,11 @@ body {
         justify-content: center;
     }
 
+    .gamestart_tgt p {
+        text-align: left;
+        margin-top: 46px;
+    }
+
     .gamestart_dontaim {
         font-size: 24px;
         font-weight: bold;
@@ -627,6 +637,16 @@ body {
         box-shadow: none;
 
         transform: translate3d(0, 5px, 0);
+    }
+
+    .gamestart_ex1_2_green {
+        width: 100%;
+        height: auto;
+        background-color: rgb(193, 255, 182);
+        padding: 20px;
+        border-radius: 10px;
+        /* 影　下 */
+        /* box-shadow: 0px 8px 0px 0px rgba(166, 166, 166, 0.5) */
     }
 
 }
