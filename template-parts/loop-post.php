@@ -28,8 +28,8 @@
                         <?php
                         // 文字数制限の設定
                         $ttl = get_the_title();
-                        if (mb_strlen($ttl) >= 20) {
-                            $title = mb_substr($ttl, 0, 20) . "…";
+                        if (mb_strlen($ttl) >= 18) {
+                            $title = mb_substr($ttl, 0, 18) . "…";
                         } else {
                             $title = $ttl;
                         }
