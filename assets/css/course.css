@@ -47,7 +47,7 @@ section {
 /* 771px以上の幅になったらカテゴリバーを右に設置 */
 @media screen and (min-width: 771px) {
 
-    /* カテゴリバーが横にきたらmargin-topをとる */
+    /* カテゴリバーが横にきたらmargin-topをはずす */
     .sidebar_box {
         margin-top: 0px;
     }
@@ -70,7 +70,7 @@ section {
 
 }
 
-/* 950px以上の幅になったらカテゴリバーを右に設置 */
+/* 950px以上の幅になったらカテゴリバーとカードの位置をやや離す */
 @media screen and (min-width: 950px) {
 
     /* カードとサイドバーにflexをかける  */

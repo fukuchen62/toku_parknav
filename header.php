@@ -65,7 +65,7 @@
                     <span>　|　 </span>
                     <a href="<?php echo home_url('/course/'); ?>">モデルコース</a>
                     <span>　|　</span>
-                    <a href="<?php echo home_url('/nursing/'); ?>">運動療育とは</a>
+                    <a href="<?php echo home_url('/nursing/'); ?>">公園遊びで育む</a>
                     <span>　|　</span>
                     <a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a>
                     <span>　|　</span>
@@ -97,7 +97,7 @@
                         <ul class="hbg_menulist hbg_menulist-circle">
                             <li><a href="<?php echo home_url('/?search_type=park'); ?>">公園検索</a></li>
                             <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
-                            <li><a href="<?php echo home_url('/nursing/'); ?>">運動療育とは</a></li>
+                            <li><a href="<?php echo home_url('/nursing/'); ?>">公園遊びで育む</a></li>
                             <li><a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a></li>
                             <li><a href="<?php echo home_url('/mypage/'); ?>">お気に入り</a></li>
 

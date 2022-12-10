@@ -24,3 +24,46 @@ section {
     /* padding-bottom: 50px; */
     padding-top: 50px;
 }
+
+
+/* ＝＝＝カテゴリバー＝＝＝ */
+
+.sidebar_box {
+    margin-top: 50px;
+}
+
+/* 771px以上の幅になったらカテゴリバーを右に設置 */
+@media screen and (min-width: 771px) {
+
+    /* カテゴリバーが横にきたらmargin-topをとる */
+    .sidebar_box {
+        margin-top: 0px;
+    }
+
+    /* カードとサイドバーにflexをかける  */
+    .flex_box {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .sidebar_box {
+        position: sticky;
+        /* Gナビの下で固定させる */
+        top: 80px;
+        height: 50vh;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+}
+
+/* 950px以上の幅になったらカテゴリバーを右に設置 */
+@media screen and (min-width: 950px) {
+
+    /* カードとサイドバーにflexをかける  */
+    .flex_box {
+        justify-content: space-around;
+    }
+
+}
