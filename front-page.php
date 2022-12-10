@@ -205,7 +205,7 @@
                 <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
 
                 <div class="inner_flex">
-                    <p class="section_txt">全て子どもの発達には運動が大切です。<br>公園は楽しみながら体を動かせる、発育に欠かせない場所。<br>本サイトでは、療育の専門家として活動する先生の監修のもと、公園遊びのメリットについて紹介します。公園での遊び方の参考にしてみてくださいね。
+                    <p class="section_txt">全て子どもの発達には運動が大切です。<br>公園は楽しみながら体を動かせる、発育に欠かせない場所。<br>本サイトでは、療育の専門家として活動する先生の監修のもと、公園遊びのメリットについて紹介します。<br>公園での遊び方の参考にしてみてくださいね。
 
                     </p>
                     <div class="next_btn">
