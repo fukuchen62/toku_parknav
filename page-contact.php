@@ -1,3 +1,9 @@
+<?php
+if(is_page('contact')){
+    remove_filter('the_content','wpautop')
+}
+?>
+
 <!-- ヘッダー -->
 <?php get_header(); ?>
 
@@ -14,9 +20,10 @@
         <h2 class="h2_under">お問い合わせ</h2>
         <p class="txt">サイトについてご不明点などございましたら、こちらからお問い合わせください。<br>個人情報の取り扱いについては<a href="<?php echo home_url('/privacy/'); ?>" class="privacy_link">こちら</a>をご覧ください。</p>
 
-        <form class="form">
-            <?php echo do_shortcode('[contact-form-7 id="281" title="お問い合わせフォーム"]'); ?>
-        </form>
+        <!-- <form class="form">
+            <?php //echo do_shortcode('[mwform_formkey key="1057"]');
+            ?>
+        </form> -->
 
     </section>
 
