@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- ディスクリプションをページごとに変更 -->
     <?php if (is_home() || is_front_page()) : ?>
     <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
     <?php elseif (is_singular('park')) : ?>
@@ -17,27 +17,17 @@
     <meta name="description" content="公園に関するイチオシ情報を提供、療育に関するニュースも掲載しています。とくしまGo!Go!パークなびでチェック！">
     <?php endif; ?>
 
-    <!-- <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。"> -->
-
     <!-- フォント読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
-    <!-- 各種css読み込み -->
-    <!-- <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/slick.css">
-    <link rel="stylesheet" href="./assets/css/slick-theme.css">
-    <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/top.css"> -->
+    <!-- 各種css読み込み functions.phpで読み込んでいます-->
 
-    <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- jQuery functions.phpで読み込んでいます-->
 
-    <!-- fontawesome -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"> -->
+    <!-- fontawesome functions.phpで読み込んでいます-->
+
 
     <!-- ファビコン -->
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/popo_favicon-16x16.png" id="favicon">
@@ -84,19 +74,11 @@
 
                 </div>
 
-                <!-- 検索ボックス -->
-                <!-- <div class=" head_menu_item"> -->
-                <!-- <form class="head_search" action="">
-                        <input class="head_form" size="300" type="search" name="search" placeholder="キーワードを入力">
-                        <input class="head_submit fas" type="submit" value="&#xf002;">
-                    </form> -->
 
                 <!-- 検索フォームを表示させる -->
                 <?php get_search_form('keywords');
                 //php get_template_part('searchform','keywords');
                 ?>
-                <!-- </div> -->
-
 
                 <!-- ハンバーガーメニュー -->
                 <div class="hbg_menubox">
