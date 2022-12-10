@@ -61,7 +61,7 @@
 
 
             <!-- ランダムに公園のカードが入るところ -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.svg" alt="装飾" class="pickup_deco zoom_in">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_pickup.png" alt="装飾" class="pickup_deco zoom_in">
             <h2 class="zoom_in">pickup！パーク</h2>
             <!-- card_flexの指定 -->
             <div class="card_flex animate_wrap">
