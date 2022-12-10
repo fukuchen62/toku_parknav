@@ -1,6 +1,6 @@
 <?php
-if(is_page('contact')){
-    remove_filter('the_content','wpautop')
+if (is_page('contact')) {
+    remove_filter('the_content', 'wpautop');
 }
 ?>
 
