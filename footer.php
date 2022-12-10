@@ -81,7 +81,7 @@
     $args = array(
         'post_type' => 'mame',
         'posts_per_page' => -1,
-        'orderby' => 'rand',
+        // 'orderby' => 'rand',
     );
 
     $the_query = new WP_Query($args);
@@ -147,7 +147,8 @@
             </p>
 
         </div>
-        <img class="popo" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" alt="ぽぽじろう">
+        <!-- <img class="popo" src="<?php //echo get_template_directory_uri(); 
+                                    ?>/assets/img/popo_img.png" alt="ぽぽじろう"> -->
         <input class="popo" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/popo_img.png" value="豆知識" onclick="msgOutput()" alt="ぽぽじろう" onsubmit="return false">
     </div>
 

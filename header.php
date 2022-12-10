@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <?php if (is_home() || is_front_page()) : ?>
     <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
+    <?php elseif (is_singular('park')) : ?>
+    <meta name="description" content="とくしまGo!Go!パークなびでは、公園にどんな遊具や自然があるのかその場所ならではの楽しみ方をまとめてみました。">
+    <?php elseif (is_singular('course')) : ?>
+    <meta name="description" content="さあ、何して遊ぼうかな？とくしまGo!Go!パークなびではその日に過ごす公園に合ったモデルコースを掲載しています。休日のスケジューリングにお役立てください。">
+    <?php elseif (is_singular('post')) : ?>
+    <meta name="description" content="公園に関するイチオシ情報を提供、療育に関するニュースも掲載しています。とくしまGo!Go!パークなびでチェック！">
+    <?php endif; ?>
+
+    <!-- <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。"> -->
 
     <!-- フォント読み込み-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
