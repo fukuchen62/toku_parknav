@@ -198,15 +198,15 @@
     <!-- 療育 -->
     <section class="bgcolor_cream">
         <div class="margin_inner">
-            <h2 class="zoom_in"><span class="h2_first h2_first_bw">理</span>学療法士の先生と考える<br>
-                運動療育と遊具</h2>
+            <h2 class="zoom_in"><span class="h2_first h2_first_bw">発</span>達支援・療育の専門家と考える<br>
+                公園遊びのメリット</h2>
 
             <div class="section_flex">
                 <img class="section_img zoom_in" src="<?php echo get_template_directory_uri(); ?>/assets/img/top/top_nursing.png" alt="療育写真">
 
                 <div class="inner_flex">
-                    <p class="section_txt">発達障がいや自閉症、知的障がいの子どもたちに療育や学習指導を行う施設「ギフテッド」様へインタビューを行いました。<br>
-                        発達障がいの子を持つ親御様への役立つ情報や、公園での遊び方などを紹介しています。
+                    <p class="section_txt">全て子どもの発達には運動が大切です。<br>公園は楽しみながら体を動かせる、発育に欠かせない場所。<br>本サイトでは、療育の専門家として活動する先生の監修のもと、公園遊びのメリットについて紹介します。<br>公園での遊び方の参考にしてみてくださいね。
+
                     </p>
                     <div class="next_btn">
                         <a href="<?php echo home_url('/nursing/'); ?>">
