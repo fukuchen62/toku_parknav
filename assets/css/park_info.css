@@ -173,6 +173,10 @@ section {
     left: -40px;
 }
 
+.blue {
+    color: #39BDFF;
+}
+
 /* アイコンにホバーすると説明が出る */
 /* いいね！ボタン（ハート） */
 .iineicon_tooltip {

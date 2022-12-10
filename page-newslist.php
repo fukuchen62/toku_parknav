@@ -39,10 +39,9 @@
                 <?php $newslist->the_post(); ?>
 
                 <!-- カード -->
-                <div class="card_wrap">
-                    <!-- テンプレートパーツの読み込み -->
-                    <?php get_template_part('template-parts/loop', 'post') ?>
-                </div>
+                <!-- テンプレートパーツの読み込み -->
+                <?php get_template_part('template-parts/loop', 'post') ?>
+
 
                 <?php endwhile; ?>
                 <!-- ループの終了 -->

@@ -3,8 +3,17 @@
     <a href="<?php the_permalink(); ?>">
 
         <!-- 記事画像 -->
-        <?php $img = get_field('course_image1'); ?>
-        <img class="card_img" src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
+        <!-- <?php //$img = get_field('course_image1');
+                ?>
+        <img class="card_img" src="<?php //echo $img['sizes']['medium'];
+                                    ?>" alt="<?php echo $img['alt']; ?>"> -->
+
+        <?php if (has_post_thumbnail()) :
+        ?>
+        <?php the_post_thumbnail('thumbnail');
+            ?>
+        <?php endif; ?>
+
 
         <!-- 文章部分の枠 -->
         <div class="card_container">
