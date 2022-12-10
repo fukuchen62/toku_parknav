@@ -18,10 +18,15 @@
         <!-- カードとページをまとめるdiv -->
         <div>
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
-
-            <h2 class="h2_under">モデルコース一覧</h2>
+            <?php
+            $count_pages = wp_count_posts();
+            $num = $count_pages->publish;
+            // echo '記事数は' . $num . '件です';
+            ?>
+            <h2 class="h2_under">モデルコース一覧（<?php echo $num; ?>）</h2>
 
             <div class="card_flex">
+
 
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : ?>
@@ -35,6 +40,7 @@
                 <?php endif; ?>
 
             </div>
+            <?php wp_reset_postdata(); ?>
 
             <!-- ページネーション -->
             <?php wp_pagenavi(); ?>
