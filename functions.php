@@ -335,67 +335,67 @@ function my_search_template($template)
  * サイト内検索の範囲に、カテゴリー名、タグ名、を含める
  */
 // //全角スペースを入れての検索に対応させる
-// function SearchFilter($query)
-// {
-//     if (!is_admin() && $query->is_main_query() && $query->is_search()) { //全角スペースでも検索可能にする
-//         $s = $query->get('s');
-//         $s = str_replace('　', ' ', $s);
-//         $query->set('s', $s);
-//     }
-//     // 検索結果に公園とコースを含める
-//     if (!is_admin() && $query->is_main_query() && $query->is_search()) { //検索する投稿タイプ
-//         $query->set('post_type', array('park', 'course'));
-//     }
-// }
-// add_action('pre_get_posts', 'SearchFilter');
+function SearchFilter($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) { //全角スペースでも検索可能にする
+        $s = $query->get('s');
+        $s = str_replace('　', ' ', $s);
+        $query->set('s', $s);
+    }
+    // 検索結果に公園とコースを含める
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) { //検索する投稿タイプ
+        $query->set('post_type', array('park', 'course'));
+    }
+}
+add_action('pre_get_posts', 'SearchFilter');
 
-// //検索対象＜カテゴリー・タグ・カスタムタクソノミー・カスタムフィールド・ユーザー表示名から＞
-// function custom_search($search, $wp_query)
-// {
-//     global $wpdb;
+//検索対象＜カテゴリー・タグ・カスタムタクソノミー・カスタムフィールド・ユーザー表示名から＞
+function custom_search($search, $wp_query)
+{
+    global $wpdb;
 
-//     if (!$wp_query->is_search)
-//         return $search;
-//     if (!isset($wp_query->query_vars))
-//         return $search;
+    if (!$wp_query->is_search)
+        return $search;
+    if (!isset($wp_query->query_vars))
+        return $search;
 
-//     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-//     if (count($search_words) > 0) {
-//         $search = '';
-//         /*$search .= "AND post_type = 'post'";*/
-//         foreach ($search_words as $word) {
-//             if (!empty($word)) {
-//                 $search_word = '%' . esc_sql($word) . '%';
-//                 $search .= " AND (
-//                                  {$wpdb->posts}.post_title LIKE '{$search_word}'
-//                                 OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-//            OR {$wpdb->posts}.ID IN (
-//              SELECT distinct r.object_id
-//              FROM {$wpdb->term_relationships} AS r
-//              INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
-//              INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
-//              WHERE t.name LIKE '{$search_word}'
-//            OR t.slug LIKE '{$search_word}'
-//            OR tt.description LIKE '{$search_word}'
-//            )
-//                                 OR {$wpdb->posts}.ID IN (
-//                                 SELECT distinct post_id
-//                                 FROM {$wpdb->postmeta}
-//                                 WHERE meta_value LIKE '{$search_word}'
-//                                 )
-//            OR {$wpdb->posts}.post_author IN (
-//              SELECT distinct ID
-//              FROM {$wpdb->users}
-//              WHERE display_name LIKE '{$search_word}'
-//              )
-//                             ) ";
-//             }
-//         }
-//     }
+    $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
+    if (count($search_words) > 0) {
+        $search = '';
+        /*$search .= "AND post_type = 'post'";*/
+        foreach ($search_words as $word) {
+            if (!empty($word)) {
+                $search_word = '%' . esc_sql($word) . '%';
+                $search .= " AND (
+                                 {$wpdb->posts}.post_title LIKE '{$search_word}'
+                                OR {$wpdb->posts}.post_content LIKE '{$search_word}'
+           OR {$wpdb->posts}.ID IN (
+             SELECT distinct r.object_id
+             FROM {$wpdb->term_relationships} AS r
+             INNER JOIN {$wpdb->term_taxonomy} AS tt ON r.term_taxonomy_id = tt.term_taxonomy_id
+             INNER JOIN {$wpdb->terms} AS t ON tt.term_id = t.term_id
+             WHERE t.name LIKE '{$search_word}'
+           OR t.slug LIKE '{$search_word}'
+           OR tt.description LIKE '{$search_word}'
+           )
+                                OR {$wpdb->posts}.ID IN (
+                                SELECT distinct post_id
+                                FROM {$wpdb->postmeta}
+                                WHERE meta_value LIKE '{$search_word}'
+                                )
+           OR {$wpdb->posts}.post_author IN (
+             SELECT distinct ID
+             FROM {$wpdb->users}
+             WHERE display_name LIKE '{$search_word}'
+             )
+                            ) ";
+            }
+        }
+    }
 
-//     return $search;
-// }
-// add_filter('posts_search', 'custom_search', 10, 2);
+    return $search;
+}
+add_filter('posts_search', 'custom_search', 10, 2);
 
 
 
@@ -438,9 +438,9 @@ function change_posts_per_page($query)
     //----------------------
     //  キーワード検索 結果
     //----------------------
-    if ($query->is_search('keywords')) {
-        $query->set('posts_per_page', '6');
-    }
+    // if ($query->is_search('keywords')) {
+    //     $query->set('posts_per_page', '6');
+    // }
 };
 add_action('pre_get_posts', 'change_posts_per_page');
 
