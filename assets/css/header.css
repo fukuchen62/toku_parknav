@@ -253,7 +253,7 @@ header {
 }
 
 /* 円を用いたメニューリスト */
-.hbg_menulist-circle li, .hbg_search_box {
+.hbg_menulist-circle li {
     border: 3px solid #3E3A39;
     margin-bottom: 5px;
     border-radius: 2em;
@@ -335,7 +335,7 @@ header {
 /* ×ボタン対策で検索ボックスの長さを決め打ち */
 .hbg_search_box {
     margin-top: 50px;
-    width: 195px;
+    width: 180px;
 }
 
 /* TB幅以上でボックスの長さを長くする */

@@ -104,18 +104,18 @@
                             <li><a href="<?php echo home_url('/nursing/'); ?>">公園遊びで育む</a></li>
                             <li><a href="<?php echo home_url('/gamestart/'); ?>">ゲーム</a></li>
                             <li><a href="<?php echo home_url('/mypage/'); ?>">お気に入り</a></li>
-
-                            <!-- 検索ボックス -->
-                            <li class="hbg_search_box">
-                                <?php
-                                get_search_form();
-                                ?>
-                                <!-- <form class="hbg_search" action="index.php" method="get">
+                        </ul>
+                        <!-- 検索ボックス -->
+                        <li class="hbg_search_box">
+                            <?php
+                            get_search_form();
+                            ?>
+                            <!-- <form class="hbg_search" action="index.php" method="get">
                                     <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力" id="clearbutton7">
                                     <input class="hbg_submit fas" type="submit" value="検索">
                                 </form> -->
-                            </li>
-                        </ul>
+                        </li>
+                        <!-- </ul> -->
                     </div>
                     <div class="hbg_cover"></div>
                 </div>
