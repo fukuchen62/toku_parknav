@@ -171,7 +171,7 @@
 
         <!-- 「リセット」と「検索」ボタン -->
         <div class="search_btn_wrap">
-            <input type="reset" value="リセット" id="reset-btn" class="search_btn search_btn_reset">
+            <input type="button" value="リセット" id="reset-btn" class="search_btn search_btn_reset">
             <input type="submit" value="検索" class="search_btn search_btn_search">
         </div>
         <!-- </div> -->
@@ -276,26 +276,14 @@
 
 //全解除のチェックボックス
 let checkbox_reset = document.querySelector("#reset-btn");
-//チェックボックスのリスト
-let checkbox_list = document.querySelectorAll(".checkbox_list");
+//console.log(checkbox_reset);
 
 //全選択のチェックボックスイベント
-checkbox_reset.addEventListener('change', change_all);
+checkbox_reset.addEventListener('click', change_all);
 
-
+// リセットでsearch-park.phpを再読み込み
 function change_all() {
-    //チェックされているか
-    if (checkbox_reset.checked) {
-        {
-            //全て解除
-            for (let i in checkbox_list) {
-                if (checkbox_list.hasOwnProperty(i)) {
-                    checkbox_list[i].checked = false;
-                }
-            }
-
-        }
-    }
+    location.href = "<?php echo home_url('/?search_type=park'); ?>";
 };
 </script>
 
