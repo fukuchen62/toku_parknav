@@ -48,12 +48,12 @@ h4 {
 
 /* サイト制作のワケ */
 .minori_reason {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .minori_reason img {
@@ -62,14 +62,16 @@ h4 {
     /* margin: 15px 0 0 15px; */
     margin-left: 0;
     margin-top: 15px;
+    border-radius: 20px;
 }
 
 /* TB幅 */
 @media screen and (min-width: 771px) {
-    .minori_reason img {
-        margin-left: 15px;
-        /* margin-top: 15px; */
-        /* width: 480px; */
+
+    .minori_reason {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
     }
 }
 
