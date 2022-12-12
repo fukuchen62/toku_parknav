@@ -48,12 +48,12 @@ h4 {
 
 /* サイト制作のワケ */
 .minori_reason {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .minori_reason img {
