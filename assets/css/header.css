@@ -322,7 +322,7 @@ header {
 }
 
 #clearbutton7::-webkit-search-cancel-button {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     /* デフォルトのサーチキャンセルボタンを非表示にする場合 */
 }
 
