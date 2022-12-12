@@ -86,10 +86,11 @@
 
 
                 <!-- 検索フォームを表示させる -->
-                <?php get_search_form('keywords');
-                //php get_template_part('searchform','keywords');
-                ?>
-
+                <div class=" head_menu_item">
+                    <?php
+                    get_search_form();
+                    ?>
+                </div>
                 <!-- ハンバーガーメニュー -->
                 <div class="hbg_menubox">
                     <input id="hbg" type="checkbox" class="input-hidden" value="hbg_open">
@@ -106,15 +107,13 @@
 
                             <!-- 検索ボックス -->
                             <li class="hbg_search_box">
-                                <!-- 検索フォームを表示させる -->
-                                <?php //get_search_form('keywords');
+                                <?php
+                                get_search_form();
                                 ?>
-                                <form class="hbg_search" action="index.php" method="get">
-                                    <input type="hidden" name="search_type" value="keywords">
-                                    <input class="hbg_form" size="300" type="search" name="s" placeholder="キーワードを入力" maxlength="20" value="<?php echo the_search_query(); ?>">
+                                <!-- <form class="hbg_search" action="index.php" method="get">
+                                    <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力" id="clearbutton7">
                                     <input class="hbg_submit fas" type="submit" value="検索">
-                                </form>
-
+                                </form> -->
                             </li>
                         </ul>
                     </div>
