@@ -1,7 +1,7 @@
 <?php
-if (is_page('contact')) {
-    remove_filter('the_content', 'wpautop');
-}
+// if (is_page('contact')) {
+//     remove_filter('the_content', 'wpautop');
+// }
 ?>
 
 <!-- ヘッダー -->
@@ -20,14 +20,26 @@ if (is_page('contact')) {
         <h2 class="h2_under">お問い合わせ</h2>
         <p class="txt">サイトについてご不明点などございましたら、こちらからお問い合わせください。<br>個人情報の取り扱いについては<a href="<?php echo home_url('/privacy/'); ?>" class="privacy_link">こちら</a>をご覧ください。</p>
 
-        <?php //echo do_shortcode('[mwform_formkey key="1057"]');
-        ?>
-        <!-- <form class="form">
+        <!-- ループの開始 -->
+        <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : ?>
+        <!-- 記事を取得して$postに代入 -->
+        <?php the_post(); ?>
 
-        </form> -->
+        <main class="main">
+            <div class="container">
+                <div class="content">
+                    <!-- 固定ページの内容を読み込んで表示させる -->
+                    <?php the_content(); ?>
+                </div>
+            </div>
+        </main>
+
+        <?php endwhile; ?>
+        <!-- ループの終了 -->
+        <?php endif; ?>
 
     </section>
-
 </main>
 
 <!-- フッター -->

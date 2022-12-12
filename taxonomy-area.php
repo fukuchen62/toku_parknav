@@ -68,7 +68,7 @@
         <?php wp_reset_postdata(); ?>
 
         <!-- ページネーション -->
-        <?php wp_pagenavi(); ?>
+        <?php if (function_exists("wp_pagenavi")) wp_pagenavi(); ?>
 
     </div>
 </main>

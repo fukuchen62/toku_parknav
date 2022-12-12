@@ -19,7 +19,7 @@
         <div>
             <!-- ↓ここに選んだカテゴリ名が入る。 -->
             <?php
-            $count_pages = wp_count_posts();
+            $count_pages = wp_count_posts('course');
             $num = $count_pages->publish;
             // echo '記事数は' . $num . '件です';
             ?>
@@ -43,7 +43,7 @@
             <?php wp_reset_postdata(); ?>
 
             <!-- ページネーション -->
-            <?php wp_pagenavi(); ?>
+            <?php if (function_exists("wp_pagenavi")) wp_pagenavi(); ?>
 
         </div>
 

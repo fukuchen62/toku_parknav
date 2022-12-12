@@ -43,15 +43,6 @@
 
     <!-- カードとページをまとめるdiv -->
     <div>
-        <?php
-        // URLのパラメータからタクソノミの値を取得する
-        //$area_slug = get_query_var('area');
-        // タクソノミの値にてそのタクソノミを取得する
-        //$area = get_term_by('slug', $area_slug, 'area');
-        ?>
-
-        <!-- <h2 class="h2_under"><?php //echo $area->name;
-                                    ?></h2> -->
         <div class="card_flex">
             <!-- ループの開始 -->
             <?php if (have_posts()) : ?>
@@ -69,7 +60,7 @@
         <?php wp_reset_postdata(); ?>
 
         <!-- ページネーション -->
-        <?php wp_pagenavi(); ?>
+        <?php if (function_exists("wp_pagenavi")) wp_pagenavi(); ?>
 
     </div>
 </main>
