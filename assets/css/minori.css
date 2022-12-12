@@ -47,19 +47,12 @@ h4 {
 }
 
 /* サイト制作のワケ */
-.minori_reason {
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; */
-}
 
 .minori_reason img {
     width: 300px;
-    border-radius: 20px;
+    height: auto;
     margin-bottom: 30px;
+    object-fit: contain;
 }
 
 @media screen and (min-width: 771px) {
@@ -67,6 +60,7 @@ h4 {
     .minori_reason {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: center;
         gap: 30px;
     }
 }
@@ -74,7 +68,7 @@ h4 {
 /* 中身のコンテンツ幅が950px以上のとき */
 @media screen and (min-width: 950px) {
     .minori_reason {
-        flex-direction: row;
+        /* flex-direction: row; */
     }
 }
 
