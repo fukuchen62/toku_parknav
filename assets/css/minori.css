@@ -57,15 +57,11 @@ h4 {
 }
 
 .minori_reason img {
-    /* width: 480px; */
     width: 300px;
-    /* margin: 15px 0 0 15px; */
-    /* margin-left: 0; */
-    /* margin-top: 15px; */
     border-radius: 20px;
+    margin-bottom: 30px;
 }
 
-/* TB幅 */
 @media screen and (min-width: 771px) {
 
     .minori_reason {
