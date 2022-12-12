@@ -335,7 +335,7 @@ header {
 /* ×ボタン対策で検索ボックスの長さを決め打ち */
 .hbg_search_box {
     margin-top: 50px;
-    width: 200px;
+    width: 185px;
 }
 
 /* TB幅以上でボックスの長さを長くする */
