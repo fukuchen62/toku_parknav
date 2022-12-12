@@ -44,3 +44,17 @@ h4 {
 .ref_wrap {
     text-align: left;
 }
+
+.minori_wrap_inner img {
+    width: 300px;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 771px) {
+
+    .minori_reason {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
+}
