@@ -14,7 +14,7 @@
 
     <form class="search_wrap">
         <input type="hidden" name="search_type" value="park">
-        <input type="hidden" name="s" value="">
+        <input type="hidden" name="s" value="<?php the_search_query(); ?>">
         <!-- <div class="search_wrap"> -->
         <h2 class="search_ttl">公園詳細検索</h2>
 
@@ -251,7 +251,7 @@
             ?>
 
             <?php get_template_part('template-parts/loop', 'park'); ?>
-
+            <?php wp_reset_postdata(); ?>
             <?php endwhile; ?>
 
             <?php else : ?>
@@ -261,7 +261,7 @@
             <?php endif; ?>
         </div>
 
-        <?php wp_reset_postdata(); ?>
+
 
         <!-- ページネーション -->
         <?php //wp_pagenavi();
