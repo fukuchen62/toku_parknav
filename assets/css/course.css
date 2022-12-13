@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
 html {
-    /* 横スクロールバー対策 */
-    overflow-x: visible;
+    /* overflow-x: visible; */
 }
 
-/* common.cssから個別へ */
+/* 要素が950pxからはみ出す場合の記述 */
 main {
-    /* overflow-x: hidden; */
-    /* overflow-x: visible; */
+    overflow-x: hidden;
 }
 
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
