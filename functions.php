@@ -438,8 +438,8 @@ function change_posts_per_page($query)
     //----------------------
     //  キーワード検索 結果
     //----------------------
-    // if ($query->is_search('keywords')) {
-    //     $query->set('posts_per_page', '6');
-    // }
+    if ($query->is_search('keywords')) {
+        $query->set('posts_per_page', '-1');
+    }
 };
 add_action('pre_get_posts', 'change_posts_per_page');
