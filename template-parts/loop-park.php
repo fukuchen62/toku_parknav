@@ -6,6 +6,9 @@
         <?php $img = get_field('park_image_1'); ?>
         <img class="card_img" src="<?php echo $img['sizes']['medium']; ?>" alt="<?php echo $img['alt']; ?>">
 
+        <!-- お気に入りが入る場所 -->
+        <div class="card_fav"></div>
+
         <!-- 文章部分の枠 -->
         <div class="card_container">
             <!-- メインタイトル（公園名） -->
