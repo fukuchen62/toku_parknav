@@ -8,9 +8,9 @@
 $(function() {
     var topBtn = $('.foot_scroll');
     topBtn.hide();
-    //スクロールが800に達したらボタン表示
+    //スクロールが200に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 800) {
+        if ($(this).scrollTop() > 200) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
