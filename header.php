@@ -23,7 +23,8 @@
     <?php elseif (is_page('minori')) : ?>
     <meta name="description" content="徳島の人々に寄り添ったサイト作りをしたい。私たちがとくしまGo!Go!パークなびを作ったきっかけを紹介しています。">
 
-
+    <?php else : ?>
+    <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
 
     <?php endif; ?>
 
