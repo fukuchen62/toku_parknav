@@ -8,9 +8,9 @@
 $(function() {
     var topBtn = $('.foot_scroll');
     topBtn.hide();
-    //スクロールが100に達したらボタン表示
+    //スクロールが800に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1100) {
+        if ($(this).scrollTop() > 800) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
@@ -60,12 +60,12 @@ $.fn.clickToggle = function (a, b) {
 
 $('.popo').clickToggle(function () {
 //   // １回目のクリック
-    $(".popo").animate({ "marginLeft": "+=60px", }, 10);
-    $(".popo").animate({ "rotate": "0deg", }, 100);
+    $(".popo").animate({ "marginLeft": "+=60px", }, 500);
+    $(".popo").animate({ "rotate": "0deg", }, 500);
 }, function () {
 //   // ２回目のクリック
-    $(".popo").animate({ "marginLeft": "-=60px", }, 1000);
-    $(".popo").animate({ "rotate": "45deg", }, 1000);
+    $(".popo").animate({ "marginLeft": "-=60px", }, 500);
+    $(".popo").animate({ "rotate": "45deg", }, 500);
 });
 
 
