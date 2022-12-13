@@ -1,5 +1,5 @@
 <!-- カード1つ分 -->
-<div class="card_wrap animate">
+<div class="card_wrap">
     <a href="<?php the_permalink(); ?>">
 
         <!-- 記事画像 -->
