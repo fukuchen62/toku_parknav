@@ -109,6 +109,7 @@
                             <!-- 検索ボックス -->
                             <li class="hbg_search_box">
                                 <form class="hbg_search" action="index.php" method="get">
+                                    <input type="hidden" name="search_type" value="keywords">
                                     <input class="hbg_form" size="300" type="search" name="search" placeholder="キーワードを入力" id="clearbutton7">
                                     <input class="hbg_submit fas" type="submit" value="検索">
                                 </form>
