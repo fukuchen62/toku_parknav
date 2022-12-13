@@ -2,6 +2,10 @@
 
 /* ＝＝＝セクションをまたぐ指定＝＝＝ */
 
+html {
+    overflow-x: visible;
+}
+
 /* 要素が950pxからはみ出す場合の記述 */
 main {
     overflow-x: hidden;

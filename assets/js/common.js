@@ -37,7 +37,7 @@ $(function() {
     $('.popo').click(function() {
 
     // 連打で暴走しないようにstop()も設定
-    $('.popo_commentset').stop().slideToggle(2500);
+    $('.popo_commentset').stop().slideToggle(-100);
 
     });
 });
@@ -60,8 +60,8 @@ $.fn.clickToggle = function (a, b) {
 
 $('.popo').clickToggle(function () {
 //   // １回目のクリック
-    $(".popo").animate({ "marginLeft": "+=60px", }, 1000);
-    $(".popo").animate({ "rotate": "0deg", }, 1000);
+    $(".popo").animate({ "marginLeft": "+=60px", }, 10);
+    $(".popo").animate({ "rotate": "0deg", }, 100);
 }, function () {
 //   // ２回目のクリック
     $(".popo").animate({ "marginLeft": "-=60px", }, 1000);

@@ -2,7 +2,7 @@
 
 html {
     /* 横スクロールバー対策 */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -509,6 +509,8 @@ h4 {
         position: sticky;
         /* Gナビの下で固定させる */
         top: 80px;
+        position: -webkit-sticky;
+        /*Safari用ベンダープレフィックス*/
         height: 50vh;
         margin-right: 20px;
         margin-left: 20px;

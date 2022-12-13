@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html {
+    /* 横スクロールバー対策 */
+    overflow-x: visible;
+}
+
 /* common.cssから個別へ */
 main {
     /* overflow-x: hidden; */
