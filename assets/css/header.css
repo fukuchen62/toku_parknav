@@ -122,7 +122,7 @@ header {
 .hbg_btn {
     cursor: pointer;
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 0;
     z-index: 9999;
     width: 4em;
@@ -253,7 +253,7 @@ header {
 }
 
 /* 円を用いたメニューリスト */
-.hbg_menulist-circle li {
+.hbg_menulist-circle li, .hbg_search_box {
     border: 3px solid #3E3A39;
     margin-bottom: 5px;
     border-radius: 2em;
@@ -309,7 +309,6 @@ header {
     display: block;
 }
 
-webkit
 
 /* hbgのキーワード検索ボックス */
 .hbg_form {
@@ -323,7 +322,7 @@ webkit
 }
 
 #clearbutton7::-webkit-search-cancel-button {
-    /* -webkit-appearance: none; */
+    -webkit-appearance: none;
     /* デフォルトのサーチキャンセルボタンを非表示にする場合 */
 }
 
@@ -332,10 +331,11 @@ webkit
 
 }
 
+/* 以下、念のため保留 */
 /* ×ボタン対策で検索ボックスの長さを決め打ち */
 .hbg_search_box {
     margin-top: 50px;
-    width: 180px;
+    /* width: 200px; */
 }
 
 /* TB幅以上でボックスの長さを長くする */
