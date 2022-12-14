@@ -8,7 +8,7 @@
 
     <!-- ディスクリプションをページごとに変更 -->
     <?php if (is_home() || is_front_page()) : ?>
-    <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
+    <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子さまとの休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
 
     <?php elseif (is_singular('park')) : ?>
     <meta name="description" content="とくしまGo!Go!パークなびでは、公園にどんな遊具や自然があるのかその場所ならではの楽しみ方をまとめてみました。">
@@ -17,14 +17,14 @@
     <?php elseif (is_singular('post')) : ?>
     <meta name="description" content="公園に関するイチオシ情報を提供、療育に関するニュースも掲載しています。とくしまGo!Go!パークなびでチェック！">
     <?php elseif (is_page('nursing')) : ?>
-    <meta name="description" content="とくしまGo!Go!パークなびでは発達支援の現場で働く療育の先生へインタビューを行い、お子様にあった体力向上が図れる療育情報を掲載しています。">
+    <meta name="description" content="とくしまGo!Go!パークなびでは発達支援の現場で働く療育の先生へインタビューを行い、お子さまにあった体力向上が図れる療育情報を掲載しています。">
     <?php elseif (is_page('about')) : ?>
-    <meta name="description" content="とくしまGo!Go!パークなびとは？徳島県内でお子様との時間に最適な公園を紹介する情報掲載サイトです。当サイトについての概要や、オリジナルキャラクターの紹介をしています。">
+    <meta name="description" content="とくしまGo!Go!パークなびとは？徳島県内でお子さまとの時間に最適な公園を紹介する情報掲載サイトです。当サイトについての概要や、オリジナルキャラクターの紹介をしています。">
     <?php elseif (is_page('minori')) : ?>
     <meta name="description" content="徳島の人々に寄り添ったサイト作りをしたい。私たちがとくしまGo!Go!パークなびを作ったきっかけを紹介しています。">
 
     <?php else : ?>
-    <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子様との休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
+    <meta name="description" content="休日に親子でお出かけ！「とくしまGo!Go!パークなび」では、お子さまとの休日に最適な徳島県内の公園情報を発信中。公園で過ごすためのモデルコースや療育情報に沿った遊具の情報も掲載しています。">
 
     <?php endif; ?>
 
