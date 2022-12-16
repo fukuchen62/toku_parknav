@@ -47,9 +47,9 @@
                 <li>
                     <a href="<?php echo home_url('/qa/'); ?>">Q＆A</a>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a>
-                </li> -->
+                </li>
                 <li>
                     <a href="<?php echo home_url('/minori/'); ?>">サイト制作にあたって</a>
                 </li>

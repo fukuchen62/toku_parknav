@@ -266,6 +266,10 @@ function add_individual_stylesheet_script()
 
         //サイト制作にあたってのCSS（minori.css）を読み込む
         wp_enqueue_style('toku_parknav-teamminori', get_template_directory_uri() . '/assets/css/minori.css', array(), false);
+    } else if (is_page('thanks')) {
+
+        //問い合わせありがとうございましたにCSS（contact.css）を読み込む
+        wp_enqueue_style('toku_parknav-thanks', get_template_directory_uri() . '/assets/css/contact.css', array(), false);
     }
 
 
@@ -294,11 +298,19 @@ function add_individual_stylesheet_script()
     //----------------------
     //  02-K:キーワード検索
     //----------------------
-    elseif (is_search('keywords')) {
+    //elseif (is_search('keywords')) {
 
-        // キーワード検索のCSS（search-keywords.css）を読み込む
-        // wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
-    }
+    // キーワード検索のCSS（search-keywords.css）を読み込む
+    // wp_enqueue_style('toku_parknav-search-keywords', get_template_directory_uri() . '/assets/css/search-keywords.css', array(), false);
+
+    //----------------------
+    //  02-L:404ページ
+    //----------------------
+    // } else if (is_page('minori')) {
+
+    //     //サイト制作にあたってのCSS（minori.css）を読み込む
+    //     wp_enqueue_style('toku_parknav', get_template_directory_uri() . '/assets/css/minori.css', array(), false);
+    // }
 }
 
 ////////////////////////////////////////////////////////////////////////

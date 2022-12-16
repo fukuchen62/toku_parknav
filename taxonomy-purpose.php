@@ -48,20 +48,28 @@
 
             <div class="card_flex">
 
+                <?php //$paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                ?>
+                <?php //query_posts("posts_per_page=6 & paged=$paged");
+                ?>
+
                 <?php
-                if ($query->have_posts()) :
+                if ($query->have_posts()) : //query_posts($query_string . '&posts_per_page=6&tax=purpose');
                     while ($query->have_posts()) :
                         $query->the_post(); ?>
 
                 <?php get_template_part('template-parts/loop', 'course') ?>
 
                 <?php endwhile;
-                endif; ?>
+                    wp_reset_postdata();
+                endif;
+                ?>
             </div>
-            <?php wp_reset_postdata(); ?>
 
-            <!-- ページネーション -->
             <?php if (function_exists("wp_pagenavi")) wp_pagenavi(); ?>
+
+
+
 
         </div>
 

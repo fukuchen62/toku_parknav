@@ -80,8 +80,8 @@
         <!-- お問い合わせボタン -->
         <div class="contact_btn_wrap">
             <h3>ご不明な点があればこちらへ</h3>
-            <!-- <a href="<?php echo home_url('/contact/'); ?>" class="contact_btn">お問い合わせ</a> -->
-            <a href="mailto:tokupark-info@tokuparknavi.com" class="contact_btn">メールを送る</a>
+            <a href="<?php echo home_url('/contact/'); ?>" class="contact_btn">お問い合わせ</a>
+            <!-- <a href="mailto:tokupark-info@tokuparknavi.com" class="contact_btn">メールを送る</a> -->
         </div>
     </div>
 
