@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-html {
-    overflow-x: visible;
-}
 
 /* 要素が950pxからはみ出す場合の記述 */
 main {
