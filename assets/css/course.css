@@ -1,12 +1,18 @@
 @charset "UTF-8";
 
 html {
-    /* overflow-x: visible; */
+    overflow-x: visible;
 }
 
 /* 要素が950pxからはみ出す場合の記述 */
 main {
     overflow-x: hidden;
+}
+
+@media screen and (min-width: 950px) {
+    main {
+        overflow-x: visible;
+    }
 }
 
 /* 要素の幅をこれ以上小さくしない。カードの幅である300pxを指定 */
@@ -48,7 +54,7 @@ section {
 }
 
 /* 771px以上の幅になったらカテゴリバーを右に設置 */
-@media screen and (min-width: 771px) {
+@media screen and (min-width: 950px) {
 
     /* カテゴリバーが横にきたらmargin-topをはずす */
     .sidebar_box {
@@ -57,18 +63,18 @@ section {
 
     /* カードとサイドバーにflexをかける  */
     .flex_box {
-        display: flex;
+        /* display: flex;
         gap: 30px;
-        justify-content: center;
+        justify-content: center; */
     }
 
     .sidebar_box {
-        position: sticky;
+        /* position: sticky; */
         /* Gナビの下で固定させる */
-        top: 80px;
+        /* top: 80px;
         height: 50vh;
         margin-right: 20px;
-        margin-left: 20px;
+        margin-left: 20px; */
     }
 
 }
